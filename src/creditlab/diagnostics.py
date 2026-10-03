@@ -52,6 +52,62 @@ def event_gradient_norm(
     return float(event_grad.norm(dim=1).mean())
 
 
+@torch.enable_grad()
+def event_loss_gradient_metrics(
+    model: TinySequenceRNN, inputs: torch.Tensor, targets: torch.Tensor
+) -> dict[str, float]:
+    """Per-example terminal-loss gradient size at the original event.
+
+    Reports mean, median, and 95th percentile of each example's L2 gradient
+    norm over the event bit and marker inputs. Reductions happen only after
+    per-example norms are computed, so examples cannot cancel one another.
+    Unlike the logit sensitivity metric, this includes the model's actual
+    prediction error: confident correct examples naturally have little loss
+    gradient.
+    """
+    inp = inputs.detach().clone().requires_grad_(True)
+    logits, _ = model(inp)
+    losses = torch.nn.functional.binary_cross_entropy_with_logits(
+        logits[:, -1, 0], (targets + 1) / 2, reduction="none"
+    )
+    (grad,) = torch.autograd.grad(losses.sum(), inp)
+    norms = grad[:, 0, :2].norm(dim=1)
+    _check_finite("event_loss_gradient", norms)
+    return {
+        "mean": float(norms.mean()),
+        "median": float(norms.median()),
+        "p95": float(torch.quantile(norms, 0.95)),
+    }
+
+
+def competitor_conditioned_accuracy(
+    predictions: torch.Tensor,
+    targets: torch.Tensor,
+    competitor_mask: torch.Tensor,
+    competitor_bits: torch.Tensor,
+) -> dict[str, float | int | None]:
+    """Accuracy when the first marked competitor agrees/disagrees with target."""
+    if competitor_mask.shape != competitor_bits.shape:
+        raise ValueError("competitor metadata shapes must match")
+    has_competitor = competitor_mask.any(dim=1)
+    first_idx = competitor_mask.float().argmax(dim=1)
+    first_bits = competitor_bits.gather(1, first_idx[:, None]).squeeze(1)
+    agrees = first_bits == targets
+    result: dict[str, float | int | None] = {}
+    for name, selected in (
+        ("agree", has_competitor & agrees),
+        ("disagree", has_competitor & ~agrees),
+        ("none", ~has_competitor),
+    ):
+        count = int(selected.sum())
+        result[f"competitor_{name}_count"] = count
+        result[f"competitor_{name}_accuracy"] = (
+            float((predictions[selected] == targets[selected]).float().mean())
+            if count else None
+        )
+    return result
+
+
 @torch.no_grad()
 def hidden_states(model: TinySequenceRNN, inputs: torch.Tensor) -> torch.Tensor:
     states, _ = model.recurrent(inputs)

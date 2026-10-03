@@ -33,6 +33,8 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
 from creditlab.diagnostics import (  # noqa: E402
+    competitor_conditioned_accuracy,
+    event_loss_gradient_metrics,
     event_gradient_norm,
     jacobian_contraction_proxy,
     ridge_probe_retention,
@@ -107,9 +109,10 @@ def train_one_run(cfg: dict, delay: int, mode: str, seed: int) -> dict:
     val_x, val_y = make_split(dcfg["val_samples"], delay, mode,
                               run_seed=seed, split_index=1,
                               base_seed=dcfg["base_seed"], config=task_cfg)
-    test_x, test_y = make_split(dcfg["test_samples"], delay, mode,
-                                run_seed=seed, split_index=2,
-                                base_seed=dcfg["base_seed"], config=task_cfg)
+    test_x, test_y, test_meta = make_split(dcfg["test_samples"], delay, mode,
+                              run_seed=seed, split_index=2,
+                              base_seed=dcfg["base_seed"], config=task_cfg,
+                              return_metadata=True)
 
     # Model init uses the global CPU RNG (seeded deterministically).
     seed_everything(seed)
@@ -150,6 +153,13 @@ def train_one_run(cfg: dict, delay: int, mode: str, seed: int) -> dict:
         val_loss, val_acc = evaluate(model, val_x, val_y, trcfg["eval_batch_size"])
         test_loss, test_acc = evaluate(model, test_x, test_y, trcfg["eval_batch_size"])
         diag_grad = event_gradient_norm(model, test_x, test_y)
+        loss_grad = event_loss_gradient_metrics(model, test_x, test_y)
+        final_logits, _ = model(test_x)
+        predictions = torch.where(final_logits[:, -1, 0] >= 0, 1.0, -1.0)
+        competitor_stats = competitor_conditioned_accuracy(
+            predictions, test_y, test_meta["competitor_mask"],
+            test_meta["competitor_bits"],
+        )
         # Probe fit on val states, scored on test states (held-out R^2).
         retention_r2 = probe_fit_score(model, val_x, val_y, test_x, test_y)
         contraction = jacobian_contraction_proxy(model, test_x[:64])
@@ -165,6 +175,10 @@ def train_one_run(cfg: dict, delay: int, mode: str, seed: int) -> dict:
             test_loss=round(test_loss, 6),
             test_accuracy=round(test_acc, 4),
             event_gradient_norm=round(diag_grad, 6),
+            event_loss_gradient_norm_mean=round(loss_grad["mean"], 8),
+            event_loss_gradient_norm_median=round(loss_grad["median"], 8),
+            event_loss_gradient_norm_p95=round(loss_grad["p95"], 8),
+            **competitor_stats,
             retention_probe_r2=round(retention_r2, 6),
             jacobian_spectral_norm=round(contraction, 6),
             grad_clip_fraction=round(clipped / trcfg["updates_per_run"], 4),
@@ -215,6 +229,9 @@ def aggregate(records: list[dict], cfg: dict) -> dict:
     summary_rows = []
     metric_names = [
         "train_loss", "val_loss", "test_accuracy", "event_gradient_norm",
+        "event_loss_gradient_norm_mean", "event_loss_gradient_norm_median",
+        "event_loss_gradient_norm_p95", "competitor_agree_accuracy",
+        "competitor_disagree_accuracy", "competitor_none_accuracy",
         "retention_probe_r2", "jacobian_spectral_norm", "grad_clip_fraction",
         "runtime_seconds",
     ]

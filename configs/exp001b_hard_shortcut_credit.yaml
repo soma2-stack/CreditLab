@@ -1,0 +1,52 @@
+# EXP-001B: conservative follow-up to the frozen EXP-001 baseline.
+experiment_id: EXP-001B
+config_revision: 1
+seeds: [17, 29, 43]
+device: cpu
+model:
+  type: vanilla_tanh_rnn
+  input_size: 3
+  hidden_size: 32
+  output_size: 1
+task:
+  type: delayed_marked_bit
+  event_position: 0
+  sequence_length: "delay + 2"
+  delays: [16, 32, 64, 128, 256]
+  modes:
+    EASY:
+      distractor_noise_std: 0.3
+    HARD:
+      distractor_noise_std: 1.0
+      competitor_rate: 0.4
+      competitor_flip_prob: 0.5
+    HARD_V2:
+      distractor_noise_std: 1.0
+      competitor_rate: 0.4
+      competitor_flip_prob: 0.5
+training:
+  optimizer: Adam
+  learning_rate: 0.003
+  batch_size: 64
+  eval_batch_size: 256
+  updates_per_run: 400
+  grad_clip_norm: 5.0
+  loss: binary_cross_entropy_with_logits
+data:
+  train_samples: 1536
+  val_samples: 512
+  test_samples: 512
+  base_seed: 1000
+metrics:
+  - test_accuracy
+  - competitor_agree_disagree_conditioned_accuracy
+  - original_event_gradient_norm
+  - original_event_per_example_loss_gradient_norm
+  - hidden_state_retention_probe
+budget:
+  max_cpu_minutes_per_seed_mode_delay: 5
+  stop_on_nan_or_inf: true
+outputs:
+  directory: results/EXP-001B
+  raw_metrics: raw_metrics.jsonl
+  summary_metrics: summary.csv

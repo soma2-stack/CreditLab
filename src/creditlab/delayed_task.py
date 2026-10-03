@@ -18,7 +18,7 @@ from __future__ import annotations
 
 import torch
 
-MODES = ("EASY", "HARD")
+MODES = ("EASY", "HARD", "HARD_V2")
 
 
 def sequence_length(delay: int) -> int:
@@ -37,17 +37,17 @@ def generate_batch(
     distractor_noise_std: float,
     competitor_rate: float = 0.0,
     competitor_flip_prob: float = 0.5,
-) -> tuple[torch.Tensor, torch.Tensor]:
+    return_metadata: bool = False,
+) -> tuple[torch.Tensor, torch.Tensor] | tuple[torch.Tensor, torch.Tensor, dict[str, torch.Tensor]]:
     """Generate one deterministic batch of the delayed-marked-bit task.
 
     Returns ``(inputs, targets)`` with shapes ``[N, delay+2, 3]`` and
     ``[N]`` (float values in {-1.0, +1.0}).
 
-    EASY mode uses simple Gaussian distractors (competitor_rate ignored when
-    0).  HARD mode additionally injects competing marked events into
-    distractor positions; competitors carry the opposite bit with probability
-    ``competitor_flip_prob`` when the target bit is +1 (and the same bit
-    otherwise), so they conflict with the true answer at the query step.
+    EASY mode uses simple Gaussian distractors. HARD reproduces the original
+    EXP-001 competitor rule. HARD_V2 uses the same events and noise, but each
+    competitor bit is sampled independently of the target. Optional metadata
+    returns the latent competitor mask and bits for diagnostics.
     """
     if mode not in MODES:
         raise ValueError(f"mode must be one of {MODES}")
@@ -76,7 +76,9 @@ def generate_batch(
     # Channel 2: query marker only at the final step.
     inputs[:, -1, 2] = 1.0
 
-    # HARD-mode competing marked events in distractor positions are applied
+    comp_mask = torch.zeros(num_samples, max(length - 2, 0), dtype=torch.bool)
+    comp_bits = torch.zeros(num_samples, max(length - 2, 0))
+    # Competing marked events in distractor positions are applied
     # BEFORE noise so that distractor steps carry no marker at all in EASY.
     if competitor_rate > 0 and length > 2:
         comp_mask = (
@@ -85,12 +87,20 @@ def generate_batch(
         flip = (
             torch.rand(num_samples, length - 2, generator=gen) < competitor_flip_prob
         )
-        # Competitor bit: opposite of target when target bit is +1 and flip is
-        # active; same as target otherwise.  Net effect: roughly half of the
-        # competitors on +1-target trials point to the wrong answer.
-        comp_bit = torch.where(
-            flip & (bits.unsqueeze(1) > 0), -1.0, bits.unsqueeze(1).expand(-1, length - 2)
-        )
+        if mode == "HARD_V2":
+            # Independent balanced bits remove target information from a
+            # competitor while preserving the original event rate.
+            comp_bit = torch.where(
+                torch.rand(num_samples, length - 2, generator=gen) < 0.5,
+                -1.0, 1.0,
+            )
+        else:
+            # EXP-001 rule, retained for the diagnostic comparison.
+            comp_bit = torch.where(
+                flip & (bits.unsqueeze(1) > 0), -1.0,
+                bits.unsqueeze(1).expand(-1, length - 2),
+            )
+        comp_bits = comp_bit
         inputs[:, 1:-1, 0] = torch.where(comp_mask, comp_bit, inputs[:, 1:-1, 0])
         inputs[:, 1:-1, 1] = torch.where(comp_mask, 1.0, inputs[:, 1:-1, 1])
 
@@ -99,6 +109,8 @@ def generate_batch(
         noise = torch.randn(num_samples, length - 2, 3, generator=gen)
         inputs[:, 1:-1, :] += distractor_noise_std * noise
 
+    if return_metadata:
+        return inputs, bits, {"competitor_mask": comp_mask, "competitor_bits": comp_bits}
     return inputs, bits
 
 
@@ -111,7 +123,8 @@ def make_split(
     split_index: int,
     base_seed: int = 1000,
     config: dict | None = None,
-) -> tuple[torch.Tensor, torch.Tensor]:
+    return_metadata: bool = False,
+) -> tuple[torch.Tensor, torch.Tensor] | tuple[torch.Tensor, torch.Tensor, dict[str, torch.Tensor]]:
     """Deterministic per-split data pull derived from (run_seed, split, delay, mode)."""
     cfg = config or {}
     easy_std = cfg.get("easy_noise_std", 0.3)
@@ -131,4 +144,5 @@ def make_split(
         distractor_noise_std=hard_std if mode == "HARD" else easy_std,
         competitor_rate=competitor_rate,
         competitor_flip_prob=cfg.get("competitor_flip_prob", 0.5),
+        return_metadata=return_metadata,
     )
