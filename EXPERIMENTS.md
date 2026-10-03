@@ -75,11 +75,13 @@ Registry entries describe completed experiments or plans. Every run saves its ex
 - **Files:** `configs/exp005_counterfactual_audit.yaml` and `results/EXP-005/`.
 - **Follow-up:** Not started.
 
-## EXP-006 — Fresh-seed replication (preregistered; training not started)
+## EXP-006 — Fresh-seed replication (completed)
 
 - **Question:** How consistently do the unchanged additive and B=4 bounded models learn delayed memory across ten new seeds and fresh datasets, compared with matched vanilla controls?
-- **Seeds:** 101, 113, 127, 139, 151, 163, 179, 191, 211, 223. Data base seed 2000. These are not pooled with seeds 17, 29, and 43.
-- **Models:** The EXP-004 vanilla, additive, and bounded-additive equations. `B` stays 4.
-- **Gate:** Fresh delay-128 training runs only if the additive model succeeds on at least 8 of 10 delay-64 seeds. Success is final test accuracy of at least 0.95.
-- **Budget:** Five minutes per training run and 15 minutes total for training plus the bit-flip audit.
-- **Result:** Not collected.
+- **Seeds:** 101, 113, 127, 139, 151, 163, 179, 191, 211, 223. Data base seed 2000. Not pooled with seeds 17, 29, and 43.
+- **Models:** Unchanged EXP-004 vanilla, additive, and bounded-additive equations. `B` stayed 4.
+- **Result:** All 60 training runs and 60 bit-flip audits finished in 529 seconds. No failures and no unstarted runs. Delay 64 successes were vanilla 3/10, additive 10/10, and bounded 6/10. The additive gate passed, so fresh delay-128 training ran. Delay 128 successes were vanilla 1/10, additive 10/10, and bounded 5/10. Paired counts at delay 64 were 6 both-succeed and 4 additive-only. Exact 95 percent intervals for the delay-64 success rates were about 0.07–0.65 for vanilla, 0.69–1.00 for additive, and 0.26–0.88 for bounded.
+- **Audit:** Models that reached 0.95 accuracy also passed the bit-flip check. Some bounded misses still changed state on part of the pairs despite a recorded bit gradient of 0.0, notably delay-64 seed 139. Other bounded misses had exactly identical final states.
+- **Interpretation:** EXPERIMENTAL RESULT. Additive success repeated on every new seed. Bounded success is not confined to the old seed 17, and it was less reliable than additive in the paired comparison. Ten seeds leave a wide interval. This is not an architecture result and it does not validate the broader theory.
+- **Files:** `configs/exp006_replication.yaml` and `results/EXP-006/`.
+- **Follow-up:** Not started. Do not tune B and do not start another experiment from this run.

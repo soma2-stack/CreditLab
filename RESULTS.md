@@ -73,3 +73,13 @@ Chronological record. Append new entries; never overwrite old results. Distingui
 - **Compute:** 162.5 seconds for replay plus audit. No numerical failures and no budget stops.
 - **Files:** `results/EXP-005/`.
 - **Replication:** Three seeds, one synthetic task, recovered EXP-004 weights.
+
+## 2026-10-03 — EXP-006 fresh-seed replication
+
+- **Experiment ID:** EXP-006.
+- **Configuration:** `configs/exp006_replication.yaml`. Unchanged EXP-004 vanilla, additive, and B=4 bounded models. New seeds 101, 113, 127, 139, 151, 163, 179, 191, 211, 223. Data base seed 2000. HARD-v2 noise 0.3 and competitor rate 0.4. Success is final test accuracy of at least 0.95. Python 3.11.9, PyTorch 2.13.0+cpu. Training code revision `53d4d63`. Historical seeds were not pooled.
+- **Result:** Sixty of sixty training runs and sixty bit-flip audits finished in 529 seconds. No numerical failures, budget stops, or unstarted runs. Delay-64 successes: vanilla 3/10, additive 10/10, bounded 6/10. Additive cleared the gate of 8, so fresh delay-128 training ran. Delay-128 successes: vanilla 1/10, additive 10/10, bounded 5/10. Paired delay-64 counts were 6 both-succeed and 4 additive-only. Clopper-Pearson 95 percent intervals for the delay-64 success rates were about 0.07–0.65, 0.69–1.00, and 0.26–0.88.
+- **Audit:** Successful models passed the bit-flip check. Bounded delay-64 seed 139 scored 0.896 and still changed state and logit on 400 of 512 pairs despite a recorded bit gradient of 0.0. Several other bounded misses had exactly identical final states and a recorded bit gradient of 0.0.
+- **Interpretation:** EXPERIMENTAL RESULT. The additive advantage reproduced on every new seed. Bounded success is not limited to the old seed 17, and the paired comparison shows it was less reliable than additive. Ten seeds leave a wide interval. This does not identify why individual seeds succeed, does not show that clipping caused the misses, and does not validate the broader theory.
+- **Files:** `results/EXP-006/`.
+- **Replication:** Ten new seeds, one synthetic task, one fixed bound. Not pooled with the earlier three seeds.

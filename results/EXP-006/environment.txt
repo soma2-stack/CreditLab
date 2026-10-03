@@ -1,0 +1,5 @@
+Python: 3.11.9
+PyTorch: 2.13.0+cpu
+Training code revision: 53d4d63ec262aa05ef0b46bf529e4bebb7984bff
+Bound B=4 was not tuned.
+Historical seeds are not pooled with this cohort.

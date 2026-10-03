@@ -57,3 +57,12 @@ Do not start another experiment from EXP-004. Do not retune B.
 - [x] Leave EXP-001 through EXP-004 artifacts unchanged.
 
 Do not start EXP-006 from this audit. Do not add a model. Do not retune B.
+
+## Phase 6 — ten-seed replication
+
+- [x] Preregister seeds 101 through 223, base seed 2000, and the additive gate of 8 out of 10 before any EXP-006 accuracy.
+- [x] Train matched vanilla, additive, and bounded models at delay 64, then fresh delay-128 runs because the gate passed.
+- [x] Run the bit-flip audit on the completed models.
+- [x] Keep historical seeds out of the primary counts and leave EXP-001 through EXP-005 artifacts unchanged.
+
+Do not start EXP-007. Do not tune B. Do not add a model.
