@@ -62,3 +62,14 @@ Chronological record. Append new entries; never overwrite old results. Distingui
 - **Interpretation:** EXPERIMENTAL RESULT, mixed and therefore inconclusive. The additive control reproduced. One bounded seed showed that a state capped at 4 can still solve the delay. The other seeds did not. This does not establish an architecture or validate the broader theory.
 - **Files:** `results/EXP-004/`.
 - **Replication:** Three seeds, one synthetic task, one fixed bound.
+
+## 2026-10-03 — EXP-005 counterfactual early-bit audit
+
+- **Experiment ID:** EXP-005.
+- **Configuration:** `configs/exp005_counterfactual_audit.yaml`. No new model. `B` remained 4. Fresh HARD-v2 pairs used split index 3, 512 sequences per seed and delay, with only the original bit flipped inside each pair. Python 3.11.9, PyTorch 2.13.0+cpu. Audit code revision `3ebc12f0e389`.
+- **Recovery:** EXP-004 saved no checkpoints. Eighteen models were replayed with the EXP-004 procedure and saved under `results/EXP-005/checkpoints/`. All 18 matched the saved EXP-004 integer correct counts and passed the pre-registered loss, retention, and magnitude tolerances. Nothing was written into `results/EXP-004/`. Frozen EXP-001 through EXP-004 hashes matched after the audit.
+- **Result:** On successful additive runs and on bounded seed 17, flipping the original bit changed the final state, the logit, and the prediction, and both pair members were correct. Bounded successes also changed the pattern of +4 and -4 signs. Bounded seed 29 at both delays, and bounded seed 43 at delay 64, kept exactly the same final state, the same boundary signs, and the same logit, with a recorded bit gradient of 0.0. Bounded seed 43 at delay 128 changed state and gave both answers correctly on 119 of 512 pairs, while the recorded bit gradient was 0.0 on every example; the other 393 pairs were unchanged.
+- **Interpretation:** EXPERIMENTAL RESULT. Some bounded failures have no finite dependence on the original bit. Seed 43 at delay 128 shows that a recorded local gradient of 0.0 can miss a real finite change. These failures are not all the same. The audit does not show that clipping caused them, and it does not validate the broader theory.
+- **Compute:** 162.5 seconds for replay plus audit. No numerical failures and no budget stops.
+- **Files:** `results/EXP-005/`.
+- **Replication:** Three seeds, one synthetic task, recovered EXP-004 weights.

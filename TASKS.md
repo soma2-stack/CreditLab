@@ -47,3 +47,13 @@
 - [x] Leave EXP-001 through EXP-003 artifacts unchanged and check their hashes.
 
 Do not start another experiment from EXP-004. Do not retune B.
+
+## Phase 5 — original-bit flip audit
+
+- [x] Preregister recovery tolerances and the counterfactual pair rule before any audit result.
+- [x] Replay the eighteen EXP-004 models, verify them against saved metrics, and save the recovered weights outside `results/EXP-004/`.
+- [x] Measure whether flipping only the original bit changes the final state, the boundary sign pattern, the logit, and the prediction.
+- [x] Compare those finite changes with the recorded local bit gradient.
+- [x] Leave EXP-001 through EXP-004 artifacts unchanged.
+
+Do not start EXP-006 from this audit. Do not add a model. Do not retune B.

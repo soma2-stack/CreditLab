@@ -64,10 +64,13 @@ Registry entries describe completed experiments or plans. Every run saves its ex
 - **Files:** `configs/exp004_bounded_additive.yaml` and `results/EXP-004/`.
 - **Follow-up:** Not started. Do not change B from these results, and do not start another experiment from this run.
 
-## EXP-005 — Counterfactual early-bit retention audit (preregistered; not yet run)
+## EXP-005 — Counterfactual early-bit retention audit (completed)
 
 - **Question:** When later inputs are held fixed, does flipping only the original event bit change the final hidden state and the prediction?
-- **Models:** The EXP-004 vanilla, additive, and bounded-additive models. No new architecture. `B` stays 4.
-- **Recovery:** EXP-004 did not save weights. They will be replayed with the EXP-004 training procedure and checked against saved accuracy counts, losses, retention, and hidden magnitude before any counterfactual result is interpreted.
-- **Fresh data:** 512 sequences per seed and delay, combined-seed formula, split index 3, base seed 1000. Each sequence is copied with the original bit set to +1 and to -1. The suffix is not regenerated.
-- **Result:** Not collected.
+- **Models:** Replayed EXP-004 vanilla, additive, and bounded-additive models. No new architecture. `B` stayed 4. EXP-004 had saved no checkpoints.
+- **Recovery:** All 18 replays matched the saved EXP-004 correct counts, losses, retention, and hidden magnitudes within the pre-registered tolerances. Python 3.11.9, PyTorch 2.13.0+cpu. Audit code `3ebc12f0e389`.
+- **Fresh data:** 512 sequences per seed and delay, split index 3. Only the original bit differed within a pair.
+- **Result:** Successful additive runs and bounded seed 17 changed state, boundary sign pattern, logit, and prediction when the bit flipped. Bounded seed 29 at both delays, and bounded seed 43 at delay 64, produced exactly identical states, identical boundary signs, identical logits, and recorded bit gradients of 0.0. Bounded seed 43 at delay 128 was mixed: 393 pairs were identical, and 119 pairs changed state, logit, and prediction despite a recorded bit gradient of 0.0 on every example.
+- **Interpretation:** EXPERIMENTAL RESULT. Zero local sensitivity agreed with no finite change for some bounded failures, and missed a real finite change for part of bounded seed 43 at delay 128. Failed bounded models did not all forget in the same way. This is not an architecture result and it does not validate the broader theory.
+- **Files:** `configs/exp005_counterfactual_audit.yaml` and `results/EXP-005/`.
+- **Follow-up:** Not started.
