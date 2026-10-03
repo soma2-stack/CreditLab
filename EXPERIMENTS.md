@@ -63,3 +63,11 @@ Registry entries describe completed experiments or plans. Every run saves its ex
 - **Interpretation:** Mixed, so inconclusive. The additive control reproduced. Clipping was active even on the bounded success, so growth to 65–129 was not required for that one seed. The same bound did not succeed on the other seeds. Co-occurrence of saturation and failure is not treated as proof that clipping caused the failure. This is not an architecture result and it does not validate the broader theory.
 - **Files:** `configs/exp004_bounded_additive.yaml` and `results/EXP-004/`.
 - **Follow-up:** Not started. Do not change B from these results, and do not start another experiment from this run.
+
+## EXP-005 — Counterfactual early-bit retention audit (preregistered; not yet run)
+
+- **Question:** When later inputs are held fixed, does flipping only the original event bit change the final hidden state and the prediction?
+- **Models:** The EXP-004 vanilla, additive, and bounded-additive models. No new architecture. `B` stays 4.
+- **Recovery:** EXP-004 did not save weights. They will be replayed with the EXP-004 training procedure and checked against saved accuracy counts, losses, retention, and hidden magnitude before any counterfactual result is interpreted.
+- **Fresh data:** 512 sequences per seed and delay, combined-seed formula, split index 3, base seed 1000. Each sequence is copied with the original bit set to +1 and to -1. The suffix is not regenerated.
+- **Result:** Not collected.
