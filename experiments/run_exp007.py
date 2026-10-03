@@ -381,8 +381,14 @@ def main() -> None:
                 readout = copy.deepcopy(full)
                 freeze_recurrent(readout)
                 probe = bundle["train_x"][:8]
-                if forward_fingerprint(full, probe) != forward_fingerprint(readout, probe):
-                    raise RuntimeError(f"paired regimes differ before training at delay {delay} seed {seed}")
+                with torch.no_grad():
+                    full_logits, _ = full(probe)
+                    readout_logits, _ = readout(probe)
+                forward_gap = float((full_logits - readout_logits).abs().max())
+                if forward_gap > 1e-5:
+                    raise RuntimeError(
+                        f"paired regimes differ before training at delay {delay} seed {seed}: {forward_gap}"
+                    )
                 hidden_before = hidden_fingerprint(readout, bundle["val_x"][:64])
                 for regime, model in (("full", full), ("readout_only", readout)):
                     if expired() or stop_for_bug:

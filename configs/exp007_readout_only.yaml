@@ -95,3 +95,4 @@ diagnostics:
   marker_channel: "stored separately"
   exact_state_equality: "direct coordinate equality in the bit-flip audit"
   computational_zero: "a recorded float equal to 0.0"
+  paired_forward_tolerance: "maximum absolute logit difference at most 1e-5 before the first update; vanilla RNN kernels are not bitwise identical across copied modules"
