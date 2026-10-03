@@ -50,3 +50,15 @@ Chronological record. Append new entries; never overwrite old results. Distingui
 - **Interpretation:** EXPERIMENTAL RESULT. The EXP-002 advantage did not survive this bound. The half-and-half path kept state size controlled and did not preserve delayed memory better than the matched vanilla RNN. Because a factor of 0.5 also fades across 64 steps, this does not prove that magnitude alone caused EXP-002. It does not establish an architecture or prove the broader theory.
 - **Files:** `results/EXP-003/analysis.md`, `raw_metrics.jsonl`, `summary.csv`, `summary.json`, `primary_delay64_summary.json`, `exp002_magnitude_reference.json`, `config_used.yaml`, and `environment.txt`.
 - **Replication:** Three seeds, one synthetic task, one fixed mixture.
+
+## 2026-10-03 — EXP-004 fixed-bound additive recurrence
+
+- **Experiment ID:** EXP-004.
+- **Configuration:** `configs/exp004_bounded_additive.yaml`; corrected HARD-v2 with explicit distractor noise 0.3 and competitor rate 0.4; delays 64 then 128; seeds 17, 29, and 43; hidden size 32; 400 Adam updates; learning rate 0.003. Bounded rule `h_t = clamp(h_{t-1} + candidate_t, -4, 4)`, with `B = 4` fixed before accuracy was collected. Python 3.11.9, PyTorch 2.13.0+cpu. Training code revision `14bdc4786549`.
+- **Baseline:** Fresh vanilla and additive models trained on the same tensors, initial weights, and minibatches as the bounded model. Frozen EXP-001 through EXP-003 files were not modified. Their hashes matched after this run.
+- **Result:** Eighteen of eighteen runs finished with finite values. No budget stop. Success means test accuracy of at least 0.95. Delay 64: vanilla 0.4961, 0.4570, 1.0000 (1 success); additive 1.0000, 1.0000, 1.0000 (3 successes); bounded 1.0000, 0.5098, 0.5195 (1 success). Delay 128 ran because additive had three delay-64 successes. Delay 128: vanilla 0.5098, 0.5039, 0.4590 (0 successes); additive 1.0000 on all three seeds; bounded 1.0000, 0.5098, 0.6289 (1 success).
+- **Retention and credit:** Additive probe R^2 stayed high on every seed. Bounded probe R^2 was 0.996 and 0.997 on seed 17 and about zero on the failed seeds, except 0.147 for delay-128 seed 43. Event sensitivity was about 1.2 to 1.7 on the bounded successes and exactly zero on the bounded failures.
+- **Clipping and magnitude:** Every bounded run was above the 1 percent clipping convention. Final test clipping fractions were about 0.71 to 0.94. Proposed states reached 5 before the clamp and stored states stopped at 4. Failed bounded states had root-mean-square size exactly 4. Additive states reached about 65 at delay 64 and about 129 at delay 128. The successful bounded runs were also heavily clipped, so clipping and failure occurring together is not treated as a cause.
+- **Interpretation:** EXPERIMENTAL RESULT, mixed and therefore inconclusive. The additive control reproduced. One bounded seed showed that a state capped at 4 can still solve the delay. The other seeds did not. This does not establish an architecture or validate the broader theory.
+- **Files:** `results/EXP-004/`.
+- **Replication:** Three seeds, one synthetic task, one fixed bound.

@@ -1,12 +1,12 @@
 # Project Status
 
-- **Current phase:** EXP-003 is complete. No adaptive-credit architecture has been built.
-- **What exists:** Frozen EXP-001, EXP-001B, and EXP-002 results, plus a bounded recurrent mixture that takes half the previous hidden state and half the usual tanh update.
-- **Environments:** Frozen EXP-001 and EXP-001B used the earlier Python 3.12 environment. EXP-002 and EXP-003 both used Python 3.11.9 and PyTorch 2.13.0+cpu. Each experiment’s conclusion uses the vanilla and altered model trained together in that experiment.
-- **Completed experiments:** EXP-001, EXP-001B, and EXP-002 result files are unchanged. EXP-003 compared the 0.5/0.5 mixture with a vanilla RNN on corrected HARD-v2 at delays 64 and 128.
-- **Latest result:** The bounded mixture stayed near chance on all three seeds at both delays. The matched vanilla model still succeeded on seed 43 at delay 64 and failed at delay 128. The bounded hidden state stayed below 1 in absolute value. The saved EXP-002 additive model had reached about 65 and 129.
-- **Credit and retention:** The bounded model did not keep a readable copy of the original bit, and the original event had almost no effect on its answer. Its one-step path was somewhat stronger than a failed vanilla step, and much weaker than the additive EXP-002 path.
+- **Current phase:** EXP-004 is complete. No further experiment is running.
+- **What exists:** Frozen EXP-001 through EXP-003 results, plus an additive RNN whose state is clamped to the fixed interval from -4 to 4.
+- **Environments:** EXP-004 used Python 3.11.9 and PyTorch 2.13.0+cpu for the vanilla, additive, and bounded models together. Training code revision `14bdc4786549`.
+- **Completed experiments:** EXP-001 through EXP-003 result files are unchanged, and their hashes still match. EXP-004 compared the three fresh models on corrected HARD-v2 at delays 64 and 128.
+- **Latest result:** The additive model scored 1.000 on all three seeds at both delays. The clamped model scored 1.000 only on seed 17 at both delays. The other clamped seeds stayed near chance, except delay-128 seed 43 at 0.629. Vanilla still had one delay-64 success and no delay-128 success.
+- **Clipping:** The clamp was active on every bounded run, including the success. Stored states stopped at 4. Additive states still grew to about 65 and 129. Failed clamped states sat entirely on the boundary. That pattern is not treated as proof that clipping caused the failures.
 - **Currently running:** Nothing.
-- **Next recommended action:** Do not start a new run yet. The next question is whether a full-strength copy can be kept while one bound, chosen before any new test, stops the state from growing with the delay. Do not retune the 0.5 weights. Do not treat EXP-003 as an architecture result.
+- **Next recommended action:** Stop. Do not change the bound of 4 from these results, and do not start another experiment until a new design is written down first.
 
-See `results/EXP-003/analysis.md`. These are small synthetic observations, not a proof of the theory.
+See `results/EXP-004/analysis.md`. This is a small synthetic result, not a proof of the theory.

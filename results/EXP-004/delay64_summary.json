@@ -1,0 +1,41 @@
+{
+  "additive_successes": 3,
+  "bound": 4.0,
+  "cells": [
+    {
+      "delay": 64,
+      "model_type": "additive_tanh_rnn",
+      "num_not_success": 0,
+      "num_numerical_or_budget_failures": 0,
+      "num_seeds": 3,
+      "num_success": 3,
+      "phase": "primary"
+    },
+    {
+      "delay": 64,
+      "model_type": "bounded_additive_tanh_rnn",
+      "num_not_success": 2,
+      "num_numerical_or_budget_failures": 0,
+      "num_seeds": 3,
+      "num_success": 1,
+      "phase": "primary"
+    },
+    {
+      "delay": 64,
+      "model_type": "vanilla_tanh_rnn",
+      "num_not_success": 2,
+      "num_numerical_or_budget_failures": 0,
+      "num_seeds": 3,
+      "num_success": 1,
+      "phase": "primary"
+    }
+  ],
+  "delay_128": "will run",
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "success_test_accuracy_at_least": 0.95,
+  "written_before_delay_128": true
+}

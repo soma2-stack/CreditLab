@@ -53,12 +53,13 @@ Registry entries describe completed experiments or plans. Every run saves its ex
 - **Files:** `configs/exp003_bounded_mixture.yaml` and `results/EXP-003/`.
 - **Follow-up:** Not run. The next question is whether a full-strength copy can be kept while a single preregistered bound stops the state from growing with the delay.
 
-## EXP-004 — Fixed-bound additive recurrence (preregistered; training not started)
+## EXP-004 — Fixed-bound additive recurrence (completed)
 
 - **Question:** Does the additive update keep its delayed-learning advantage when one fixed clamp limits hidden-state size, without shrinking the previous state on every step?
-- **Models:** Vanilla `h_t = candidate_t`; additive `h_t = h_{t-1} + candidate_t`; bounded additive `h_t = clamp(h_{t-1} + candidate_t, -4, 4)`. `B = 4` is fixed before any EXP-004 accuracy result and is not learned.
-- **Task:** Corrected HARD-v2 with the effective settings stated explicitly: independent competitor bits, competitor rate 0.4, distractor noise standard deviation 0.3. Historical YAML files are not edited.
-- **Matching:** For each seed and delay, all three models share dataset tensors, initial parameters, minibatch indices, and the training step. Fingerprints are saved.
-- **Success rule:** Final-checkpoint test accuracy at least 0.95. Delay 128 is fresh training and runs only if the additive control succeeds on at least two of three delay-64 seeds.
-- **Active clipping convention:** At least 1 percent of validation hidden coordinates are outside [-4, 4] before the clamp at the final checkpoint. The continuous fraction is always saved.
-- **Result:** Not collected. Do not interpret this entry as an outcome.
+- **Models:** Vanilla, additive `h_t = h_{t-1} + candidate_t`, and bounded additive `h_t = clamp(h_{t-1} + candidate_t, -4, 4)`. `B = 4` was fixed before any EXP-004 accuracy result.
+- **Task:** Corrected HARD-v2 with explicit noise standard deviation 0.3 and competitor rate 0.4. Historical configuration files were not edited. Three models in each seed and delay shared data, initialization, and minibatches.
+- **Rules:** Success is final test accuracy of at least 0.95. Delay 128 ran because the additive control succeeded on 3 of 3 delay-64 seeds. Active clipping means at least 1 percent of validation coordinates were outside [-4, 4] before the clamp. Python 3.11.9, PyTorch 2.13.0+cpu, training code `14bdc4786549`.
+- **Result:** Eighteen runs, zero failures. Delay-64 accuracy was vanilla 0.4961, 0.4570, 1.0000; additive 1.0000 on all three seeds; bounded 1.0000, 0.5098, 0.5195. Delay-128 accuracy was vanilla 0.5098, 0.5039, 0.4590; additive 1.0000 on all three seeds; bounded 1.0000, 0.5098, 0.6289. Bounded probe R^2 was about 0.996 and 0.997 on seed 17 and about zero on the other delay-64 seeds. Clipping fraction on the bounded test rollouts was about 0.71 to 0.94. Stored bounded states were capped at 4. Additive states reached about 65 and 129.
+- **Interpretation:** Mixed, so inconclusive. The additive control reproduced. Clipping was active even on the bounded success, so growth to 65–129 was not required for that one seed. The same bound did not succeed on the other seeds. Co-occurrence of saturation and failure is not treated as proof that clipping caused the failure. This is not an architecture result and it does not validate the broader theory.
+- **Files:** `configs/exp004_bounded_additive.yaml` and `results/EXP-004/`.
+- **Follow-up:** Not started. Do not change B from these results, and do not start another experiment from this run.

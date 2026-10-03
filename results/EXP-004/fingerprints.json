@@ -1,0 +1,104 @@
+[
+  {
+    "dataset_fingerprints": {
+      "competitor_bits": "7c337048dfc39b1fa870540ddb3313ad03eee16d7b19070245c4b3f02b753453",
+      "competitor_mask": "622f3154929b28cad5757d2845fac759e6b10e1e5b021069c424c22775f130f5",
+      "test_x": "ad28b7c8d3c36940c5e7d6c46994644a8d930dae4924db97f138babea304be94",
+      "test_y": "ddc1d45adf95f9daf4996650d20ff64f81eea8d1d56e7770a18a487bab21497f",
+      "train_x": "d7750f365f7763505c6a8da88ea68a7f21424f13cc5a22c034b62e846d060344",
+      "train_y": "a106a1296643c7d631ad7512ff89d4fb78d311333cd1e2dfd484765e26818154",
+      "val_x": "1dc2381830b722cf8997ee2bc601802c81307d106103f53e61b20c524833c0ec",
+      "val_y": "33dee6dae4fc27f57055a7b2534f542cfa97b4e50aaafc3913792371e19368dd"
+    },
+    "delay": 64,
+    "init_fingerprint": "0772181d7dd449e159c1dd83a89e3e5032a291b5964ffabb7a409ba18055bf66",
+    "minibatch_fingerprint": "2af2bb56d01dd2271e64005925963770378e2a4057847469600e0d18a20ddb5e",
+    "models_matched": true,
+    "seed": 17
+  },
+  {
+    "dataset_fingerprints": {
+      "competitor_bits": "51bd539816390bd0745456020688b97d5be982a9cc8c765a2a2115b54863228d",
+      "competitor_mask": "201a5284c987c1c66e39cdacb880902d5a8eff4c6d8c894da3e241c2e39e3bb2",
+      "test_x": "10b6daf6deabfc5a4977fa745124451575da107bdbf159fcbabdd1a22666851b",
+      "test_y": "8ab9d9c648a6cdbc20d949a23d35aa3e3c076bc422d80c926732d54d13ed8cee",
+      "train_x": "30c0b63f904aaf63d1361851934574c33ef0f0c3fede393e3163e570750d37d4",
+      "train_y": "3e56cfc60e257806ecf85bd06cffee9da92813a0c125e5b45f8c5c4dce6633a9",
+      "val_x": "41ac0ea3decc6091d13287b7f8bc7cee4cab3c22921d4b94f2eba490fc1f3240",
+      "val_y": "4dab845c479648f6fbc11a3cb6fb0fa617b7e0573c0e23d1dfa2edb57f193988"
+    },
+    "delay": 64,
+    "init_fingerprint": "71bb259e088c028a456587385b76ec6c71b1d82d2ed4e64510d27c18ab2c25a6",
+    "minibatch_fingerprint": "c1d1bf9abaf57b76c673ab31af3e8fcffb90a5b2026e4e39df9d1d7082018482",
+    "models_matched": true,
+    "seed": 29
+  },
+  {
+    "dataset_fingerprints": {
+      "competitor_bits": "c7d0964c88aec2be0853c23d6c1ad6b8e1ece98e2a88fd537991953e210134df",
+      "competitor_mask": "eebb998e64107cb0da5ff5d8a7f69bf771b5aa450b12ad20a4ea615021c26bbd",
+      "test_x": "54158ddcf8e54a495196a275ddd71c4c697b4f17bda9ede595443320e8f00fe3",
+      "test_y": "fa1615b01d99883de523528b63632f8f470be600b73bfac4c3ebdd2d4e6b02af",
+      "train_x": "1adc1cb5e0ddd05ea729973fc6c1658548c71e055441ddb861a2d9f60ef8ec05",
+      "train_y": "06341f67c1cb41ec187bce868729bf3f2f1a5bf932505eb4c02f9e0fddaf3958",
+      "val_x": "21e70dd5ac5bf785912ac5eb76fe27d79fb7d246f2ad061ca51e05b7b2dc3772",
+      "val_y": "c3965a06d60e5c1c7c6e76c69e35cf5a31e854b02de13ea943f154b4c5fa4624"
+    },
+    "delay": 64,
+    "init_fingerprint": "25139c69fb7af13589754838de6597e1c7a0d1000b4d4768e95b36d0850825ea",
+    "minibatch_fingerprint": "b32e6ede21bd41477f8579c4c064c026f406a5f34ffe53f16bb9b0714ee492d6",
+    "models_matched": true,
+    "seed": 43
+  },
+  {
+    "dataset_fingerprints": {
+      "competitor_bits": "00197a80f1ae17d40b96164fec3c0b812a75ba36f638cd3cdfdb8e5f17c97ac3",
+      "competitor_mask": "a7e271a84e7bee56e9e6983730050acc33e65c38d4bb9827a9cc88e99fdc074f",
+      "test_x": "4c3d4ec5c9a9da1ccf76d3cbbd60a662cf176ef3ffc8f016242401d3142cf8b8",
+      "test_y": "ecd8179ed3e706e85ca89c33c3b0f54a2cbfb6f6d69fdb1d1ea73a42ac573184",
+      "train_x": "6f357a9934fad4963180e58df1f7c68a9121877f651f9b7d3d007ea38cf0408b",
+      "train_y": "36a638226098027412007dbe06e30e4a48052d50bfac712a88db5a52fc1ed55c",
+      "val_x": "b35648fc1cfe85c70a3e11e1bb7b8ef3fb3a30d2887467b3935f85cb7dcb4523",
+      "val_y": "6049f919d61c31e53e174502a7b9d3dc35be37396070c3aa3d9265de98aa9cdb"
+    },
+    "delay": 128,
+    "init_fingerprint": "0772181d7dd449e159c1dd83a89e3e5032a291b5964ffabb7a409ba18055bf66",
+    "minibatch_fingerprint": "30c912a88473f1bd1f88f6128be6c64a6e1ab575f272eac1e00ea5171b5388f9",
+    "models_matched": true,
+    "seed": 17
+  },
+  {
+    "dataset_fingerprints": {
+      "competitor_bits": "71170022329f07ad30b51cb06458be265a9881578d35903dc3cb0e7a51795777",
+      "competitor_mask": "5ce4a623ec4292c51a8d029be13544405a218e7389f1e7f99454ee0dee96a1ca",
+      "test_x": "a9304a481a7d1db72a7ce76aa101b811c2681cdb92fcab15adcf642faa8f4632",
+      "test_y": "6cf9001a0810bb88d7ffdf6a86307e90f377e004a0fb2bb2680d149d9d44b514",
+      "train_x": "f8f0c66c5802aeead0cab47259478d80b47e8f71e2b96c10b05ee5f56f535ca8",
+      "train_y": "db4b02619a0a037e65b0961af438cd244c635fa10d962e1ec19e9b3f8663c157",
+      "val_x": "6c2f090fea77aa4048e2f7528d13e4aaa82fe327b875319d09e956847d349344",
+      "val_y": "38cb2374497d4001bb87d3ae7558e857790675d31a512c6eba5fa6f464998c5f"
+    },
+    "delay": 128,
+    "init_fingerprint": "71bb259e088c028a456587385b76ec6c71b1d82d2ed4e64510d27c18ab2c25a6",
+    "minibatch_fingerprint": "08862c07a632649fb24076e36125982d2a9e159225b490e477639601cc481e53",
+    "models_matched": true,
+    "seed": 29
+  },
+  {
+    "dataset_fingerprints": {
+      "competitor_bits": "4c415fab1365c50aa9279ea9c66bf530ed3181960325c30b34b62b05c5457602",
+      "competitor_mask": "fb6a5ba16e0b10a718ad42f2098f8f21398227f8a698b20127e902ffe01e8584",
+      "test_x": "23c4f6b536bfd992d43302c16801ee3f66212706521996e43cff7f7697cd6d5c",
+      "test_y": "681ada5ef7a428983cad103e0ca0a7c7780dcaeb33cfd0842fc18600b61ddb50",
+      "train_x": "9574d8509dc75b9c90841fd31ffff856f1edfe7850ea32c6ac950095c02caf20",
+      "train_y": "0270e1578b217c56e811b1d0cb9e12b6c6622e2a5572a2504845fd45fe09224b",
+      "val_x": "d27e5a1a146eff7b30f4b37d86b149e900a8b3f170bc6cee4a1b6f1a572bf8e8",
+      "val_y": "b8f5b8b3f8e459e519af9e41a94c748bebc98e0e3edf3338ac060b3dc0d1ae2a"
+    },
+    "delay": 128,
+    "init_fingerprint": "25139c69fb7af13589754838de6597e1c7a0d1000b4d4768e95b36d0850825ea",
+    "minibatch_fingerprint": "6a334efdc3e7b9d801c45f20538f0681d22921d42088c8de94280e5950a38ce4",
+    "models_matched": true,
+    "seed": 43
+  }
+]

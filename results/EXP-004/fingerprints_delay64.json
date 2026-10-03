@@ -1,0 +1,53 @@
+[
+  {
+    "dataset_fingerprints": {
+      "competitor_bits": "7c337048dfc39b1fa870540ddb3313ad03eee16d7b19070245c4b3f02b753453",
+      "competitor_mask": "622f3154929b28cad5757d2845fac759e6b10e1e5b021069c424c22775f130f5",
+      "test_x": "ad28b7c8d3c36940c5e7d6c46994644a8d930dae4924db97f138babea304be94",
+      "test_y": "ddc1d45adf95f9daf4996650d20ff64f81eea8d1d56e7770a18a487bab21497f",
+      "train_x": "d7750f365f7763505c6a8da88ea68a7f21424f13cc5a22c034b62e846d060344",
+      "train_y": "a106a1296643c7d631ad7512ff89d4fb78d311333cd1e2dfd484765e26818154",
+      "val_x": "1dc2381830b722cf8997ee2bc601802c81307d106103f53e61b20c524833c0ec",
+      "val_y": "33dee6dae4fc27f57055a7b2534f542cfa97b4e50aaafc3913792371e19368dd"
+    },
+    "delay": 64,
+    "init_fingerprint": "0772181d7dd449e159c1dd83a89e3e5032a291b5964ffabb7a409ba18055bf66",
+    "minibatch_fingerprint": "2af2bb56d01dd2271e64005925963770378e2a4057847469600e0d18a20ddb5e",
+    "models_matched": true,
+    "seed": 17
+  },
+  {
+    "dataset_fingerprints": {
+      "competitor_bits": "51bd539816390bd0745456020688b97d5be982a9cc8c765a2a2115b54863228d",
+      "competitor_mask": "201a5284c987c1c66e39cdacb880902d5a8eff4c6d8c894da3e241c2e39e3bb2",
+      "test_x": "10b6daf6deabfc5a4977fa745124451575da107bdbf159fcbabdd1a22666851b",
+      "test_y": "8ab9d9c648a6cdbc20d949a23d35aa3e3c076bc422d80c926732d54d13ed8cee",
+      "train_x": "30c0b63f904aaf63d1361851934574c33ef0f0c3fede393e3163e570750d37d4",
+      "train_y": "3e56cfc60e257806ecf85bd06cffee9da92813a0c125e5b45f8c5c4dce6633a9",
+      "val_x": "41ac0ea3decc6091d13287b7f8bc7cee4cab3c22921d4b94f2eba490fc1f3240",
+      "val_y": "4dab845c479648f6fbc11a3cb6fb0fa617b7e0573c0e23d1dfa2edb57f193988"
+    },
+    "delay": 64,
+    "init_fingerprint": "71bb259e088c028a456587385b76ec6c71b1d82d2ed4e64510d27c18ab2c25a6",
+    "minibatch_fingerprint": "c1d1bf9abaf57b76c673ab31af3e8fcffb90a5b2026e4e39df9d1d7082018482",
+    "models_matched": true,
+    "seed": 29
+  },
+  {
+    "dataset_fingerprints": {
+      "competitor_bits": "c7d0964c88aec2be0853c23d6c1ad6b8e1ece98e2a88fd537991953e210134df",
+      "competitor_mask": "eebb998e64107cb0da5ff5d8a7f69bf771b5aa450b12ad20a4ea615021c26bbd",
+      "test_x": "54158ddcf8e54a495196a275ddd71c4c697b4f17bda9ede595443320e8f00fe3",
+      "test_y": "fa1615b01d99883de523528b63632f8f470be600b73bfac4c3ebdd2d4e6b02af",
+      "train_x": "1adc1cb5e0ddd05ea729973fc6c1658548c71e055441ddb861a2d9f60ef8ec05",
+      "train_y": "06341f67c1cb41ec187bce868729bf3f2f1a5bf932505eb4c02f9e0fddaf3958",
+      "val_x": "21e70dd5ac5bf785912ac5eb76fe27d79fb7d246f2ad061ca51e05b7b2dc3772",
+      "val_y": "c3965a06d60e5c1c7c6e76c69e35cf5a31e854b02de13ea943f154b4c5fa4624"
+    },
+    "delay": 64,
+    "init_fingerprint": "25139c69fb7af13589754838de6597e1c7a0d1000b4d4768e95b36d0850825ea",
+    "minibatch_fingerprint": "b32e6ede21bd41477f8579c4c064c026f406a5f34ffe53f16bb9b0714ee492d6",
+    "models_matched": true,
+    "seed": 43
+  }
+]

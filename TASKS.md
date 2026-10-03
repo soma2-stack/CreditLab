@@ -38,9 +38,12 @@
 - [x] Compare state size with the saved EXP-002 additive residual without rerunning EXP-002.
 - [x] Leave EXP-001, EXP-001B, and EXP-002 result files unchanged.
 
-## Phase 4 — not started
+## Phase 4 — fixed-bound additive test
 
-- [ ] Write down one way to keep a full-strength residual copy while bounding state size, before looking at any new test result.
-- [ ] Only after that design is fixed, test it against the frozen EXP-003 vanilla control and the frozen EXP-002 additive result.
+- [x] Preregister B = 4, the three model equations, the 0.95 success rule, and the clipping definition before any EXP-004 accuracy result.
+- [x] Train matched vanilla, additive, and bounded-additive models at delay 64 on corrected HARD-v2, seeds 17, 29, and 43.
+- [x] Save the delay-64 summary before delay 128. Run delay 128 only because the additive control had at least two successes.
+- [x] Record accuracy, retention, early-event diagnostics, clipping before the clamp, magnitudes, and stability.
+- [x] Leave EXP-001 through EXP-003 artifacts unchanged and check their hashes.
 
-Do not start that follow-up as part of EXP-003. Do not retune the 0.5 weights.
+Do not start another experiment from EXP-004. Do not retune B.
