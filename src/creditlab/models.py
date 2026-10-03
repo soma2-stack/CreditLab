@@ -140,3 +140,50 @@ class ResidualTanhRNN(nn.Module):
         states = self.recurrent_states(sequence, hidden)
         final_hidden = states[:, -1, :].unsqueeze(0)
         return self.readout(states), final_hidden
+
+
+class BoundedMixtureTanhRNN(ResidualTanhRNN):
+    """Tanh RNN with one fixed half-and-half mix of state and candidate.
+
+    The candidate is the usual tanh update. The new state is
+
+        candidate_t = tanh(W_h h_{t-1} + W_x x_t + b)
+        h_t = previous_weight * h_{t-1} + candidate_weight * candidate_t
+
+    EXP-003 fixes both weights at 0.5 before any test result. They are not
+    learned. Hidden size matches the vanilla RNN, and the recurrent weights
+    use the same ``nn.RNN`` initialization. A zero start stays inside
+    ``[-1, 1]`` because the mix is a convex combination of the previous state
+    and a tanh value.
+    """
+
+    def __init__(
+        self,
+        input_size: int,
+        hidden_size: int,
+        output_size: int = 1,
+        previous_weight: float = 0.5,
+        candidate_weight: float = 0.5,
+    ):
+        super().__init__(input_size, hidden_size, output_size, residual_scale=1.0)
+        previous = float(previous_weight)
+        candidate = float(candidate_weight)
+        if any(value != value or value in {float("inf"), float("-inf")} for value in (previous, candidate)):
+            raise ValueError("mixture weights must be finite")
+        self.previous_weight = previous
+        self.candidate_weight = candidate
+
+    def candidate_step(
+        self, x_t: torch.Tensor, h_prev: torch.Tensor
+    ) -> tuple[torch.Tensor, torch.Tensor]:
+        """One bounded mixture step. Returns ``(new_state, candidate)``."""
+        cell = self.recurrent
+        pre = (
+            x_t.matmul(cell.weight_ih_l0.T)
+            + cell.bias_ih_l0
+            + h_prev.matmul(cell.weight_hh_l0.T)
+            + cell.bias_hh_l0
+        )
+        candidate = torch.tanh(pre)
+        state = self.previous_weight * h_prev + self.candidate_weight * candidate
+        return state, candidate

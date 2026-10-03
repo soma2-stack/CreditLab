@@ -210,12 +210,13 @@ def step_jacobian_stats(
     """Architecture-correct step gain of h_t with respect to h_{t-1}.
 
     Vanilla: diag(1 - h_t^2) @ W_h, using the real tanh state.
-    Residual: I + residual_scale * diag(1 - candidate_t^2) @ W_h.
+    Additive residual: I + residual_scale * diag(1 - candidate_t^2) @ W_h.
+    Bounded mixture: previous_weight * I + candidate_weight * diag(1 - candidate_t^2) @ W_h.
     Spectral norm is the largest gain at each sampled step, then averaged
     across steps the same way as the older contraction proxy. Minimum singular
     value is averaged across the sampled examples and then across steps.
     """
-    from creditlab.models import ResidualTanhRNN
+    from creditlab.models import BoundedMixtureTanhRNN, ResidualTanhRNN
 
     times = _sampled_step_times(inputs.shape[1], num_steps)
     if not times:
@@ -223,7 +224,7 @@ def step_jacobian_stats(
     n = min(64, inputs.shape[0])
     spectral_values = []
     min_values = []
-    if isinstance(model, ResidualTanhRNN):
+    if isinstance(model, (BoundedMixtureTanhRNN, ResidualTanhRNN)):
         weight = model.recurrent.weight_hh_l0
         eye = torch.eye(model.hidden_size, device=inputs.device, dtype=inputs.dtype)
         h = model._initial_state(inputs.shape[0], None, inputs.device, inputs.dtype)
@@ -231,8 +232,14 @@ def step_jacobian_stats(
         for t in range(inputs.shape[1]):
             h, candidate = model.candidate_step(inputs[:, t, :], h)
             if t in wanted:
-                gate = model.residual_scale * (1.0 - candidate[:n] ** 2)
-                jac = eye + gate.unsqueeze(2) * weight.unsqueeze(0)
+                shrink = 1.0 - candidate[:n] ** 2
+                if isinstance(model, BoundedMixtureTanhRNN):
+                    jac = model.previous_weight * eye + (
+                        model.candidate_weight * shrink
+                    ).unsqueeze(2) * weight.unsqueeze(0)
+                else:
+                    gate = model.residual_scale * shrink
+                    jac = eye + gate.unsqueeze(2) * weight.unsqueeze(0)
                 spectral, minimum = _singular_summaries(jac)
                 spectral_values.append(spectral)
                 min_values.append(minimum)
