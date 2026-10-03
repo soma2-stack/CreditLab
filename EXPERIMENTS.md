@@ -74,3 +74,12 @@ Registry entries describe completed experiments or plans. Every run saves its ex
 - **Interpretation:** EXPERIMENTAL RESULT. Zero local sensitivity agreed with no finite change for some bounded failures, and missed a real finite change for part of bounded seed 43 at delay 128. Failed bounded models did not all forget in the same way. This is not an architecture result and it does not validate the broader theory.
 - **Files:** `configs/exp005_counterfactual_audit.yaml` and `results/EXP-005/`.
 - **Follow-up:** Not started.
+
+## EXP-006 — Fresh-seed replication (preregistered; training not started)
+
+- **Question:** How consistently do the unchanged additive and B=4 bounded models learn delayed memory across ten new seeds and fresh datasets, compared with matched vanilla controls?
+- **Seeds:** 101, 113, 127, 139, 151, 163, 179, 191, 211, 223. Data base seed 2000. These are not pooled with seeds 17, 29, and 43.
+- **Models:** The EXP-004 vanilla, additive, and bounded-additive equations. `B` stays 4.
+- **Gate:** Fresh delay-128 training runs only if the additive model succeeds on at least 8 of 10 delay-64 seeds. Success is final test accuracy of at least 0.95.
+- **Budget:** Five minutes per training run and 15 minutes total for training plus the bit-flip audit.
+- **Result:** Not collected.
