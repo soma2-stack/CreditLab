@@ -94,6 +94,11 @@ def competitor_conditioned_accuracy(
     first_bits = competitor_bits.gather(1, first_idx[:, None]).squeeze(1)
     agrees = first_bits == targets
     result: dict[str, float | int | None] = {}
+    result["competitor_first_bit_count"] = int(has_competitor.sum())
+    result["competitor_first_bit_agreement_rate"] = (
+        float(agrees[has_competitor].float().mean())
+        if bool(has_competitor.any()) else None
+    )
     for name, selected in (
         ("agree", has_competitor & agrees),
         ("disagree", has_competitor & ~agrees),

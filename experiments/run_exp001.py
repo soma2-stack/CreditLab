@@ -232,6 +232,7 @@ def aggregate(records: list[dict], cfg: dict) -> dict:
         "event_loss_gradient_norm_mean", "event_loss_gradient_norm_median",
         "event_loss_gradient_norm_p95", "competitor_agree_accuracy",
         "competitor_disagree_accuracy", "competitor_none_accuracy",
+        "competitor_first_bit_agreement_rate",
         "retention_probe_r2", "jacobian_spectral_norm", "grad_clip_fraction",
         "runtime_seconds",
     ]
@@ -244,8 +245,13 @@ def aggregate(records: list[dict], cfg: dict) -> dict:
             if vals:
                 mean = sum(vals) / len(vals)
                 var = sum((v - mean) ** 2 for v in vals) / max(len(vals) - 1, 1) if len(vals) > 1 else 0.0
-                row[f"{name}_mean"] = round(mean, 6)
-                row[f"{name}_std"] = round(math.sqrt(var), 6)
+                summary_name = {
+                    "event_loss_gradient_norm_mean": "event_loss_gradient_mean_per_run",
+                    "event_loss_gradient_norm_median": "event_loss_gradient_median_per_run",
+                    "event_loss_gradient_norm_p95": "event_loss_gradient_p95_per_run",
+                }.get(name, name)
+                row[f"{summary_name}_mean"] = round(mean, 6)
+                row[f"{summary_name}_std"] = round(math.sqrt(var), 6)
             else:
                 row[f"{name}_mean"] = None
                 row[f"{name}_std"] = None
