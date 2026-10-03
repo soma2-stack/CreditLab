@@ -240,7 +240,7 @@ def aggregate(records: list[dict], cfg: dict) -> dict:
         row = {"delay": delay, "mode": mode, "num_seeds": len(recs),
                "num_ok": len(ok), "num_failed": len(recs) - len(ok)}
         for name in metric_names:
-            vals = [r[name] for r in ok if name in r]
+            vals = [r[name] for r in ok if name in r and r[name] is not None]
             if vals:
                 mean = sum(vals) / len(vals)
                 var = sum((v - mean) ** 2 for v in vals) / max(len(vals) - 1, 1) if len(vals) > 1 else 0.0
