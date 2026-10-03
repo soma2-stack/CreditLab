@@ -30,9 +30,17 @@
 - [x] Leave EXP-001 and EXP-001B result files unchanged.
 - [x] Record that those frozen runs used the unrecovered Python 3.12 environment, and that EXP-002 conclusions use the vanilla and residual runs from the same Python 3.11 / PyTorch 2.13 process.
 
-## Phase 3 — not started
+## Phase 3 — bounded mixture test
 
-- [ ] Write down one bounded version of the same residual copy before looking at any new test result.
-- [ ] Only after that design is fixed, test it at delay 64 on HARD-v2 against the frozen EXP-002 vanilla and scale-1 results.
+- [x] Preregister one change: a fixed 0.5/0.5 mix of the previous state and the tanh candidate, chosen before any EXP-003 test result.
+- [x] Train the vanilla RNN and the bounded mixture on corrected HARD-v2 at delays 64 and 128, with seeds 17, 29, and 43 and the EXP-002 training budget.
+- [x] Record accuracy, loss, retention, credit diagnostics, hidden-state size, and numerical stability.
+- [x] Compare state size with the saved EXP-002 additive residual without rerunning EXP-002.
+- [x] Leave EXP-001, EXP-001B, and EXP-002 result files unchanged.
 
-Do not start that follow-up as part of EXP-002. Do not retune the scale of 1.
+## Phase 4 — not started
+
+- [ ] Write down one way to keep a full-strength residual copy while bounding state size, before looking at any new test result.
+- [ ] Only after that design is fixed, test it against the frozen EXP-003 vanilla control and the frozen EXP-002 additive result.
+
+Do not start that follow-up as part of EXP-003. Do not retune the 0.5 weights.

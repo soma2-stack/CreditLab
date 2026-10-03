@@ -39,3 +39,14 @@ Chronological record. Append new entries; never overwrite old results. Distingui
 - **Deviations:** HARD-v2 still uses the EXP-001B generator, including its 0.3 distractor noise. EXP-002 could not use the original Python 3.12 interpreter, so both of its models used Python 3.11.9 and PyTorch 2.13.0+cpu. The residual scale was not changed after looking at test accuracy. No extra rerun was needed, because vanilla and residual were already environment-matched.
 - **Files:** `results/EXP-002/analysis.md`, `raw_metrics.jsonl`, `summary.csv`, `summary.json`, `primary_delay64_summary.json`, `config_used.yaml`, and `environment.txt`.
 - **Replication:** Three seeds, one synthetic task, one fixed scale.
+
+## 2026-10-03 — EXP-003 bounded half-and-half mixture
+
+- **Experiment ID:** EXP-003.
+- **Configuration:** `configs/exp003_bounded_mixture.yaml`; corrected HARD-v2; delays 64 then 128; seeds 17, 29, and 43; hidden size 32; 400 Adam updates; learning rate 0.003; batch size 64; 1,536 / 512 / 512 examples. Mixture `h_t = 0.5 h_{t-1} + 0.5 candidate_t`, fixed before the run and not tuned. Python 3.11.9, PyTorch 2.13.0+cpu. Code revision `ec69be58e3c8`.
+- **Baseline:** Vanilla tanh RNN trained in that same process. Frozen EXP-001, EXP-001B, and EXP-002 result files were not modified. EXP-002 was not rerun. Its saved additive state sizes were copied for comparison.
+- **Result:** Twelve of twelve runs finished with finite values in 111.9 seconds. Delay-64 vanilla accuracy was 0.4961, 0.4570, and 1.0000. Bounded accuracy was 0.5293, 0.4805, and 0.4688. Delay-128 vanilla accuracy was 0.5098, 0.5039, and 0.4590. Bounded accuracy was 0.4902, 0.5098, and 0.4805. Bounded probe R^2 stayed near zero. Largest absolute hidden entries on the bounded model were about 0.41–0.83. The saved EXP-002 additive model reached about 65 at delay 64 and about 129 at delay 128.
+- **Credit and stability:** Bounded event sensitivity and loss gradients stayed near zero on runs that had not solved the task. The smallest one-step gain was about 0.07–0.21, above the failed vanilla values and below the additive EXP-002 range of about 0.7–0.9. No bounded run was gradient-clipped. No NaN or Inf.
+- **Interpretation:** EXPERIMENTAL RESULT. The EXP-002 advantage did not survive this bound. The half-and-half path kept state size controlled and did not preserve delayed memory better than the matched vanilla RNN. Because a factor of 0.5 also fades across 64 steps, this does not prove that magnitude alone caused EXP-002. It does not establish an architecture or prove the broader theory.
+- **Files:** `results/EXP-003/analysis.md`, `raw_metrics.jsonl`, `summary.csv`, `summary.json`, `primary_delay64_summary.json`, `exp002_magnitude_reference.json`, `config_used.yaml`, and `environment.txt`.
+- **Replication:** Three seeds, one synthetic task, one fixed mixture.

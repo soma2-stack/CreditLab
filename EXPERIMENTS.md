@@ -37,11 +37,23 @@ Registry entries describe completed experiments or plans. Every run saves its ex
 - **Result:** At delay 64, vanilla accuracies were 0.4961, 0.4570, and 1.0000. Residual accuracies were 1.0000, 1.0000, and 1.0000. Residual probe R^2 was about 0.98 on every seed; vanilla probe R^2 was near zero on the two failures and 0.995 on the success. At delay 128, vanilla accuracies were 0.5098, 0.5039, and 0.4590; residual accuracies were 1.0000 on all three seeds.
 - **Interpretation:** Outcome A against the matched Python 3.11 vanilla control. The direct path made success and retention reliable, and the smallest step-to-step gain stayed near 0.7–0.9 instead of near 0. The loss gradient stayed small because the residual answers were already correct. The residual state also grew to about one unit per step, so state size changed along with the path. This does not prove the broader theory or establish an architecture. Frozen-file differences are not part of this conclusion.
 - **Files:** `configs/exp002_residual_recurrent.yaml` and `results/EXP-002/`.
-- **Follow-up:** Not run. The next experiment should test one preregistered bounded version of this same skip, so a direct path can be separated from unbounded state growth.
+- **Follow-up:** EXP-003 tested one fixed half-and-half mixture. EXP-002 files were not changed.
 
-## EXP-003 — Next mechanism check (unstarted)
+## EXP-003 — Bounded half-and-half mixture (completed)
 
-- **Question:** Does one bounded version of the same residual copy still make delay-64 HARD-v2 success reliable when the hidden state cannot grow with the delay?
-- **Baseline:** Frozen EXP-002 vanilla and scale-1 residual results. Do not retune the scale-1 weight.
-- **Change tested:** Not selected yet. One bound must be written down before any new test result.
-- **Result:** Not run. Do not start it from the EXP-002 run automatically.
+- **Question:** Did EXP-002’s direct path help because it preserves information through time, or did that result depend on hidden-state magnitude growing much larger?
+- **Hypothesis:** A fixed mix, `h_t = 0.5 h_{t-1} + 0.5 candidate_t`, keeps a direct path while preventing additive growth. If it still beats the matched vanilla RNN, the direct path itself is useful here. If it does not, magnitude or the additive update was an important part of EXP-002.
+- **Baseline:** Vanilla tanh RNN trained in the same Python 3.11.9 / PyTorch 2.13.0+cpu process. Same hidden size, data, optimizer, learning rate, update budget, seeds, and diagnostics as EXP-002.
+- **Change tested:** One bounded mixture with both weights fixed at 0.5 before any EXP-003 test result. No second mechanism. EXP-002 was not rerun; its saved state sizes were copied for comparison.
+- **Dataset/task:** Corrected HARD-v2. Delays 64 and 128. Seeds 17, 29, and 43.
+- **Rules locked beforehand:** Success is test accuracy of at least 0.75. Readable retention is probe R^2 of at least 0.5. Controlled magnitude is a largest absolute hidden entry of at most 1.01.
+- **Seeds / compute:** 12 runs, 0 numerical failures, 111.9 seconds. Code revision `ec69be58e3c8`. Weights were not tuned.
+- **Result:** Delay-64 vanilla accuracies were 0.4961, 0.4570, and 1.0000. Bounded accuracies were 0.5293, 0.4805, and 0.4688. Delay-128 vanilla accuracies were 0.5098, 0.5039, and 0.4590. Bounded accuracies were 0.4902, 0.5098, and 0.4805. Bounded probe R^2 stayed near zero. Largest absolute hidden values stayed between about 0.41 and 0.83, versus about 65 and 129 for the saved EXP-002 additive model.
+- **Interpretation:** The EXP-002 advantage did not survive this bound. The half-and-half model kept state size controlled and did not preserve the bit or beat the matched vanilla model at either delay. A factor of 0.5 each step also fades a pure copy of the original state, so this does not isolate magnitude from a full-strength copy. It does not prove the broader theory or establish an architecture.
+- **Files:** `configs/exp003_bounded_mixture.yaml` and `results/EXP-003/`.
+- **Follow-up:** Not run. The next question is whether a full-strength copy can be kept while a single preregistered bound stops the state from growing with the delay.
+
+## EXP-004 — Not started
+
+- **Question:** Can one fixed bound keep a full-strength residual copy from growing with delay and still preserve delayed memory on HARD-v2?
+- **Result:** Not run. Do not start it from EXP-003 automatically.

@@ -1,0 +1,8 @@
+Python: 3.11.9
+PyTorch: 2.13.0+cpu
+CPU architecture: AMD64
+Recorded training code revision: ec69be58e3c8
+All runs used CPU.
+Both vanilla and bounded-mixture models used this same process.
+Mixture weights 0.5 and 0.5 were fixed before these runs and were not tuned.
+EXP-002 was not rerun. Its saved magnitudes are copied only as a reference.
