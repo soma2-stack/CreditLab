@@ -8,16 +8,22 @@
 - [x] Add a small experiment JSONL logger.
 - [x] Add a tiny vanilla RNN baseline module.
 - [x] Add quick foundation tests and run them on CPU.
-- [ ] Review dependency setup on a clean environment.
+- [ ] Check installation in a clean environment.
 
-## Phase 1 — detect delayed learning credit
+## Phase 1 — vanilla-RNN baseline review
 
-- [ ] Implement the synthetic delayed-bit task with controllable delay and distractor difficulty.
-- [ ] Train the tiny standard RNN baseline using the frozen EXP-001 config.
-- [ ] Measure loss/accuracy and gradient magnitude as a function of delay.
-- [ ] Measure relevant hidden-state retention and simple recurrent contraction indicators.
-- [ ] Define and evaluate simple credit-difficulty signals without using task IDs.
-- [ ] Review whether the baseline results justify a minimal adaptive-credit prototype.
-- [ ] If justified, compare that prototype with matched standard-RNN and truncated-credit baselines.
+- [x] Implement the synthetic delayed-bit generator and original EASY/HARD tasks.
+- [x] Complete and freeze EXP-001; preserve its results.
+- [x] Diagnose whether HARD competitors correlate with the target.
+- [x] Add corrected HARD-v2 with independent competitor bits.
+- [x] Add competitor-conditioned accuracy and per-example early-event loss-gradient diagnostics.
+- [x] Re-run EASY, original HARD, and HARD-v2 at delays 16, 32, 64, 128, and 256 with seeds 17, 29, and 43.
+- [x] Review hidden-state retention, early-event sensitivity, loss gradients, and seed variation.
+- [x] Document EXP-001 and EXP-001B separately.
 
-No large-scale training is scheduled.
+## Phase 2 — next experiment design only
+
+- [ ] Preregister one small EXP-002 comparing the vanilla baseline with a simple way to send learning feedback to the original event, at delay 64 on HARD-v2.
+- [ ] Implement or run EXP-002 only after that design is reviewed.
+
+No EXP-002 run or new architecture is part of this work.

@@ -1,0 +1,7 @@
+Python: 3.12.14
+PyTorch: 2.14.1+cpu
+PyYAML: 6.0.3
+CPU architecture: x86_64
+Recorded training code revision: acd8bf3987f5
+Summary-only robustness fix: dad1a74
+All runs used CPU. NumPy was unavailable; the runner does not use NumPy.
