@@ -1,0 +1,3 @@
+Python: 3.11.9
+PyTorch: 2.13.0+cpu
+Required before EXP-007 training.

@@ -84,4 +84,13 @@ Registry entries describe completed experiments or plans. Every run saves its ex
 - **Audit:** Models that reached 0.95 accuracy also passed the bit-flip check. Some bounded misses still changed state on part of the pairs despite a recorded bit gradient of 0.0, notably delay-64 seed 139. Other bounded misses had exactly identical final states.
 - **Interpretation:** EXPERIMENTAL RESULT. Additive success repeated on every new seed. Bounded success is not confined to the old seed 17, and it was less reliable than additive in the paired comparison. Ten seeds leave a wide interval. This is not an architecture result and it does not validate the broader theory.
 - **Files:** `configs/exp006_replication.yaml` and `results/EXP-006/`.
-- **Follow-up:** Not started. Do not tune B and do not start another experiment from this run.
+- **Follow-up:** Not started.
+
+## EXP-007 — Readout-only versus full training (preregistered; training not started)
+
+- **Question:** Does the additive model's delayed-memory success require learning its recurrent weights, or can the initial recurrent dynamics support the task when only the readout is trained?
+- **Regimes:** Full training of all parameters, and readout-only training that freezes the input and recurrent weights at initialization. `B` stays 4. No new forward architecture.
+- **Seeds:** The EXP-006 cohort, 101 through 223, with data base seed 2000. Full-training runs inside EXP-007 are fresh controls and are not pooled with EXP-006.
+- **Gate:** Fresh delay-128 training runs only if full-training additive succeeds on at least 8 of 10 delay-64 seeds. Readout-only results do not control that gate.
+- **Budget:** Five minutes per run and 20 minutes total for training plus the bit-flip audit.
+- **Result:** Not collected.
