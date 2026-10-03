@@ -22,18 +22,26 @@ Registry entries describe completed experiments or plans. Every run saves its ex
 - **Result:** Original HARD competitors agree with the target about 75% of the time, versus about 50% in HARD-v2. At delay 256, mean accuracy is 0.723 on original HARD and 0.491 on HARD-v2. EASY and HARD-v2 show a one-success/two-failure split at delay 64.
 - **Interpretation:** The original HARD long-delay advantage is partly a shortcut. Failed EASY/HARD-v2 runs generally lack a linearly readable target in the final hidden state, and have very small early-event sensitivity and loss gradients. Loss gradients can also be small on already-correct examples, so they are not a standalone failure detector.
 - **Files:** Frozen config at `configs/exp001b_hard_shortcut_credit.yaml`; raw and aggregated records plus analysis under `results/EXP-001B/`.
-- **Follow-up:** Design only, not run: test whether one simple way to send learning feedback to the original event helps at delay 64 on corrected HARD-v2.
+- **Follow-up:** EXP-002 tested one fixed residual state path on HARD-v2. EXP-001B files were not changed.
 
-## EXP-002 — Focused early-event feedback test (proposed; not run)
+## EXP-002 — Fixed residual recurrent path (completed)
 
-- **Question:** At delay 64 on HARD-v2, does a simple additional learning signal to the original event improve success across seeds over the matched vanilla RNN?
-- **Baseline:** EXP-001B vanilla RNN on HARD-v2, using seeds 17, 29, and 43.
-- **Change tested:** To be selected and preregistered as one minimal intervention; no architecture or implementation has been selected.
-- **Metrics:** Test accuracy, original-event hidden-state retention, event sensitivity, and per-example loss-gradient norm.
-- **Stopping / compute:** Freeze after the design is reviewed; match EXP-001B training settings and CPU budget.
-- **Result:** Not run.
+- **Question:** Does a direct residual copy through recurrent state make success at delay 64 on corrected HARD-v2 more reliable across seeds than the vanilla tanh RNN?
+- **Hypothesis:** The vanilla failure happens because state and learning signal must repeatedly pass through the tanh recurrent map. A fixed identity skip around that map should make delay-64 success more reliable.
+- **Baseline:** The same vanilla tanh RNN, hidden size 32, Adam settings, data sizes, seeds 17, 29, and 43, and diagnostics as EXP-001B. The vanilla arm was retrained in this run; frozen EXP-001 and EXP-001B files were not changed.
+- **Change tested:** One residual recurrence, `h_t = h_{t-1} + candidate_t`, with fixed scale 1.0 chosen before any EXP-002 test result. Same parameter count and initialization family. No LSTM, GRU, attention, external memory, or extra labels.
+- **Dataset/task:** Corrected HARD-v2 only, through the unchanged EXP-001B generator. Primary delay 64. Confirmation delay 128 only after the delay-64 records were saved.
+- **Metrics:** Test accuracy, train and validation loss, hidden-state retention probe, event sensitivity, per-example loss gradient, step-to-step gain, and numerical stability. Residual runs also record the size of the tanh candidate and the hidden state.
+- **Success rule, locked beforehand:** Accuracy of at least 0.75 counts as success. Probe R^2 of at least 0.5 counts as clearly readable retention.
+- **Seeds / compute:** 17, 29, and 43; 400 updates; 12 runs; 0 numerical failures; 64.7 seconds wall time. Python 3.11.9, PyTorch 2.13.0+cpu. Code revision `b17fa60c8e3c`. The scale was not tuned.
+- **Result:** At delay 64, vanilla accuracies were 0.4961, 0.4570, and 1.0000. Residual accuracies were 1.0000, 1.0000, and 1.0000. Residual probe R^2 was about 0.98 on every seed; vanilla probe R^2 was near zero on the two failures and 0.995 on the success. At delay 128, vanilla accuracies were 0.5098, 0.5039, and 0.4590; residual accuracies were 1.0000 on all three seeds.
+- **Interpretation:** Outcome A for this task. The direct path made success and retention reliable, and the smallest step-to-step gain stayed near 0.7–0.9 instead of near 0. The loss gradient stayed small because the residual answers were already correct. The residual state also grew to about one unit per step, so state size changed along with the path. This does not prove the broader theory or establish an architecture.
+- **Files:** `configs/exp002_residual_recurrent.yaml` and `results/EXP-002/`.
+- **Follow-up:** Not run. The next experiment should test one preregistered bounded version of this same skip, so a direct path can be separated from unbounded state growth.
 
-## EXP-003 — Minimal adaptive-credit prototype (unstarted)
+## EXP-003 — Next mechanism check (unstarted)
 
-- **Question / design:** Not yet specified. Do not begin until a focused EXP-002 result justifies it.
-- **Result:** Not run.
+- **Question:** Does one bounded version of the same residual copy still make delay-64 HARD-v2 success reliable when the hidden state cannot grow with the delay?
+- **Baseline:** Frozen EXP-002 vanilla and scale-1 residual results. Do not retune the scale-1 weight.
+- **Change tested:** Not selected yet. One bound must be written down before any new test result.
+- **Result:** Not run. Do not start it from the EXP-002 run automatically.
