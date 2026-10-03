@@ -187,3 +187,55 @@ class BoundedMixtureTanhRNN(ResidualTanhRNN):
         candidate = torch.tanh(pre)
         state = self.previous_weight * h_prev + self.candidate_weight * candidate
         return state, candidate
+
+
+class BoundedAdditiveTanhRNN(ResidualTanhRNN):
+    """Additive tanh RNN with one fixed clamp on the proposed state.
+
+    The candidate and the sum are the EXP-002 additive update. The stored
+    state is that sum clamped to a fixed interval:
+
+        candidate_t = tanh(W_h h_{t-1} + W_x x_t + b)
+        proposed_t = h_{t-1} + candidate_t
+        h_t = clamp(proposed_t, min=-bound, max=bound)
+
+    ``bound`` is a fixed number, not a learned parameter. The clamp uses
+    ordinary autograd, so the local gradient is zero on coordinates that
+    land outside the interval. Hidden size and trainable parameters match
+    the additive RNN.
+    """
+
+    def __init__(
+        self,
+        input_size: int,
+        hidden_size: int,
+        output_size: int = 1,
+        bound: float = 4.0,
+    ):
+        super().__init__(input_size, hidden_size, output_size, residual_scale=1.0)
+        limit = float(bound)
+        if limit != limit or limit in {float("inf"), float("-inf")} or limit <= 0:
+            raise ValueError("bound must be a positive finite number")
+        self.bound = limit
+
+    def step_parts(
+        self, x_t: torch.Tensor, h_prev: torch.Tensor
+    ) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
+        """Return ``(clamped_state, candidate, proposed_before_clamp)``."""
+        cell = self.recurrent
+        pre = (
+            x_t.matmul(cell.weight_ih_l0.T)
+            + cell.bias_ih_l0
+            + h_prev.matmul(cell.weight_hh_l0.T)
+            + cell.bias_hh_l0
+        )
+        candidate = torch.tanh(pre)
+        proposed = h_prev + candidate
+        state = proposed.clamp(-self.bound, self.bound)
+        return state, candidate, proposed
+
+    def candidate_step(
+        self, x_t: torch.Tensor, h_prev: torch.Tensor
+    ) -> tuple[torch.Tensor, torch.Tensor]:
+        state, candidate, _proposed = self.step_parts(x_t, h_prev)
+        return state, candidate

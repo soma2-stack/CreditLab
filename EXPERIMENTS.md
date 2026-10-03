@@ -53,7 +53,12 @@ Registry entries describe completed experiments or plans. Every run saves its ex
 - **Files:** `configs/exp003_bounded_mixture.yaml` and `results/EXP-003/`.
 - **Follow-up:** Not run. The next question is whether a full-strength copy can be kept while a single preregistered bound stops the state from growing with the delay.
 
-## EXP-004 — Not started
+## EXP-004 — Fixed-bound additive recurrence (preregistered; training not started)
 
-- **Question:** Can one fixed bound keep a full-strength residual copy from growing with delay and still preserve delayed memory on HARD-v2?
-- **Result:** Not run. Do not start it from EXP-003 automatically.
+- **Question:** Does the additive update keep its delayed-learning advantage when one fixed clamp limits hidden-state size, without shrinking the previous state on every step?
+- **Models:** Vanilla `h_t = candidate_t`; additive `h_t = h_{t-1} + candidate_t`; bounded additive `h_t = clamp(h_{t-1} + candidate_t, -4, 4)`. `B = 4` is fixed before any EXP-004 accuracy result and is not learned.
+- **Task:** Corrected HARD-v2 with the effective settings stated explicitly: independent competitor bits, competitor rate 0.4, distractor noise standard deviation 0.3. Historical YAML files are not edited.
+- **Matching:** For each seed and delay, all three models share dataset tensors, initial parameters, minibatch indices, and the training step. Fingerprints are saved.
+- **Success rule:** Final-checkpoint test accuracy at least 0.95. Delay 128 is fresh training and runs only if the additive control succeeds on at least two of three delay-64 seeds.
+- **Active clipping convention:** At least 1 percent of validation hidden coordinates are outside [-4, 4] before the clamp at the final checkpoint. The continuous fraction is always saved.
+- **Result:** Not collected. Do not interpret this entry as an outcome.
