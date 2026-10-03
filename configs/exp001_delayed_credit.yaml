@@ -1,0 +1,36 @@
+# EXP-001 design config; no run has been made with this file.
+experiment_id: EXP-001
+status: design_only
+seed: [17, 29, 43]
+device: cpu
+model:
+  type: vanilla_tanh_rnn
+  input_size: 3
+  hidden_size: 32
+  output_size: 1
+task:
+  type: delayed_marked_bit
+  delay_steps: [1, 4, 16, 64]
+  distractor_noise_std: [0.0, 0.5]
+  bit_values: [-1.0, 1.0]
+  terminal_query_marker: true
+training:
+  optimizer: Adam
+  learning_rate: 0.001
+  batch_size: 64
+  max_updates: 1000
+  loss: binary_cross_entropy_with_logits
+metrics:
+  - terminal_loss
+  - accuracy_by_delay_and_difficulty
+  - input_event_gradient_norm_by_age
+  - hidden_state_bit_decodability
+  - recurrent_jacobian_contraction_proxy
+budget:
+  max_cpu_minutes_per_seed_config: 5
+  stop_on_nan_or_inf: true
+  no_automatic_budget_expansion: true
+notes:
+  - Baseline characterization only; no adaptive-credit mechanism in EXP-001.
+  - Train/validation/test generation must be deterministic from recorded seeds.
+  - Any training-step change requires a new config revision before a run.
