@@ -231,10 +231,13 @@ def test_failure_is_recorded_not_raised(monkeypatch):
     real_make_split = run_exp001.make_split
 
     def poisoned(num_samples, delay, mode, **kwargs):
-        x, y = real_make_split(num_samples, delay, mode, **kwargs)
+        result = real_make_split(num_samples, delay, mode, **kwargs)
+        x, y = result[0], result[1]
         if kwargs.get("split_index", 0) == 0:
             x = x.clone()
             x[0, 0, 0] = float("nan")  # event bit poisoned -> NaN propagates
+        if kwargs.get("return_metadata"):
+            return x, y, result[2]
         return x, y
 
     monkeypatch.setattr(run_exp001, "make_split", poisoned)
