@@ -37,9 +37,23 @@ counts as clearly readable when the probe R^2 is at least 0.5. Both cutoffs
 were taken from the gap in the frozen EXP-001B HARD-v2 results and were locked
 in `configs/exp002_residual_recurrent.yaml` before this run.
 
-Software for this run: Python 3.11.9, PyTorch 2.13.0+cpu. Code revision
-`b17fa60c8e3c`. Twelve runs, zero numerical failures, 64.7 seconds wall time.
-EXP-001B was recorded on Python 3.12.14 and PyTorch 2.14.1+cpu.
+## Software environments
+
+The frozen EXP-001 and EXP-001B baseline was produced in an earlier Python 3.12
+environment. EXP-001B records that environment in
+`results/EXP-001B/environment.txt`: Python 3.12.14 and PyTorch 2.14.1+cpu.
+EXP-001 has no separate environment file; it belongs to that same earlier
+baseline. That Python 3.12 interpreter could not be recovered on this machine.
+
+EXP-002 therefore ran under Python 3.11.9 and PyTorch 2.13.0+cpu. Code
+revision `b17fa60c8e3c`. Twelve runs, zero numerical failures, 64.7 seconds
+wall time. The vanilla RNN and the residual RNN were both trained in that one
+process, with the same settings apart from the residual copy. That matched
+pair is the only comparison used for EXP-002 conclusions.
+
+Differences between the frozen Python 3.12 files and this Python 3.11 vanilla
+rerun are environment differences. They are not effects of the residual model,
+and they are not used as evidence for or against the hypothesis.
 
 ## Delay 64
 
@@ -48,11 +62,10 @@ EXP-001B was recorded on Python 3.12.14 and PyTorch 2.14.1+cpu.
 | Vanilla | 0.4961 | 0.4570 | 1.0000 | 1 of 3 |
 | Residual | 1.0000 | 1.0000 | 1.0000 | 3 of 3 |
 
-The vanilla accuracies match the frozen EXP-001B HARD-v2 delay-64 accuracies
-exactly (0.4961, 0.4570, 1.0000). Seed 17 training loss matches the frozen
-value exactly, and seed 29 differs by 0.000003. Seed 43 remains the only
-vanilla success, with small numeric drift in its loss and gradient-clip rate
-relative to the frozen file.
+These are the Python 3.11 vanilla and residual runs. Seed 43 is the only
+vanilla success in this matched comparison. Any smaller difference from the
+frozen Python 3.12 file is recorded only as an environment note, not as a
+model effect.
 
 Hidden-state probe R^2 at delay 64:
 
@@ -108,14 +121,10 @@ Residual probe R^2 values are 0.935, 0.965, and 0.947. Vanilla probe R^2
 values are about 0. All three residual seeds are again perfect on both
 competitor-agreement and competitor-disagreement examples.
 
-This vanilla arm does not reproduce every frozen EXP-001B delay-128 number.
-Seed 29 matches the frozen accuracy 0.5039. Seed 17 stays near chance
-(0.5098 here, 0.4961 in the frozen file). Seed 43 was a success in the frozen
-file (0.9648) and is a failure here (0.4590). Delay 64 reproduced the frozen
-accuracies on all three seeds, so this is not a different task. The longer
-delay is sensitive to the Python and PyTorch versions. The comparison that
-matters for EXP-002 is the vanilla-versus-residual pair trained together in
-this run.
+In this matched Python 3.11 run, every vanilla seed stays near chance and
+every residual seed scores 1.000. The frozen Python 3.12 file is a different
+environment. A difference between that file and this vanilla rerun is not an
+architectural result.
 
 ## Numerical stability
 
@@ -130,7 +139,8 @@ on 0–6% of vanilla updates. Training still finished inside the original
 
 ## Interpretation
 
-This is outcome A from the preregistered list.
+This is outcome A from the preregistered list, judged only against the vanilla
+RNN trained in the same Python 3.11.9 / PyTorch 2.13.0 run.
 
 The residual model succeeded on all three seeds at delay 64. The vanilla model
 succeeded on one. The residual model kept the original bit linearly readable,

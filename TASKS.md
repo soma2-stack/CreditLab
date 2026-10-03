@@ -28,6 +28,7 @@
 - [x] After those runs were saved, repeat the same pair at delay 128.
 - [x] Record accuracy, loss, retention, event sensitivity, loss gradient, step gain, and numerical stability.
 - [x] Leave EXP-001 and EXP-001B result files unchanged.
+- [x] Record that those frozen runs used the unrecovered Python 3.12 environment, and that EXP-002 conclusions use the vanilla and residual runs from the same Python 3.11 / PyTorch 2.13 process.
 
 ## Phase 3 — not started
 
