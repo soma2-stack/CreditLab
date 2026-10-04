@@ -161,3 +161,11 @@ Registry entries describe completed experiments or plans. Every run saves its ex
 - **Interpretation:** DIAGNOSTIC RESULT, outcome C. Untrained dynamics are already enough on some seeds under this readout, and learning still improves the others. Final-16 learning produced that improvement without a training gradient back to the original event. This does not validate the broader theory.
 - **Files:** `configs/exp013_initialized_readout.yaml` and `results/EXP-013/`.
 - **Follow-up:** Not started. Do not train recurrent weights, do not tune C, and do not start EXP-014.
+
+## EXP-014 — Independent replication of representation versus readout (preregistered; not started)
+
+- **Question:** At delay 128, on ten new seeds, does final-16 training again produce states that a separate linear classifier can use reliably, even when the original readout is weaker?
+- **Cohort:** Seeds 307, 311, 313, 317, 331, 337, 347, 349, 353, and 359. Data base seed 3000. These seeds were not used in the saved experiments.
+- **Procedure:** Unchanged additive model. Full-history training and final-16 training, plus the untrained initial state. The EXP-012 classifier is unchanged.
+- **Budget:** Five minutes per training run and 10 minutes total.
+- **Result:** Not collected. The pre-run interpretation note is `results/EXP-014/research_checkpoint.md`.

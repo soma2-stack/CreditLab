@@ -1,0 +1,25 @@
+experiment_id: EXP-014
+seeds:
+- 307
+- 311
+- 313
+- 317
+- 331
+- 337
+- 347
+- 349
+- 353
+- 359
+base_seed: 3000
+delay: 128
+k: 16
+classifier:
+  same_as: EXP-012
+  C: 1.0
+  l1_ratio: 0.0
+  solver: lbfgs
+  tolerance: 1.0e-08
+  max_iterations: 2000
+  fit_intercept: true
+  class_weight: null
+budget_seconds: 600

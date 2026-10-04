@@ -1,0 +1,75 @@
+# EXP-014 preregistration. The new seeds and the unchanged procedures were
+# fixed before any EXP-014 accuracy was collected.
+experiment_id: EXP-014
+config_revision: 1
+status: preregistered_before_running
+kind: prospective_replication
+device: cpu
+delay: 128
+seeds: [307, 311, 313, 317, 331, 337, 347, 349, 353, 359]
+data:
+  base_seed: 3000
+  train_samples: 1536
+  val_samples: 512
+  test_samples: 512
+  audit_samples: 512
+  audit_split_index: 3
+model_equation: "candidate_t = tanh(W_h h_{t-1} + W_x x_t + b_h + b_x); h_t = h_{t-1} + candidate_t"
+gradient_horizon:
+  k: 16
+  cut: "max(delay + 2 - 16, 0)"
+  query_counts_as_one_of_the_16: true
+representations:
+  - initialized
+  - full_history
+  - final_16
+training_regimes:
+  - full_history
+  - final_16
+model:
+  type: additive_tanh_rnn
+  input_size: 3
+  hidden_size: 32
+  output_size: 1
+  initial_hidden_state: zero
+  residual_scale: 1.0
+task:
+  run_mode: HARD_V2
+  distractor_noise_std: 0.3
+  competitor_rate: 0.4
+  competitor_flip_prob: 0.5
+training:
+  optimizer: Adam
+  adam_defaults: "betas (0.9, 0.999), eps 1e-8"
+  learning_rate: 0.003
+  batch_size: 64
+  eval_batch_size: 256
+  updates_per_run: 400
+  grad_clip_norm: 5.0
+  loss: terminal_binary_cross_entropy_with_logits
+  diagnostic_updates: [0, 50, 100, 200, 400]
+  checkpoint_selection: final update only
+classifier:
+  same_as: EXP-012
+  C: 1.0
+  l1_ratio: 0.0
+  solver: lbfgs
+  tolerance: 1.0e-8
+  max_iterations: 2000
+  fit_intercept: true
+  class_weight: null
+success_test_accuracy_at_least: 0.95
+endpoints:
+  original_readout: "after the fixed training procedure, for full-history and final-16 only"
+  diagnostic_classifier: "fixed readout fit on frozen final states of all three representations"
+budget:
+  max_cpu_seconds_per_run: 300
+  max_cpu_seconds_total: 600
+  no_automatic_resume: true
+  no_seed_replacement: true
+environment_requirement:
+  python: "3.11.9"
+  torch: "2.13.0+cpu"
+  sklearn: 1.9.1
+outputs:
+  directory: results/EXP-014
