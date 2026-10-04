@@ -216,9 +216,9 @@ Do not add a learned gate. Do not start EXP-020.
 
 ## Phase 20 — clean write control
 
-- [ ] Preregister the fourth input channel and the reset rule before any EXP-020 accuracy.
-- [ ] Pass the clean-control and hold-match checks before training.
-- [ ] Train ordinary additive and reset additive on the hold and selective tasks.
-- [ ] Leave EXP-001 through EXP-019 artifacts unchanged, including the EXP-019 stop record.
+- [x] Preregister the fourth input channel and the reset rule before any EXP-020 accuracy.
+- [x] Pass the clean-control and hold-match checks before training.
+- [x] Train ordinary additive and reset additive on the hold and selective tasks.
+- [x] Leave EXP-001 through EXP-019 artifacts unchanged, including the EXP-019 stop record.
 
 Do not add a learned gate. Do not start EXP-021.

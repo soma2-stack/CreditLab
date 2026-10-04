@@ -1,9 +1,9 @@
 # Project Status
 
-- **Current phase:** EXP-020 is preregistered. Training has not started.
-- **What was tested:** Nothing new yet. EXP-019 stopped before training because the old write channel was noisy.
-- **Latest result:** No overwrite accuracy was collected for a clean write signal.
+- **Current phase:** EXP-020 is complete. No experiment is running.
+- **What was tested:** Whether a fixed reset helps replacement when both models are given an explicit on/off write signal, separate from the noisy event channel.
+- **Latest result:** The ordinary additive model still did not replace a conflicting bit. The reset version did, on all ten seeds, and the hold task stayed perfect.
 - **Currently running:** Nothing.
-- **Next recommended action:** Run the preregistered clean-control comparison. Do not start EXP-021.
+- **Next recommended action:** Stop. Do not add a learned gate, and do not start EXP-021.
 
-See `results/EXP-019/analysis.md`. The scientific checkpoint was not rewritten.
+See `results/EXP-020/analysis.md`. The scientific checkpoint and the EXP-019 stop record were not rewritten.

@@ -254,3 +254,12 @@ Chronological record. Append new entries; never overwrite old results. Distingui
 ## 2026-10-04 — EXP-019 interpretation, stated before EXP-020
 
 - **Correction:** EXP-019 collected no training results. Its clean-marker assumption was false. EXP-017 tested overwrite under its actual noisy input encoding, not under an unambiguous binary write-control interface. EXP-019 is not a model failure. The saved EXP-019 analysis was not rewritten.
+
+## 2026-10-04 — EXP-020 clean write control
+
+- **Experiment ID:** EXP-020.
+- **Configuration:** `configs/exp020_clean_write.yaml`. Same seeds and base seed as EXP-017, plus a fourth clean write channel. Four-input additive and four-input reset additive. 1,249 parameters, 32 more than the three-channel models. Not an unchanged-task replication. Python 3.11.9, PyTorch 2.13.0+cpu, scikit-learn 1.9.1. Training code `398ea44b4474`.
+- **Result:** Preflight passed with state, score, and gradient gaps of 0. 40/40 runs finished in 587 seconds. Hold success was 10/10 for both versions. Selective success was 0/10 for ordinary additive and 10/10 for reset additive. Conflicting replacement was 128/128 on every reset seed. Seed 547 was 511/512 overall. No numerical failures.
+- **Interpretation:** EXPERIMENTAL RESULT. The explicit control alone did not make ordinary additive replacement succeed. The fixed reset did. This is not learned gating and is not pooled with EXP-017. It does not establish video capability.
+- **Files:** `results/EXP-020/`.
+- **Replication:** Matched intervention on the existing cohort. Not an independent new-seed replication.

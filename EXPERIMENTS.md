@@ -234,12 +234,13 @@ Registry entries describe completed experiments or plans. Every run saves its ex
 
 - **Correction:** EXP-019 collected no training results. Its assumption that the write channel was a clean marker was false. EXP-017 tested overwrite under that actual noisy input encoding, not under an unambiguous binary write-control interface. EXP-019 is not classified as a model failure.
 
-## EXP-020 — Clean write control (preregistered; not started)
+## EXP-020 — Clean write control (completed)
 
 - **Question:** If both models receive the same explicit on/off write signal, does the reset version replace the old bit more reliably than the ordinary additive version?
-- **Design:** A fourth input channel carries a clean 0/1 write control. The original three channels stay as they were. This is extra information. It is not a rerun of EXP-017. Forty fresh runs on the same seeds. No learned gate.
-- **Budget:** Five minutes per run, fifteen minutes total, after the hold-match check.
-- **Result:** Not collected.
+- **Result:** The clean-control checks passed, including an exact hold-task match. All 40 runs finished in 587 seconds. Both hold versions scored 1.000 on 10 of 10 seeds. Ordinary additive selective succeeded on 0 of 10. Reset additive selective succeeded on 10 of 10, including conflicting replacement at 128 of 128 on every seed. Seed 547 was 511 of 512 overall.
+- **Interpretation:** EXPERIMENTAL RESULT. The new instruction channel alone did not produce replacement. The fixed reset did, under this shared interface and budget. This is not learned gating, not an EXP-017 rerun, and not a video result.
+- **Files:** `configs/exp020_clean_write.yaml` and `results/EXP-020/`.
+- **Follow-up:** Not started. Do not add a learned gate. Do not start EXP-021.
 
 ## EXP-014 rescue denominator, clarified after the checkpoint
 
@@ -248,5 +249,5 @@ Registry entries describe completed experiments or plans. Every run saves its ex
 
 ## Scientific checkpoint
 
-- **Status:** EXP-020 is preregistered. Training scores have not been collected. EXP-021 is not authorized.
+- **Status:** EXP-020 is complete. No experiment is running. EXP-021 is not authorized.
 - **Document:** `SCIENTIFIC_CHECKPOINT.md`. The audit of saved records is `DOCUMENTATION_AUDIT.md`.
