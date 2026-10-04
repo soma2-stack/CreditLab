@@ -172,14 +172,15 @@ Registry entries describe completed experiments or plans. Every run saves its ex
 
 ## Pause lifted for EXP-015 only
 
-- **Authorization:** The documentation pause is lifted only for an evaluation of the saved EXP-014 models at longer delays. No training and no classifier refitting.
+- **Authorization:** The documentation pause was lifted only for an evaluation of the saved EXP-014 models at longer delays. No training and no classifier refitting.
 
-## EXP-015 — Frozen-model length generalization (preregistered; not started)
+## EXP-015 — Frozen-model length generalization (completed)
 
-- **Question:** Do the existing delay-128 additive models and readouts still answer at delays 256 and 512, with no further adaptation?
-- **Endpoints:** Initialized diagnostic readout; full-history original and diagnostic readouts; final-16 original and diagnostic readouts. Fresh data use base seed 4000. Delay 128 is a new in-distribution reference, not the original EXP-014 test set.
-- **Budget:** Five minutes total.
-- **Result:** Not collected.
+- **Question:** Do the saved delay-128 models and readouts still answer at delays 256 and 512, with no further adaptation?
+- **Result:** All 30 checkpoints and classifiers verified. All scores finished in 15.8 seconds. On a fresh delay-128 draw, success counts were initialized diagnostic 4/10, full-history original 10/10, full-history diagnostic 10/10, final-16 original 1/10, and final-16 diagnostic 8/10. At delay 256 those counts were 0, 8, 4, 1, and 0. At delay 512 they were 0, 6, 3, 0, and 0. States still changed when only the original bit was flipped. No numerical failures.
+- **Interpretation:** EXPERIMENTAL RESULT. The saved diagnostic readout does not generalize to the longer delays. The full-history original readout still does on many seeds. Bit dependence can remain after the answer has fallen to chance. Longer sequences also add distractors, so this is not a pure time test. This does not validate the broader theory.
+- **Files:** `configs/exp015_length_generalization.yaml` and `results/EXP-015/`.
+- **Follow-up:** Not started. Do not test delay 1024, do not retrain, and do not start EXP-016.
 
 ## EXP-014 rescue denominator, clarified after the checkpoint
 
@@ -188,5 +189,5 @@ Registry entries describe completed experiments or plans. Every run saves its ex
 
 ## Scientific checkpoint
 
-- **Status:** The experimental phase through EXP-014 is consolidated. No experiment is running. EXP-015 is not authorized.
+- **Status:** EXP-015 is complete. No experiment is running. EXP-016 is not authorized.
 - **Document:** `SCIENTIFIC_CHECKPOINT.md`. The audit of saved records is `DOCUMENTATION_AUDIT.md`.

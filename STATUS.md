@@ -1,9 +1,9 @@
 # Project Status
 
-- **Current phase:** The research phase through EXP-014 is consolidated. No experiment is running.
-- **What was learned:** On this delayed-bit task, additive recurrence is more reliable than a vanilla network under the same training recipe. Full-sequence training makes the joint readout reliable. Cutting that training feedback usually hurts the joint readout, but the hidden state is often still readable by a separate linear fit. Some seeds are readable even before recurrent training. A few are not.
-- **Latest correction:** EXP-014’s final-16 diagnostic success is 8 of 10. Of the 9 original misses, 7 were rescued. Seed 311 was already successful and is not a rescue. Seeds 331 and 353 stayed below 0.95.
+- **Current phase:** EXP-015 is complete. No experiment is running.
+- **What was tested:** The saved delay-128 models and their saved readouts, scored again at delays 128, 256, and 512. Nothing was trained or refit.
+- **Latest result:** The separate linear readout did not stay reliable at the longer delays. The full-history model’s own readout still succeeded on 8 of 10 seeds at delay 256 and 6 of 10 at delay 512. The hidden state still changed when the original bit was flipped.
 - **Currently running:** Nothing.
-- **Next recommended action:** Stop. EXP-015 is not authorized.
+- **Next recommended action:** Stop. Do not test a longer delay, do not retrain, and do not start EXP-016.
 
-See `SCIENTIFIC_CHECKPOINT.md`.
+See `results/EXP-015/analysis.md`. The scientific checkpoint was not rewritten.

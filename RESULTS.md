@@ -195,3 +195,12 @@ Chronological record. Append new entries; never overwrite old results. Distingui
 - **Document:** `SCIENTIFIC_CHECKPOINT.md` and `DOCUMENTATION_AUDIT.md`.
 - **Result:** The hashed experiment artifacts were unchanged by the documentation edit. The main wording gap was the EXP-014 rescue denominator above.
 - **Next:** No experiment is running. EXP-015 awaits coordinator authorization.
+
+## 2026-10-04 — EXP-015 frozen length generalization
+
+- **Experiment ID:** EXP-015.
+- **Configuration:** `configs/exp015_length_generalization.yaml`. Saved EXP-014 models and classifiers only. No training and no refitting. Fresh HARD-v2 draws at delays 128, 256, and 512, data base seed 4000, evaluation split 4, audit split 5. Python 3.11.9, PyTorch 2.13.0+cpu, scikit-learn 1.9.1. Evaluation code `114e74ffefe`.
+- **Result:** All 30 checkpoints and 30 classifiers reproduced their saved correct counts. Evaluation took 15.8 seconds. Fresh delay-128 success counts were initialized diagnostic 4/10, full-history original 10/10, full-history diagnostic 10/10, final-16 original 1/10, and final-16 diagnostic 8/10. Delay 256 was 0, 8, 4, 1, and 0. Delay 512 was 0, 6, 3, 0, and 0. Of the models already successful at fresh delay 128, retained success was 0, 8, 4, 0, and 0 at delay 256, and 0, 6, 3, 0, and 0 at delay 512. Final states still differed on every bit-flip pair. Hidden magnitude grew with the number of steps for untrained and trained models alike. No numerical failures.
+- **Interpretation:** EXPERIMENTAL RESULT. The frozen diagnostic readout does not remain reliable at delays 256 and 512. The full-history original readout does on many seeds. Surviving bit dependence is not the same as a correct answer. This is not a pure elapsed-time test, because longer sequences contain more distractors. It does not validate the broader theory.
+- **Files:** `results/EXP-015/`.
+- **Replication:** Evaluation of the EXP-014 cohort on new longer sequences. Not a new training replication.

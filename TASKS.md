@@ -156,3 +156,13 @@ Do not build a model. Do not change the task distribution. Do not tune the class
 - [x] Record that no experiment is running and EXP-015 is not authorized.
 
 Do not start EXP-015. Do not train, refit, or evaluate another model.
+
+## Phase 15 — frozen length generalization
+
+- [x] Preregister evaluation of the saved EXP-014 models at delays 128, 256, and 512 before any new score.
+- [x] Verify the 30 checkpoints and 30 classifiers against their saved correct counts.
+- [x] Score the five frozen endpoints on fresh data, with no training and no refitting.
+- [x] Record bit-flip results and hidden-state magnitude.
+- [x] Leave EXP-001 through EXP-014 artifacts, and the scientific checkpoint, unchanged.
+
+Do not test delay 1024. Do not retrain or refit. Do not start EXP-016.
