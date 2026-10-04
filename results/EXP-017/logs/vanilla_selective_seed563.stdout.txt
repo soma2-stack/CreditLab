@@ -1,0 +1,1 @@
+{"condition": "vanilla_selective", "seed": 563, "status": "ok", "test_accuracy": 0.50390625}

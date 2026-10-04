@@ -206,12 +206,13 @@ Registry entries describe completed experiments or plans. Every run saves its ex
 - **Files:** `results/EXP-016/completion/`. The original interruption note was not rewritten.
 - **Follow-up:** Not started. Do not start EXP-017. Do not begin a selective-overwrite task.
 
-## EXP-017 — Selective overwrite versus continued retention (preregistered; not started)
+## EXP-017 — Selective overwrite versus continued retention (completed)
 
 - **Question:** Can the existing additive model replace an old bit when the later bit is marked as an update, and keep the old bit when that later bit is only a distractor?
-- **Design:** Ten new seeds and data base seed 7000. Four matched conditions: vanilla and additive, each on a hold task and a selective-overwrite task. This is a new task, not another copy of the original delayed-bit task. No new gate. Success on the selective task requires the overall score and all four bit-agreement subgroups to reach at least 0.95.
-- **Budget:** Five minutes per run, fifteen minutes total.
-- **Result:** Not collected.
+- **Result:** All 40 runs finished in 471.9 seconds. Additive hold accuracy was 1.000 on 10 of 10 seeds. Vanilla hold succeeded on 1 of 10, seed 503. No model met the selective rule. The additive failure was concentrated on marked updates whose new bit differed from the old one. The separate readout scored exactly 0.750 on every additive selective model by answering the old bit.
+- **Interpretation:** EXPERIMENTAL RESULT. Persistence worked. Controlled replacement did not, under this task and this 400-update schedule. This does not show that the old bit was erased, and it does not authorize a new gate by itself. It does not validate the broader theory.
+- **Files:** `configs/exp017_selective_overwrite.yaml` and `results/EXP-017/`.
+- **Follow-up:** Not started. Do not add a gate. Do not train a video model. Do not start EXP-018.
 
 ## EXP-014 rescue denominator, clarified after the checkpoint
 
@@ -220,5 +221,5 @@ Registry entries describe completed experiments or plans. Every run saves its ex
 
 ## Scientific checkpoint
 
-- **Status:** EXP-017 is preregistered. No training scores have been collected. EXP-018 is not authorized.
+- **Status:** EXP-017 is complete. No experiment is running. EXP-018 is not authorized.
 - **Document:** `SCIENTIFIC_CHECKPOINT.md`. The audit of saved records is `DOCUMENTATION_AUDIT.md`.

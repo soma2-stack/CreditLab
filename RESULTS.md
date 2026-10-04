@@ -223,3 +223,12 @@ Chronological record. Append new entries; never overwrite old results. Distingui
 - **Interpretation:** EXPERIMENTAL RESULT. The additive advantage remains at this stronger noise under the fixed budget. One vanilla seed shows that noise 0.3 is not impossible for that model. This does not establish general robustness or video capability. Overwrite remains untested.
 - **Files:** `results/EXP-016/completion/`.
 - **Replication:** The preregistered ten-seed cohort is now scored. The original session and the continuation are not pooled into one runtime.
+
+## 2026-10-04 — EXP-017 selective overwrite
+
+- **Experiment ID:** EXP-017.
+- **Configuration:** `configs/exp017_selective_overwrite.yaml`. New seeds 503, 509, 521, 523, 541, 547, 557, 563, 569, and 571. Data base seed 7000. Hold versus selective overwrite, vanilla and additive. Not a HARD-v2 replication. Python 3.11.9, PyTorch 2.13.0+cpu, scikit-learn 1.9.1. Training code `d3b223fb3dd0`.
+- **Result:** 40/40 runs finished in 471.9 seconds. Additive hold succeeded on 10/10. Vanilla hold succeeded on 1/10, seed 503. Selective success was 0/10 for both models. On the additive selective task, the conflicting replacement subgroup was the weak one, from 0.062 to 0.500. The separate readout scored 0.750 on every additive selective seed by answering A, including 0.000 when the marked bit differed.
+- **Interpretation:** EXPERIMENTAL RESULT. The additive model retained the first bit and did not reliably replace it. The separate readout made that retention sharper. It did not establish selective updating, erasure, or a need for a new gate. This does not validate the broader theory.
+- **Files:** `results/EXP-017/`.
+- **Replication:** Ten new seeds, one new task, one budget. Not pooled with the delayed-bit cohorts.
