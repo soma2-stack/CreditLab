@@ -166,3 +166,13 @@ Do not start EXP-015. Do not train, refit, or evaluate another model.
 - [x] Leave EXP-001 through EXP-014 artifacts, and the scientific checkpoint, unchanged.
 
 Do not test delay 1024. Do not retrain or refit. Do not start EXP-016.
+
+## Phase 16 — stronger distractor noise
+
+- [ ] Confirm the new seeds are unused, and preregister the four matched conditions before any EXP-016 accuracy.
+- [ ] Train vanilla and additive models at delay 128, at distractor noise 0.3 and 1.0, on the new seeds.
+- [ ] Fit the fixed diagnostic classifier separately at each noise level.
+- [ ] Run the bit-flip audit on the completed models.
+- [ ] Leave EXP-001 through EXP-015 artifacts, and the scientific checkpoint, unchanged.
+
+Do not raise the training budget. Do not try another noise level. Do not start EXP-017.

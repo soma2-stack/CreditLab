@@ -182,6 +182,21 @@ Registry entries describe completed experiments or plans. Every run saves its ex
 - **Files:** `configs/exp015_length_generalization.yaml` and `results/EXP-015/`.
 - **Follow-up:** Not started. Do not test delay 1024, do not retrain, and do not start EXP-016.
 
+## EXP-015 length result
+
+- **Clarification:** A fixed-length readout rescue did not establish length robustness. EXP-015 scored saved models at longer delays without new training. The separate linear readout did not stay reliable at delays 256 and 512.
+
+## Pause lifted for EXP-016 only
+
+- **Authorization:** The stop after EXP-015 is lifted only for a fresh vanilla-versus-additive comparison at delay 128, with distractor noise 0.3 and 1.0. Noise 1.0 does not replace the frozen noise-0.3 experiments.
+
+## EXP-016 — Additive advantage under stronger noise (preregistered; not started)
+
+- **Question:** At delay 128, does additive recurrence stay more reliable than vanilla recurrence when distractor noise increases from 0.3 to 1.0?
+- **Design:** Ten new seeds, data base seed 6000. Four matched conditions: vanilla and additive, each at both noise levels. Shared labels, competitors, and standard-normal distractor draws. Full-history training, 400 Adam updates, clip 5. Success is test accuracy of at least 0.95. A separate diagnostic classifier is fit per condition and is not transferred across noise.
+- **Budget:** Five minutes per run, fifteen minutes total.
+- **Result:** Not collected.
+
 ## EXP-014 rescue denominator, clarified after the checkpoint
 
 - **Clarification:** “8 of 10 diagnostic successes” is not “8 misses rescued.” Seed 311 already scored at least 0.95 with the original final-16 readout. Of the 9 original misses, 7 were rescued: 307, 313, 317, 337, 347, 349, and 359. Seeds 331 and 353 stayed below 0.95. The saved EXP-014 analysis was not edited.
@@ -189,5 +204,5 @@ Registry entries describe completed experiments or plans. Every run saves its ex
 
 ## Scientific checkpoint
 
-- **Status:** EXP-015 is complete. No experiment is running. EXP-016 is not authorized.
+- **Status:** EXP-016 is preregistered. No training scores have been collected. EXP-017 is not authorized.
 - **Document:** `SCIENTIFIC_CHECKPOINT.md`. The audit of saved records is `DOCUMENTATION_AUDIT.md`.
