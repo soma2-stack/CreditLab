@@ -108,8 +108,11 @@ Chronological record. Append new entries; never overwrite old results. Distingui
 - **Files:** `results/EXP-008/`.
 - **Replication:** Ten seeds, four training regimes, not pooled with EXP-006 or EXP-007.
 
-## 2026-10-03 — EXP-009 preregistered
+## 2026-10-03 — EXP-009 bias versus matrix adaptation (interrupted)
 
 - **Experiment ID:** EXP-009.
-- **Configuration:** `configs/exp009_bias_ablation.yaml`. Additive model only. Regime C trains `b_x` and the readout. Regime D trains both matrices and the readout. This choice was fixed before any EXP-009 accuracy.
-- **Result:** Not collected.
+- **Configuration:** `configs/exp009_bias_ablation.yaml`. Additive model only. Regime C trains `b_x` and the readout, with both matrices and `b_h` frozen. Regime D trains both matrices and the readout, with both preactivation biases frozen. Same ten seeds and data base seed 2000. Not pooled with earlier counts. Python 3.11.9, PyTorch 2.13.0+cpu. Training code `573bd668d03ead`.
+- **Result:** The delay-64 cohort finished: full 10/10, readout only 0/10, bias plus readout 8/10, matrices plus readout 10/10. Bias misses were seed 151 at 0.945 and seed 191 at 0.846. Frozen parameters stayed fixed. The process stopped during delay-128 seed 101 bias-plus-readout. Only delay-128 seed 101 full and readout-only were saved. No audit was run. The run was not resumed. The last recorded session mark is 229.085 seconds, at the start of the unfinished run. That unfinished run has no recorded duration.
+- **Interpretation:** EXPERIMENTAL RESULT for delay 64 only. Learning the matrices was sufficient while both biases stayed fixed. Learning one preactivation bias was sufficient on 8 of 10 seeds while both matrices stayed fixed. This does not prove EXP-008 used the bias-only route, and it does not validate the broader theory.
+- **Files:** `results/EXP-009/`.
+- **Replication:** Ten seeds at delay 64, four regimes, not pooled with earlier counts. Delay 128 is incomplete.

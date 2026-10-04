@@ -104,11 +104,10 @@ Registry entries describe completed experiments or plans. Every run saves its ex
 - **Files:** `configs/exp008_parameter_groups.yaml` and `results/EXP-008/`.
 - **Follow-up:** EXP-009 asks whether one preactivation bias, or the two matrices, is enough. The EXP-008 analysis file was not rewritten.
 
-## EXP-009 — Can bias adaptation alone enable additive success? (preregistered; training not started)
+## EXP-009 — Can bias adaptation alone enable additive success? (interrupted)
 
 - **Question:** Can one learned preactivation bias plus the readout solve the additive task while both weight matrices stay at initialization? Can matrix learning plus the readout solve it while both preactivation biases stay fixed?
-- **Model:** The existing additive equation only. Regime C trains `b_x` (`recurrent.bias_ih_l0`) and the readout, and freezes both matrices and `b_h`. Regime D trains both matrices and the readout, and freezes both preactivation biases. Full training and readout-only are fresh controls. `B` is not part of this comparison and is not tuned.
-- **Seeds:** 101 through 223, data base seed 2000. Not pooled with earlier counts.
-- **Gate:** Fresh delay-128 training runs only if all 40 delay-64 runs finish and full training succeeds on at least 8 of 10 delay-64 seeds.
-- **Budget:** Five minutes per run and 15 minutes total. No automatic resume and no runtime inferred from file timestamps.
-- **Result:** Not collected.
+- **Result:** All 40 delay-64 runs finished. Full training succeeded on 10/10 seeds. Readout-only succeeded on 0/10. Bias plus readout (`b_x` only) succeeded on 8/10. Matrices plus readout succeeded on 10/10. The process then stopped during delay-128 seed 101 bias-plus-readout. Delay 128 is incomplete. No bit-flip audit was run. Training was not resumed.
+- **Interpretation:** EXPERIMENTAL RESULT for delay 64 only. Matrix learning was sufficient on every seed with both biases frozen. One preactivation bias was sufficient on 8 seeds and missed 2. This does not show that EXP-008 used the bias-only route, and it does not validate the broader theory.
+- **Files:** `configs/exp009_bias_ablation.yaml` and `results/EXP-009/`.
+- **Follow-up:** Stopped for coordinator review. Do not resume automatically. Do not tune B and do not start EXP-010.

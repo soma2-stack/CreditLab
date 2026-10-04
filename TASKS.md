@@ -86,3 +86,13 @@ Do not start EXP-008. Do not tune B. Do not change the forward equations.
 - [x] Leave EXP-001 through EXP-007 artifacts unchanged.
 
 Do not start EXP-009. Do not tune B. Do not change the forward equation.
+
+## Phase 9 — bias versus matrix adaptation
+
+- [x] Preregister one trainable preactivation bias, `b_x`, and the four additive regimes before any EXP-009 accuracy.
+- [x] Train all four regimes at delay 64. Full training succeeded on 10 of 10 seeds.
+- [ ] Finish delay 128. The process stopped during seed 101 bias-plus-readout after saving only seed 101 full and readout-only.
+- [ ] Run the bit-flip audit. It was not started.
+- [x] Leave EXP-001 through EXP-008 artifacts unchanged.
+
+Do not resume EXP-009 automatically. Coordinator review is required before any continuation. Do not start EXP-010. Do not tune B. Do not change the forward equation.
