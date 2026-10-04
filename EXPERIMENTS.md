@@ -133,3 +133,12 @@ Registry entries describe completed experiments or plans. Every run saves its ex
 - **Interpretation:** EXPERIMENTAL RESULT, outcome B. Explicit long-horizon backpropagation improved reliable success under this schedule. It was not required for every seed, and several misses still kept partial information. This is not an architecture result and it does not validate the broader theory.
 - **Files:** `configs/exp010_truncated_bptt.yaml` and `results/EXP-010/`.
 - **Follow-up:** Not started. Do not try another horizon and do not start EXP-011.
+
+## EXP-011 — Gradient horizon × clipping policy (preregistered; training not started)
+
+- **Question:** Does the full-history advantage remain when gradient clipping is turned off, with every other setting unchanged?
+- **Conditions:** Full history or final 16 steps, each with the existing norm-5 clipping or with no gradient rescaling. K stays 16. No other threshold is tried.
+- **Seeds:** 101 through 223, data base seed 2000. Fresh controls, not pooled with EXP-010.
+- **Gate:** Fresh delay-128 training only if all 40 delay-64 runs finish and full-history with clipping succeeds on at least 8 of 10 seeds.
+- **Budget:** Five minutes per run and 20 minutes total. No automatic resume.
+- **Result:** Not collected.

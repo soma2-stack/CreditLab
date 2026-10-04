@@ -1,0 +1,32 @@
+experiment_id: EXP-011
+kind: preregistration
+k: 16
+conditions:
+- name: full_history_clip5
+  horizon: full_history
+  clip: true
+- name: final_16_clip5
+  horizon: final_16
+  clip: true
+- name: full_history_noclip
+  horizon: full_history
+  clip: false
+- name: final_16_noclip
+  horizon: final_16
+  clip: false
+seeds:
+- 101
+- 113
+- 127
+- 139
+- 151
+- 163
+- 179
+- 191
+- 211
+- 223
+clip_norm: 5.0
+budget_seconds: 1200
+per_run_seconds: 300
+note: Four fixed conditions. Clipping is either the existing norm-5 operation or absent.
+  K stays 16.

@@ -1,0 +1,103 @@
+# EXP-011 preregistration. The four conditions were fixed before any EXP-011
+# accuracy was collected. K stays 16. No other clipping threshold is tried.
+experiment_id: EXP-011
+config_revision: 1
+status: preregistered_before_training
+device: cpu
+model_equation: "candidate_t = tanh(W_h h_{t-1} + W_x x_t + b_h + b_x); h_t = h_{t-1} + candidate_t"
+forward_match: direct_equality
+gradient_horizon:
+  k: 16
+  sequence_length: "delay + 2"
+  cut: "max(sequence_length - 16, 0)"
+  boundary: "After input cut-1, detach the hidden state once. Do not change its value. Then process inputs cut through the final query."
+  query_counts_as_one_of_the_16: true
+clipping:
+  on: "torch.nn.utils.clip_grad_norm_ with max_norm 5.0, the existing implementation. Scale is min(1, 5 / (total_norm + 1e-6))."
+  off: "Do not rescale gradients before Adam. Record whether the raw norm would have exceeded 5, but do not apply that as an operation."
+  not_a_sweep: true
+conditions:
+  - name: full_history_clip5
+    horizon: full_history
+    clip: true
+  - name: final_16_clip5
+    horizon: final_16
+    clip: true
+  - name: full_history_noclip
+    horizon: full_history
+    clip: false
+  - name: final_16_noclip
+    horizon: final_16
+    clip: false
+seeds: [101, 113, 127, 139, 151, 163, 179, 191, 211, 223]
+delays:
+  primary: 64
+  secondary: 128
+model:
+  type: additive_tanh_rnn
+  input_size: 3
+  hidden_size: 32
+  output_size: 1
+  initial_hidden_state: zero
+  residual_scale: 1.0
+  all_parameters_trainable: true
+bound_unchanged: 4.0
+training:
+  optimizer: Adam
+  adam_defaults: "betas (0.9, 0.999), eps 1e-8"
+  learning_rate: 0.003
+  batch_size: 64
+  eval_batch_size: 256
+  updates_per_run: 400
+  grad_clip_norm: 5.0
+  loss: terminal_binary_cross_entropy_with_logits
+  updates_per_minibatch: 1
+  diagnostic_updates: [0, 50, 100, 200, 400]
+  checkpoint_selection: final update only
+  no_test_accuracy_during_training: true
+task:
+  run_mode: HARD_V2
+  distractor_noise_std: 0.3
+  competitor_rate: 0.4
+  competitor_flip_prob: 0.5
+data:
+  train_samples: 1536
+  val_samples: 512
+  test_samples: 512
+  base_seed: 2000
+  audit_split_index: 3
+  audit_samples: 512
+interpretation:
+  success_test_accuracy_at_least: 0.95
+  delay_128_gate: "fresh delay-128 training for all four conditions only if all 40 delay-64 runs have a terminal record, full-history with clipping norm 5 succeeds on at least 8 of 10 seeds, and no implementation bug invalidated the comparison"
+  do_not_gate_on_unclipped_or_final_16: true
+  do_not_pool_with_earlier_counts: true
+  clipping_context: "More frequent clipping under the final-16 cutoff is a consequence of the changed gradients. It does not make the EXP-010 comparison invalid. This experiment tests whether that conclusion is robust to turning clipping off."
+  shared_parameters_limit: "The same weights are used at every timestep. A final-16 update can change earlier forward processing on the next minibatch."
+  adam_update_limit: "The recorded Adam update norm is the actual parameter change. It is not the raw gradient multiplied by the learning rate."
+  outcomes:
+    A: "The full-history advantage persists without clipping."
+    B: "Removing clipping substantially improves final-16 training and narrows the gap."
+    C: "Removing clipping hurts both regimes or causes numerical failures."
+    D: "Effects vary across seeds or delays."
+budget:
+  max_cpu_seconds_per_run: 300
+  max_cpu_seconds_total: 1200
+  no_automatic_retry: true
+  no_automatic_resume: true
+  no_timestamp_runtime_inference: true
+  interruption: "Preserve completed and partial records, identify the affected condition, and stop for coordinator review."
+numerical_failure: "Stop that condition, preserve the partial record, and do not add clipping, change the learning rate, or retry."
+environment_requirement:
+  python: "3.11.9"
+  torch: "2.13.0+cpu"
+outputs:
+  directory: results/EXP-011
+diagnostics:
+  forward_bit_channel: "full differentiable rollout, no detach"
+  training_graph_event: "event channel through the condition's actual training graph"
+  raw_grad_norm: "float64 global L2 norm of parameter gradients, computed without modifying them"
+  checkpoint_probe_split: "validation indices 0:256 fit and 256:512 score"
+  final_probe: "fit on all validation states, score on test states"
+  exact_state_equality: "direct coordinate equality"
+  computational_zero: "a recorded float equal to 0.0"
