@@ -86,10 +86,10 @@ def with_control(inputs: torch.Tensor, timing: torch.Tensor, candidate_control: 
     return torch.cat([inputs, control], dim=-1)
 
 
-def four_channel_bundle(seed: int, task: str) -> dict:
+def four_channel_bundle(seed: int, task: str, base_seed: int = 7000) -> dict:
     bundle = {}
     for num_samples, split_index, name in ((1536, 0, "train"), (512, 1, "val"), (512, 2, "test")):
-        latent = make_latent(num_samples, seed, split_index)
+        latent = make_latent(num_samples, seed, split_index, base_seed)
         hold_x, hold_y, selective_x, selective_y = task_views(latent)
         base, targets = (hold_x, hold_y) if task == "hold" else (selective_x, selective_y)
         candidate_control = torch.zeros_like(latent["F"]) if task == "hold" else latent["F"]
@@ -128,8 +128,8 @@ def inspect_control(inputs: torch.Tensor, timing: torch.Tensor, candidate_contro
             raise ImplementationError("the clean control separates the sign of A")
 
 
-def hold_match(seed: int = 503) -> dict:
-    latent = make_latent(64, seed, 0)
+def hold_match(seed: int = 503, base_seed: int = 7000) -> dict:
+    latent = make_latent(64, seed, 0, base_seed)
     hold_x, hold_y, _selective_x, _selective_y = task_views(latent)
     inputs = with_control(hold_x, latent["timing"], torch.zeros(64))
     inspect_control(inputs, latent["timing"], torch.zeros(64), hold_y, latent["A"], latent["B"])
@@ -215,18 +215,18 @@ def local_rules() -> None:
         raise ImplementationError("the old noisy write channel triggered a reset")
 
 
-def preflight() -> dict:
+def preflight(seed: int = 503, base_seed: int = 7000) -> dict:
     local_rules()
-    latent = make_latent(512, 503, 2)
+    latent = make_latent(512, seed, 2, base_seed)
     hold_x, hold_y, selective_x, selective_y = task_views(latent)
-    again = task_views(make_latent(512, 503, 2))
+    again = task_views(make_latent(512, seed, 2, base_seed))
     if not torch.equal(hold_x, again[0]) or not torch.equal(selective_y, again[3]):
         raise ImplementationError("the EXP-017 generator is not deterministic")
     hold_inputs = with_control(hold_x, latent["timing"], torch.zeros_like(latent["F"]))
     selective_inputs = with_control(selective_x, latent["timing"], latent["F"])
     inspect_control(hold_inputs, latent["timing"], torch.zeros_like(latent["F"]), hold_y, latent["A"], latent["B"])
     inspect_control(selective_inputs, latent["timing"], latent["F"], selective_y, latent["A"], latent["B"])
-    report = hold_match(503)
+    report = hold_match(seed, base_seed)
     report["generator_fingerprints_saved_by_exp017"] = False
     report["three_channel_fingerprint"] = tensor_fingerprint(hold_x)
     if not report["matched"]:
@@ -261,18 +261,19 @@ def candidate_diagnostics(model, inputs, timing, flag) -> dict:
     }
 
 
-def train_job(job: dict, seconds_left: float) -> None:
+def train_job(job: dict, seconds_left: float, out_dir: Path | None = None, base_seed: int = 7000, experiment_id: str = "EXP-020") -> None:
     if platform.python_version() != "3.11.9" or torch.__version__ != "2.13.0+cpu" or sklearn_version() != "1.9.1":
         raise RuntimeError("environment does not match the preregistered versions")
     seed = int(job["seed"])
     model_type = job["model_type"]
     task = job["task"]
     name = condition_name(model_type, task)
-    bundle = four_channel_bundle(seed, task)
+    destination_root = OUT_DIR if out_dir is None else out_dir
+    bundle = four_channel_bundle(seed, task, base_seed)
     control, reset = paired_models(seed)
     model = control if model_type == "additive_tanh_rnn" else reset
     indices = minibatch_indices(seed, 128, 1536, 64, 400)
-    append_jsonl(OUT_DIR / "fingerprints.jsonl", {
+    append_jsonl(destination_root / "fingerprints.jsonl", {
         "seed": seed, "condition": name,
         "init_fingerprint": parameter_fingerprint(model),
         "train_x": tensor_fingerprint(bundle["train_x"]),
@@ -285,7 +286,7 @@ def train_job(job: dict, seconds_left: float) -> None:
     optimizer = torch.optim.Adam(model.parameters(), lr=0.003)
     bce = torch.nn.functional.binary_cross_entropy_with_logits
     record = {
-        "experiment_id": "EXP-020", "model_type": model_type, "task": task, "condition": name,
+        "experiment_id": experiment_id, "model_type": model_type, "task": task, "condition": name,
         "seed": seed, "attempt": 1, "status": "ok", "stop_reason": None, "code_revision": git_revision(),
         "parameter_count": sum(parameter.numel() for parameter in model.parameters()),
     }
@@ -327,13 +328,13 @@ def train_job(job: dict, seconds_left: float) -> None:
             record["selective_success"] = bool(record["test_accuracy"] >= 0.95 and all(item["accuracy"] >= 0.95 for item in record["subgroups"].values()))
         else:
             record["hold_success"] = bool(record["test_accuracy"] >= 0.95)
-        destination = OUT_DIR / "checkpoints" / f"{name}_seed{seed}.pt"
+        destination = destination_root / "checkpoints" / f"{name}_seed{seed}.pt"
         record["checkpoint_sha256"] = atomic_torch_save(destination, {
-            "experiment_id": "EXP-020", "model_type": model_type, "task": task, "seed": seed,
+            "experiment_id": experiment_id, "model_type": model_type, "task": task, "seed": seed,
             "input_size": 4, "marker_index": 3, "state_dict": model.state_dict(),
         })
         fitted = fit_diagnostic(model, bundle["train_x"], bundle["train_y"], bundle["val_x"], bundle["val_y"], bundle["test_x"], bundle["test_y"])
-        classifier_path = OUT_DIR / "classifiers" / f"{name}_seed{seed}.joblib"
+        classifier_path = destination_root / "classifiers" / f"{name}_seed{seed}.joblib"
         classifier_path.parent.mkdir(parents=True, exist_ok=True)
         joblib.dump({"classifier": fitted["classifier"], "mean": fitted["mean"], "scale": fitted["scale"]}, classifier_path)
         record["diagnostic_test_accuracy"] = fitted["diagnostic_test_accuracy"]
@@ -342,14 +343,14 @@ def train_job(job: dict, seconds_left: float) -> None:
             from run_exp012 import final_states, refit_predictions
             diagnostic_predictions = torch.from_numpy(refit_predictions(fitted["decision"](final_states(model, bundle["test_x"])))).float()
             record["diagnostic_subgroups"] = subgroup_record(diagnostic_predictions, bundle["test_y"], bundle["A"], bundle["B"], bundle["F"])
-        record["entry"] = entry_measurement(model, seed)
-        record["audits"] = audit_measurement(model, seed, task)
+        record["entry"] = entry_measurement(model, seed, base_seed)
+        record["audits"] = audit_measurement(model, seed, task, base_seed)
     except (FloatingPointError, TimeoutError) as exc:
         record.update(status="budget_stop" if isinstance(exc, TimeoutError) else "numerical_failure", stop_reason=f"{type(exc).__name__}: {exc}", updates_completed=len(loss_curve), runtime_seconds=round(time.perf_counter() - started, 3))
-    append_jsonl(OUT_DIR / "raw_metrics.jsonl", record)
-    append_jsonl(OUT_DIR / "loss_curves.jsonl", {"seed": seed, "condition": name, "loss_curve": loss_curve})
+    append_jsonl(destination_root / "raw_metrics.jsonl", record)
+    append_jsonl(destination_root / "loss_curves.jsonl", {"seed": seed, "condition": name, "loss_curve": loss_curve})
     for item in checkpoints:
-        append_jsonl(OUT_DIR / "checkpoint_diagnostics.jsonl", {"seed": seed, "condition": name, **item})
+        append_jsonl(destination_root / "checkpoint_diagnostics.jsonl", {"seed": seed, "condition": name, **item})
     print(json.dumps({"seed": seed, "condition": name, "status": record["status"], "test_accuracy": record.get("test_accuracy")}, sort_keys=True), flush=True)
 
 
@@ -363,8 +364,8 @@ def audit_inputs(latent: dict, audit: str) -> tuple[torch.Tensor, torch.Tensor]:
     return with_control(pair["positive"], timing, control_value), with_control(pair["negative"], timing, control_value), pair
 
 
-def entry_measurement(model, seed: int) -> dict:
-    latent = make_latent(256, seed, 3)
+def entry_measurement(model, seed: int, base_seed: int = 7000) -> dict:
+    latent = make_latent(256, seed, 3, base_seed)
     timing = latent["timing"]
     rows = torch.arange(256)
     base = latent["hold_x"].clone()
@@ -386,8 +387,8 @@ def entry_measurement(model, seed: int) -> dict:
     }
 
 
-def audit_measurement(model, seed: int, task: str) -> dict:
-    latent = make_latent(256, seed, 3)
+def audit_measurement(model, seed: int, task: str, base_seed: int = 7000) -> dict:
+    latent = make_latent(256, seed, 3, base_seed)
     results = {}
     for audit in ("retained_initial", "replacement_bit", "ignore_unmarked_later", "ignore_obsolete_initial"):
         positive, negative, pair = audit_inputs(latent, audit)
