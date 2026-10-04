@@ -198,6 +198,12 @@ Registry entries describe completed experiments or plans. Every run saves its ex
 - **Files:** `configs/exp016_noise_robustness.yaml` and `results/EXP-016/`.
 - **Follow-up:** Not started. Do not resume automatically. Do not raise the budget. Do not start EXP-017.
 
+## EXP-016 completion authorized
+
+- **Authorization:** Fourteen training jobs may finish the preregistered comparison. Twenty-six completed conditions are reused and not retrained. Seed 439, vanilla, noise 1.0, may be restarted once from initialization. Its interrupted attempt stays unscored, with unknown duration and cause. This is not EXP-017.
+- **Budget:** Five minutes total for verification, those fourteen jobs, and the missing diagnostics. The original session's missing time is not reconstructed.
+- **Result:** Not collected.
+
 ## EXP-014 rescue denominator, clarified after the checkpoint
 
 - **Clarification:** “8 of 10 diagnostic successes” is not “8 misses rescued.” Seed 311 already scored at least 0.95 with the original final-16 readout. Of the 9 original misses, 7 were rescued: 307, 313, 317, 337, 347, 349, and 359. Seeds 331 and 353 stayed below 0.95. The saved EXP-014 analysis was not edited.
@@ -205,5 +211,5 @@ Registry entries describe completed experiments or plans. Every run saves its ex
 
 ## Scientific checkpoint
 
-- **Status:** EXP-016 was interrupted. No experiment is running. Do not resume it automatically. EXP-017 is not authorized.
+- **Status:** An EXP-016 completion is authorized and not yet run. The original session remains interrupted. EXP-017 is not authorized.
 - **Document:** `SCIENTIFIC_CHECKPOINT.md`. The audit of saved records is `DOCUMENTATION_AUDIT.md`.

@@ -175,4 +175,12 @@ Do not test delay 1024. Do not retrain or refit. Do not start EXP-016.
 - [ ] Run the bit-flip audit on the completed models. Done for seeds 401 through 433 only.
 - [x] Leave EXP-001 through EXP-015 artifacts, and the scientific checkpoint, unchanged.
 
-Do not resume automatically. Do not raise the training budget. Do not try another noise level. Do not start EXP-017.
+Do not resume the original session. Do not raise its budget. Do not try another noise level. Do not start EXP-017.
+
+## Phase 16b — authorized completion
+
+- [ ] Register the fourteen-job continuation before any new score.
+- [ ] Verify the twenty-six saved checkpoints and reuse them.
+- [ ] Restart seed 439, vanilla, noise 1.0, once from initialization, and train the thirteen conditions that never started.
+- [ ] Fit diagnostics only for the sixteen conditions that do not have them.
+- [ ] Leave the original EXP-016 interruption records unchanged.
