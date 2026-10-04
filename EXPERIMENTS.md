@@ -222,12 +222,13 @@ Registry entries describe completed experiments or plans. Every run saves its ex
 - **Files:** `configs/exp018_failure_location.yaml` and `results/EXP-018/`.
 - **Follow-up:** Not started. Do not add a gate. Do not fit a new readout. Do not start EXP-019.
 
-## EXP-019 — Explicit marked reset (preregistered; training not started)
+## EXP-019 — Explicit marked reset (stopped before training)
 
 - **Question:** Does wiping the carried state before a marked write let the additive model replace the old bit, without hurting the hold task?
-- **Rule:** The reset reads the write channel already in the input. There is no threshold and no new trainable parameter. Training scores are collected only if the hold-task trajectories still match.
-- **Budget:** Five minutes per run and fifteen minutes total, if the hold check passes.
-- **Result:** Not collected.
+- **Result:** Stopped before training. On the hold task the write channel is not a clean on/off mark: competitors use it, and distractor noise is added to it. The reset and the ordinary additive model, from the same weights, already disagree at the first distractor step. The largest state gap was about 145. No accuracy was collected.
+- **Interpretation:** The registered hold-match check failed. This is not evidence that a reset cannot help, and it is not a new accuracy result. The marker definition was not changed after the check.
+- **Files:** `configs/exp019_marker_reset.yaml` and `results/EXP-019/`.
+- **Follow-up:** Not started. Do not add a learned gate. Do not start EXP-020.
 
 ## EXP-014 rescue denominator, clarified after the checkpoint
 
@@ -236,5 +237,5 @@ Registry entries describe completed experiments or plans. Every run saves its ex
 
 ## Scientific checkpoint
 
-- **Status:** EXP-019 is preregistered. The hold-match check has not been run. EXP-020 is not authorized.
+- **Status:** EXP-019 stopped before training. No experiment is running. EXP-020 is not authorized.
 - **Document:** `SCIENTIFIC_CHECKPOINT.md`. The audit of saved records is `DOCUMENTATION_AUDIT.md`.

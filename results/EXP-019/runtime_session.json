@@ -1,0 +1,7 @@
+{
+  "code_revision": "1ce3059676bd74f29e7949ec44f136b518e80ee0",
+  "experiment_id": "EXP-019",
+  "started_unix": 1791121929.956675,
+  "timing_method": "time.perf_counter inside this process",
+  "training_started": false
+}

@@ -207,9 +207,9 @@ Do not fit a new readout. Do not add a gate. Do not start EXP-019.
 
 ## Phase 19 — marked reset
 
-- [ ] Preregister the hard-wired reset and the hold-match gate before any EXP-019 accuracy.
-- [ ] Stop before training if hold-task trajectories do not match.
-- [ ] If they match, train the four conditions and record replacement subgroups.
-- [ ] Leave EXP-001 through EXP-018 artifacts unchanged.
+- [x] Preregister the hard-wired reset and the hold-match gate before any EXP-019 accuracy.
+- [x] Stop before training if hold-task trajectories do not match.
+- [ ] If they match, train the four conditions and record replacement subgroups. Not reached. The hold check failed.
+- [x] Leave EXP-001 through EXP-018 artifacts unchanged.
 
 Do not add a learned gate. Do not start EXP-020.

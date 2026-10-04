@@ -241,3 +241,12 @@ Chronological record. Append new entries; never overwrite old results. Distingui
 - **Interpretation:** NUMERICAL EVIDENCE. Weak entry, later disappearance, and unused persistent differences all occur. Saturation is associated with weaker entry and is not shown to be the cause. A lasting state difference is not evidence that another readout could use the new bit. This does not validate the broader theory.
 - **Files:** `results/EXP-018/`.
 - **Replication:** Diagnostic of the EXP-017 models. Not a new training replication.
+
+## 2026-10-04 — EXP-019 marked reset, stopped before training
+
+- **Experiment ID:** EXP-019.
+- **Configuration:** `configs/exp019_marker_reset.yaml`. The reset uses the write channel with no threshold and no new parameter. Training was allowed only if hold-task trajectories matched within 0.00001. Python 3.11.9, PyTorch 2.13.0+cpu, scikit-learn 1.9.1. Code `1ce3059676bd`.
+- **Result:** The check failed in 0.3 seconds. All ten seeds disagree from the first distractor step. About 40 percent of interior steps are competitors, and about 99 percent of interior write-channel values are not exactly 0 or 1. The largest hidden-state gap was 145 and the largest score gap was 166. Training runs: 0. No accuracy was collected. Historical files were unchanged.
+- **Interpretation:** The hold-match assumption is false for the existing task generator. The reset is not confined to the original event. This is not a selective-overwrite accuracy result and not evidence that a cleaner marker could not help. No threshold was added after the check.
+- **Files:** `results/EXP-019/`.
+- **Replication:** Not a training replication. Not pooled with earlier success rates.
