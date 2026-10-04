@@ -214,3 +214,12 @@ Chronological record. Append new entries; never overwrite old results. Distingui
 - **Interpretation:** The finished runs are consistent with the additive advantage surviving this stronger noise, on both the original readout and the separate diagnostic readout. This is not a completed ten-seed result. A vanilla miss was not always the same: some vanilla states became identical after a bit flip, and one partial vanilla run did not. Noise 1.0 does not replace the frozen noise-0.3 experiments. This does not validate the broader theory.
 - **Files:** `results/EXP-016/`.
 - **Replication:** Incomplete new cohort. Not pooled with earlier seeds.
+
+## 2026-10-04 — EXP-016 completion
+
+- **Experiment ID:** EXP-016, completed through an authorized continuation. Not a normally completed original session.
+- **Configuration:** The original `configs/exp016_noise_robustness.yaml` settings were unchanged. Twenty-six finished conditions were reused. Fourteen jobs were trained under `results/EXP-016/completion/`. Seed 439, vanilla, noise 1.0, was restarted once from initialization. Python 3.11.9, PyTorch 2.13.0+cpu, scikit-learn 1.9.1. Completion code `4fa96b9058fa`.
+- **Result:** All 26 reused checkpoints reproduced their saved correct counts. All 14 jobs exited 0. Continuation time was 170.4 seconds. Scored conditions are 40. Original-readout success was additive 10/10 at noise 0.3 and 10/10 at noise 1.0. Vanilla was 1/10 at noise 0.3, seed 457 only, and 0/10 at noise 1.0. The diagnostic readout agreed on every success line. No further interruption and no numerical failure. The original attempt’s duration and cause remain unknown. Historical files outside the completion folder were unchanged.
+- **Interpretation:** EXPERIMENTAL RESULT. The additive advantage remains at this stronger noise under the fixed budget. One vanilla seed shows that noise 0.3 is not impossible for that model. This does not establish general robustness or video capability. Overwrite remains untested.
+- **Files:** `results/EXP-016/completion/`.
+- **Replication:** The preregistered ten-seed cohort is now scored. The original session and the continuation are not pooled into one runtime.

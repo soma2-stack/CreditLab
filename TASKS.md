@@ -179,8 +179,10 @@ Do not resume the original session. Do not raise its budget. Do not try another 
 
 ## Phase 16b — authorized completion
 
-- [ ] Register the fourteen-job continuation before any new score.
-- [ ] Verify the twenty-six saved checkpoints and reuse them.
-- [ ] Restart seed 439, vanilla, noise 1.0, once from initialization, and train the thirteen conditions that never started.
-- [ ] Fit diagnostics only for the sixteen conditions that do not have them.
-- [ ] Leave the original EXP-016 interruption records unchanged.
+- [x] Register the fourteen-job continuation before any new score.
+- [x] Verify the twenty-six saved checkpoints and reuse them.
+- [x] Restart seed 439, vanilla, noise 1.0, once from initialization, and train the thirteen conditions that never started.
+- [x] Fit diagnostics only for the sixteen conditions that do not have them.
+- [x] Leave the original EXP-016 interruption records unchanged.
+
+Do not start EXP-017. Do not begin a selective-overwrite task. Do not retrain a completed condition.

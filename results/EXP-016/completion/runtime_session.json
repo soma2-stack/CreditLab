@@ -1,0 +1,9 @@
+{
+  "budget_seconds_total": 300.0,
+  "code_revision": "4fa96b9058fa6abca0f5e809802ef8052f364dbc",
+  "experiment_id": "EXP-016",
+  "kind": "authorized_completion",
+  "original_runtime": "unknown; not reconstructed",
+  "started_unix": 1791091449.934827,
+  "timing_method": "time.perf_counter inside this process, including verification"
+}

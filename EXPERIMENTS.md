@@ -198,11 +198,13 @@ Registry entries describe completed experiments or plans. Every run saves its ex
 - **Files:** `configs/exp016_noise_robustness.yaml` and `results/EXP-016/`.
 - **Follow-up:** Not started. Do not resume automatically. Do not raise the budget. Do not start EXP-017.
 
-## EXP-016 completion authorized
+## EXP-016 completion — full cohort (completed through an authorized continuation)
 
-- **Authorization:** Fourteen training jobs may finish the preregistered comparison. Twenty-six completed conditions are reused and not retrained. Seed 439, vanilla, noise 1.0, may be restarted once from initialization. Its interrupted attempt stays unscored, with unknown duration and cause. This is not EXP-017.
-- **Budget:** Five minutes total for verification, those fourteen jobs, and the missing diagnostics. The original session's missing time is not reconstructed.
-- **Result:** Not collected.
+- **Question:** At delay 128, does additive recurrence stay more reliable than vanilla recurrence when distractor noise increases from 0.3 to 1.0?
+- **Result:** The 26 saved checkpoints verified. Fourteen new jobs finished in a continuation of 170.4 seconds. Seed 439, vanilla, noise 1.0, was restarted once from initialization. Additive accuracy was 1.000 on all 10 seeds at both noise levels. Vanilla was below 0.95 on 9 of 10 seeds at noise 0.3 and on all 10 at noise 1.0. The exception was seed 457 at noise 0.3, accuracy 1.000. The diagnostic readout agreed with that success line on every condition.
+- **Interpretation:** EXPERIMENTAL RESULT for the completed cohort, obtained through an authorized continuation rather than an uninterrupted original session. The additive advantage remains at noise 1.0. This is not general robustness, and it does not validate the broader theory.
+- **Files:** `results/EXP-016/completion/`. The original interruption note was not rewritten.
+- **Follow-up:** Not started. Do not start EXP-017. Do not begin a selective-overwrite task.
 
 ## EXP-014 rescue denominator, clarified after the checkpoint
 
@@ -211,5 +213,5 @@ Registry entries describe completed experiments or plans. Every run saves its ex
 
 ## Scientific checkpoint
 
-- **Status:** An EXP-016 completion is authorized and not yet run. The original session remains interrupted. EXP-017 is not authorized.
+- **Status:** The EXP-016 cohort is complete through an authorized continuation. No experiment is running. EXP-017 is not authorized.
 - **Document:** `SCIENTIFIC_CHECKPOINT.md`. The audit of saved records is `DOCUMENTATION_AUDIT.md`.

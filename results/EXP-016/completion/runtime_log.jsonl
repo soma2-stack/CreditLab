@@ -1,0 +1,28 @@
+{"attempt": 2, "condition": "vanilla_noise1p0", "event": "start", "seed": 439, "session_elapsed_seconds": 0.955}
+{"attempt": 2, "condition": "vanilla_noise1p0", "event": "finish", "exit_code": 0, "runtime_seconds": 9.063, "seed": 439, "session_elapsed_seconds": 10.018, "stderr_path": "results/EXP-016/completion/logs/vanilla_noise1p0_seed439_attempt2.stderr.txt"}
+{"attempt": 1, "condition": "additive_noise1p0", "event": "start", "seed": 439, "session_elapsed_seconds": 10.019}
+{"attempt": 1, "condition": "additive_noise1p0", "event": "finish", "exit_code": 0, "runtime_seconds": 15.202, "seed": 439, "session_elapsed_seconds": 25.221, "stderr_path": "results/EXP-016/completion/logs/additive_noise1p0_seed439_attempt1.stderr.txt"}
+{"attempt": 1, "condition": "vanilla_noise0p3", "event": "start", "seed": 443, "session_elapsed_seconds": 25.222}
+{"attempt": 1, "condition": "vanilla_noise0p3", "event": "finish", "exit_code": 0, "runtime_seconds": 9.864, "seed": 443, "session_elapsed_seconds": 35.086, "stderr_path": "results/EXP-016/completion/logs/vanilla_noise0p3_seed443_attempt1.stderr.txt"}
+{"attempt": 1, "condition": "additive_noise0p3", "event": "start", "seed": 443, "session_elapsed_seconds": 35.086}
+{"attempt": 1, "condition": "additive_noise0p3", "event": "finish", "exit_code": 0, "runtime_seconds": 15.499, "seed": 443, "session_elapsed_seconds": 50.585, "stderr_path": "results/EXP-016/completion/logs/additive_noise0p3_seed443_attempt1.stderr.txt"}
+{"attempt": 1, "condition": "vanilla_noise1p0", "event": "start", "seed": 443, "session_elapsed_seconds": 50.586}
+{"attempt": 1, "condition": "vanilla_noise1p0", "event": "finish", "exit_code": 0, "runtime_seconds": 9.729, "seed": 443, "session_elapsed_seconds": 60.315, "stderr_path": "results/EXP-016/completion/logs/vanilla_noise1p0_seed443_attempt1.stderr.txt"}
+{"attempt": 1, "condition": "additive_noise1p0", "event": "start", "seed": 443, "session_elapsed_seconds": 60.315}
+{"attempt": 1, "condition": "additive_noise1p0", "event": "finish", "exit_code": 0, "runtime_seconds": 14.397, "seed": 443, "session_elapsed_seconds": 74.712, "stderr_path": "results/EXP-016/completion/logs/additive_noise1p0_seed443_attempt1.stderr.txt"}
+{"attempt": 1, "condition": "vanilla_noise0p3", "event": "start", "seed": 449, "session_elapsed_seconds": 74.713}
+{"attempt": 1, "condition": "vanilla_noise0p3", "event": "finish", "exit_code": 0, "runtime_seconds": 9.067, "seed": 449, "session_elapsed_seconds": 83.78, "stderr_path": "results/EXP-016/completion/logs/vanilla_noise0p3_seed449_attempt1.stderr.txt"}
+{"attempt": 1, "condition": "additive_noise0p3", "event": "start", "seed": 449, "session_elapsed_seconds": 83.781}
+{"attempt": 1, "condition": "additive_noise0p3", "event": "finish", "exit_code": 0, "runtime_seconds": 14.506, "seed": 449, "session_elapsed_seconds": 98.287, "stderr_path": "results/EXP-016/completion/logs/additive_noise0p3_seed449_attempt1.stderr.txt"}
+{"attempt": 1, "condition": "vanilla_noise1p0", "event": "start", "seed": 449, "session_elapsed_seconds": 98.287}
+{"attempt": 1, "condition": "vanilla_noise1p0", "event": "finish", "exit_code": 0, "runtime_seconds": 9.007, "seed": 449, "session_elapsed_seconds": 107.295, "stderr_path": "results/EXP-016/completion/logs/vanilla_noise1p0_seed449_attempt1.stderr.txt"}
+{"attempt": 1, "condition": "additive_noise1p0", "event": "start", "seed": 449, "session_elapsed_seconds": 107.295}
+{"attempt": 1, "condition": "additive_noise1p0", "event": "finish", "exit_code": 0, "runtime_seconds": 14.495, "seed": 449, "session_elapsed_seconds": 121.79, "stderr_path": "results/EXP-016/completion/logs/additive_noise1p0_seed449_attempt1.stderr.txt"}
+{"attempt": 1, "condition": "vanilla_noise0p3", "event": "start", "seed": 457, "session_elapsed_seconds": 121.79}
+{"attempt": 1, "condition": "vanilla_noise0p3", "event": "finish", "exit_code": 0, "runtime_seconds": 8.906, "seed": 457, "session_elapsed_seconds": 130.696, "stderr_path": "results/EXP-016/completion/logs/vanilla_noise0p3_seed457_attempt1.stderr.txt"}
+{"attempt": 1, "condition": "additive_noise0p3", "event": "start", "seed": 457, "session_elapsed_seconds": 130.696}
+{"attempt": 1, "condition": "additive_noise0p3", "event": "finish", "exit_code": 0, "runtime_seconds": 13.94, "seed": 457, "session_elapsed_seconds": 144.636, "stderr_path": "results/EXP-016/completion/logs/additive_noise0p3_seed457_attempt1.stderr.txt"}
+{"attempt": 1, "condition": "vanilla_noise1p0", "event": "start", "seed": 457, "session_elapsed_seconds": 144.637}
+{"attempt": 1, "condition": "vanilla_noise1p0", "event": "finish", "exit_code": 0, "runtime_seconds": 9.454, "seed": 457, "session_elapsed_seconds": 154.091, "stderr_path": "results/EXP-016/completion/logs/vanilla_noise1p0_seed457_attempt1.stderr.txt"}
+{"attempt": 1, "condition": "additive_noise1p0", "event": "start", "seed": 457, "session_elapsed_seconds": 154.091}
+{"attempt": 1, "condition": "additive_noise1p0", "event": "finish", "exit_code": 0, "runtime_seconds": 13.411, "seed": 457, "session_elapsed_seconds": 167.503, "stderr_path": "results/EXP-016/completion/logs/additive_noise1p0_seed457_attempt1.stderr.txt"}
