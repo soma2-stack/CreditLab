@@ -152,3 +152,12 @@ Chronological record. Append new entries; never overwrite old results. Distingui
 - **Interpretation:** EXPERIMENTAL RESULT, outcome D. At delay 64 the full-history advantage remains after clipping is removed. At delay 128, removing clipping makes full-history training less consistent and does not make final-16 training reliable. The earlier clipped comparison is not invalidated by its higher clipping rate. This does not validate the broader theory.
 - **Files:** `results/EXP-011/`.
 - **Replication:** Ten seeds, four conditions, two delays trained separately. Not pooled with earlier counts.
+
+## 2026-10-03 — EXP-012 frozen readout refit
+
+- **Experiment ID:** EXP-012.
+- **Configuration:** `configs/exp012_readout_refit.yaml`. Exploratory diagnostic on all 80 saved EXP-011 checkpoints. No recurrent training. L2 logistic regression, C = 1.0, lbfgs, tolerance 1e-8, 2000 iterations. scikit-learn 1.9.1 expresses that L2 setting as `l1_ratio = 0`. Standardization uses the training mean and population standard deviation. Python 3.11.9, PyTorch 2.13.0+cpu. Diagnostic code `bc4fcdd1e130`. scikit-learn was installed because it was not already present.
+- **Result:** All 80 checkpoints reproduced their saved test counts. All 80 classifiers converged, in at most 170 iterations, in 15.6 seconds. Of 37 final-16 misses, 36 reached at least 0.95 with the new readout. Their bit-flip both-correct fractions were at least 0.977. The remaining miss, delay 128 seed 179 final-16 without clipping, rose from 0.594 to 0.881. Every full-history refit was at least 0.973. Recurrent hashes and historical files stayed unchanged.
+- **Interpretation:** DIAGNOSTIC RESULT, outcome C. Most unsuccessful final-16 states already contained enough linearly readable task information for this fixed classifier. The original readout did not fully use it. One state was only partly improved, which does not prove that no linear classifier could succeed. This does not remove the joint-training advantage of full-history learning, and it does not validate the broader theory.
+- **Files:** `results/EXP-012/`.
+- **Replication:** Not a new recurrent-training replication. The refits are not new seeds.

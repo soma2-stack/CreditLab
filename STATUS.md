@@ -1,9 +1,9 @@
 # Project Status
 
-- **Current phase:** EXP-011 is complete. No further experiment is running.
-- **What was tested:** The same additive model under four fixed settings: full-history or final-16 training, each with norm-5 clipping or with clipping turned off.
-- **Latest result:** With clipping, full-history training succeeded on all 10 seeds at both delays and final-16 training succeeded on 1 and then 0. Without clipping, full-history training still succeeded on all 10 seeds at delay 64 but only 7 at delay 128. Final-16 training succeeded on 2 seeds at delay 64 and none at delay 128.
+- **Current phase:** EXP-012 is complete. No further experiment is running.
+- **What was tested:** A new linear classifier was fit to the frozen final hidden states of all 80 EXP-011 models. The recurrent weights were not trained again.
+- **Latest result:** 36 of 37 unsuccessful final-16 models reached at least 0.95 with the new readout, and those rescues held up when only the original bit was flipped. One model, delay 128 seed 179 without clipping, rose from 0.594 to 0.881 and stayed below 0.95. Every full-history model stayed strong.
 - **Currently running:** Nothing.
-- **Next recommended action:** Stop. Do not try another horizon, do not tune a clipping threshold, and do not start EXP-012.
+- **Next recommended action:** Stop. Do not train the recurrent weights again, do not tune the classifier, and do not start EXP-013.
 
-See `results/EXP-011/analysis.md`. This is one factorial comparison, not a proof of the theory.
+See `results/EXP-012/analysis.md`. This is a diagnostic on models that were already trained, not a proof of the theory.

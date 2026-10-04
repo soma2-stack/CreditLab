@@ -142,10 +142,10 @@ Registry entries describe completed experiments or plans. Every run saves its ex
 - **Files:** `configs/exp011_clipping_horizon.yaml` and `results/EXP-011/`.
 - **Follow-up:** EXP-012 asks whether a new linear readout can use the hidden states the final-16 runs already learned. The EXP-011 analysis file was not rewritten.
 
-## EXP-012 — Frozen-state linear readout rescue (preregistered; diagnostic not started)
+## EXP-012 — Frozen-state linear readout rescue (completed)
 
 - **Question:** Can a separately fitted linear classifier answer the task from the final hidden states of the 80 saved EXP-011 models?
-- **Classifier:** L2 logistic regression, C = 1.0, lbfgs, tolerance 1e-8, 2000 iterations. In scikit-learn 1.9 this L2 setting is `l1_ratio = 0`. Training features are standardized with the training mean and population standard deviation. A zero-variance coordinate uses scale 1.
-- **Scope:** All 80 checkpoints. No recurrent training and no change to K or clipping.
-- **Budget:** Five minutes total. No automatic resume.
-- **Result:** Not collected.
+- **Result:** All 80 checkpoints verified and all 80 classifiers converged in 15.6 seconds. Of 37 final-16 misses, 36 reached at least 0.95 with the new readout, and those rescues held up on the bit-flip check. Delay 128, seed 179, final-16 without clipping, rose from 0.594 to 0.881 and stayed below 0.95. Every full-history refit stayed at or above 0.973.
+- **Interpretation:** DIAGNOSTIC RESULT, outcome C. Most final-16 misses had enough linearly readable information that the original readout did not fully use. One miss was only partly improved. This does not erase the full-history advantage during joint training, and it does not validate the broader theory.
+- **Files:** `configs/exp012_readout_refit.yaml` and `results/EXP-012/`.
+- **Follow-up:** Not started. Do not train recurrent weights, do not tune C, and do not start EXP-013.

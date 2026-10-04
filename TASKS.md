@@ -117,3 +117,13 @@ Do not try another horizon. Do not build another model. Do not start EXP-011.
 - [x] Leave EXP-001 through EXP-010 artifacts unchanged.
 
 Do not try another horizon. Do not tune a clipping threshold. Do not build another model. Do not start EXP-012.
+
+## Phase 12 — frozen readout refit
+
+- [x] Preregister the fixed L2 logistic classifier before any refitted accuracy.
+- [x] Verify all 80 EXP-011 checkpoints against their saved test counts.
+- [x] Fit one classifier per checkpoint on training hidden states only, and compare it with the original readout.
+- [x] Run the bit-flip check on the original and refitted readouts using the same frozen states.
+- [x] Leave EXP-001 through EXP-011 artifacts unchanged.
+
+Do not train recurrent weights. Do not tune C. Do not try another horizon. Do not start EXP-013.
