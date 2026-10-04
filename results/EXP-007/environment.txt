@@ -1,0 +1,3 @@
+Python: 3.11.9
+PyTorch: 2.13.0+cpu
+Training code revision: facb570b788652c4edee5341ef8cce68fcd6f2af

@@ -83,3 +83,13 @@ Chronological record. Append new entries; never overwrite old results. Distingui
 - **Interpretation:** EXPERIMENTAL RESULT. The additive advantage reproduced on every new seed. Bounded success is not limited to the old seed 17, and the paired comparison shows it was less reliable than additive. Ten seeds leave a wide interval. This does not identify why individual seeds succeed, does not show that clipping caused the misses, and does not validate the broader theory.
 - **Files:** `results/EXP-006/`.
 - **Replication:** Ten new seeds, one synthetic task, one fixed bound. Not pooled with the earlier three seeds.
+
+## 2026-10-03 — EXP-007 readout-only versus full training
+
+- **Experiment ID:** EXP-007.
+- **Configuration:** `configs/exp007_readout_only.yaml`. Same three forward equations and `B = 4`. Same ten seeds and data base seed 2000 as EXP-006, but these full-training runs are a new matched control and are not pooled with EXP-006. Readout-only training freezes input and recurrent weights at initialization and trains the output layer with the same Adam settings and 400 updates. Python 3.11.9, PyTorch 2.13.0+cpu.
+- **Result:** 120/120 training runs and 120 bit-flip audits finished. Accounted runtime 753 seconds. No numerical failures and no unstarted runs. Full additive succeeded on 10/10 seeds at delays 64 and 128. Readout-only additive succeeded on 0/10 at both delays. Full bounded succeeded on 6/10 and 5/10. Readout-only bounded succeeded on 0/10 at both delays. Full vanilla succeeded on 3/10 and 1/10. Readout-only vanilla succeeded on 0/10.
+- **Memory before training:** At initialization, additive probe R^2 averaged about 0.53 at delay 64 and about 0.45 at delay 128. Those values were unchanged after readout-only training. Recurrent parameter hashes and hidden states on a fixed batch were unchanged in all 60 readout-only runs.
+- **Interpretation:** EXPERIMENTAL RESULT, outcome B. Reliable additive success under this schedule uses learning in the recurrent weights. The initial dynamics already carry partial bit information, and a trained readout uses some of it, but not enough to reach 0.95 accuracy. Freezing the bounded model removed its successes rather than making it more reliable. This does not prove another budget could never train the readout alone, and it does not validate the broader theory.
+- **Files:** `results/EXP-007/`.
+- **Replication:** Ten seeds, two training regimes, not pooled with EXP-006.

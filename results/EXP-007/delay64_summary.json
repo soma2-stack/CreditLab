@@ -1,0 +1,193 @@
+{
+  "cohorts": [
+    {
+      "accuracies": {
+        "101": 0.521484375,
+        "113": 1.0,
+        "127": 0.490234375,
+        "139": 0.6796875,
+        "151": 1.0,
+        "163": 1.0,
+        "179": 0.486328125,
+        "191": 0.498046875,
+        "211": 0.501953125,
+        "223": 0.685546875
+      },
+      "accuracy_mean": 0.686328125,
+      "accuracy_median": 0.6005859375,
+      "completed": 10,
+      "delay": 64,
+      "model_type": "vanilla_tanh_rnn",
+      "regime": "full",
+      "success_interval_95": {
+        "lower": 0.0667395111777345,
+        "successes": 3,
+        "trials": 10,
+        "upper": 0.6524528500599971
+      },
+      "successes": 3
+    },
+    {
+      "accuracies": {
+        "101": 0.529296875,
+        "113": 0.51171875,
+        "127": 0.52734375,
+        "139": 0.517578125,
+        "151": 0.4921875,
+        "163": 0.515625,
+        "179": 0.505859375,
+        "191": 0.513671875,
+        "211": 0.505859375,
+        "223": 0.52734375
+      },
+      "accuracy_mean": 0.5146484375,
+      "accuracy_median": 0.5146484375,
+      "completed": 10,
+      "delay": 64,
+      "model_type": "vanilla_tanh_rnn",
+      "regime": "readout_only",
+      "success_interval_95": {
+        "lower": 0.0,
+        "successes": 0,
+        "trials": 10,
+        "upper": 0.3084971078187607
+      },
+      "successes": 0
+    },
+    {
+      "accuracies": {
+        "101": 1.0,
+        "113": 1.0,
+        "127": 1.0,
+        "139": 1.0,
+        "151": 1.0,
+        "163": 1.0,
+        "179": 1.0,
+        "191": 1.0,
+        "211": 1.0,
+        "223": 1.0
+      },
+      "accuracy_mean": 1.0,
+      "accuracy_median": 1.0,
+      "completed": 10,
+      "delay": 64,
+      "model_type": "additive_tanh_rnn",
+      "regime": "full",
+      "success_interval_95": {
+        "lower": 0.6915028921812392,
+        "successes": 10,
+        "trials": 10,
+        "upper": 1.0
+      },
+      "successes": 10
+    },
+    {
+      "accuracies": {
+        "101": 0.87109375,
+        "113": 0.853515625,
+        "127": 0.87109375,
+        "139": 0.92578125,
+        "151": 0.896484375,
+        "163": 0.865234375,
+        "179": 0.873046875,
+        "191": 0.80078125,
+        "211": 0.884765625,
+        "223": 0.83203125
+      },
+      "accuracy_mean": 0.8673828125,
+      "accuracy_median": 0.87109375,
+      "completed": 10,
+      "delay": 64,
+      "model_type": "additive_tanh_rnn",
+      "regime": "readout_only",
+      "success_interval_95": {
+        "lower": 0.0,
+        "successes": 0,
+        "trials": 10,
+        "upper": 0.3084971078187607
+      },
+      "successes": 0
+    },
+    {
+      "accuracies": {
+        "101": 1.0,
+        "113": 1.0,
+        "127": 1.0,
+        "139": 0.896484375,
+        "151": 0.51171875,
+        "163": 1.0,
+        "179": 1.0,
+        "191": 0.482421875,
+        "211": 0.5,
+        "223": 1.0
+      },
+      "accuracy_mean": 0.8390625,
+      "accuracy_median": 1.0,
+      "completed": 10,
+      "delay": 64,
+      "model_type": "bounded_additive_tanh_rnn",
+      "regime": "full",
+      "success_interval_95": {
+        "lower": 0.26237807660694523,
+        "successes": 6,
+        "trials": 10,
+        "upper": 0.8784477418801726
+      },
+      "successes": 6
+    },
+    {
+      "accuracies": {
+        "101": 0.837890625,
+        "113": 0.72265625,
+        "127": 0.826171875,
+        "139": 0.78125,
+        "151": 0.703125,
+        "163": 0.53515625,
+        "179": 0.849609375,
+        "191": 0.658203125,
+        "211": 0.58984375,
+        "223": 0.609375
+      },
+      "accuracy_mean": 0.711328125,
+      "accuracy_median": 0.712890625,
+      "completed": 10,
+      "delay": 64,
+      "model_type": "bounded_additive_tanh_rnn",
+      "regime": "readout_only",
+      "success_interval_95": {
+        "lower": 0.0,
+        "successes": 0,
+        "trials": 10,
+        "upper": 0.3084971078187607
+      },
+      "successes": 0
+    }
+  ],
+  "delay_128": "will run",
+  "elapsed_seconds": 263.875,
+  "full_additive_successes": 10,
+  "paired": {
+    "additive_tanh_rnn": {
+      "both": 0,
+      "full_only": 10,
+      "neither": 0,
+      "readout_only": 0,
+      "seeds": 10
+    },
+    "bounded_additive_tanh_rnn": {
+      "both": 0,
+      "full_only": 6,
+      "neither": 4,
+      "readout_only": 0,
+      "seeds": 10
+    },
+    "vanilla_tanh_rnn": {
+      "both": 0,
+      "full_only": 3,
+      "neither": 7,
+      "readout_only": 0,
+      "seeds": 10
+    }
+  },
+  "written_before_delay_128": true
+}

@@ -86,11 +86,11 @@ Registry entries describe completed experiments or plans. Every run saves its ex
 - **Files:** `configs/exp006_replication.yaml` and `results/EXP-006/`.
 - **Follow-up:** Not started.
 
-## EXP-007 — Readout-only versus full training (preregistered; training not started)
+## EXP-007 — Readout-only versus full training (completed)
 
-- **Question:** Does the additive model's delayed-memory success require learning its recurrent weights, or can the initial recurrent dynamics support the task when only the readout is trained?
-- **Regimes:** Full training of all parameters, and readout-only training that freezes the input and recurrent weights at initialization. `B` stays 4. No new forward architecture.
-- **Seeds:** The EXP-006 cohort, 101 through 223, with data base seed 2000. Full-training runs inside EXP-007 are fresh controls and are not pooled with EXP-006.
-- **Gate:** Fresh delay-128 training runs only if full-training additive succeeds on at least 8 of 10 delay-64 seeds. Readout-only results do not control that gate.
-- **Budget:** Five minutes per run and 20 minutes total for training plus the bit-flip audit.
-- **Result:** Not collected.
+- **Question:** Does additive delayed-memory success require learning the recurrent weights, or is the initial recurrent dynamics enough if only the readout is trained?
+- **Change:** No new forward equation. `B` stayed 4. Each model was trained either fully or with input and recurrent weights frozen at initialization.
+- **Result:** All 120 runs and 120 audits finished. Full additive succeeded on 10/10 seeds at both delays. Readout-only additive succeeded on 0/10 at both delays, with accuracy mostly about 0.80–0.93. Full bounded succeeded on 6/10 and 5/10. Readout-only bounded succeeded on 0/10 at both delays. Frozen recurrent weights and hidden states stayed unchanged in every readout-only run. The initial additive probe R^2 was about 0.53 at delay 64 and about 0.45 at delay 128, and it did not change when only the readout was trained.
+- **Interpretation:** EXPERIMENTAL RESULT, outcome B. Under this schedule, learning the recurrent weights is needed for reliable additive success. Freezing did not repair bounded reliability. This is not an architecture result and it does not validate the broader theory.
+- **Files:** `configs/exp007_readout_only.yaml` and `results/EXP-007/`.
+- **Follow-up:** Not started. Do not tune B and do not start another experiment from this run.

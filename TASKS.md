@@ -66,3 +66,13 @@ Do not start EXP-006 from this audit. Do not add a model. Do not retune B.
 - [x] Keep historical seeds out of the primary counts and leave EXP-001 through EXP-005 artifacts unchanged.
 
 Do not start EXP-007. Do not tune B. Do not add a model.
+
+## Phase 7 — readout-only comparison
+
+- [x] Preregister full training versus readout-only training before any EXP-007 accuracy.
+- [x] Train all six conditions at delay 64, then fresh delay-128 runs because full additive succeeded on 10 of 10 seeds.
+- [x] Check that frozen recurrent weights and hidden states stayed unchanged.
+- [x] Run the bit-flip audit on the completed conditions.
+- [x] Leave EXP-001 through EXP-006 artifacts unchanged.
+
+Do not start EXP-008. Do not tune B. Do not change the forward equations.
