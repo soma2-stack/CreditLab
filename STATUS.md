@@ -1,9 +1,9 @@
 # Project Status
 
-- **Current phase:** The planned EXP-009 delay-128 comparison is complete through an authorized continuation. The original training session remains interrupted. No training is running.
-- **What was tested:** The same additive model at delay 128. Two finished runs were reused. The unfinished bias run was restarted once from initialization, and the other 37 runs were trained once.
-- **Latest result:** Full training and matrix-plus-readout training succeeded on all 10 seeds. Bias-plus-readout training succeeded on 2 of 10. Readout-only training succeeded on none. The misses still showed partial dependence on the original bit.
+- **Current phase:** EXP-010 is complete. No further experiment is running.
+- **What was tested:** The same additive model, trained either through the whole sequence or with the training gradient cut off so that only the final 16 steps send a gradient.
+- **Latest result:** Full-sequence training succeeded on all 10 seeds at delays 64 and 128. Final-16 training succeeded on 1 of 10 seeds at delay 64 and on none at delay 128. The training gradient at the original event was blocked in the final-16 runs. The forward pass could still change with that bit.
 - **Currently running:** Nothing.
-- **Next recommended action:** Stop. Do not start EXP-010, do not split the parameter groups further, and do not tune the bound of 4.
+- **Next recommended action:** Stop. Do not try another horizon, do not add a model, and do not start EXP-011.
 
-See `results/EXP-009/delay128_completion/analysis.md`. The original interruption note was not rewritten.
+See `results/EXP-010/analysis.md`. This is one training comparison, not a proof of the theory.

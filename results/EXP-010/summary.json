@@ -1,0 +1,296 @@
+{
+  "audit_rows": 40,
+  "code_revision": "af1c7fbfeaf8dcd42eeaf19eede827d3aa49ecc1",
+  "completed_runs": 40,
+  "delay64_terminal_records": 20,
+  "delay_128_ran": true,
+  "elapsed_seconds": 472.212,
+  "failed_runs": 0,
+  "full_history_delay64_successes": 10,
+  "implementation_stop": null,
+  "k": 16,
+  "paired": [
+    {
+      "delay": 64,
+      "final_16": {
+        "status": "ok",
+        "success": false,
+        "test_accuracy": 0.494140625
+      },
+      "full_history": {
+        "status": "ok",
+        "success": true,
+        "test_accuracy": 1.0
+      },
+      "seed": 101
+    },
+    {
+      "delay": 64,
+      "final_16": {
+        "status": "ok",
+        "success": false,
+        "test_accuracy": 0.578125
+      },
+      "full_history": {
+        "status": "ok",
+        "success": true,
+        "test_accuracy": 1.0
+      },
+      "seed": 113
+    },
+    {
+      "delay": 64,
+      "final_16": {
+        "status": "ok",
+        "success": false,
+        "test_accuracy": 0.923828125
+      },
+      "full_history": {
+        "status": "ok",
+        "success": true,
+        "test_accuracy": 1.0
+      },
+      "seed": 127
+    },
+    {
+      "delay": 64,
+      "final_16": {
+        "status": "ok",
+        "success": false,
+        "test_accuracy": 0.744140625
+      },
+      "full_history": {
+        "status": "ok",
+        "success": true,
+        "test_accuracy": 1.0
+      },
+      "seed": 139
+    },
+    {
+      "delay": 64,
+      "final_16": {
+        "status": "ok",
+        "success": false,
+        "test_accuracy": 0.7734375
+      },
+      "full_history": {
+        "status": "ok",
+        "success": true,
+        "test_accuracy": 1.0
+      },
+      "seed": 151
+    },
+    {
+      "delay": 64,
+      "final_16": {
+        "status": "ok",
+        "success": false,
+        "test_accuracy": 0.65234375
+      },
+      "full_history": {
+        "status": "ok",
+        "success": true,
+        "test_accuracy": 1.0
+      },
+      "seed": 163
+    },
+    {
+      "delay": 64,
+      "final_16": {
+        "status": "ok",
+        "success": false,
+        "test_accuracy": 0.60546875
+      },
+      "full_history": {
+        "status": "ok",
+        "success": true,
+        "test_accuracy": 1.0
+      },
+      "seed": 179
+    },
+    {
+      "delay": 64,
+      "final_16": {
+        "status": "ok",
+        "success": false,
+        "test_accuracy": 0.626953125
+      },
+      "full_history": {
+        "status": "ok",
+        "success": true,
+        "test_accuracy": 1.0
+      },
+      "seed": 191
+    },
+    {
+      "delay": 64,
+      "final_16": {
+        "status": "ok",
+        "success": false,
+        "test_accuracy": 0.5390625
+      },
+      "full_history": {
+        "status": "ok",
+        "success": true,
+        "test_accuracy": 1.0
+      },
+      "seed": 211
+    },
+    {
+      "delay": 64,
+      "final_16": {
+        "status": "ok",
+        "success": true,
+        "test_accuracy": 0.998046875
+      },
+      "full_history": {
+        "status": "ok",
+        "success": true,
+        "test_accuracy": 1.0
+      },
+      "seed": 223
+    },
+    {
+      "delay": 128,
+      "final_16": {
+        "status": "ok",
+        "success": false,
+        "test_accuracy": 0.4765625
+      },
+      "full_history": {
+        "status": "ok",
+        "success": true,
+        "test_accuracy": 1.0
+      },
+      "seed": 101
+    },
+    {
+      "delay": 128,
+      "final_16": {
+        "status": "ok",
+        "success": false,
+        "test_accuracy": 0.638671875
+      },
+      "full_history": {
+        "status": "ok",
+        "success": true,
+        "test_accuracy": 1.0
+      },
+      "seed": 113
+    },
+    {
+      "delay": 128,
+      "final_16": {
+        "status": "ok",
+        "success": false,
+        "test_accuracy": 0.48828125
+      },
+      "full_history": {
+        "status": "ok",
+        "success": true,
+        "test_accuracy": 1.0
+      },
+      "seed": 127
+    },
+    {
+      "delay": 128,
+      "final_16": {
+        "status": "ok",
+        "success": false,
+        "test_accuracy": 0.810546875
+      },
+      "full_history": {
+        "status": "ok",
+        "success": true,
+        "test_accuracy": 1.0
+      },
+      "seed": 139
+    },
+    {
+      "delay": 128,
+      "final_16": {
+        "status": "ok",
+        "success": false,
+        "test_accuracy": 0.849609375
+      },
+      "full_history": {
+        "status": "ok",
+        "success": true,
+        "test_accuracy": 1.0
+      },
+      "seed": 151
+    },
+    {
+      "delay": 128,
+      "final_16": {
+        "status": "ok",
+        "success": false,
+        "test_accuracy": 0.5234375
+      },
+      "full_history": {
+        "status": "ok",
+        "success": true,
+        "test_accuracy": 1.0
+      },
+      "seed": 163
+    },
+    {
+      "delay": 128,
+      "final_16": {
+        "status": "ok",
+        "success": false,
+        "test_accuracy": 0.46875
+      },
+      "full_history": {
+        "status": "ok",
+        "success": true,
+        "test_accuracy": 1.0
+      },
+      "seed": 179
+    },
+    {
+      "delay": 128,
+      "final_16": {
+        "status": "ok",
+        "success": false,
+        "test_accuracy": 0.4921875
+      },
+      "full_history": {
+        "status": "ok",
+        "success": true,
+        "test_accuracy": 1.0
+      },
+      "seed": 191
+    },
+    {
+      "delay": 128,
+      "final_16": {
+        "status": "ok",
+        "success": false,
+        "test_accuracy": 0.841796875
+      },
+      "full_history": {
+        "status": "ok",
+        "success": true,
+        "test_accuracy": 1.0
+      },
+      "seed": 211
+    },
+    {
+      "delay": 128,
+      "final_16": {
+        "status": "ok",
+        "success": false,
+        "test_accuracy": 0.63671875
+      },
+      "full_history": {
+        "status": "ok",
+        "success": true,
+        "test_accuracy": 1.0
+      },
+      "seed": 223
+    }
+  ],
+  "timing_method": "time.perf_counter inside this process",
+  "unstarted": []
+}

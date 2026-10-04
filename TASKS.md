@@ -97,3 +97,13 @@ Do not start EXP-009. Do not tune B. Do not change the forward equation.
 - [x] Leave EXP-001 through the earlier EXP-009 training and audit files unchanged.
 
 Do not start EXP-010. Do not subdivide parameter groups further. Do not tune B. Do not change the forward equation.
+
+## Phase 10 — final-16 gradient cutoff
+
+- [x] Preregister K = 16 and the two additive training regimes before any EXP-010 accuracy.
+- [x] Train full-history and final-16 regimes at delay 64, then fresh delay-128 runs because full-history training succeeded on 10 of 10 seeds.
+- [x] Confirm that the final-16 training graph blocks the original event, and keep that measurement separate from the full forward pass.
+- [x] Run the bit-flip audit on the completed models.
+- [x] Leave EXP-001 through EXP-009 artifacts unchanged.
+
+Do not try another horizon. Do not build another model. Do not start EXP-011.

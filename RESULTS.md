@@ -134,3 +134,12 @@ Chronological record. Append new entries; never overwrite old results. Distingui
 - **Interpretation:** EXPERIMENTAL RESULT. At delay 128, bias-only adaptation was not sufficient for most seeds, while matrix adaptation was sufficient on every seed with both biases fixed. Scores just below 0.95 still carried bit information. This does not explain EXP-008, does not make matrix learning universally necessary, and does not validate the broader theory. The original unfinished attempt still has no recorded duration.
 - **Files:** `results/EXP-009/delay128_completion/`.
 - **Compute:** Separate 10-minute allowance. Measured time was 381.534 seconds. This is not the complete historical EXP-009 cost.
+
+## 2026-10-03 — EXP-010 final-16 gradient cutoff
+
+- **Experiment ID:** EXP-010.
+- **Configuration:** `configs/exp010_truncated_bptt.yaml`. Unchanged additive model, all parameters trainable. Full-history training versus one detach before the final 16 steps. K = 16, fixed beforehand. Same ten seeds and data base seed 2000. Not pooled with earlier counts. Python 3.11.9, PyTorch 2.13.0+cpu. Training code `af1c7fbfeaf8`.
+- **Result:** 40/40 training runs and 40 bit-flip audits finished in 472 seconds. No failures and no unstarted runs. Full-history success was 10/10 at both delays. Final-16 success was 1/10 at delay 64, seed 223 at 0.998, and 0/10 at delay 128. On every final-16 run the training-graph gradient at the original event was a computational zero. The separate full-forward measurement still changed with the bit, and the bit-flip check changed the final state. Final-16 clipping was much more frequent than full-history clipping.
+- **Interpretation:** EXPERIMENTAL RESULT, outcome B. Sending the training gradient back through the whole sequence improved reliable success under this schedule. The cutoff was not fatal for every seed, and several misses kept partial information. This does not prove another budget or horizon could never work, and it does not validate the broader theory.
+- **Files:** `results/EXP-010/`.
+- **Replication:** Ten seeds, two training regimes, not pooled with earlier counts.

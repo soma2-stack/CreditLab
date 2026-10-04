@@ -126,11 +126,10 @@ Registry entries describe completed experiments or plans. Every run saves its ex
 - **Interpretation:** EXPERIMENTAL RESULT for the completed delay-128 cohort. Bias-only adaptation did not remain sufficient for most seeds at this delay. Matrix adaptation remained sufficient on every seed with both biases fixed. The original session is still interrupted, and this clock is not its missing cost. This is not an architecture result and it does not validate the broader theory.
 - **Files:** `results/EXP-009/delay128_completion/`. The interruption note was not rewritten.
 
-## EXP-010 — Does additive learning need long-horizon backpropagation? (preregistered; training not started)
+## EXP-010 — Does additive learning need long-horizon backpropagation? (completed)
 
-- **Question:** Does the additive model still learn the delayed bit reliably when training gradients are cut off after the state is carried forward, so that only the final 16 steps send a gradient?
-- **Change:** No new forward equation. K = 16 was fixed before any EXP-010 accuracy. One regime uses ordinary full-history training. The other detaches the hidden state once, without changing its value, and trains through the last 16 steps only.
-- **Seeds:** 101 through 223, data base seed 2000. Not pooled with earlier counts.
-- **Gate:** Fresh delay-128 training runs only if all 20 delay-64 runs finish and full-history training succeeds on at least 8 of 10 seeds.
-- **Budget:** Five minutes per run and 10 minutes total. No automatic resume.
-- **Result:** Not collected.
+- **Question:** Does the additive model still learn the delayed bit reliably when the state is carried forward through the whole sequence, but the training gradient is sent back only through the final 16 steps?
+- **Result:** All 40 runs and 40 audits finished in 472 seconds. Full-history training succeeded on 10/10 seeds at both delays. Final-16 training succeeded on 1/10 at delay 64 and 0/10 at delay 128. The delay-64 success was seed 223 at 0.998. The training-graph gradient at the original event was a computational zero on every final-16 run. The separate full-forward check still showed some bit sensitivity, and the bit-flip check still changed the final state.
+- **Interpretation:** EXPERIMENTAL RESULT, outcome B. Explicit long-horizon backpropagation improved reliable success under this schedule. It was not required for every seed, and several misses still kept partial information. This is not an architecture result and it does not validate the broader theory.
+- **Files:** `configs/exp010_truncated_bptt.yaml` and `results/EXP-010/`.
+- **Follow-up:** Not started. Do not try another horizon and do not start EXP-011.
