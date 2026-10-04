@@ -107,3 +107,9 @@ Chronological record. Append new entries; never overwrite old results. Distingui
 - **Interpretation:** EXPERIMENTAL RESULT, outcome C. Either trained parameter group, together with the readout, was enough for reliable success while the other group stayed at initialization. Learning the hidden-to-hidden matrix was not necessary in this setup. Readout-only training still stayed below 0.95, consistent with EXP-007. This does not prove another budget could never train the readout alone, and it does not validate the broader theory.
 - **Files:** `results/EXP-008/`.
 - **Replication:** Ten seeds, four training regimes, not pooled with EXP-006 or EXP-007.
+
+## 2026-10-03 — EXP-009 preregistered
+
+- **Experiment ID:** EXP-009.
+- **Configuration:** `configs/exp009_bias_ablation.yaml`. Additive model only. Regime C trains `b_x` and the readout. Regime D trains both matrices and the readout. This choice was fixed before any EXP-009 accuracy.
+- **Result:** Not collected.

@@ -102,4 +102,13 @@ Registry entries describe completed experiments or plans. Every run saves its ex
 - **Result:** All 80 runs and 80 audits finished in 625 seconds. Full training succeeded on 10/10 seeds at both delays. Readout-only succeeded on 0/10. Input-side plus readout succeeded on 10/10. Recurrent-side plus readout succeeded on 10/10. Frozen parameters stayed fixed. Readout-only hidden states stayed unchanged.
 - **Interpretation:** EXPERIMENTAL RESULT, outcome C. Either parameter group, together with the readout, was sufficient under this schedule. Learning the hidden-to-hidden matrix was not necessary. This is not an architecture result and it does not validate the broader theory.
 - **Files:** `configs/exp008_parameter_groups.yaml` and `results/EXP-008/`.
-- **Follow-up:** Not started. Do not tune B and do not start another experiment from this run.
+- **Follow-up:** EXP-009 asks whether one preactivation bias, or the two matrices, is enough. The EXP-008 analysis file was not rewritten.
+
+## EXP-009 — Can bias adaptation alone enable additive success? (preregistered; training not started)
+
+- **Question:** Can one learned preactivation bias plus the readout solve the additive task while both weight matrices stay at initialization? Can matrix learning plus the readout solve it while both preactivation biases stay fixed?
+- **Model:** The existing additive equation only. Regime C trains `b_x` (`recurrent.bias_ih_l0`) and the readout, and freezes both matrices and `b_h`. Regime D trains both matrices and the readout, and freezes both preactivation biases. Full training and readout-only are fresh controls. `B` is not part of this comparison and is not tuned.
+- **Seeds:** 101 through 223, data base seed 2000. Not pooled with earlier counts.
+- **Gate:** Fresh delay-128 training runs only if all 40 delay-64 runs finish and full training succeeds on at least 8 of 10 delay-64 seeds.
+- **Budget:** Five minutes per run and 15 minutes total. No automatic resume and no runtime inferred from file timestamps.
+- **Result:** Not collected.
