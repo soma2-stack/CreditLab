@@ -259,12 +259,14 @@ Registry entries describe completed experiments or plans. Every run saves its ex
 - **Files:** `configs/exp022_two_memory.yaml` and `results/EXP-022/`.
 - **Follow-up:** Stop. Do not add a learned gate. Do not start EXP-023.
 
-## EXP-023 — Are both current memory values readable? (preregistered; not started)
+## EXP-023 — Are both current memory values readable? (completed)
 
 - **Question:** Before the final question, can two linear readouts recover both current memory values from the same frozen state, and does choosing between them with the supplied query address improve the task score?
-- **Design:** Diagnostic only, on the 30 saved EXP-022 models. No recurrent training. The features are the hidden state after step 128, before the query. Success on the original test split requires routed accuracy and every subgroup at least 0.95.
-- **Budget:** Five minutes total.
-- **Result:** Not collected.
+- **Design:** Diagnostic only, on the 30 saved EXP-022 models. No recurrent training. Features are the hidden state after step 128. Sixty linear heads, fit on training states only.
+- **Result:** All 30 checkpoints reproduced their saved correct counts. All 60 fits converged. The diagnostic took 25 seconds. Success was 0/30. The best routed score was 449/512. Original bits were readable. Replacement was not. A whole-state wipe still left the pre-wipe bit unreadable, with exact state equality.
+- **Interpretation:** EXPERIMENTAL RESULT. Explicit routing raised scores above the saved readout and did not solve the task. Retained bits and updated bits do not behave the same way under this linear diagnostic. This is not learned addressing and not a video result.
+- **Files:** `configs/exp023_two_head_diagnostic.yaml` and `results/EXP-023/`.
+- **Follow-up:** Stop. Do not train the recurrent models again. Do not start EXP-024.
 
 ## EXP-014 rescue denominator, clarified after the checkpoint
 
@@ -273,5 +275,5 @@ Registry entries describe completed experiments or plans. Every run saves its ex
 
 ## Scientific checkpoint
 
-- **Status:** EXP-023 is preregistered. Diagnostic scores have not been collected. EXP-024 is not authorized.
+- **Status:** EXP-023 is complete. The two-head diagnostic did not solve the task. EXP-024 is not authorized.
 - **Document:** `SCIENTIFIC_CHECKPOINT.md`. The audit of saved records is `DOCUMENTATION_AUDIT.md`.

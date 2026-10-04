@@ -281,3 +281,12 @@ Chronological record. Append new entries; never overwrite old results. Distingui
 - **Interpretation:** EXPERIMENTAL RESULT. The fixed half-state reset did not update one memory and keep the other. Whole-state misses on a pre-wipe bit were structural. The separate readout did not change that call. This is not learned routing and not a video result.
 - **Files:** `results/EXP-022/`.
 - **Replication:** New task and new cohort. Not pooled with EXP-020 or EXP-021.
+
+## 2026-10-04 — EXP-023 two-head diagnostic
+
+- **Experiment ID:** EXP-023.
+- **Configuration:** `configs/exp023_two_head_diagnostic.yaml`. Frozen EXP-022 checkpoints only. Pre-query state at index 128. Two linear heads, training data only, then a hard-coded choice by the query address. No recurrent training. Python 3.11.9, PyTorch 2.13.0+cpu, scikit-learn 1.9.1. Diagnostic code `4358f3e6fad6`.
+- **Result:** All 30 checkpoints reproduced their saved correct counts. All 60 fits converged. The run took 24.5 seconds. Success was 0/30. The best routed score was 449/512. Ordinary additive and addressed reset made the original bits readable and left replacement near chance. Whole-state reset made the latest write readable and left a pre-wipe bit at chance, with exact state equality on the wiped-bit audit.
+- **Interpretation:** EXPERIMENTAL RESULT. Useful original-value information is often present before the query, and the saved readout underuses it. The updated value is not recovered by this linear diagnostic, so explicit routing does not solve the task. A linear miss does not prove absence. This is not learned addressing and not a video result.
+- **Files:** `results/EXP-023/`.
+- **Replication:** Diagnostic of the EXP-022 models. Not a new training replication.

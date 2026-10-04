@@ -1,0 +1,4 @@
+Python: 3.11.9
+PyTorch: 2.13.0+cpu
+scikit-learn: 1.9.1
+Diagnostic code revision: 4358f3e6fad6f960bf9e2ff00298754f8374e179

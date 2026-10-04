@@ -243,9 +243,9 @@ Do not add a learned gate. Do not force the two halves to stop talking to each o
 
 ## Phase 23 — read both current values
 
-- [ ] Preregister the pre-query state, the two linear heads, and the hard-coded query route before any EXP-023 score.
-- [ ] Verify the 30 saved EXP-022 checkpoints and their original correct counts.
-- [ ] Fit the two heads on training states only, then score the routed readout.
-- [ ] Leave EXP-001 through EXP-022 artifacts unchanged.
+- [x] Preregister the pre-query state, the two linear heads, and the hard-coded query route before any EXP-023 score.
+- [x] Verify the 30 saved EXP-022 checkpoints and their original correct counts.
+- [x] Fit the two heads on training states only, then score the routed readout.
+- [x] Leave EXP-001 through EXP-022 artifacts unchanged.
 
 Do not train the recurrent models again. Do not add a learned gate. Do not start EXP-024.

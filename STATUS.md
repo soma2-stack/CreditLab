@@ -1,9 +1,9 @@
 # Project Status
 
-- **Current phase:** EXP-023 is preregistered. The diagnostic has not started.
-- **What was tested:** Nothing new yet. The two-memory comparison remains the latest scored result.
-- **Latest result:** None of the 30 runs solved the two-memory task. The half-state reset did not replace one bit while preserving the other.
+- **Current phase:** EXP-023 is complete. No experiment is running.
+- **What was tested:** Whether two linear readouts could recover both current memory values from the frozen state just before the question.
+- **Latest result:** Original stored bits were often readable. The replacement bit was not. Choosing a readout with the supplied query address raised the score and left every model below the success line. A bit written only before a whole-state wipe stayed unreadable.
 - **Currently running:** Nothing.
-- **Next recommended action:** Run the preregistered two-head diagnostic on the frozen EXP-022 models. Do not start EXP-024.
+- **Next recommended action:** Stop. Do not train the recurrent models again, and do not start EXP-024.
 
-See `results/EXP-022/analysis.md`. Earlier analyses and the EXP-019 stop record were not rewritten.
+See `results/EXP-023/analysis.md`. Earlier analyses and the EXP-019 stop record were not rewritten.
