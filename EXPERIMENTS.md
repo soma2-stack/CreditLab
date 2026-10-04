@@ -96,11 +96,10 @@ Registry entries describe completed experiments or plans. Every run saves its ex
 - **Files:** `configs/exp007_readout_only.yaml` and `results/EXP-007/`.
 - **Follow-up:** EXP-008 separates input-side training from recurrent-side training. The EXP-007 analysis file was not rewritten.
 
-## EXP-008 — Which parameter group enables additive learning? (preregistered; training not started)
+## EXP-008 — Which parameter group enables additive learning? (completed)
 
-- **Question:** Can reliable additive delayed learning happen while the hidden-to-hidden weights stay fixed, if the input-side weights and the readout are trained? Can the reverse, recurrent-side weights plus the readout, also succeed?
-- **Model:** The existing additive equation only. Four regimes: full, readout only, input-side plus readout, and recurrent-side plus readout. `B` is not part of this comparison and is not tuned.
-- **Seeds:** 101 through 223, data base seed 2000. Not pooled with earlier counts.
-- **Gate:** Fresh delay-128 training runs only if full additive succeeds on at least 8 of 10 delay-64 seeds.
-- **Budget:** Five minutes per run and 15 minutes total.
-- **Result:** Not collected.
+- **Question:** Can reliable additive delayed learning happen while the hidden-to-hidden weights stay fixed, if the input-side weights and the readout are trained? Can recurrent-side weights plus the readout also succeed?
+- **Result:** All 80 runs and 80 audits finished in 625 seconds. Full training succeeded on 10/10 seeds at both delays. Readout-only succeeded on 0/10. Input-side plus readout succeeded on 10/10. Recurrent-side plus readout succeeded on 10/10. Frozen parameters stayed fixed. Readout-only hidden states stayed unchanged.
+- **Interpretation:** EXPERIMENTAL RESULT, outcome C. Either parameter group, together with the readout, was sufficient under this schedule. Learning the hidden-to-hidden matrix was not necessary. This is not an architecture result and it does not validate the broader theory.
+- **Files:** `configs/exp008_parameter_groups.yaml` and `results/EXP-008/`.
+- **Follow-up:** Not started. Do not tune B and do not start another experiment from this run.

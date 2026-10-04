@@ -76,3 +76,13 @@ Do not start EXP-007. Do not tune B. Do not add a model.
 - [x] Leave EXP-001 through EXP-006 artifacts unchanged.
 
 Do not start EXP-008. Do not tune B. Do not change the forward equations.
+
+## Phase 8 — additive parameter groups
+
+- [x] Clarify that EXP-007 froze both input-side and recurrent-side weights, and record the interrupted-run execution note without editing saved EXP-007 measurements.
+- [x] Preregister the four additive regimes before any EXP-008 accuracy.
+- [x] Train all four regimes at delay 64, then fresh delay-128 runs because full training succeeded on 10 of 10 seeds.
+- [x] Run the bit-flip audit and confirm frozen parameters stayed fixed.
+- [x] Leave EXP-001 through EXP-007 artifacts unchanged.
+
+Do not start EXP-009. Do not tune B. Do not change the forward equation.

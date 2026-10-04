@@ -98,3 +98,12 @@ Chronological record. Append new entries; never overwrite old results. Distingui
 
 - **Clarification:** The EXP-007 readout-only condition froze both input-side parameters (`W_x` and `b_x`) and recurrent-side parameters (`W_h` and `b_h`). The supported conclusion is that training that combined input/recurrent module improves reliable additive success under the registered schedule. It does not establish that learning the hidden-to-hidden matrix specifically is necessary.
 - **Paired accuracy:** Fewer successful seeds is not the same as lower accuracy on every paired seed. Across the 60 paired comparisons, readout-only accuracy was higher than full training on 18 pairs, mostly where full training had not solved the task. The saved EXP-007 analysis file was not rewritten. The execution record of the interrupted run is `results/EXP-008/exp007_execution_audit.md`.
+
+## 2026-10-03 — EXP-008 additive parameter groups
+
+- **Experiment ID:** EXP-008.
+- **Configuration:** `configs/exp008_parameter_groups.yaml`. Additive model only. Four regimes: full; readout only; input-side (`W_x`, `b_x`) plus readout with `W_h` and `b_h` frozen; recurrent-side (`W_h`, `b_h`) plus readout with `W_x` and `b_x` frozen. Same ten seeds and data base seed 2000. Not pooled with earlier counts. Python 3.11.9, PyTorch 2.13.0+cpu. Training code `906a7bd4d375`.
+- **Result:** 80/80 training runs and 80 bit-flip audits finished in 625 seconds. No failures and no unstarted runs. Success counts at both delays were full 10/10, readout only 0/10, input-side plus readout 10/10, and recurrent-side plus readout 10/10. Frozen parameters did not change. Readout-only hidden states did not change.
+- **Interpretation:** EXPERIMENTAL RESULT, outcome C. Either trained parameter group, together with the readout, was enough for reliable success while the other group stayed at initialization. Learning the hidden-to-hidden matrix was not necessary in this setup. Readout-only training still stayed below 0.95, consistent with EXP-007. This does not prove another budget could never train the readout alone, and it does not validate the broader theory.
+- **Files:** `results/EXP-008/`.
+- **Replication:** Ten seeds, four training regimes, not pooled with EXP-006 or EXP-007.
