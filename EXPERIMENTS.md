@@ -125,3 +125,12 @@ Registry entries describe completed experiments or plans. Every run saves its ex
 - **Result:** All 38 jobs finished in 381.534 seconds. No failures and no unstarted jobs. Delay-128 success counts were full 10/10, readout only 0/10, bias plus readout 2/10, and matrices plus readout 10/10. The two bias successes were seeds 127 and 211. The bit-flip audit covered all 40 models. Frozen parameters stayed fixed.
 - **Interpretation:** EXPERIMENTAL RESULT for the completed delay-128 cohort. Bias-only adaptation did not remain sufficient for most seeds at this delay. Matrix adaptation remained sufficient on every seed with both biases fixed. The original session is still interrupted, and this clock is not its missing cost. This is not an architecture result and it does not validate the broader theory.
 - **Files:** `results/EXP-009/delay128_completion/`. The interruption note was not rewritten.
+
+## EXP-010 — Does additive learning need long-horizon backpropagation? (preregistered; training not started)
+
+- **Question:** Does the additive model still learn the delayed bit reliably when training gradients are cut off after the state is carried forward, so that only the final 16 steps send a gradient?
+- **Change:** No new forward equation. K = 16 was fixed before any EXP-010 accuracy. One regime uses ordinary full-history training. The other detaches the hidden state once, without changing its value, and trains through the last 16 steps only.
+- **Seeds:** 101 through 223, data base seed 2000. Not pooled with earlier counts.
+- **Gate:** Fresh delay-128 training runs only if all 20 delay-64 runs finish and full-history training succeeds on at least 8 of 10 seeds.
+- **Budget:** Five minutes per run and 10 minutes total. No automatic resume.
+- **Result:** Not collected.
