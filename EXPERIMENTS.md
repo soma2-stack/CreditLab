@@ -206,6 +206,13 @@ Registry entries describe completed experiments or plans. Every run saves its ex
 - **Files:** `results/EXP-016/completion/`. The original interruption note was not rewritten.
 - **Follow-up:** Not started. Do not start EXP-017. Do not begin a selective-overwrite task.
 
+## EXP-017 — Selective overwrite versus continued retention (preregistered; not started)
+
+- **Question:** Can the existing additive model replace an old bit when the later bit is marked as an update, and keep the old bit when that later bit is only a distractor?
+- **Design:** Ten new seeds and data base seed 7000. Four matched conditions: vanilla and additive, each on a hold task and a selective-overwrite task. This is a new task, not another copy of the original delayed-bit task. No new gate. Success on the selective task requires the overall score and all four bit-agreement subgroups to reach at least 0.95.
+- **Budget:** Five minutes per run, fifteen minutes total.
+- **Result:** Not collected.
+
 ## EXP-014 rescue denominator, clarified after the checkpoint
 
 - **Clarification:** “8 of 10 diagnostic successes” is not “8 misses rescued.” Seed 311 already scored at least 0.95 with the original final-16 readout. Of the 9 original misses, 7 were rescued: 307, 313, 317, 337, 347, 349, and 359. Seeds 331 and 353 stayed below 0.95. The saved EXP-014 analysis was not edited.
@@ -213,5 +220,5 @@ Registry entries describe completed experiments or plans. Every run saves its ex
 
 ## Scientific checkpoint
 
-- **Status:** The EXP-016 cohort is complete through an authorized continuation. No experiment is running. EXP-017 is not authorized.
+- **Status:** EXP-017 is preregistered. No training scores have been collected. EXP-018 is not authorized.
 - **Document:** `SCIENTIFIC_CHECKPOINT.md`. The audit of saved records is `DOCUMENTATION_AUDIT.md`.

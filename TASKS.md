@@ -186,3 +186,12 @@ Do not resume the original session. Do not raise its budget. Do not try another 
 - [x] Leave the original EXP-016 interruption records unchanged.
 
 Do not start EXP-017. Do not begin a selective-overwrite task. Do not retrain a completed condition.
+
+## Phase 17 — selective overwrite
+
+- [ ] Confirm the new seeds are unused, and preregister the hold and selective-overwrite tasks before any EXP-017 accuracy.
+- [ ] Train matched vanilla and additive models on both tasks.
+- [ ] Record subgroup accuracy, the diagnostic readout, and the four bit audits.
+- [ ] Leave EXP-001 through EXP-016 artifacts, including the interruption and continuation records, unchanged.
+
+Do not add a gate. Do not train a video model. Do not start EXP-018.
