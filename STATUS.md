@@ -1,9 +1,9 @@
 # Project Status
 
-- **Current phase:** EXP-012 is complete. No further experiment is running.
-- **What was tested:** A new linear classifier was fit to the frozen final hidden states of all 80 EXP-011 models. The recurrent weights were not trained again.
-- **Latest result:** 36 of 37 unsuccessful final-16 models reached at least 0.95 with the new readout, and those rescues held up when only the original bit was flipped. One model, delay 128 seed 179 without clipping, rose from 0.594 to 0.881 and stayed below 0.95. Every full-history model stayed strong.
+- **Current phase:** EXP-013 is complete. No further experiment is running.
+- **What was tested:** The same fixed linear classifier on three frozen additive states: never-trained input and recurrent weights, full-history training, and final-16 training.
+- **Latest result:** Never-trained states reached 0.95 on 6 of 10 seeds at delay 64 and 5 of 10 at delay 128. Both trained states reached it on all 10 seeds at both delays. The earlier readout-only misses were not proof that the untrained state had no readable answer.
 - **Currently running:** Nothing.
-- **Next recommended action:** Stop. Do not train the recurrent weights again, do not tune the classifier, and do not start EXP-013.
+- **Next recommended action:** Stop. Do not train recurrent weights, do not tune the classifier, and do not start EXP-014.
 
-See `results/EXP-012/analysis.md`. This is a diagnostic on models that were already trained, not a proof of the theory.
+See `results/EXP-013/analysis.md`. This is a diagnostic on saved models, not a proof of the theory.

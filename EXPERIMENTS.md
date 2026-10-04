@@ -150,11 +150,14 @@ Registry entries describe completed experiments or plans. Every run saves its ex
 - **Files:** `configs/exp012_readout_refit.yaml` and `results/EXP-012/`.
 - **Follow-up:** Not started. Do not train recurrent weights, do not tune C, and do not start EXP-013.
 
-## EXP-013 — Does initialized additive memory already suffice? (preregistered; diagnostic not started)
+## EXP-007 readout schedule, clarified after EXP-013
 
-- **Question:** Can the same fixed linear classifier used in EXP-012 solve the task from additive hidden states whose input and recurrent weights were never trained?
-- **Representations:** EXP-007 additive readout-only checkpoints, EXP-011 full-history with clipping, and EXP-011 final-16 with clipping. Ten seeds, delays 64 and 128. No new recurrent training.
-- **Classifier:** The EXP-012 L2 logistic regression, C = 1.0, lbfgs, `l1_ratio = 0`, tolerance 1e-8, 2000 iterations.
-- **Check:** The full-history and final-16 refits must agree with the saved EXP-012 predictions. If they do not, stop.
-- **Budget:** Five minutes total.
-- **Result:** Not collected.
+- **Clarification:** EXP-007 showed that training the input and recurrent weights improved reliable success under that experiment’s original readout-training schedule. It did not show that recurrent training is necessary for every way of fitting a readout. The saved EXP-007 analysis file was not rewritten.
+
+## EXP-013 — Does initialized additive memory already suffice? (completed)
+
+- **Question:** Can the EXP-012 classifier solve the task from additive hidden states whose input and recurrent weights were never trained?
+- **Result:** All 60 checks verified, including exact initialization matches, and the trained-state fits reproduced EXP-012. Initialized states reached 0.95 on 6 of 10 seeds at delay 64 and 5 of 10 at delay 128. Full-history and final-16 states reached it on all 10 seeds at both delays. The diagnostic took 11.3 seconds.
+- **Interpretation:** DIAGNOSTIC RESULT, outcome C. Untrained dynamics are already enough on some seeds under this readout, and learning still improves the others. Final-16 learning produced that improvement without a training gradient back to the original event. This does not validate the broader theory.
+- **Files:** `configs/exp013_initialized_readout.yaml` and `results/EXP-013/`.
+- **Follow-up:** Not started. Do not train recurrent weights, do not tune C, and do not start EXP-014.

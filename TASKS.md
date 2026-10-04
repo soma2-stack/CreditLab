@@ -127,3 +127,13 @@ Do not try another horizon. Do not tune a clipping threshold. Do not build anoth
 - [x] Leave EXP-001 through EXP-011 artifacts unchanged.
 
 Do not train recurrent weights. Do not tune C. Do not try another horizon. Do not start EXP-013.
+
+## Phase 13 — initialized additive states
+
+- [x] Preregister the three frozen representations and the unchanged EXP-012 classifier.
+- [x] Verify the EXP-007 readout-only weights against a freshly seeded model, with no optimizer step.
+- [x] Confirm that the full-history and final-16 refits reproduce EXP-012.
+- [x] Compare diagnostic accuracy and the bit-flip check across the three states.
+- [x] Leave EXP-001 through EXP-012 artifacts unchanged, including the incomplete EXP-007 fingerprint file.
+
+Do not train recurrent weights. Do not tune C. Do not build a model. Do not start EXP-014.

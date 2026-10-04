@@ -161,3 +161,16 @@ Chronological record. Append new entries; never overwrite old results. Distingui
 - **Interpretation:** DIAGNOSTIC RESULT, outcome C. Most unsuccessful final-16 states already contained enough linearly readable task information for this fixed classifier. The original readout did not fully use it. One state was only partly improved, which does not prove that no linear classifier could succeed. This does not remove the joint-training advantage of full-history learning, and it does not validate the broader theory.
 - **Files:** `results/EXP-012/`.
 - **Replication:** Not a new recurrent-training replication. The refits are not new seeds.
+
+## 2026-10-03 — EXP-007 schedule clarification
+
+- **Clarification:** EXP-007 showed an advantage for training the input and recurrent weights under its original readout-training schedule. It did not establish that recurrent training is necessary no matter how the readout is fit. The saved EXP-007 analysis was not rewritten.
+
+## 2026-10-03 — EXP-013 initialized additive states
+
+- **Experiment ID:** EXP-013.
+- **Configuration:** `configs/exp013_initialized_readout.yaml`. Same EXP-012 classifier on three frozen states: EXP-007 additive readout-only initialization, EXP-011 full-history with clipping, and EXP-011 final-16 with clipping. Ten seeds, delays 64 and 128. No recurrent training. Python 3.11.9, PyTorch 2.13.0+cpu, scikit-learn 1.9.1. Diagnostic code `7b132c6ce698`.
+- **Result:** All 60 checkpoints verified. Initialized recurrent weights matched a freshly seeded model exactly. The full-history and final-16 fits reproduced the EXP-012 predictions. All 60 classifiers converged. Initialized diagnostic success was 6/10 at delay 64 and 5/10 at delay 128. Full-history and final-16 diagnostic success was 10/10 at both delays. The run took 11.3 seconds. EXP-007’s incomplete fingerprint file was not altered.
+- **Interpretation:** DIAGNOSTIC RESULT, outcome C. Untrained additive dynamics are already enough for this readout on some seeds. Learning, including final-16 learning, raises the remaining seeds to a reliable score. The earlier readout-only misses were not proof that the untrained state had no readable answer. This does not validate the broader theory.
+- **Files:** `results/EXP-013/`.
+- **Replication:** Exploratory diagnostic on the existing cohort. These refits are not new recurrent-training seeds.
