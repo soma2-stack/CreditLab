@@ -1,0 +1,16 @@
+{
+  "clean_control_binary": true,
+  "parameter_count": 1313,
+  "structural_whole_reset": {
+    "max_abs_difference_from_second_write_onward": 0.0,
+    "structural_independence": true
+  },
+  "subgroup_sizes": {
+    "no_replacement_query0": 128,
+    "no_replacement_query1": 128,
+    "replacement_untouched_query0": 64,
+    "replacement_untouched_query1": 64,
+    "replacement_updated_conflict": 64,
+    "replacement_updated_same": 64
+  }
+}

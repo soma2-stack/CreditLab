@@ -1,0 +1,5 @@
+Python: 3.11.9
+PyTorch: 2.13.0+cpu
+scikit-learn: 1.9.1
+Training code revision: 4fbbe75e7be108519d2abd2c7b12c765bf32fac5
+Parameter count: 1313

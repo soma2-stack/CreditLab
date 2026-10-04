@@ -1,0 +1,60 @@
+{"event": "start", "model_type": "additive_tanh_rnn", "seed": 701, "session_elapsed_seconds": 0.084}
+{"event": "finish", "exit_code": 0, "model_type": "additive_tanh_rnn", "runtime_seconds": 19.693, "seed": 701, "session_elapsed_seconds": 19.777}
+{"event": "start", "model_type": "whole_reset_additive", "seed": 701, "session_elapsed_seconds": 19.778}
+{"event": "finish", "exit_code": 0, "model_type": "whole_reset_additive", "runtime_seconds": 19.654, "seed": 701, "session_elapsed_seconds": 39.431}
+{"event": "start", "model_type": "addressed_reset_additive", "seed": 701, "session_elapsed_seconds": 39.432}
+{"event": "finish", "exit_code": 0, "model_type": "addressed_reset_additive", "runtime_seconds": 23.499, "seed": 701, "session_elapsed_seconds": 62.931}
+{"event": "start", "model_type": "additive_tanh_rnn", "seed": 709, "session_elapsed_seconds": 62.932}
+{"event": "finish", "exit_code": 0, "model_type": "additive_tanh_rnn", "runtime_seconds": 16.682, "seed": 709, "session_elapsed_seconds": 79.614}
+{"event": "start", "model_type": "whole_reset_additive", "seed": 709, "session_elapsed_seconds": 79.615}
+{"event": "finish", "exit_code": 0, "model_type": "whole_reset_additive", "runtime_seconds": 21.83, "seed": 709, "session_elapsed_seconds": 101.445}
+{"event": "start", "model_type": "addressed_reset_additive", "seed": 709, "session_elapsed_seconds": 101.446}
+{"event": "finish", "exit_code": 0, "model_type": "addressed_reset_additive", "runtime_seconds": 23.537, "seed": 709, "session_elapsed_seconds": 124.983}
+{"event": "start", "model_type": "additive_tanh_rnn", "seed": 719, "session_elapsed_seconds": 124.985}
+{"event": "finish", "exit_code": 0, "model_type": "additive_tanh_rnn", "runtime_seconds": 19.05, "seed": 719, "session_elapsed_seconds": 144.034}
+{"event": "start", "model_type": "whole_reset_additive", "seed": 719, "session_elapsed_seconds": 144.036}
+{"event": "finish", "exit_code": 0, "model_type": "whole_reset_additive", "runtime_seconds": 21.075, "seed": 719, "session_elapsed_seconds": 165.11}
+{"event": "start", "model_type": "addressed_reset_additive", "seed": 719, "session_elapsed_seconds": 165.112}
+{"event": "finish", "exit_code": 0, "model_type": "addressed_reset_additive", "runtime_seconds": 22.099, "seed": 719, "session_elapsed_seconds": 187.211}
+{"event": "start", "model_type": "additive_tanh_rnn", "seed": 727, "session_elapsed_seconds": 187.212}
+{"event": "finish", "exit_code": 0, "model_type": "additive_tanh_rnn", "runtime_seconds": 21.215, "seed": 727, "session_elapsed_seconds": 208.427}
+{"event": "start", "model_type": "whole_reset_additive", "seed": 727, "session_elapsed_seconds": 208.427}
+{"event": "finish", "exit_code": 0, "model_type": "whole_reset_additive", "runtime_seconds": 21.614, "seed": 727, "session_elapsed_seconds": 230.041}
+{"event": "start", "model_type": "addressed_reset_additive", "seed": 727, "session_elapsed_seconds": 230.042}
+{"event": "finish", "exit_code": 0, "model_type": "addressed_reset_additive", "runtime_seconds": 24.114, "seed": 727, "session_elapsed_seconds": 254.156}
+{"event": "start", "model_type": "additive_tanh_rnn", "seed": 733, "session_elapsed_seconds": 254.157}
+{"event": "finish", "exit_code": 0, "model_type": "additive_tanh_rnn", "runtime_seconds": 18.227, "seed": 733, "session_elapsed_seconds": 272.385}
+{"event": "start", "model_type": "whole_reset_additive", "seed": 733, "session_elapsed_seconds": 272.386}
+{"event": "finish", "exit_code": 0, "model_type": "whole_reset_additive", "runtime_seconds": 20.75, "seed": 733, "session_elapsed_seconds": 293.136}
+{"event": "start", "model_type": "addressed_reset_additive", "seed": 733, "session_elapsed_seconds": 293.137}
+{"event": "finish", "exit_code": 0, "model_type": "addressed_reset_additive", "runtime_seconds": 22.268, "seed": 733, "session_elapsed_seconds": 315.405}
+{"event": "start", "model_type": "additive_tanh_rnn", "seed": 739, "session_elapsed_seconds": 315.406}
+{"event": "finish", "exit_code": 0, "model_type": "additive_tanh_rnn", "runtime_seconds": 19.069, "seed": 739, "session_elapsed_seconds": 334.475}
+{"event": "start", "model_type": "whole_reset_additive", "seed": 739, "session_elapsed_seconds": 334.476}
+{"event": "finish", "exit_code": 0, "model_type": "whole_reset_additive", "runtime_seconds": 21.084, "seed": 739, "session_elapsed_seconds": 355.56}
+{"event": "start", "model_type": "addressed_reset_additive", "seed": 739, "session_elapsed_seconds": 355.562}
+{"event": "finish", "exit_code": 0, "model_type": "addressed_reset_additive", "runtime_seconds": 23.785, "seed": 739, "session_elapsed_seconds": 379.346}
+{"event": "start", "model_type": "additive_tanh_rnn", "seed": 743, "session_elapsed_seconds": 379.348}
+{"event": "finish", "exit_code": 0, "model_type": "additive_tanh_rnn", "runtime_seconds": 18.268, "seed": 743, "session_elapsed_seconds": 397.616}
+{"event": "start", "model_type": "whole_reset_additive", "seed": 743, "session_elapsed_seconds": 397.617}
+{"event": "finish", "exit_code": 0, "model_type": "whole_reset_additive", "runtime_seconds": 20.512, "seed": 743, "session_elapsed_seconds": 418.129}
+{"event": "start", "model_type": "addressed_reset_additive", "seed": 743, "session_elapsed_seconds": 418.13}
+{"event": "finish", "exit_code": 0, "model_type": "addressed_reset_additive", "runtime_seconds": 23.998, "seed": 743, "session_elapsed_seconds": 442.127}
+{"event": "start", "model_type": "additive_tanh_rnn", "seed": 751, "session_elapsed_seconds": 442.128}
+{"event": "finish", "exit_code": 0, "model_type": "additive_tanh_rnn", "runtime_seconds": 19.188, "seed": 751, "session_elapsed_seconds": 461.316}
+{"event": "start", "model_type": "whole_reset_additive", "seed": 751, "session_elapsed_seconds": 461.317}
+{"event": "finish", "exit_code": 0, "model_type": "whole_reset_additive", "runtime_seconds": 20.495, "seed": 751, "session_elapsed_seconds": 481.812}
+{"event": "start", "model_type": "addressed_reset_additive", "seed": 751, "session_elapsed_seconds": 481.814}
+{"event": "finish", "exit_code": 0, "model_type": "addressed_reset_additive", "runtime_seconds": 24.944, "seed": 751, "session_elapsed_seconds": 506.757}
+{"event": "start", "model_type": "additive_tanh_rnn", "seed": 757, "session_elapsed_seconds": 506.758}
+{"event": "finish", "exit_code": 0, "model_type": "additive_tanh_rnn", "runtime_seconds": 19.349, "seed": 757, "session_elapsed_seconds": 526.107}
+{"event": "start", "model_type": "whole_reset_additive", "seed": 757, "session_elapsed_seconds": 526.109}
+{"event": "finish", "exit_code": 0, "model_type": "whole_reset_additive", "runtime_seconds": 20.737, "seed": 757, "session_elapsed_seconds": 546.845}
+{"event": "start", "model_type": "addressed_reset_additive", "seed": 757, "session_elapsed_seconds": 546.848}
+{"event": "finish", "exit_code": 0, "model_type": "addressed_reset_additive", "runtime_seconds": 24.853, "seed": 757, "session_elapsed_seconds": 571.702}
+{"event": "start", "model_type": "additive_tanh_rnn", "seed": 761, "session_elapsed_seconds": 571.703}
+{"event": "finish", "exit_code": 0, "model_type": "additive_tanh_rnn", "runtime_seconds": 20.536, "seed": 761, "session_elapsed_seconds": 592.24}
+{"event": "start", "model_type": "whole_reset_additive", "seed": 761, "session_elapsed_seconds": 592.241}
+{"event": "finish", "exit_code": 0, "model_type": "whole_reset_additive", "runtime_seconds": 22.331, "seed": 761, "session_elapsed_seconds": 614.571}
+{"event": "start", "model_type": "addressed_reset_additive", "seed": 761, "session_elapsed_seconds": 614.573}
+{"event": "finish", "exit_code": 0, "model_type": "addressed_reset_additive", "runtime_seconds": 25.862, "seed": 761, "session_elapsed_seconds": 640.435}

@@ -250,12 +250,14 @@ Registry entries describe completed experiments or plans. Every run saves its ex
 - **Files:** `configs/exp021_replication.yaml` and `results/EXP-021/`.
 - **Follow-up:** Not started. Do not add a learned gate. Do not start EXP-022.
 
-## EXP-022 — Update one memory without losing another (preregistered; not started)
+## EXP-022 — Update one memory without losing another (completed)
 
-- **Question:** Can a fixed reset of one half of the state update one memory and keep the other, when both models also include an ordinary additive version and a whole-state reset?
-- **Design:** A new two-memory task with a clean write channel and two clean address channels. Ten new seeds, data base seed 9000. Thirty runs. Whole-state reset is expected to forget a bit that was written only before the wipe. That limit is checked before training.
-- **Budget:** Five minutes per run, twenty minutes total.
-- **Result:** Not collected.
+- **Question:** Can a fixed reset of one half of the state update one stored bit and keep the other?
+- **Design:** A new six-channel two-memory task. Ordinary additive, whole-state reset, and addressed reset. Ten new seeds. Data base seed 9000. Thirty runs. This is not an EXP-021 replication.
+- **Result:** The preflight check passed, including an exact whole-state equality after flipping a bit written only before the wipe. All 30 runs finished in 640 seconds. Success was 0/30. The best addressed overall score was 375/512. Conflicting replacement stayed near chance, and changing the query address did not change the answer.
+- **Interpretation:** EXPERIMENTAL RESULT. The fixed half-state reset was not sufficient for this two-memory task. Whole-state misses on a pre-wipe bit were a structural limit, checked before training. This is not learned routing and not a video result.
+- **Files:** `configs/exp022_two_memory.yaml` and `results/EXP-022/`.
+- **Follow-up:** Stop. Do not add a learned gate. Do not start EXP-023.
 
 ## EXP-014 rescue denominator, clarified after the checkpoint
 
@@ -264,5 +266,5 @@ Registry entries describe completed experiments or plans. Every run saves its ex
 
 ## Scientific checkpoint
 
-- **Status:** EXP-022 is preregistered. Training scores have not been collected. EXP-023 is not authorized.
+- **Status:** EXP-022 is complete. No model solved the two-memory task. EXP-023 is not authorized.
 - **Document:** `SCIENTIFIC_CHECKPOINT.md`. The audit of saved records is `DOCUMENTATION_AUDIT.md`.

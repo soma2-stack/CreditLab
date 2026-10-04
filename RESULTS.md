@@ -272,3 +272,12 @@ Chronological record. Append new entries; never overwrite old results. Distingui
 - **Interpretation:** EXPERIMENTAL RESULT. The reset advantage replicated. Ordinary additive recurrence remained below the line, including on conflicting replacement. This is not learned gating and not a video result.
 - **Files:** `results/EXP-021/`.
 - **Replication:** Independent cohort. Not pooled with EXP-020.
+
+## 2026-10-04 — EXP-022 two memories
+
+- **Experiment ID:** EXP-022.
+- **Configuration:** `configs/exp022_two_memory.yaml`. New six-channel task with two slots. Ordinary additive, whole-state reset, and addressed reset. Seeds 701, 709, 719, 727, 733, 739, 743, 751, 757, and 761. Data base seed 9000. 1,313 parameters. Not an EXP-021 replication. Python 3.11.9, PyTorch 2.13.0+cpu, scikit-learn 1.9.1. Training code `4fbbe75e7be1`.
+- **Result:** Preflight passed. A bit written only before a whole-state wipe left exactly equal states afterward. 30/30 runs finished in 640 seconds. Success was 0/30. The best addressed score was 375/512. Conflicting replacement stayed near chance on every addressed seed. Changing only the query address left the answer unchanged.
+- **Interpretation:** EXPERIMENTAL RESULT. The fixed half-state reset did not update one memory and keep the other. Whole-state misses on a pre-wipe bit were structural. The separate readout did not change that call. This is not learned routing and not a video result.
+- **Files:** `results/EXP-022/`.
+- **Replication:** New task and new cohort. Not pooled with EXP-020 or EXP-021.
