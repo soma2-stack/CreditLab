@@ -242,12 +242,13 @@ Registry entries describe completed experiments or plans. Every run saves its ex
 - **Files:** `configs/exp020_clean_write.yaml` and `results/EXP-020/`.
 - **Follow-up:** Not started. Do not add a learned gate. Do not start EXP-021.
 
-## EXP-021 — Independent replication of clean-control overwrite (preregistered; not started)
+## EXP-021 — Independent replication of clean-control overwrite (completed)
 
 - **Question:** On ten new seeds, does the fixed reset again replace the old bit more reliably than ordinary additive recurrence when both receive the same clean write signal?
-- **Design:** Same models, same task, and same training as EXP-020. New seeds and data base seed 8000. Not pooled with EXP-020.
-- **Budget:** Five minutes per run, fifteen minutes total, after the same hold-match check.
-- **Result:** Not collected.
+- **Result:** The preflight check passed. All 40 runs finished in 612 seconds. Hold success was 10/10 for both versions. Selective success was 0/10 for ordinary additive and 10/10 for the reset. Seed 607 was 511/512 overall, with conflicting replacement at 127/128. The audits agreed.
+- **Interpretation:** EXPERIMENTAL RESULT. The EXP-020 pattern replicated on a new cohort. The cohorts are not pooled. This is not a learned gate and not a video result.
+- **Files:** `configs/exp021_replication.yaml` and `results/EXP-021/`.
+- **Follow-up:** Not started. Do not add a learned gate. Do not start EXP-022.
 
 ## EXP-014 rescue denominator, clarified after the checkpoint
 
@@ -256,5 +257,5 @@ Registry entries describe completed experiments or plans. Every run saves its ex
 
 ## Scientific checkpoint
 
-- **Status:** EXP-021 is preregistered. Training scores have not been collected. EXP-022 is not authorized.
+- **Status:** EXP-021 is complete. No experiment is running. EXP-022 is not authorized.
 - **Document:** `SCIENTIFIC_CHECKPOINT.md`. The audit of saved records is `DOCUMENTATION_AUDIT.md`.

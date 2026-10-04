@@ -225,9 +225,9 @@ Do not add a learned gate. Do not start EXP-021.
 
 ## Phase 21 — independent clean-control replication
 
-- [ ] Confirm the new seeds are unused, and preregister them before any EXP-021 accuracy.
-- [ ] Pass the same clean-control and hold-match checks.
-- [ ] Train the four EXP-020 conditions on the new seeds.
-- [ ] Leave EXP-001 through EXP-020 artifacts unchanged, including the EXP-019 stop record.
+- [x] Confirm the new seeds are unused, and preregister them before any EXP-021 accuracy.
+- [x] Pass the same clean-control and hold-match checks.
+- [x] Train the four EXP-020 conditions on the new seeds.
+- [x] Leave EXP-001 through EXP-020 artifacts unchanged, including the EXP-019 stop record.
 
 Do not add a learned gate. Do not start EXP-022.

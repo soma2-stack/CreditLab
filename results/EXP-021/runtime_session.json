@@ -1,0 +1,21 @@
+{
+  "base_seed": 8000,
+  "budget_seconds_total": 900.0,
+  "code_revision": "9dd7a3c81f212f4a2919a1a0fd21d67b753d6cd1",
+  "experiment_id": "EXP-021",
+  "replicates": "EXP-020",
+  "seeds": [
+    601,
+    607,
+    613,
+    617,
+    619,
+    631,
+    641,
+    643,
+    647,
+    653
+  ],
+  "started_unix": 1791124503.5604377,
+  "timing_method": "time.perf_counter inside this process"
+}

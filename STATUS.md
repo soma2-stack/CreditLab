@@ -1,9 +1,9 @@
 # Project Status
 
-- **Current phase:** EXP-021 is preregistered. Training has not started.
-- **What was tested:** Nothing new yet. EXP-020 remains the latest scored comparison.
-- **Latest result:** With a clean write signal, the fixed reset replaced a conflicting bit on all ten seeds. Ordinary additive recurrence did not.
+- **Current phase:** EXP-021 is complete. No experiment is running.
+- **What was tested:** The same clean-write comparison as the previous experiment, on ten new seeds.
+- **Latest result:** The fixed reset again replaced a conflicting bit on all ten seeds. Ordinary additive recurrence again did not. The hold task stayed perfect for both.
 - **Currently running:** Nothing.
-- **Next recommended action:** Run the preregistered replication. Do not start EXP-022.
+- **Next recommended action:** Stop. Do not add a learned gate, and do not start EXP-022.
 
-See `results/EXP-020/analysis.md`. The scientific checkpoint and the EXP-019 stop record were not rewritten.
+See `results/EXP-021/analysis.md`. Earlier analyses and the EXP-019 stop record were not rewritten.

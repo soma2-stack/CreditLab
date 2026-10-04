@@ -1,0 +1,6 @@
+Python: 3.11.9
+PyTorch: 2.13.0+cpu
+scikit-learn: 1.9.1
+Training code revision: 9dd7a3c81f212f4a2919a1a0fd21d67b753d6cd1
+Parameter count: 1249
+Data base seed: 8000

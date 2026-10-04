@@ -263,3 +263,12 @@ Chronological record. Append new entries; never overwrite old results. Distingui
 - **Interpretation:** EXPERIMENTAL RESULT. The explicit control alone did not make ordinary additive replacement succeed. The fixed reset did. This is not learned gating and is not pooled with EXP-017. It does not establish video capability.
 - **Files:** `results/EXP-020/`.
 - **Replication:** Matched intervention on the existing cohort. Not an independent new-seed replication.
+
+## 2026-10-04 — EXP-021 clean-control replication
+
+- **Experiment ID:** EXP-021.
+- **Configuration:** `configs/exp021_replication.yaml`. Same procedure as EXP-020. New seeds 601, 607, 613, 617, 619, 631, 641, 643, 647, and 653. Data base seed 8000. Not pooled with EXP-020. Python 3.11.9, PyTorch 2.13.0+cpu, scikit-learn 1.9.1. Training code `9dd7a3c81f21`.
+- **Result:** Preflight passed with gaps of 0. 40/40 runs finished in 612 seconds. Hold success was 10/10 for both versions. Selective success was 0/10 for ordinary additive and 10/10 for the reset. Seed 607 was 511/512, with conflicting replacement at 127/128. Audits for the reset were at or above 0.996. No numerical failures. Historical files were unchanged.
+- **Interpretation:** EXPERIMENTAL RESULT. The reset advantage replicated. Ordinary additive recurrence remained below the line, including on conflicting replacement. This is not learned gating and not a video result.
+- **Files:** `results/EXP-021/`.
+- **Replication:** Independent cohort. Not pooled with EXP-020.

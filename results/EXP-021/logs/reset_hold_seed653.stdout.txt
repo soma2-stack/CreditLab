@@ -1,0 +1,1 @@
+{"condition": "reset_hold", "seed": 653, "status": "ok", "test_accuracy": 1.0}

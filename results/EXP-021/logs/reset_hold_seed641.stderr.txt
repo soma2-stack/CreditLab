@@ -1,0 +1,3 @@
+C:\Users\coler\OneDrive\Desktop\CreditLab\experiments\run_exp020.py:383: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\torch\csrc\autograd\generated\python_variable_methods.cpp:823.)
+  "mean_l2_after_update": float((left[rows, timing] - right[rows, timing]).norm(dim=-1).mean()),
