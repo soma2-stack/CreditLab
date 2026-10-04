@@ -132,13 +132,12 @@ Registry entries describe completed experiments or plans. Every run saves its ex
 - **Result:** All 40 runs and 40 audits finished in 472 seconds. Full-history training succeeded on 10/10 seeds at both delays. Final-16 training succeeded on 1/10 at delay 64 and 0/10 at delay 128. The delay-64 success was seed 223 at 0.998. The training-graph gradient at the original event was a computational zero on every final-16 run. The separate full-forward check still showed some bit sensitivity, and the bit-flip check still changed the final state.
 - **Interpretation:** EXPERIMENTAL RESULT, outcome B. Explicit long-horizon backpropagation improved reliable success under this schedule. It was not required for every seed, and several misses still kept partial information. This is not an architecture result and it does not validate the broader theory.
 - **Files:** `configs/exp010_truncated_bptt.yaml` and `results/EXP-010/`.
-- **Follow-up:** Not started. Do not try another horizon and do not start EXP-011.
+- **Follow-up:** EXP-011 asks whether that gap remains when clipping is turned off. The EXP-010 analysis file was not rewritten.
 
-## EXP-011 — Gradient horizon × clipping policy (preregistered; training not started)
+## EXP-011 — Gradient horizon × clipping policy (completed)
 
 - **Question:** Does the full-history advantage remain when gradient clipping is turned off, with every other setting unchanged?
-- **Conditions:** Full history or final 16 steps, each with the existing norm-5 clipping or with no gradient rescaling. K stays 16. No other threshold is tried.
-- **Seeds:** 101 through 223, data base seed 2000. Fresh controls, not pooled with EXP-010.
-- **Gate:** Fresh delay-128 training only if all 40 delay-64 runs finish and full-history with clipping succeeds on at least 8 of 10 seeds.
-- **Budget:** Five minutes per run and 20 minutes total. No automatic resume.
-- **Result:** Not collected.
+- **Result:** All 80 runs and 80 audits finished in 1032 seconds. No numerical failures and no unstarted runs. At delay 64 the success counts were full with clipping 10/10, final 16 with clipping 1/10, full without clipping 10/10, and final 16 without clipping 2/10. At delay 128 they were 10/10, 0/10, 7/10, and 0/10. The clipped runs matched EXP-010. No unclipped run rescaled a gradient.
+- **Interpretation:** EXPERIMENTAL RESULT, outcome D. At delay 64 the full-history advantage remains without clipping. At delay 128, turning clipping off makes full-history training less consistent and still does not make final-16 training reliable. This is not an architecture result and it does not validate the broader theory.
+- **Files:** `configs/exp011_clipping_horizon.yaml` and `results/EXP-011/`.
+- **Follow-up:** Not started. Do not try another horizon or clipping threshold, and do not start EXP-012.

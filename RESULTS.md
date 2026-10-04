@@ -143,3 +143,12 @@ Chronological record. Append new entries; never overwrite old results. Distingui
 - **Interpretation:** EXPERIMENTAL RESULT, outcome B. Sending the training gradient back through the whole sequence improved reliable success under this schedule. The cutoff was not fatal for every seed, and several misses kept partial information. This does not prove another budget or horizon could never work, and it does not validate the broader theory.
 - **Files:** `results/EXP-010/`.
 - **Replication:** Ten seeds, two training regimes, not pooled with earlier counts.
+
+## 2026-10-03 — EXP-011 horizon and clipping
+
+- **Experiment ID:** EXP-011.
+- **Configuration:** `configs/exp011_clipping_horizon.yaml`. Same additive model. Four fresh conditions: full history or final 16 steps, each with norm-5 clipping or with no gradient rescaling. K stayed 16. Same ten seeds and data base seed 2000. Not pooled with EXP-010. Python 3.11.9, PyTorch 2.13.0+cpu. Training code `39b57cd499ece`.
+- **Result:** 80/80 training runs and 80 bit-flip audits finished in 1032 seconds. No numerical failures, timeouts, or unstarted runs. Delay-64 successes were 10/10, 1/10, 10/10, and 2/10 for full-clip, final-16-clip, full-unclipped, and final-16-unclipped. Delay-128 successes were 10/10, 0/10, 7/10, and 0/10. The clipped accuracies matched EXP-010. Unclipped runs never rescaled a gradient, although their raw gradients often exceeded 5. The final-16 training-graph event gradient stayed a computational zero.
+- **Interpretation:** EXPERIMENTAL RESULT, outcome D. At delay 64 the full-history advantage remains after clipping is removed. At delay 128, removing clipping makes full-history training less consistent and does not make final-16 training reliable. The earlier clipped comparison is not invalidated by its higher clipping rate. This does not validate the broader theory.
+- **Files:** `results/EXP-011/`.
+- **Replication:** Ten seeds, four conditions, two delays trained separately. Not pooled with earlier counts.

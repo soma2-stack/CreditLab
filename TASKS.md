@@ -107,3 +107,13 @@ Do not start EXP-010. Do not subdivide parameter groups further. Do not tune B. 
 - [x] Leave EXP-001 through EXP-009 artifacts unchanged.
 
 Do not try another horizon. Do not build another model. Do not start EXP-011.
+
+## Phase 11 — horizon and clipping
+
+- [x] Preregister the four conditions, with K = 16 and clipping either at norm 5 or off, before any EXP-011 accuracy.
+- [x] Train all four conditions at delay 64, then fresh delay-128 runs because clipped full-history training succeeded on 10 of 10 seeds.
+- [x] Record raw gradient norms, whether clipping was applied, and the actual Adam update size.
+- [x] Run the bit-flip audit on the completed models.
+- [x] Leave EXP-001 through EXP-010 artifacts unchanged.
+
+Do not try another horizon. Do not tune a clipping threshold. Do not build another model. Do not start EXP-012.
