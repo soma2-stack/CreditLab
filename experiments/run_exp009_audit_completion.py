@@ -256,7 +256,7 @@ def verify_equation(model: ResidualTanhRNN) -> None:
 
 
 def verify_checkpoints(cfg: dict, records: list[dict]) -> list[dict]:
-    used = json.loads((SAVED_DIR / "config_used.yaml").read_text(encoding="utf-8"))
+    used = yaml.safe_load((SAVED_DIR / "config_used.yaml").read_text(encoding="utf-8"))
     if used["model_equation"] != cfg["model_equation"]:
         raise RuntimeError("saved configuration equation does not match the training configuration")
     by_key = {(int(row["seed"]), row["regime"]): row for row in records}
