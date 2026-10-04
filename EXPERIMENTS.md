@@ -110,4 +110,11 @@ Registry entries describe completed experiments or plans. Every run saves its ex
 - **Result:** All 40 delay-64 runs finished. Full training succeeded on 10/10 seeds. Readout-only succeeded on 0/10. Bias plus readout (`b_x` only) succeeded on 8/10. Matrices plus readout succeeded on 10/10. The process then stopped during delay-128 seed 101 bias-plus-readout. Delay 128 is incomplete. No bit-flip audit was run. Training was not resumed.
 - **Interpretation:** EXPERIMENTAL RESULT for delay 64 only. Matrix learning was sufficient on every seed with both biases frozen. One preactivation bias was sufficient on 8 seeds and missed 2. This does not show that EXP-008 used the bias-only route, and it does not validate the broader theory.
 - **Files:** `configs/exp009_bias_ablation.yaml` and `results/EXP-009/`.
-- **Follow-up:** Stopped for coordinator review. Do not resume automatically. Do not tune B and do not start EXP-010.
+- **Follow-up:** Stopped for coordinator review. Do not resume delay 128 automatically. Do not tune B and do not start EXP-010.
+
+## EXP-009 delay-64 audit continuation (diagnostic only)
+
+- **Authorization:** After the interruption, only the bit-flip audit of the 40 saved delay-64 checkpoints was authorized. Delay 128 was not resumed.
+- **Result:** All 40 checkpoints matched their saved test counts. The audit took 10.649 seconds and did not change earlier files. Bias-only successes changed the final state when only the original bit was flipped. Seeds 151 and 191 still showed partial bit dependence. Matrix-trained runs did too. This separate clock does not reconstruct the unfinished training run.
+- **Interpretation:** DIAGNOSTIC RESULT. The ordinary test scores and the pair scores are different measurements. This does not explain EXP-008, does not establish delay 128, and does not validate the broader theory.
+- **Files:** `results/EXP-009/audit_completion/`. The original interruption note and training analysis were not rewritten.

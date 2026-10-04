@@ -116,3 +116,12 @@ Chronological record. Append new entries; never overwrite old results. Distingui
 - **Interpretation:** EXPERIMENTAL RESULT for delay 64 only. Learning the matrices was sufficient while both biases stayed fixed. Learning one preactivation bias was sufficient on 8 of 10 seeds while both matrices stayed fixed. This does not prove EXP-008 used the bias-only route, and it does not validate the broader theory.
 - **Files:** `results/EXP-009/`.
 - **Replication:** Ten seeds at delay 64, four regimes, not pooled with earlier counts. Delay 128 is incomplete.
+
+## 2026-10-03 — EXP-009 delay-64 bit-flip audit (diagnostic continuation)
+
+- **Experiment ID:** EXP-009 audit continuation. Training remains interrupted.
+- **Configuration:** The 40 saved delay-64 checkpoints only. No new training. Pair rule: 512 base sequences, split index 3, data base seed 2000, flip only the original bit. Python 3.11.9, PyTorch 2.13.0+cpu. Audit code `b8a42b7d8bb62e`.
+- **Result:** All 40 checkpoints reproduced their saved integer test counts. Audit runtime was 10.649 seconds. Final states were never exactly equal after the bit flip. Bias-only ordinary successes had both pair members correct on about 0.91 to 0.98 of pairs. Seed 151, ordinary accuracy 0.945, had both members correct on 0.895 of pairs. Seed 191, ordinary accuracy 0.846, had both members correct on 0.686 of pairs. Matrix-trained runs had both members correct on at least 0.998 of pairs. No computational-zero bit gradient hid a finite change. Preexisting files were unchanged.
+- **Interpretation:** DIAGNOSTIC RESULT. The pair check supports finite dependence on the original bit for the bias-only successes and for the matrix-trained runs. The two ordinary misses still carry partial information. This does not prove a bias explanation of EXP-008, does not finish delay 128, and does not validate the broader theory. The cause of the original process stop remains unknown.
+- **Files:** `results/EXP-009/audit_completion/`.
+- **Compute:** Separate diagnostic allowance. It is not evidence about the original 15-minute training cap.
