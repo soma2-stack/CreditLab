@@ -183,3 +183,15 @@ Chronological record. Append new entries; never overwrite old results. Distingui
 - **Interpretation:** EXPERIMENTAL RESULT. The separation between a weak original readout and a readable final-16 state mostly replicated on a new cohort. It did not replicate for every seed. Untrained states were already enough on 4 of 10 seeds. Full-history training stayed reliable with its original readout. This does not validate the broader theory.
 - **Files:** `results/EXP-014/`. The pre-run note is `research_checkpoint.md`.
 - **Replication:** Ten new seeds, one delay, one task distribution. Not pooled with the earlier cohort.
+
+## 2026-10-03 — EXP-014 rescue denominator
+
+- **Clarification:** Re-counted from `results/EXP-014/diagnostic_metrics.jsonl`. Final-16 original success is 1/10, seed 311. Diagnostic success is 8/10. Original misses are 9. Rescued misses are 7: seeds 307, 313, 317, 337, 347, 349, and 359. Seeds 331 and 353 remained below 0.95. Seed 311 is not a rescue. The frozen analysis was not edited.
+- **Separate cell:** EXP-012 delay 128, final-16, clipping at 5, seeds 101–223: 10 original misses and 10 rescues. That is not pooled with 7/9.
+
+## 2026-10-03 — Scientific checkpoint
+
+- **Scope:** Saved-record audit of EXP-001 through EXP-014. No new training, refitting, or evaluation.
+- **Document:** `SCIENTIFIC_CHECKPOINT.md` and `DOCUMENTATION_AUDIT.md`.
+- **Result:** The hashed experiment artifacts were unchanged by the documentation edit. The main wording gap was the EXP-014 rescue denominator above.
+- **Next:** No experiment is running. EXP-015 awaits coordinator authorization.

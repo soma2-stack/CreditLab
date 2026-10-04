@@ -169,3 +169,13 @@ Registry entries describe completed experiments or plans. Every run saves its ex
 - **Interpretation:** EXPERIMENTAL RESULT. The readout-rescue pattern mostly replicated, with two exceptions. Some untrained states were already readable. Full-history training remained reliable. This is not an architecture result and it does not validate the broader theory.
 - **Files:** `configs/exp014_replication.yaml` and `results/EXP-014/`.
 - **Follow-up:** Not started. Do not tune the classifier or the horizon, and do not start EXP-015.
+
+## EXP-014 rescue denominator, clarified after the checkpoint
+
+- **Clarification:** “8 of 10 diagnostic successes” is not “8 misses rescued.” Seed 311 already scored at least 0.95 with the original final-16 readout. Of the 9 original misses, 7 were rescued: 307, 313, 317, 337, 347, 349, and 359. Seeds 331 and 353 stayed below 0.95. The saved EXP-014 analysis was not edited.
+- **Not the same fraction:** EXP-012’s 36 of 37 covers both delays and both clipping settings. The matching saved cell, delay 128 and final-16 with clipping, on seeds 101–223, was 10 original misses and 10 rescues. That cell is not pooled with EXP-014’s 7 of 9.
+
+## Scientific checkpoint
+
+- **Status:** The experimental phase through EXP-014 is consolidated. No experiment is running. EXP-015 is not authorized.
+- **Document:** `SCIENTIFIC_CHECKPOINT.md`. The audit of saved records is `DOCUMENTATION_AUDIT.md`.

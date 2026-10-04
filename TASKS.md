@@ -147,3 +147,12 @@ Do not train recurrent weights. Do not tune C. Do not build a model. Do not star
 - [x] Leave EXP-001 through EXP-013 artifacts unchanged.
 
 Do not build a model. Do not change the task distribution. Do not tune the classifier or the horizon. Do not start EXP-015.
+
+## Checkpoint — saved-record audit
+
+- [x] Write `SCIENTIFIC_CHECKPOINT.md` from the saved EXP-001 through EXP-014 records.
+- [x] Correct the EXP-014 rescue denominator in new documentation: 7 of 9 original misses, not 8 of 10.
+- [x] Leave every saved experiment artifact unchanged, including `results/EXP-014/analysis.md`.
+- [x] Record that no experiment is running and EXP-015 is not authorized.
+
+Do not start EXP-015. Do not train, refit, or evaluate another model.

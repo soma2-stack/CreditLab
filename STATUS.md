@@ -1,9 +1,9 @@
 # Project Status
 
-- **Current phase:** EXP-014 is complete. No further experiment is running.
-- **What was tested:** The same additive model and the same fixed linear classifier on ten new seeds at delay 128. Each seed had an untrained state, a full-history trained state, and a final-16 trained state.
-- **Latest result:** The original final-16 readout succeeded on 1 of 10 seeds. A separate classifier read 8 of those 10 states reliably. Untrained states succeeded on 4 of 10. Full-history training succeeded on all 10 with its original readout.
+- **Current phase:** The research phase through EXP-014 is consolidated. No experiment is running.
+- **What was learned:** On this delayed-bit task, additive recurrence is more reliable than a vanilla network under the same training recipe. Full-sequence training makes the joint readout reliable. Cutting that training feedback usually hurts the joint readout, but the hidden state is often still readable by a separate linear fit. Some seeds are readable even before recurrent training. A few are not.
+- **Latest correction:** EXP-014’s final-16 diagnostic success is 8 of 10. Of the 9 original misses, 7 were rescued. Seed 311 was already successful and is not a rescue. Seeds 331 and 353 stayed below 0.95.
 - **Currently running:** Nothing.
-- **Next recommended action:** Stop. Do not change the task, the classifier, or the horizon, and do not start EXP-015.
+- **Next recommended action:** Stop. EXP-015 is not authorized.
 
-See `results/EXP-014/analysis.md`. This is one new cohort, not a proof of the theory.
+See `SCIENTIFIC_CHECKPOINT.md`.
