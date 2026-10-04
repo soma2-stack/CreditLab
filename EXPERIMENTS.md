@@ -149,3 +149,12 @@ Registry entries describe completed experiments or plans. Every run saves its ex
 - **Interpretation:** DIAGNOSTIC RESULT, outcome C. Most final-16 misses had enough linearly readable information that the original readout did not fully use. One miss was only partly improved. This does not erase the full-history advantage during joint training, and it does not validate the broader theory.
 - **Files:** `configs/exp012_readout_refit.yaml` and `results/EXP-012/`.
 - **Follow-up:** Not started. Do not train recurrent weights, do not tune C, and do not start EXP-013.
+
+## EXP-013 — Does initialized additive memory already suffice? (preregistered; diagnostic not started)
+
+- **Question:** Can the same fixed linear classifier used in EXP-012 solve the task from additive hidden states whose input and recurrent weights were never trained?
+- **Representations:** EXP-007 additive readout-only checkpoints, EXP-011 full-history with clipping, and EXP-011 final-16 with clipping. Ten seeds, delays 64 and 128. No new recurrent training.
+- **Classifier:** The EXP-012 L2 logistic regression, C = 1.0, lbfgs, `l1_ratio = 0`, tolerance 1e-8, 2000 iterations.
+- **Check:** The full-history and final-16 refits must agree with the saved EXP-012 predictions. If they do not, stop.
+- **Budget:** Five minutes total.
+- **Result:** Not collected.
