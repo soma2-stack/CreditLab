@@ -1,0 +1,35 @@
+# EXP-022 preregistration. The two-memory task and addressed reset were fixed
+# before any accuracy. This is not an unchanged EXP-021 replication.
+experiment_id: EXP-022
+config_revision: 1
+status: preregistered_before_running
+kind: two_memory_mechanism
+not_learned_gating: true
+seeds: [701, 709, 719, 727, 733, 739, 743, 751, 757, 761]
+data:
+  base_seed: 9000
+  combinations: 64
+  train_per_combination: 24
+  val_per_combination: 8
+  test_per_combination: 8
+models:
+  names:
+    - additive_tanh_rnn
+    - whole_reset_additive
+    - addressed_reset_additive
+  input_size: 6
+  hidden_size: 32
+  parameter_count: 1313
+addressed_reset: "marked write clears coordinates 0-15 for slot 0, or 16-31 for slot 1; recurrence stays dense"
+success: "overall and every one of the six subgroups >= 0.95"
+structural_limit: "whole-state reset cannot recover a bit written only before the last wipe"
+budget:
+  max_cpu_seconds_per_run: 300
+  max_cpu_seconds_total: 1200
+  no_automatic_resume: true
+environment_requirement:
+  python: "3.11.9"
+  torch: "2.13.0+cpu"
+  sklearn: 1.9.1
+outputs:
+  directory: results/EXP-022

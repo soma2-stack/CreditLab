@@ -1,0 +1,21 @@
+experiment_id: EXP-022
+seeds:
+- 701
+- 709
+- 719
+- 727
+- 733
+- 739
+- 743
+- 751
+- 757
+- 761
+base_seed: 9000
+models:
+- additive_tanh_rnn
+- whole_reset_additive
+- addressed_reset_additive
+jobs: 30
+parameter_count: 1313
+budget_seconds_total: 1200.0
+seed_conflicts: []

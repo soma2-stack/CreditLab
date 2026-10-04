@@ -231,3 +231,12 @@ Do not add a learned gate. Do not start EXP-021.
 - [x] Leave EXP-001 through EXP-020 artifacts unchanged, including the EXP-019 stop record.
 
 Do not add a learned gate. Do not start EXP-022.
+
+## Phase 22 — two memories
+
+- [ ] Preregister the two-memory task and the addressed reset before any EXP-022 accuracy.
+- [ ] Confirm, before training, that a whole-state wipe cannot recover a bit written only before that wipe.
+- [ ] Train ordinary additive, whole-state reset, and addressed reset on the new seeds.
+- [ ] Leave EXP-001 through EXP-021 artifacts unchanged.
+
+Do not add a learned gate. Do not force the two halves to stop talking to each other. Do not start EXP-023.

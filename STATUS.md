@@ -1,9 +1,9 @@
 # Project Status
 
-- **Current phase:** EXP-021 is complete. No experiment is running.
-- **What was tested:** The same clean-write comparison as the previous experiment, on ten new seeds.
-- **Latest result:** The fixed reset again replaced a conflicting bit on all ten seeds. Ordinary additive recurrence again did not. The hold task stayed perfect for both.
+- **Current phase:** EXP-022 is preregistered. Training has not started.
+- **What was tested:** Nothing new yet. The clean-control replication remains the latest scored result.
+- **Latest result:** On a new cohort, the fixed reset again replaced a conflicting bit and ordinary additive recurrence did not.
 - **Currently running:** Nothing.
-- **Next recommended action:** Stop. Do not add a learned gate, and do not start EXP-022.
+- **Next recommended action:** Run the preregistered two-memory comparison. Do not start EXP-023.
 
 See `results/EXP-021/analysis.md`. Earlier analyses and the EXP-019 stop record were not rewritten.

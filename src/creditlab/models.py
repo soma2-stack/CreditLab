@@ -279,3 +279,47 @@ class MarkerResetAdditiveRNN(ResidualTanhRNN):
         )
         candidate = torch.tanh(pre)
         return previous + self.residual_scale * candidate, candidate
+
+
+class AddressedResetAdditiveRNN(ResidualTanhRNN):
+    """Additive update after clearing one fixed half of the state.
+
+    The clean write flag is channel 3. Channels 4 and 5 are the slot-0 and
+    slot-1 address bits. A marked write clears coordinates 0-15 when slot 0
+    is addressed, or 16-31 when slot 1 is addressed. The mask is fixed.
+    Recurrent weights stay dense, and the candidate may still change both
+    halves. This is input-controlled logic, not a learned gate.
+    """
+
+    def __init__(
+        self,
+        input_size: int,
+        hidden_size: int,
+        output_size: int = 1,
+        residual_scale: float = 1.0,
+    ):
+        super().__init__(input_size, hidden_size, output_size, residual_scale=residual_scale)
+        if hidden_size % 2 != 0:
+            raise ValueError("addressed reset requires an even hidden size")
+        self.region = hidden_size // 2
+
+    def carried_state(self, x_t: torch.Tensor, h_prev: torch.Tensor) -> torch.Tensor:
+        marker = x_t[:, 3:4]
+        region = torch.zeros_like(h_prev)
+        region[:, :self.region] = x_t[:, 4:5]
+        region[:, self.region:] = x_t[:, 5:6]
+        return (1.0 - marker * region) * h_prev
+
+    def candidate_step(
+        self, x_t: torch.Tensor, h_prev: torch.Tensor
+    ) -> tuple[torch.Tensor, torch.Tensor]:
+        previous = self.carried_state(x_t, h_prev)
+        cell = self.recurrent
+        pre = (
+            x_t.matmul(cell.weight_ih_l0.T)
+            + cell.bias_ih_l0
+            + previous.matmul(cell.weight_hh_l0.T)
+            + cell.bias_hh_l0
+        )
+        candidate = torch.tanh(pre)
+        return previous + self.residual_scale * candidate, candidate
