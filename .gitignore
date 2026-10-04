@@ -1,27 +1,5 @@
 __pycache__/
 *.py[cod]
-*.egg-info/
-.venv/
-venv/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
-.env
-.env.*
-!.env.example
-
-# Generated experiment outputs belong under results/ and are not committed.
-results/**
-!results/.gitkeep
-
-# Model checkpoints and large generated data should be stored outside Git.
-*.pt
-*.pth
-*.ckpt
-*.onnx
-*.parquet
-*.arrow
-*.npy
-*.npz
-*.h5
-*.mp4

@@ -1,0 +1,5 @@
+{
+  "exp007_fingerprints": "not backfilled; the saved EXP-007 fingerprint file is incomplete",
+  "dataset_match": "regenerated tensors match the saved EXP-011 fingerprints for each seed and delay",
+  "initialization": "exact tensor equality against a freshly seeded additive model, with no optimizer step"
+}

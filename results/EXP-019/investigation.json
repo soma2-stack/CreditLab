@@ -1,0 +1,91 @@
+{
+  "elapsed_seconds": 0.294,
+  "matched": false,
+  "per_seed": [
+    {
+      "earliest_mismatch_timestep": 1,
+      "interior_competitor_fraction": 0.4039306640625,
+      "interior_write_channel_not_exactly_binary_fraction": 0.9921875,
+      "max_abs_logit_difference": 42.19729232788086,
+      "max_abs_state_difference": 137.08798217773438,
+      "seed": 503
+    },
+    {
+      "earliest_mismatch_timestep": 1,
+      "interior_competitor_fraction": 0.4010009765625,
+      "interior_write_channel_not_exactly_binary_fraction": 0.9921875,
+      "max_abs_logit_difference": 124.78376770019531,
+      "max_abs_state_difference": 130.84303283691406,
+      "seed": 509
+    },
+    {
+      "earliest_mismatch_timestep": 1,
+      "interior_competitor_fraction": 0.392333984375,
+      "interior_write_channel_not_exactly_binary_fraction": 0.9921875,
+      "max_abs_logit_difference": 89.12889862060547,
+      "max_abs_state_difference": 132.6501007080078,
+      "seed": 521
+    },
+    {
+      "earliest_mismatch_timestep": 1,
+      "interior_competitor_fraction": 0.39404296875,
+      "interior_write_channel_not_exactly_binary_fraction": 0.9921875,
+      "max_abs_logit_difference": 132.8387451171875,
+      "max_abs_state_difference": 144.5261688232422,
+      "seed": 523
+    },
+    {
+      "earliest_mismatch_timestep": 1,
+      "interior_competitor_fraction": 0.3902587890625,
+      "interior_write_channel_not_exactly_binary_fraction": 0.9921875,
+      "max_abs_logit_difference": 157.15176391601562,
+      "max_abs_state_difference": 134.94772338867188,
+      "seed": 541
+    },
+    {
+      "earliest_mismatch_timestep": 1,
+      "interior_competitor_fraction": 0.4002685546875,
+      "interior_write_channel_not_exactly_binary_fraction": 0.9921875,
+      "max_abs_logit_difference": 165.57565307617188,
+      "max_abs_state_difference": 135.58831787109375,
+      "seed": 547
+    },
+    {
+      "earliest_mismatch_timestep": 1,
+      "interior_competitor_fraction": 0.3985595703125,
+      "interior_write_channel_not_exactly_binary_fraction": 0.9921875,
+      "max_abs_logit_difference": 66.82048034667969,
+      "max_abs_state_difference": 130.0791778564453,
+      "seed": 557
+    },
+    {
+      "earliest_mismatch_timestep": 1,
+      "interior_competitor_fraction": 0.388916015625,
+      "interior_write_channel_not_exactly_binary_fraction": 0.9921875,
+      "max_abs_logit_difference": 146.74855041503906,
+      "max_abs_state_difference": 138.01480102539062,
+      "seed": 563
+    },
+    {
+      "earliest_mismatch_timestep": 1,
+      "interior_competitor_fraction": 0.396728515625,
+      "interior_write_channel_not_exactly_binary_fraction": 0.9921875,
+      "max_abs_logit_difference": 55.93671798706055,
+      "max_abs_state_difference": 141.03692626953125,
+      "seed": 569
+    },
+    {
+      "earliest_mismatch_timestep": 1,
+      "interior_competitor_fraction": 0.400146484375,
+      "interior_write_channel_not_exactly_binary_fraction": 0.9921875,
+      "max_abs_logit_difference": 96.18742370605469,
+      "max_abs_state_difference": 135.91546630859375,
+      "seed": 571
+    }
+  ],
+  "reason": "Hold trajectories do not match. The EXP-017 generator puts competitor write markers and distractor noise on the same channel the reset reads, so the reset is not confined to the initial event.",
+  "tolerance_max_abs": 1e-05,
+  "training_started": false,
+  "worst_logit_difference": 165.57565307617188,
+  "worst_state_difference": 144.5261688232422
+}

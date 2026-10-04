@@ -1,0 +1,1280 @@
+{
+  "elapsed_seconds": 170.365,
+  "experiment_id": "EXP-016",
+  "kind": "authorized_completion",
+  "original_runtime_unknown": true,
+  "per_seed": [
+    {
+      "additive_noise0p3": {
+        "attempt": 1,
+        "audit": {
+          "diagnostic": {
+            "accuracy": 1.0,
+            "both_correct_fraction": 1.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 1.0,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": 18.162258353465738,
+            "prediction_flip_fraction": 1.0
+          },
+          "original": {
+            "accuracy": 1.0,
+            "both_correct_fraction": 1.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 1.0,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": 66.60217943973839,
+            "prediction_flip_fraction": 1.0
+          }
+        },
+        "diagnostic_source": "original",
+        "diagnostic_success": true,
+        "diagnostic_test_accuracy": 1.0,
+        "original_success": true,
+        "retention_probe_r2": 0.9934138744422977,
+        "source_session": "original",
+        "status": "ok",
+        "test_accuracy": 1.0
+      },
+      "additive_noise1p0": {
+        "attempt": 1,
+        "audit": {
+          "diagnostic": {
+            "accuracy": 1.0,
+            "both_correct_fraction": 1.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 1.0,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": 19.355817416761116,
+            "prediction_flip_fraction": 1.0
+          },
+          "original": {
+            "accuracy": 1.0,
+            "both_correct_fraction": 1.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 1.0,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": 54.21891191229224,
+            "prediction_flip_fraction": 1.0
+          }
+        },
+        "diagnostic_source": "original",
+        "diagnostic_success": true,
+        "diagnostic_test_accuracy": 1.0,
+        "original_success": true,
+        "retention_probe_r2": 0.9792126069861982,
+        "source_session": "original",
+        "status": "ok",
+        "test_accuracy": 1.0
+      },
+      "seed": 401,
+      "vanilla_noise0p3": {
+        "attempt": 1,
+        "audit": {
+          "diagnostic": {
+            "accuracy": 0.5,
+            "both_correct_fraction": 0.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 1.0,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": 8.396022067270136e-08,
+            "prediction_flip_fraction": 0.0
+          },
+          "original": {
+            "accuracy": 0.5,
+            "both_correct_fraction": 0.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 0.88671875,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": 1.4217221178114414e-08,
+            "prediction_flip_fraction": 0.0
+          }
+        },
+        "diagnostic_source": "original",
+        "diagnostic_success": false,
+        "diagnostic_test_accuracy": 0.501953125,
+        "original_success": false,
+        "retention_probe_r2": -0.0035179709523225355,
+        "source_session": "original",
+        "status": "ok",
+        "test_accuracy": 0.494140625
+      },
+      "vanilla_noise1p0": {
+        "attempt": 1,
+        "audit": {
+          "diagnostic": {
+            "accuracy": 0.5,
+            "both_correct_fraction": 0.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 1.0,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": 0.0001470491586040473,
+            "prediction_flip_fraction": 0.0
+          },
+          "original": {
+            "accuracy": 0.5,
+            "both_correct_fraction": 0.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 0.990234375,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": 0.00020375206077005714,
+            "prediction_flip_fraction": 0.0
+          }
+        },
+        "diagnostic_source": "original",
+        "diagnostic_success": false,
+        "diagnostic_test_accuracy": 0.521484375,
+        "original_success": false,
+        "retention_probe_r2": -0.007575510938840457,
+        "source_session": "original",
+        "status": "ok",
+        "test_accuracy": 0.505859375
+      }
+    },
+    {
+      "additive_noise0p3": {
+        "attempt": 1,
+        "audit": {
+          "diagnostic": {
+            "accuracy": 1.0,
+            "both_correct_fraction": 1.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 1.0,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": 17.481338229943574,
+            "prediction_flip_fraction": 1.0
+          },
+          "original": {
+            "accuracy": 1.0,
+            "both_correct_fraction": 1.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 1.0,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": 76.28742573130876,
+            "prediction_flip_fraction": 1.0
+          }
+        },
+        "diagnostic_source": "original",
+        "diagnostic_success": true,
+        "diagnostic_test_accuracy": 1.0,
+        "original_success": true,
+        "retention_probe_r2": 0.9171331942368695,
+        "source_session": "original",
+        "status": "ok",
+        "test_accuracy": 1.0
+      },
+      "additive_noise1p0": {
+        "attempt": 1,
+        "audit": {
+          "diagnostic": {
+            "accuracy": 0.998046875,
+            "both_correct_fraction": 0.99609375,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 1.0,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": 18.133112748604447,
+            "prediction_flip_fraction": 0.99609375
+          },
+          "original": {
+            "accuracy": 0.998046875,
+            "both_correct_fraction": 0.99609375,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 1.0,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": 98.38558437302709,
+            "prediction_flip_fraction": 0.99609375
+          }
+        },
+        "diagnostic_source": "original",
+        "diagnostic_success": true,
+        "diagnostic_test_accuracy": 1.0,
+        "original_success": true,
+        "retention_probe_r2": 0.9860732995924923,
+        "source_session": "original",
+        "status": "ok",
+        "test_accuracy": 1.0
+      },
+      "seed": 409,
+      "vanilla_noise0p3": {
+        "attempt": 1,
+        "audit": {
+          "diagnostic": {
+            "accuracy": 0.5,
+            "both_correct_fraction": 0.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 1.0,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": -4.081447550237502e-09,
+            "prediction_flip_fraction": 0.0
+          },
+          "original": {
+            "accuracy": 0.5,
+            "both_correct_fraction": 0.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 0.595703125,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": 5.311449058353901e-10,
+            "prediction_flip_fraction": 0.0
+          }
+        },
+        "diagnostic_source": "original",
+        "diagnostic_success": false,
+        "diagnostic_test_accuracy": 0.484375,
+        "original_success": false,
+        "retention_probe_r2": -0.00484558004941138,
+        "source_session": "original",
+        "status": "ok",
+        "test_accuracy": 0.517578125
+      },
+      "vanilla_noise1p0": {
+        "attempt": 1,
+        "audit": {
+          "diagnostic": {
+            "accuracy": 0.5,
+            "both_correct_fraction": 0.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 1.0,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": -2.6841472531609215e-07,
+            "prediction_flip_fraction": 0.0
+          },
+          "original": {
+            "accuracy": 0.4990234375,
+            "both_correct_fraction": 0.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 0.947265625,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": 6.5371423261240125e-06,
+            "prediction_flip_fraction": 0.001953125
+          }
+        },
+        "diagnostic_source": "original",
+        "diagnostic_success": false,
+        "diagnostic_test_accuracy": 0.490234375,
+        "original_success": false,
+        "retention_probe_r2": -0.005443324704142105,
+        "source_session": "original",
+        "status": "ok",
+        "test_accuracy": 0.482421875
+      }
+    },
+    {
+      "additive_noise0p3": {
+        "attempt": 1,
+        "audit": {
+          "diagnostic": {
+            "accuracy": 1.0,
+            "both_correct_fraction": 1.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 1.0,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": 18.759074772057243,
+            "prediction_flip_fraction": 1.0
+          },
+          "original": {
+            "accuracy": 1.0,
+            "both_correct_fraction": 1.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 1.0,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": 90.9991792216897,
+            "prediction_flip_fraction": 1.0
+          }
+        },
+        "diagnostic_source": "original",
+        "diagnostic_success": true,
+        "diagnostic_test_accuracy": 1.0,
+        "original_success": true,
+        "retention_probe_r2": 0.9316073588114177,
+        "source_session": "original",
+        "status": "ok",
+        "test_accuracy": 1.0
+      },
+      "additive_noise1p0": {
+        "attempt": 1,
+        "audit": {
+          "diagnostic": {
+            "accuracy": 1.0,
+            "both_correct_fraction": 1.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 1.0,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": 20.68009134021788,
+            "prediction_flip_fraction": 1.0
+          },
+          "original": {
+            "accuracy": 1.0,
+            "both_correct_fraction": 1.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 1.0,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": 63.47193206846714,
+            "prediction_flip_fraction": 1.0
+          }
+        },
+        "diagnostic_source": "original",
+        "diagnostic_success": true,
+        "diagnostic_test_accuracy": 1.0,
+        "original_success": true,
+        "retention_probe_r2": 0.9793199015445874,
+        "source_session": "original",
+        "status": "ok",
+        "test_accuracy": 1.0
+      },
+      "seed": 419,
+      "vanilla_noise0p3": {
+        "attempt": 1,
+        "audit": {
+          "diagnostic": {
+            "accuracy": 0.5,
+            "both_correct_fraction": 0.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 1.0,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": 6.1345452915877955e-09,
+            "prediction_flip_fraction": 0.0
+          },
+          "original": {
+            "accuracy": 0.5,
+            "both_correct_fraction": 0.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 0.552734375,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": -1.6661942936480045e-09,
+            "prediction_flip_fraction": 0.0
+          }
+        },
+        "diagnostic_source": "original",
+        "diagnostic_success": false,
+        "diagnostic_test_accuracy": 0.51171875,
+        "original_success": false,
+        "retention_probe_r2": -0.0020074347140068838,
+        "source_session": "original",
+        "status": "ok",
+        "test_accuracy": 0.505859375
+      },
+      "vanilla_noise1p0": {
+        "attempt": 1,
+        "audit": {
+          "diagnostic": {
+            "accuracy": 0.5,
+            "both_correct_fraction": 0.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 1.0,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": 9.815865374993927e-09,
+            "prediction_flip_fraction": 0.0
+          },
+          "original": {
+            "accuracy": 0.5,
+            "both_correct_fraction": 0.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 0.685546875,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": -1.051375875249505e-09,
+            "prediction_flip_fraction": 0.0
+          }
+        },
+        "diagnostic_source": "original",
+        "diagnostic_success": false,
+        "diagnostic_test_accuracy": 0.529296875,
+        "original_success": false,
+        "retention_probe_r2": 0.004722682213854523,
+        "source_session": "original",
+        "status": "ok",
+        "test_accuracy": 0.529296875
+      }
+    },
+    {
+      "additive_noise0p3": {
+        "attempt": 1,
+        "audit": {
+          "diagnostic": {
+            "accuracy": 1.0,
+            "both_correct_fraction": 1.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 1.0,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": 21.809952423968205,
+            "prediction_flip_fraction": 1.0
+          },
+          "original": {
+            "accuracy": 1.0,
+            "both_correct_fraction": 1.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 1.0,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": 37.63937445729971,
+            "prediction_flip_fraction": 1.0
+          }
+        },
+        "diagnostic_source": "original",
+        "diagnostic_success": true,
+        "diagnostic_test_accuracy": 1.0,
+        "original_success": true,
+        "retention_probe_r2": 0.9554676732103682,
+        "source_session": "original",
+        "status": "ok",
+        "test_accuracy": 1.0
+      },
+      "additive_noise1p0": {
+        "attempt": 1,
+        "audit": {
+          "diagnostic": {
+            "accuracy": 1.0,
+            "both_correct_fraction": 1.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 1.0,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": 20.458368101882133,
+            "prediction_flip_fraction": 1.0
+          },
+          "original": {
+            "accuracy": 1.0,
+            "both_correct_fraction": 1.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 1.0,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": 62.21171459928155,
+            "prediction_flip_fraction": 1.0
+          }
+        },
+        "diagnostic_source": "original",
+        "diagnostic_success": true,
+        "diagnostic_test_accuracy": 1.0,
+        "original_success": true,
+        "retention_probe_r2": 0.921649701330599,
+        "source_session": "original",
+        "status": "ok",
+        "test_accuracy": 1.0
+      },
+      "seed": 421,
+      "vanilla_noise0p3": {
+        "attempt": 1,
+        "audit": {
+          "diagnostic": {
+            "accuracy": 0.7412109375,
+            "both_correct_fraction": 0.482421875,
+            "final_states_coordinate_equal_fraction": 0.517578125,
+            "finite_logit_difference_fraction": 0.482421875,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": 4.516729127172971,
+            "prediction_flip_fraction": 0.482421875
+          },
+          "original": {
+            "accuracy": 0.7412109375,
+            "both_correct_fraction": 0.482421875,
+            "final_states_coordinate_equal_fraction": 0.517578125,
+            "finite_logit_difference_fraction": 0.482421875,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": 2.5285754395881668,
+            "prediction_flip_fraction": 0.482421875
+          }
+        },
+        "diagnostic_source": "original",
+        "diagnostic_success": false,
+        "diagnostic_test_accuracy": 0.73046875,
+        "original_success": false,
+        "retention_probe_r2": 0.3012640690576116,
+        "source_session": "original",
+        "status": "ok",
+        "test_accuracy": 0.73046875
+      },
+      "vanilla_noise1p0": {
+        "attempt": 1,
+        "audit": {
+          "diagnostic": {
+            "accuracy": 0.5,
+            "both_correct_fraction": 0.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 1.0,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": -5.1718927454504765e-09,
+            "prediction_flip_fraction": 0.0
+          },
+          "original": {
+            "accuracy": 0.5,
+            "both_correct_fraction": 0.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 0.6484375,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": -4.220055416226387e-10,
+            "prediction_flip_fraction": 0.0
+          }
+        },
+        "diagnostic_source": "original",
+        "diagnostic_success": false,
+        "diagnostic_test_accuracy": 0.552734375,
+        "original_success": false,
+        "retention_probe_r2": 0.006781464612743204,
+        "source_session": "original",
+        "status": "ok",
+        "test_accuracy": 0.5703125
+      }
+    },
+    {
+      "additive_noise0p3": {
+        "attempt": 1,
+        "audit": {
+          "diagnostic": {
+            "accuracy": 0.9970703125,
+            "both_correct_fraction": 0.994140625,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 1.0,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": 19.955283456156096,
+            "prediction_flip_fraction": 0.994140625
+          },
+          "original": {
+            "accuracy": 1.0,
+            "both_correct_fraction": 1.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 1.0,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": 63.61761468835175,
+            "prediction_flip_fraction": 1.0
+          }
+        },
+        "diagnostic_source": "original",
+        "diagnostic_success": true,
+        "diagnostic_test_accuracy": 1.0,
+        "original_success": true,
+        "retention_probe_r2": 0.9689508232495794,
+        "source_session": "original",
+        "status": "ok",
+        "test_accuracy": 1.0
+      },
+      "additive_noise1p0": {
+        "attempt": 1,
+        "audit": {
+          "diagnostic": {
+            "accuracy": 1.0,
+            "both_correct_fraction": 1.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 1.0,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": 23.758813453966944,
+            "prediction_flip_fraction": 1.0
+          },
+          "original": {
+            "accuracy": 1.0,
+            "both_correct_fraction": 1.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 1.0,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": 62.86616524588317,
+            "prediction_flip_fraction": 1.0
+          }
+        },
+        "diagnostic_source": "original",
+        "diagnostic_success": true,
+        "diagnostic_test_accuracy": 1.0,
+        "original_success": true,
+        "retention_probe_r2": 0.9139575159545347,
+        "source_session": "original",
+        "status": "ok",
+        "test_accuracy": 1.0
+      },
+      "seed": 431,
+      "vanilla_noise0p3": {
+        "attempt": 1,
+        "audit": {
+          "diagnostic": {
+            "accuracy": 0.5107421875,
+            "both_correct_fraction": 0.021484375,
+            "final_states_coordinate_equal_fraction": 0.97265625,
+            "finite_logit_difference_fraction": 0.02734375,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": 0.009386214228839146,
+            "prediction_flip_fraction": 0.021484375
+          },
+          "original": {
+            "accuracy": 0.5,
+            "both_correct_fraction": 0.0,
+            "final_states_coordinate_equal_fraction": 0.97265625,
+            "finite_logit_difference_fraction": 0.025390625,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": 0.001267498970264569,
+            "prediction_flip_fraction": 0.0
+          }
+        },
+        "diagnostic_source": "original",
+        "diagnostic_success": false,
+        "diagnostic_test_accuracy": 0.482421875,
+        "original_success": false,
+        "retention_probe_r2": -0.0007905733045414642,
+        "source_session": "original",
+        "status": "ok",
+        "test_accuracy": 0.505859375
+      },
+      "vanilla_noise1p0": {
+        "attempt": 1,
+        "audit": {
+          "diagnostic": {
+            "accuracy": 0.5,
+            "both_correct_fraction": 0.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 1.0,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": 6.175496106104522e-10,
+            "prediction_flip_fraction": 0.0
+          },
+          "original": {
+            "accuracy": 0.5,
+            "both_correct_fraction": 0.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 0.744140625,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": -2.4010660126805305e-09,
+            "prediction_flip_fraction": 0.0
+          }
+        },
+        "diagnostic_source": "original",
+        "diagnostic_success": false,
+        "diagnostic_test_accuracy": 0.498046875,
+        "original_success": false,
+        "retention_probe_r2": -0.013433546537358065,
+        "source_session": "original",
+        "status": "ok",
+        "test_accuracy": 0.533203125
+      }
+    },
+    {
+      "additive_noise0p3": {
+        "attempt": 1,
+        "audit": {
+          "diagnostic": {
+            "accuracy": 1.0,
+            "both_correct_fraction": 1.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 1.0,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": 19.028368545051393,
+            "prediction_flip_fraction": 1.0
+          },
+          "original": {
+            "accuracy": 1.0,
+            "both_correct_fraction": 1.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 1.0,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": 81.59203373268247,
+            "prediction_flip_fraction": 1.0
+          }
+        },
+        "diagnostic_source": "original",
+        "diagnostic_success": true,
+        "diagnostic_test_accuracy": 1.0,
+        "original_success": true,
+        "retention_probe_r2": 0.9698046669363976,
+        "source_session": "original",
+        "status": "ok",
+        "test_accuracy": 1.0
+      },
+      "additive_noise1p0": {
+        "attempt": 1,
+        "audit": {
+          "diagnostic": {
+            "accuracy": 0.9990234375,
+            "both_correct_fraction": 0.998046875,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 1.0,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": 22.159136929914816,
+            "prediction_flip_fraction": 0.998046875
+          },
+          "original": {
+            "accuracy": 0.9990234375,
+            "both_correct_fraction": 0.998046875,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 1.0,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": 59.016753357835114,
+            "prediction_flip_fraction": 0.998046875
+          }
+        },
+        "diagnostic_source": "original",
+        "diagnostic_success": true,
+        "diagnostic_test_accuracy": 1.0,
+        "original_success": true,
+        "retention_probe_r2": 0.9074133634567261,
+        "source_session": "original",
+        "status": "ok",
+        "test_accuracy": 1.0
+      },
+      "seed": 433,
+      "vanilla_noise0p3": {
+        "attempt": 1,
+        "audit": {
+          "diagnostic": {
+            "accuracy": 0.5,
+            "both_correct_fraction": 0.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 1.0,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": -1.7178818152664612e-08,
+            "prediction_flip_fraction": 0.0
+          },
+          "original": {
+            "accuracy": 0.5,
+            "both_correct_fraction": 0.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 0.73046875,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": -9.822542779147625e-11,
+            "prediction_flip_fraction": 0.0
+          }
+        },
+        "diagnostic_source": "original",
+        "diagnostic_success": false,
+        "diagnostic_test_accuracy": 0.5390625,
+        "original_success": false,
+        "retention_probe_r2": -0.00310516357421875,
+        "source_session": "original",
+        "status": "ok",
+        "test_accuracy": 0.54296875
+      },
+      "vanilla_noise1p0": {
+        "attempt": 1,
+        "audit": {
+          "diagnostic": {
+            "accuracy": 0.501953125,
+            "both_correct_fraction": 0.00390625,
+            "final_states_coordinate_equal_fraction": 0.990234375,
+            "finite_logit_difference_fraction": 0.009765625,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": 0.026376372850341966,
+            "prediction_flip_fraction": 0.00390625
+          },
+          "original": {
+            "accuracy": 0.501953125,
+            "both_correct_fraction": 0.00390625,
+            "final_states_coordinate_equal_fraction": 0.990234375,
+            "finite_logit_difference_fraction": 0.0078125,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": 0.0015769291494507343,
+            "prediction_flip_fraction": 0.00390625
+          }
+        },
+        "diagnostic_source": "original",
+        "diagnostic_success": false,
+        "diagnostic_test_accuracy": 0.5,
+        "original_success": false,
+        "retention_probe_r2": -0.0016075372695922852,
+        "source_session": "original",
+        "status": "ok",
+        "test_accuracy": 0.45703125
+      }
+    },
+    {
+      "additive_noise0p3": {
+        "attempt": 1,
+        "audit": {
+          "diagnostic": {
+            "accuracy": 1.0,
+            "both_correct_fraction": 1.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 1.0,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": 21.054311633981595,
+            "prediction_flip_fraction": 1.0
+          },
+          "original": {
+            "accuracy": 1.0,
+            "both_correct_fraction": 1.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 1.0,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": 64.94883813336492,
+            "prediction_flip_fraction": 1.0
+          }
+        },
+        "diagnostic_source": "completion",
+        "diagnostic_success": true,
+        "diagnostic_test_accuracy": 1.0,
+        "original_success": true,
+        "retention_probe_r2": 0.838398570230005,
+        "source_session": "original",
+        "status": "ok",
+        "test_accuracy": 1.0
+      },
+      "additive_noise1p0": {
+        "attempt": 1,
+        "audit": {
+          "diagnostic": {
+            "accuracy": 0.9990234375,
+            "both_correct_fraction": 0.998046875,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 1.0,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": 18.92676092128491,
+            "prediction_flip_fraction": 0.998046875
+          },
+          "original": {
+            "accuracy": 1.0,
+            "both_correct_fraction": 1.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 1.0,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": 81.2199881626293,
+            "prediction_flip_fraction": 1.0
+          }
+        },
+        "diagnostic_source": "completion",
+        "diagnostic_success": true,
+        "diagnostic_test_accuracy": 1.0,
+        "original_success": true,
+        "retention_probe_r2": 0.9446880849345849,
+        "source_session": "completion",
+        "status": "ok",
+        "test_accuracy": 1.0
+      },
+      "seed": 439,
+      "vanilla_noise0p3": {
+        "attempt": 1,
+        "audit": {
+          "diagnostic": {
+            "accuracy": 0.5,
+            "both_correct_fraction": 0.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 1.0,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": -4.226397121127401e-08,
+            "prediction_flip_fraction": 0.0
+          },
+          "original": {
+            "accuracy": 0.5,
+            "both_correct_fraction": 0.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 0.80859375,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": -7.025664672255516e-08,
+            "prediction_flip_fraction": 0.0
+          }
+        },
+        "diagnostic_source": "completion",
+        "diagnostic_success": false,
+        "diagnostic_test_accuracy": 0.498046875,
+        "original_success": false,
+        "retention_probe_r2": -0.009932013667738326,
+        "source_session": "original",
+        "status": "ok",
+        "test_accuracy": 0.505859375
+      },
+      "vanilla_noise1p0": {
+        "attempt": 2,
+        "audit": {
+          "diagnostic": {
+            "accuracy": 0.5,
+            "both_correct_fraction": 0.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 1.0,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": -2.0022944808071154e-06,
+            "prediction_flip_fraction": 0.0
+          },
+          "original": {
+            "accuracy": 0.5,
+            "both_correct_fraction": 0.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 0.92578125,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": -7.018243195489049e-07,
+            "prediction_flip_fraction": 0.0
+          }
+        },
+        "diagnostic_source": "completion",
+        "diagnostic_success": false,
+        "diagnostic_test_accuracy": 0.509765625,
+        "original_success": false,
+        "retention_probe_r2": -0.0022579576102028653,
+        "source_session": "completion",
+        "status": "ok",
+        "test_accuracy": 0.505859375
+      }
+    },
+    {
+      "additive_noise0p3": {
+        "attempt": 1,
+        "audit": {
+          "diagnostic": {
+            "accuracy": 1.0,
+            "both_correct_fraction": 1.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 1.0,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": 16.585634466204517,
+            "prediction_flip_fraction": 1.0
+          },
+          "original": {
+            "accuracy": 1.0,
+            "both_correct_fraction": 1.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 1.0,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": 120.74881096556783,
+            "prediction_flip_fraction": 1.0
+          }
+        },
+        "diagnostic_source": "completion",
+        "diagnostic_success": true,
+        "diagnostic_test_accuracy": 1.0,
+        "original_success": true,
+        "retention_probe_r2": 0.9818706391320091,
+        "source_session": "completion",
+        "status": "ok",
+        "test_accuracy": 1.0
+      },
+      "additive_noise1p0": {
+        "attempt": 1,
+        "audit": {
+          "diagnostic": {
+            "accuracy": 1.0,
+            "both_correct_fraction": 1.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 1.0,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": 17.402665962175043,
+            "prediction_flip_fraction": 1.0
+          },
+          "original": {
+            "accuracy": 1.0,
+            "both_correct_fraction": 1.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 1.0,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": 65.85112236067653,
+            "prediction_flip_fraction": 1.0
+          }
+        },
+        "diagnostic_source": "completion",
+        "diagnostic_success": true,
+        "diagnostic_test_accuracy": 1.0,
+        "original_success": true,
+        "retention_probe_r2": 0.9987207550389858,
+        "source_session": "completion",
+        "status": "ok",
+        "test_accuracy": 1.0
+      },
+      "seed": 443,
+      "vanilla_noise0p3": {
+        "attempt": 1,
+        "audit": {
+          "diagnostic": {
+            "accuracy": 0.5,
+            "both_correct_fraction": 0.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 1.0,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": 5.703270803650469e-09,
+            "prediction_flip_fraction": 0.0
+          },
+          "original": {
+            "accuracy": 0.5,
+            "both_correct_fraction": 0.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 0.66796875,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": -4.802132025361061e-10,
+            "prediction_flip_fraction": 0.0
+          }
+        },
+        "diagnostic_source": "completion",
+        "diagnostic_success": false,
+        "diagnostic_test_accuracy": 0.494140625,
+        "original_success": false,
+        "retention_probe_r2": -0.0034120053737176637,
+        "source_session": "completion",
+        "status": "ok",
+        "test_accuracy": 0.482421875
+      },
+      "vanilla_noise1p0": {
+        "attempt": 1,
+        "audit": {
+          "diagnostic": {
+            "accuracy": 0.5,
+            "both_correct_fraction": 0.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 1.0,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": -1.4131572805659801e-09,
+            "prediction_flip_fraction": 0.0
+          },
+          "original": {
+            "accuracy": 0.5,
+            "both_correct_fraction": 0.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 0.6328125,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": -4.511093720793724e-10,
+            "prediction_flip_fraction": 0.0
+          }
+        },
+        "diagnostic_source": "completion",
+        "diagnostic_success": false,
+        "diagnostic_test_accuracy": 0.48828125,
+        "original_success": false,
+        "retention_probe_r2": -0.010410385243649234,
+        "source_session": "completion",
+        "status": "ok",
+        "test_accuracy": 0.515625
+      }
+    },
+    {
+      "additive_noise0p3": {
+        "attempt": 1,
+        "audit": {
+          "diagnostic": {
+            "accuracy": 1.0,
+            "both_correct_fraction": 1.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 1.0,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": 17.32379747236169,
+            "prediction_flip_fraction": 1.0
+          },
+          "original": {
+            "accuracy": 1.0,
+            "both_correct_fraction": 1.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 1.0,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": 95.58450164087117,
+            "prediction_flip_fraction": 1.0
+          }
+        },
+        "diagnostic_source": "completion",
+        "diagnostic_success": true,
+        "diagnostic_test_accuracy": 1.0,
+        "original_success": true,
+        "retention_probe_r2": 0.8688428341791956,
+        "source_session": "completion",
+        "status": "ok",
+        "test_accuracy": 1.0
+      },
+      "additive_noise1p0": {
+        "attempt": 1,
+        "audit": {
+          "diagnostic": {
+            "accuracy": 1.0,
+            "both_correct_fraction": 1.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 1.0,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": 17.93865473941984,
+            "prediction_flip_fraction": 1.0
+          },
+          "original": {
+            "accuracy": 1.0,
+            "both_correct_fraction": 1.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 1.0,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": 48.512995310127735,
+            "prediction_flip_fraction": 1.0
+          }
+        },
+        "diagnostic_source": "completion",
+        "diagnostic_success": true,
+        "diagnostic_test_accuracy": 1.0,
+        "original_success": true,
+        "retention_probe_r2": 0.9855435099845932,
+        "source_session": "completion",
+        "status": "ok",
+        "test_accuracy": 1.0
+      },
+      "seed": 449,
+      "vanilla_noise0p3": {
+        "attempt": 1,
+        "audit": {
+          "diagnostic": {
+            "accuracy": 0.5009765625,
+            "both_correct_fraction": 0.001953125,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 1.0,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": 0.00010753567777710326,
+            "prediction_flip_fraction": 0.001953125
+          },
+          "original": {
+            "accuracy": 0.5,
+            "both_correct_fraction": 0.001953125,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 1.0,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": -0.00037567834806395695,
+            "prediction_flip_fraction": 0.00390625
+          }
+        },
+        "diagnostic_source": "completion",
+        "diagnostic_success": false,
+        "diagnostic_test_accuracy": 0.470703125,
+        "original_success": false,
+        "retention_probe_r2": -0.01889846313821253,
+        "source_session": "completion",
+        "status": "ok",
+        "test_accuracy": 0.494140625
+      },
+      "vanilla_noise1p0": {
+        "attempt": 1,
+        "audit": {
+          "diagnostic": {
+            "accuracy": 0.5,
+            "both_correct_fraction": 0.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 1.0,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": 7.576742884355184e-11,
+            "prediction_flip_fraction": 0.0
+          },
+          "original": {
+            "accuracy": 0.5,
+            "both_correct_fraction": 0.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 0.630859375,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": -2.0445440895855427e-09,
+            "prediction_flip_fraction": 0.0
+          }
+        },
+        "diagnostic_source": "completion",
+        "diagnostic_success": false,
+        "diagnostic_test_accuracy": 0.453125,
+        "original_success": false,
+        "retention_probe_r2": -0.018360179920628772,
+        "source_session": "completion",
+        "status": "ok",
+        "test_accuracy": 0.44921875
+      }
+    },
+    {
+      "additive_noise0p3": {
+        "attempt": 1,
+        "audit": {
+          "diagnostic": {
+            "accuracy": 1.0,
+            "both_correct_fraction": 1.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 1.0,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": 18.728561684510694,
+            "prediction_flip_fraction": 1.0
+          },
+          "original": {
+            "accuracy": 1.0,
+            "both_correct_fraction": 1.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 1.0,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": 72.0462782047689,
+            "prediction_flip_fraction": 1.0
+          }
+        },
+        "diagnostic_source": "completion",
+        "diagnostic_success": true,
+        "diagnostic_test_accuracy": 1.0,
+        "original_success": true,
+        "retention_probe_r2": 0.9797701826096892,
+        "source_session": "completion",
+        "status": "ok",
+        "test_accuracy": 1.0
+      },
+      "additive_noise1p0": {
+        "attempt": 1,
+        "audit": {
+          "diagnostic": {
+            "accuracy": 1.0,
+            "both_correct_fraction": 1.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 1.0,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": 18.140935932095246,
+            "prediction_flip_fraction": 1.0
+          },
+          "original": {
+            "accuracy": 1.0,
+            "both_correct_fraction": 1.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 1.0,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": 38.721590721048415,
+            "prediction_flip_fraction": 1.0
+          }
+        },
+        "diagnostic_source": "completion",
+        "diagnostic_success": true,
+        "diagnostic_test_accuracy": 1.0,
+        "original_success": true,
+        "retention_probe_r2": 0.9259609277208094,
+        "source_session": "completion",
+        "status": "ok",
+        "test_accuracy": 1.0
+      },
+      "seed": 457,
+      "vanilla_noise0p3": {
+        "attempt": 1,
+        "audit": {
+          "diagnostic": {
+            "accuracy": 1.0,
+            "both_correct_fraction": 1.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 1.0,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": 16.99028761794188,
+            "prediction_flip_fraction": 1.0
+          },
+          "original": {
+            "accuracy": 1.0,
+            "both_correct_fraction": 1.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 1.0,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": 11.246142469346523,
+            "prediction_flip_fraction": 1.0
+          }
+        },
+        "diagnostic_source": "completion",
+        "diagnostic_success": true,
+        "diagnostic_test_accuracy": 1.0,
+        "original_success": true,
+        "retention_probe_r2": 0.9954021820542132,
+        "source_session": "completion",
+        "status": "ok",
+        "test_accuracy": 1.0
+      },
+      "vanilla_noise1p0": {
+        "attempt": 1,
+        "audit": {
+          "diagnostic": {
+            "accuracy": 0.5,
+            "both_correct_fraction": 0.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 1.0,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": 1.843413040985599e-08,
+            "prediction_flip_fraction": 0.0
+          },
+          "original": {
+            "accuracy": 0.5,
+            "both_correct_fraction": 0.0,
+            "final_states_coordinate_equal_fraction": 0.0,
+            "finite_logit_difference_fraction": 0.8359375,
+            "finite_signed_difference_fraction": 1.0,
+            "mean_signed_logit_difference": 3.4327968023717403e-08,
+            "prediction_flip_fraction": 0.0
+          }
+        },
+        "diagnostic_source": "completion",
+        "diagnostic_success": false,
+        "diagnostic_test_accuracy": 0.509765625,
+        "original_success": false,
+        "retention_probe_r2": -0.0007384481521623965,
+        "source_session": "completion",
+        "status": "ok",
+        "test_accuracy": 0.490234375
+      }
+    }
+  ],
+  "scored_conditions": 40,
+  "unstarted": []
+}

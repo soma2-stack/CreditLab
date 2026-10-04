@@ -1,0 +1,85 @@
+# EXP-012 preregistration. The classifier settings were fixed before any
+# refitted accuracy was collected. This is an exploratory diagnostic on the
+# existing EXP-011 checkpoints, not a new recurrent-training experiment.
+experiment_id: EXP-012
+config_revision: 1
+status: preregistered_before_diagnostic
+kind: exploratory_diagnostic_on_existing_cohort
+device: cpu
+source_experiment: EXP-011
+source_checkpoints: results/EXP-011/checkpoints
+conditions:
+  - full_history_clip5
+  - final_16_clip5
+  - full_history_noclip
+  - final_16_noclip
+seeds: [101, 113, 127, 139, 151, 163, 179, 191, 211, 223]
+delays: [64, 128]
+model:
+  type: additive_tanh_rnn
+  input_size: 3
+  hidden_size: 32
+  output_size: 1
+  initial_hidden_state: zero
+  residual_scale: 1.0
+  rollout: ordinary full forward, no training detach
+feature_extraction:
+  train_split_index: 0
+  val_split_index: 1
+  test_split_index: 2
+  train_samples: 1536
+  val_samples: 512
+  test_samples: 512
+  base_seed: 2000
+  distractor_noise_std: 0.3
+  competitor_rate: 0.4
+  competitor_flip_prob: 0.5
+  dtype: float64
+preprocessing:
+  fit_on: training features only
+  mean: training mean
+  scale: training population standard deviation, divide by the training count
+  zero_variance_scale: 1.0
+  applied_unchanged_to: [validation, test, audit]
+classifier:
+  type: binary_logistic_regression
+  regularization: L2
+  sklearn_1_9_l2: "l1_ratio 0.0. penalty='l2' is deprecated in scikit-learn 1.9 and is the same L2 setting."
+  C: 1.0
+  l1_ratio: 0.0
+  solver: lbfgs
+  tolerance: 1.0e-8
+  max_iterations: 2000
+  fit_intercept: true
+  class_weight: null
+  fit_on: training hidden states and training labels only
+  prediction_rule: "class +1 when the decision value is greater than 0; an exact 0 counts as -1"
+  original_readout_rule: "sign of the original logit, with an exact 0 counted as +1"
+success_test_accuracy_at_least: 0.95
+audit:
+  split_index: 3
+  samples: 512
+  rule: flip only the original bit
+budget:
+  max_cpu_seconds_total: 300
+  no_automatic_retry: true
+  no_automatic_resume: true
+  no_recurrent_training: true
+  no_tuning_of_C: true
+interpretation:
+  exploratory: true
+  not_an_independent_replication: true
+  nonconvergence_is_inconclusive: true
+  negative_result_is_weaker: "Failure of this fixed classifier does not prove that no linear classifier could succeed."
+  outcomes:
+    A: "Final-16 misses are substantially rescued."
+    B: "Full-history models remain strong and final-16 misses are not rescued."
+    C: "Some final-16 misses are rescued and others are not."
+    D: "The diagnostic performs poorly even on successful full-history models."
+    E: "Checkpoint verification fails."
+environment_requirement:
+  python: "3.11.9"
+  torch: "2.13.0+cpu"
+  sklearn_note: "scikit-learn was not installed. It was installed so the specified lbfgs logistic solver could be used. The recorded version is checked at runtime."
+outputs:
+  directory: results/EXP-012

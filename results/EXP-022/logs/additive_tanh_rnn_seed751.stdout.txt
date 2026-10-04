@@ -1,0 +1,1 @@
+{"model_type": "additive_tanh_rnn", "seed": 751, "status": "ok", "test_accuracy": 0.6796875}

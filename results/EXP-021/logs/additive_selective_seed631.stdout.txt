@@ -1,0 +1,1 @@
+{"condition": "additive_selective", "seed": 631, "status": "ok", "test_accuracy": 0.63671875}

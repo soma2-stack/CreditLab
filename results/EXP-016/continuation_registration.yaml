@@ -1,0 +1,28 @@
+experiment_id: EXP-016
+seeds:
+- 401
+- 409
+- 419
+- 421
+- 431
+- 433
+- 439
+- 443
+- 449
+- 457
+base_seed: 6000
+delay: 128
+conditions:
+- model: vanilla_tanh_rnn
+  noise: 0.3
+- model: additive_tanh_rnn
+  noise: 0.3
+- model: vanilla_tanh_rnn
+  noise: 1.0
+- model: additive_tanh_rnn
+  noise: 1.0
+noise_pairing: shared latent draw scaled by 0.3 or 1.0 on distractor steps only
+success_test_accuracy_at_least: 0.95
+budget_seconds_per_run: 300
+budget_seconds_total: 900
+seed_conflicts: []

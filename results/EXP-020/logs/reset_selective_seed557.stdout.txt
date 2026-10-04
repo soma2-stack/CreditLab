@@ -1,0 +1,1 @@
+{"condition": "reset_selective", "seed": 557, "status": "ok", "test_accuracy": 1.0}

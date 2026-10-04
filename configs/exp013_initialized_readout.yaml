@@ -1,0 +1,51 @@
+# EXP-013 preregistration. The classifier and the three frozen representations
+# were fixed before any EXP-013 accuracy was collected.
+experiment_id: EXP-013
+config_revision: 1
+status: preregistered_before_diagnostic
+kind: exploratory_matched_diagnostic
+device: cpu
+representations:
+  - name: initialized
+    source: EXP-007
+    checkpoint_pattern: additive_tanh_rnn_readout_only_delay{delay}_seed{seed}.pt
+    note: "Input and recurrent weights should still be the seeded initialization. The saved readout is ignored when fitting the diagnostic."
+  - name: full_history
+    source: EXP-011
+    condition: full_history_clip5
+  - name: final_16
+    source: EXP-011
+    condition: final_16_clip5
+seeds: [101, 113, 127, 139, 151, 163, 179, 191, 211, 223]
+delays: [64, 128]
+initialization_check: "seed_everything(seed), then the existing matched additive constructor, with no optimizer step. Every input and recurrent parameter must be exactly equal to the saved readout-only checkpoint."
+fingerprint_limitation: "EXP-007 does not have a complete saved fingerprint file. Those records are not backfilled. New fingerprints are saved here. Dataset tensors are matched to the saved EXP-011 fingerprints for the same seed and delay."
+classifier:
+  same_as: EXP-012
+  C: 1.0
+  l1_ratio: 0.0
+  solver: lbfgs
+  tolerance: 1.0e-8
+  max_iterations: 2000
+  fit_intercept: true
+  class_weight: null
+  sklearn: 1.9.1
+preprocessing:
+  fit_on: training features only
+  scale: training population standard deviation
+  zero_variance_scale: 1.0
+reproduction_check:
+  integer_test_correct_counts: required
+  prediction_agreement_on_original_test_examples: required
+  on_failure: stop and do not adjust the classifier
+success_test_accuracy_at_least: 0.95
+budget:
+  max_cpu_seconds_total: 300
+  no_automatic_resume: true
+  no_recurrent_training: true
+environment_requirement:
+  python: "3.11.9"
+  torch: "2.13.0+cpu"
+  sklearn: 1.9.1
+outputs:
+  directory: results/EXP-013

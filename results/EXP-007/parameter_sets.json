@@ -1,0 +1,14 @@
+{
+  "frozen_when_readout_only": [
+    "recurrent.weight_ih_l0",
+    "recurrent.weight_hh_l0",
+    "recurrent.bias_ih_l0",
+    "recurrent.bias_hh_l0"
+  ],
+  "trainable_when_readout_only": [
+    "readout.weight",
+    "readout.bias"
+  ],
+  "total_parameter_count": 1217,
+  "readout_trainable_count": 33
+}

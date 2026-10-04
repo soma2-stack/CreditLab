@@ -1,0 +1,1 @@
+{"model_type": "addressed_reset_additive", "seed": 751, "status": "ok", "test_accuracy": 0.63671875}

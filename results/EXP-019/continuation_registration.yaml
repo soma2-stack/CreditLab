@@ -1,0 +1,16 @@
+experiment_id: EXP-019
+seeds:
+- 503
+- 509
+- 521
+- 523
+- 541
+- 547
+- 557
+- 563
+- 569
+- 571
+marker: x_t channel 1 with no threshold
+hold_match_tolerance: 1.0e-05
+training_starts_only_if_hold_matches: true
+budget_seconds_total: 900

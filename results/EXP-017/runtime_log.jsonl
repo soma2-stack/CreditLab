@@ -1,0 +1,80 @@
+{"condition": "vanilla_hold", "event": "start", "seed": 503, "session_elapsed_seconds": 0.027}
+{"condition": "vanilla_hold", "event": "finish", "exit_code": 0, "runtime_seconds": 9.054, "seed": 503, "session_elapsed_seconds": 9.081}
+{"condition": "additive_hold", "event": "start", "seed": 503, "session_elapsed_seconds": 9.082}
+{"condition": "additive_hold", "event": "finish", "exit_code": 0, "runtime_seconds": 14.555, "seed": 503, "session_elapsed_seconds": 23.637}
+{"condition": "vanilla_selective", "event": "start", "seed": 503, "session_elapsed_seconds": 23.638}
+{"condition": "vanilla_selective", "event": "finish", "exit_code": 0, "runtime_seconds": 8.645, "seed": 503, "session_elapsed_seconds": 32.283}
+{"condition": "additive_selective", "event": "start", "seed": 503, "session_elapsed_seconds": 32.284}
+{"condition": "additive_selective", "event": "finish", "exit_code": 0, "runtime_seconds": 13.277, "seed": 503, "session_elapsed_seconds": 45.56}
+{"condition": "vanilla_hold", "event": "start", "seed": 509, "session_elapsed_seconds": 45.561}
+{"condition": "vanilla_hold", "event": "finish", "exit_code": 0, "runtime_seconds": 8.63, "seed": 509, "session_elapsed_seconds": 54.191}
+{"condition": "additive_hold", "event": "start", "seed": 509, "session_elapsed_seconds": 54.191}
+{"condition": "additive_hold", "event": "finish", "exit_code": 0, "runtime_seconds": 13.731, "seed": 509, "session_elapsed_seconds": 67.922}
+{"condition": "vanilla_selective", "event": "start", "seed": 509, "session_elapsed_seconds": 67.923}
+{"condition": "vanilla_selective", "event": "finish", "exit_code": 0, "runtime_seconds": 14.298, "seed": 509, "session_elapsed_seconds": 82.221}
+{"condition": "additive_selective", "event": "start", "seed": 509, "session_elapsed_seconds": 82.221}
+{"condition": "additive_selective", "event": "finish", "exit_code": 0, "runtime_seconds": 13.973, "seed": 509, "session_elapsed_seconds": 96.194}
+{"condition": "vanilla_hold", "event": "start", "seed": 521, "session_elapsed_seconds": 96.195}
+{"condition": "vanilla_hold", "event": "finish", "exit_code": 0, "runtime_seconds": 9.07, "seed": 521, "session_elapsed_seconds": 105.264}
+{"condition": "additive_hold", "event": "start", "seed": 521, "session_elapsed_seconds": 105.265}
+{"condition": "additive_hold", "event": "finish", "exit_code": 0, "runtime_seconds": 13.926, "seed": 521, "session_elapsed_seconds": 119.191}
+{"condition": "vanilla_selective", "event": "start", "seed": 521, "session_elapsed_seconds": 119.192}
+{"condition": "vanilla_selective", "event": "finish", "exit_code": 0, "runtime_seconds": 9.048, "seed": 521, "session_elapsed_seconds": 128.24}
+{"condition": "additive_selective", "event": "start", "seed": 521, "session_elapsed_seconds": 128.241}
+{"condition": "additive_selective", "event": "finish", "exit_code": 0, "runtime_seconds": 13.725, "seed": 521, "session_elapsed_seconds": 141.966}
+{"condition": "vanilla_hold", "event": "start", "seed": 523, "session_elapsed_seconds": 141.966}
+{"condition": "vanilla_hold", "event": "finish", "exit_code": 0, "runtime_seconds": 8.423, "seed": 523, "session_elapsed_seconds": 150.389}
+{"condition": "additive_hold", "event": "start", "seed": 523, "session_elapsed_seconds": 150.39}
+{"condition": "additive_hold", "event": "finish", "exit_code": 0, "runtime_seconds": 14.125, "seed": 523, "session_elapsed_seconds": 164.515}
+{"condition": "vanilla_selective", "event": "start", "seed": 523, "session_elapsed_seconds": 164.516}
+{"condition": "vanilla_selective", "event": "finish", "exit_code": 0, "runtime_seconds": 8.901, "seed": 523, "session_elapsed_seconds": 173.417}
+{"condition": "additive_selective", "event": "start", "seed": 523, "session_elapsed_seconds": 173.418}
+{"condition": "additive_selective", "event": "finish", "exit_code": 0, "runtime_seconds": 13.603, "seed": 523, "session_elapsed_seconds": 187.021}
+{"condition": "vanilla_hold", "event": "start", "seed": 541, "session_elapsed_seconds": 187.021}
+{"condition": "vanilla_hold", "event": "finish", "exit_code": 0, "runtime_seconds": 8.615, "seed": 541, "session_elapsed_seconds": 195.636}
+{"condition": "additive_hold", "event": "start", "seed": 541, "session_elapsed_seconds": 195.637}
+{"condition": "additive_hold", "event": "finish", "exit_code": 0, "runtime_seconds": 13.486, "seed": 541, "session_elapsed_seconds": 209.123}
+{"condition": "vanilla_selective", "event": "start", "seed": 541, "session_elapsed_seconds": 209.123}
+{"condition": "vanilla_selective", "event": "finish", "exit_code": 0, "runtime_seconds": 8.633, "seed": 541, "session_elapsed_seconds": 217.757}
+{"condition": "additive_selective", "event": "start", "seed": 541, "session_elapsed_seconds": 217.757}
+{"condition": "additive_selective", "event": "finish", "exit_code": 0, "runtime_seconds": 13.718, "seed": 541, "session_elapsed_seconds": 231.476}
+{"condition": "vanilla_hold", "event": "start", "seed": 547, "session_elapsed_seconds": 231.476}
+{"condition": "vanilla_hold", "event": "finish", "exit_code": 0, "runtime_seconds": 8.692, "seed": 547, "session_elapsed_seconds": 240.169}
+{"condition": "additive_hold", "event": "start", "seed": 547, "session_elapsed_seconds": 240.169}
+{"condition": "additive_hold", "event": "finish", "exit_code": 0, "runtime_seconds": 13.538, "seed": 547, "session_elapsed_seconds": 253.707}
+{"condition": "vanilla_selective", "event": "start", "seed": 547, "session_elapsed_seconds": 253.708}
+{"condition": "vanilla_selective", "event": "finish", "exit_code": 0, "runtime_seconds": 8.867, "seed": 547, "session_elapsed_seconds": 262.574}
+{"condition": "additive_selective", "event": "start", "seed": 547, "session_elapsed_seconds": 262.575}
+{"condition": "additive_selective", "event": "finish", "exit_code": 0, "runtime_seconds": 13.715, "seed": 547, "session_elapsed_seconds": 276.29}
+{"condition": "vanilla_hold", "event": "start", "seed": 557, "session_elapsed_seconds": 276.29}
+{"condition": "vanilla_hold", "event": "finish", "exit_code": 0, "runtime_seconds": 8.818, "seed": 557, "session_elapsed_seconds": 285.108}
+{"condition": "additive_hold", "event": "start", "seed": 557, "session_elapsed_seconds": 285.109}
+{"condition": "additive_hold", "event": "finish", "exit_code": 0, "runtime_seconds": 16.353, "seed": 557, "session_elapsed_seconds": 301.462}
+{"condition": "vanilla_selective", "event": "start", "seed": 557, "session_elapsed_seconds": 301.463}
+{"condition": "vanilla_selective", "event": "finish", "exit_code": 0, "runtime_seconds": 8.862, "seed": 557, "session_elapsed_seconds": 310.324}
+{"condition": "additive_selective", "event": "start", "seed": 557, "session_elapsed_seconds": 310.325}
+{"condition": "additive_selective", "event": "finish", "exit_code": 0, "runtime_seconds": 14.252, "seed": 557, "session_elapsed_seconds": 324.576}
+{"condition": "vanilla_hold", "event": "start", "seed": 563, "session_elapsed_seconds": 324.577}
+{"condition": "vanilla_hold", "event": "finish", "exit_code": 0, "runtime_seconds": 9.976, "seed": 563, "session_elapsed_seconds": 334.553}
+{"condition": "additive_hold", "event": "start", "seed": 563, "session_elapsed_seconds": 334.554}
+{"condition": "additive_hold", "event": "finish", "exit_code": 0, "runtime_seconds": 13.471, "seed": 563, "session_elapsed_seconds": 348.024}
+{"condition": "vanilla_selective", "event": "start", "seed": 563, "session_elapsed_seconds": 348.025}
+{"condition": "vanilla_selective", "event": "finish", "exit_code": 0, "runtime_seconds": 9.223, "seed": 563, "session_elapsed_seconds": 357.248}
+{"condition": "additive_selective", "event": "start", "seed": 563, "session_elapsed_seconds": 357.249}
+{"condition": "additive_selective", "event": "finish", "exit_code": 0, "runtime_seconds": 13.127, "seed": 563, "session_elapsed_seconds": 370.376}
+{"condition": "vanilla_hold", "event": "start", "seed": 569, "session_elapsed_seconds": 370.377}
+{"condition": "vanilla_hold", "event": "finish", "exit_code": 0, "runtime_seconds": 8.955, "seed": 569, "session_elapsed_seconds": 379.332}
+{"condition": "additive_hold", "event": "start", "seed": 569, "session_elapsed_seconds": 379.332}
+{"condition": "additive_hold", "event": "finish", "exit_code": 0, "runtime_seconds": 13.468, "seed": 569, "session_elapsed_seconds": 392.8}
+{"condition": "vanilla_selective", "event": "start", "seed": 569, "session_elapsed_seconds": 392.801}
+{"condition": "vanilla_selective", "event": "finish", "exit_code": 0, "runtime_seconds": 8.871, "seed": 569, "session_elapsed_seconds": 401.672}
+{"condition": "additive_selective", "event": "start", "seed": 569, "session_elapsed_seconds": 401.673}
+{"condition": "additive_selective", "event": "finish", "exit_code": 0, "runtime_seconds": 13.678, "seed": 569, "session_elapsed_seconds": 415.351}
+{"condition": "vanilla_hold", "event": "start", "seed": 571, "session_elapsed_seconds": 415.351}
+{"condition": "vanilla_hold", "event": "finish", "exit_code": 0, "runtime_seconds": 8.88, "seed": 571, "session_elapsed_seconds": 424.231}
+{"condition": "additive_hold", "event": "start", "seed": 571, "session_elapsed_seconds": 424.232}
+{"condition": "additive_hold", "event": "finish", "exit_code": 0, "runtime_seconds": 15.355, "seed": 571, "session_elapsed_seconds": 439.587}
+{"condition": "vanilla_selective", "event": "start", "seed": 571, "session_elapsed_seconds": 439.588}
+{"condition": "vanilla_selective", "event": "finish", "exit_code": 0, "runtime_seconds": 8.906, "seed": 571, "session_elapsed_seconds": 448.494}
+{"condition": "additive_selective", "event": "start", "seed": 571, "session_elapsed_seconds": 448.494}
+{"condition": "additive_selective", "event": "finish", "exit_code": 0, "runtime_seconds": 13.965, "seed": 571, "session_elapsed_seconds": 462.46}

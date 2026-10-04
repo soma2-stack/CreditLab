@@ -1,0 +1,88 @@
+# EXP-006 preregistration. Seeds, the success rule, and the delay-128 gate
+# were fixed before any EXP-006 accuracy was collected.
+experiment_id: EXP-006
+config_revision: 1
+status: preregistered_before_training
+device: cpu
+seeds: [101, 113, 127, 139, 151, 163, 179, 191, 211, 223]
+delays:
+  primary: 64
+  secondary: 128
+models:
+  - vanilla_tanh_rnn
+  - additive_tanh_rnn
+  - bounded_additive_tanh_rnn
+model:
+  input_size: 3
+  hidden_size: 32
+  output_size: 1
+  initial_hidden_state: zero
+bound:
+  B: 4.0
+  learned: false
+  autograd: ordinary clamp
+equations:
+  vanilla: "h_t = tanh(W_h h_{t-1} + W_x x_t + b)"
+  additive: "h_t = h_{t-1} + tanh(W_h h_{t-1} + W_x x_t + b)"
+  bounded_additive: "h_t = clamp(h_{t-1} + tanh(W_h h_{t-1} + W_x x_t + b), -4, 4)"
+task:
+  run_mode: HARD_V2
+  distractor_noise_std: 0.3
+  competitor_rate: 0.4
+  competitor_flip_prob: 0.5
+  competitor_bits: independent balanced bits
+training:
+  optimizer: Adam
+  adam_defaults: "betas (0.9, 0.999), eps 1e-8"
+  learning_rate: 0.003
+  batch_size: 64
+  eval_batch_size: 256
+  updates_per_run: 400
+  grad_clip_norm: 5.0
+  loss: binary_cross_entropy_with_logits
+  backprop: full backpropagation through time
+  diagnostic_updates: [0, 50, 100, 200, 400]
+  checkpoint_selection: final update only
+data:
+  train_samples: 1536
+  val_samples: 512
+  test_samples: 512
+  base_seed: 2000
+  train_split_index: 0
+  validation_split_index: 1
+  test_split_index: 2
+  audit_split_index: 3
+  audit_samples: 512
+  note: >
+    New seeds and base_seed 2000 change initialization and dataset draws
+    together. This does not isolate one from the other. Historical seeds
+    17, 29, and 43 are not pooled into the primary counts.
+interpretation:
+  success_test_accuracy_at_least: 0.95
+  delay_128_gate: "run fresh delay-128 training only if additive succeeds on at least 8 of 10 delay-64 seeds"
+  confidence_interval: "exact Clopper-Pearson 95 percent interval for each model's success count; not a paired test"
+  outcomes:
+    A: "Additive success repeats and bounded success occurs on several new seeds."
+    B: "Additive success repeats and bounded success stays rare."
+    C: "Bounded models keep finite bit dependence without reliable accuracy."
+    D: "Additive replication is substantially weaker than the original three-seed result."
+  historical_seeds: "kept separate; not additional replications"
+budget:
+  max_cpu_seconds_per_run: 300
+  max_cpu_seconds_total: 900
+  no_automatic_retry: true
+  no_bound_tuning: true
+environment_requirement:
+  python: "3.11.9"
+  torch: "2.13.0+cpu"
+outputs:
+  directory: results/EXP-006
+  refuse_overwrite: true
+diagnostics:
+  final_bit_channel: "gradient of the final test logit w.r.t. inputs[:, 0, 0] only"
+  final_marker_channel: "gradient w.r.t. inputs[:, 0, 1], stored separately"
+  final_bit_loss_gradient: "per-example absolute loss gradient on the original bit channel only"
+  checkpoints: "EXP-004 checkpoint set on fixed validation halves, including the combined event-gradient norm"
+  counterfactual: "EXP-005 pair rule on split_index 3 after training; same pairs for all three models"
+  exact_state_equality: "direct coordinate equality, not an L2 threshold"
+  computational_zero: "a recorded float equal to 0.0"

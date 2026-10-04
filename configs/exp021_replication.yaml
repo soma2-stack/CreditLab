@@ -1,0 +1,31 @@
+# EXP-021 preregistration. New seeds and a new data base were fixed before any accuracy.
+# The model, reset rule, task, and training settings are the EXP-020 procedure.
+experiment_id: EXP-021
+config_revision: 1
+status: preregistered_before_running
+kind: independent_replication
+replicates: EXP-020
+not_pooled_with_exp020: true
+seeds: [601, 607, 613, 617, 619, 631, 641, 643, 647, 653]
+data:
+  base_seed: 8000
+  same_contract_as: EXP-020
+models:
+  input_size: 4
+  parameter_count: 1249
+success:
+  hold: "test accuracy >= 0.95"
+  selective: "overall and each of the four subgroups >= 0.95"
+preflight:
+  hold_match_tolerance: 1.0e-5
+  if_failed: "stop before training and do not weaken the tolerance"
+budget:
+  max_cpu_seconds_per_run: 300
+  max_cpu_seconds_total: 900
+  no_automatic_resume: true
+environment_requirement:
+  python: "3.11.9"
+  torch: "2.13.0+cpu"
+  sklearn: 1.9.1
+outputs:
+  directory: results/EXP-021

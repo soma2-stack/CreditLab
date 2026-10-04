@@ -1,0 +1,187 @@
+experiment_id: EXP-016
+kind: authorized_completion
+not_experiment: EXP-017
+original_session: interrupted, unknown duration and cause
+does_not_reconstruct_original_runtime: true
+does_not_claim_original_budget_compliance: true
+reused_completed_conditions:
+- seed: 401
+  model_type: vanilla_tanh_rnn
+  noise: 0.3
+- seed: 401
+  model_type: additive_tanh_rnn
+  noise: 0.3
+- seed: 401
+  model_type: vanilla_tanh_rnn
+  noise: 1.0
+- seed: 401
+  model_type: additive_tanh_rnn
+  noise: 1.0
+- seed: 409
+  model_type: vanilla_tanh_rnn
+  noise: 0.3
+- seed: 409
+  model_type: additive_tanh_rnn
+  noise: 0.3
+- seed: 409
+  model_type: vanilla_tanh_rnn
+  noise: 1.0
+- seed: 409
+  model_type: additive_tanh_rnn
+  noise: 1.0
+- seed: 419
+  model_type: vanilla_tanh_rnn
+  noise: 0.3
+- seed: 419
+  model_type: additive_tanh_rnn
+  noise: 0.3
+- seed: 419
+  model_type: vanilla_tanh_rnn
+  noise: 1.0
+- seed: 419
+  model_type: additive_tanh_rnn
+  noise: 1.0
+- seed: 421
+  model_type: vanilla_tanh_rnn
+  noise: 0.3
+- seed: 421
+  model_type: additive_tanh_rnn
+  noise: 0.3
+- seed: 421
+  model_type: vanilla_tanh_rnn
+  noise: 1.0
+- seed: 421
+  model_type: additive_tanh_rnn
+  noise: 1.0
+- seed: 431
+  model_type: vanilla_tanh_rnn
+  noise: 0.3
+- seed: 431
+  model_type: additive_tanh_rnn
+  noise: 0.3
+- seed: 431
+  model_type: vanilla_tanh_rnn
+  noise: 1.0
+- seed: 431
+  model_type: additive_tanh_rnn
+  noise: 1.0
+- seed: 433
+  model_type: vanilla_tanh_rnn
+  noise: 0.3
+- seed: 433
+  model_type: additive_tanh_rnn
+  noise: 0.3
+- seed: 433
+  model_type: vanilla_tanh_rnn
+  noise: 1.0
+- seed: 433
+  model_type: additive_tanh_rnn
+  noise: 1.0
+- seed: 439
+  model_type: vanilla_tanh_rnn
+  noise: 0.3
+- seed: 439
+  model_type: additive_tanh_rnn
+  noise: 0.3
+restarted_attempt:
+  seed: 439
+  model_type: vanilla_tanh_rnn
+  noise: 1.0
+  attempt: 2
+  from: original initialization
+  previous_attempt: interrupted, no saved result or checkpoint, not a scored seed
+jobs:
+- seed: 439
+  model_type: vanilla_tanh_rnn
+  noise: 1.0
+  attempt: 2
+  role: restart_from_initialization
+- seed: 439
+  model_type: additive_tanh_rnn
+  noise: 1.0
+  attempt: 1
+  role: previously_unstarted
+- seed: 443
+  model_type: vanilla_tanh_rnn
+  noise: 0.3
+  attempt: 1
+  role: previously_unstarted
+- seed: 443
+  model_type: additive_tanh_rnn
+  noise: 0.3
+  attempt: 1
+  role: previously_unstarted
+- seed: 443
+  model_type: vanilla_tanh_rnn
+  noise: 1.0
+  attempt: 1
+  role: previously_unstarted
+- seed: 443
+  model_type: additive_tanh_rnn
+  noise: 1.0
+  attempt: 1
+  role: previously_unstarted
+- seed: 449
+  model_type: vanilla_tanh_rnn
+  noise: 0.3
+  attempt: 1
+  role: previously_unstarted
+- seed: 449
+  model_type: additive_tanh_rnn
+  noise: 0.3
+  attempt: 1
+  role: previously_unstarted
+- seed: 449
+  model_type: vanilla_tanh_rnn
+  noise: 1.0
+  attempt: 1
+  role: previously_unstarted
+- seed: 449
+  model_type: additive_tanh_rnn
+  noise: 1.0
+  attempt: 1
+  role: previously_unstarted
+- seed: 457
+  model_type: vanilla_tanh_rnn
+  noise: 0.3
+  attempt: 1
+  role: previously_unstarted
+- seed: 457
+  model_type: additive_tanh_rnn
+  noise: 0.3
+  attempt: 1
+  role: previously_unstarted
+- seed: 457
+  model_type: vanilla_tanh_rnn
+  noise: 1.0
+  attempt: 1
+  role: previously_unstarted
+- seed: 457
+  model_type: additive_tanh_rnn
+  noise: 1.0
+  attempt: 1
+  role: previously_unstarted
+settings: unchanged EXP-016 configuration and implementation
+verification_rules:
+- exactly one completed result per reused condition
+- checkpoint hash and metadata must match
+- integer test correct count must be reproduced
+- saved initialization, data, and minibatch fingerprints must match
+- seed 439 regeneration must match its completed noise-0.3 records
+- existing 24 diagnostic fits and audits are reused, not repeated
+budget_seconds_total: 300.0
+budget_seconds_per_training_condition: 300.0
+batching: one training condition per process
+interruption_policy: preserve records, identify the condition, stop, no automatic
+  retry
+interruption_cause:
+  condition: vanilla_noise1p0
+  seed: 439
+  start_records: 1
+  finish_records: 0
+  last_recorded_session_seconds: 218.353
+  stderr_files: []
+  exception_text_in_runtime_log: false
+  cause: unknown
+  note: A start record has no finish record. No exception text and no stderr file
+    were saved. This is not evidence of a timeout or an out-of-memory event.

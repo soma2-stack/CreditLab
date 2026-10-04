@@ -1,0 +1,18 @@
+experiment_id: EXP-021
+replicates: EXP-020
+seeds:
+- 601
+- 607
+- 613
+- 617
+- 619
+- 631
+- 641
+- 643
+- 647
+- 653
+base_seed: 8000
+jobs: 40
+parameter_count: 1249
+seed_conflicts: []
+budget_seconds_total: 900.0

@@ -1,0 +1,64 @@
+# EXP-001 run config, revision 2 (revision 1 was design_only and listed a
+# smaller delay sweep; this revision freezes the full sweep requested for the
+# first real run). Any further training-step change requires revision 3.
+experiment_id: EXP-001
+config_revision: 2
+status: frozen_for_run
+seeds: [17, 29, 43]            # deterministic CPU seeds
+device: cpu
+model:
+  type: vanilla_tanh_rnn       # TinySequenceRNN from creditlab.models
+  input_size: 3                # [event_bit, event_marker, query_marker]
+  hidden_size: 32
+  output_size: 1
+task:
+  type: delayed_marked_bit
+  event_position: 0            # important event always at timestep 0
+  distractor_positions: "1..T-2"
+  query_position: "T-1"        # terminal query marker requests the bit
+  sequence_length: "delay + 2" # total length implied by each delay
+  delays: [1, 2, 4, 8, 16, 32, 64, 128]   # 256 optional; see budget.optional_delay_256
+  modes:
+    EASY:                       # simple, uncorrelated Gaussian distractors
+      distractor_noise_std: 0.3
+    HARD:                       # stronger + competing irrelevant events
+      distractor_noise_std: 1.0
+      competitor_rate: 0.4      # prob of a competing marked event per step
+      competitor_flip_prob: 0.5 # competitor carries opposite bit when target bit == 1
+training:
+  optimizer: Adam
+  learning_rate: 0.003          # rev-2 change from 0.001 so long delays are trainable
+  batch_size: 64
+  eval_batch_size: 256
+  updates_per_run: 400          # keep runs tiny; small pilot showed convergence well before this
+  grad_clip_norm: 5.0           # training stability control (recorded)
+  loss: binary_cross_entropy_with_logits
+data:
+  train_samples: 1536
+  val_samples: 512
+  test_samples: 512
+  base_seed: 1000               # data RNG = seed + base_seed offsets per split
+metrics:
+  - train_loss_final
+  - train_loss_curve
+  - val_loss
+  - test_accuracy
+  - early_event_gradient_norm_by_delay   # d(terminal logit)/d(event input), mean norm
+  - hidden_state_retention_probe         # closed-form ridge probe of bit from final hidden state
+  - jacobian_spectral_norm_proxy         # mean max singular value of d h_t / d h_{t-1}
+  - seed_variance                        # std across the 3 seeds
+  - training_stability                   # finite-flag, grad-clip fraction, best-vs-final val loss
+budget:
+  max_cpu_minutes_per_seed_config: 5
+  stop_on_nan_or_inf: true
+  no_automatic_budget_expansion: true
+  optional_delay_256: only_if_runtime_small   # run 256 only if full sweep < ~10 CPU-min
+outputs:
+  directory: results/EXP-001/
+  raw_metrics: raw_metrics.jsonl
+  summary_metrics: summary.csv
+notes:
+  - Baseline characterization only; no adaptive-credit mechanism in EXP-001.
+  - All diagnostics are EXPERIMENTAL measurements, not theoretical memory bounds.
+  - Train/validation/test generation is deterministic from recorded seeds.
+  - Failed runs are recorded in raw metrics with status=failure, not retried.

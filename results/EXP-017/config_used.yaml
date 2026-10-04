@@ -1,0 +1,81 @@
+# EXP-017 preregistration. The task, balance rule, and success line were
+# fixed before any EXP-017 accuracy was collected. This is a task extension,
+# not an unchanged HARD-v2 replication.
+experiment_id: EXP-017
+config_revision: 1
+status: preregistered_before_running
+kind: task_capability
+not_a_hard_v2_replication: true
+device: cpu
+sequence:
+  length: 130
+  interior_steps: 128
+  event_index: 0
+  query_index: 129
+  candidate_index: "uniform integer from 32 through 96 inclusive"
+seeds: [503, 509, 521, 523, 541, 547, 557, 563, 569, 571]
+data:
+  base_seed: 7000
+  train_samples: 1536
+  val_samples: 512
+  test_samples: 512
+  audit_pairs: 256
+  splits:
+    train: 0
+    validation: 1
+    test: 2
+    audit: 3
+  combined_seed: "(run_seed * 1000003 + base_seed * 9973 + 128 * 31 + split_index) % (2**31 - 1)"
+  balance: "each of the eight A x B x F combinations appears equally often"
+  pairing: "hold and selective share A, B, timing, distractors, and nominal F; they differ only at the candidate write marker and at the target when replacement changes it"
+conditions:
+  - {model: vanilla_tanh_rnn, task: hold}
+  - {model: additive_tanh_rnn, task: hold}
+  - {model: vanilla_tanh_rnn, task: selective}
+  - {model: additive_tanh_rnn, task: selective}
+equations:
+  vanilla: "candidate_t = tanh(W_h h_{t-1} + W_x x_t + b_h + b_x); h_t = candidate_t"
+  additive: "candidate_t = tanh(W_h h_{t-1} + W_x x_t + b_h + b_x); h_t = h_{t-1} + candidate_t"
+model:
+  input_size: 3
+  hidden_size: 32
+  output_size: 1
+  initial_hidden_state: zero
+  residual_scale: 1.0
+task:
+  bit_a: "independently balanced at the original event, write marker 1"
+  bit_b: "independently balanced at the candidate index, no distractor noise on that token"
+  flag_f: "independently balanced in {0, 1}"
+  hold: "candidate write marker 0 and target A, even though nominal F is stored"
+  selective: "candidate write marker = F; target = B if F=1 else A"
+  distractors: "established competitor rate 0.4 and noise 0.3 on every other interior position; the candidate index is excluded"
+  noise_std: 0.3
+  competitor_rate: 0.4
+training:
+  backpropagation: full_history
+  optimizer: Adam
+  learning_rate: 0.003
+  batch_size: 64
+  eval_batch_size: 256
+  updates_per_run: 400
+  grad_clip_norm: 5.0
+  loss: terminal_binary_cross_entropy_with_logits
+  diagnostic_updates: [0, 50, 100, 200, 400]
+  checkpoint_selection: final update only
+success:
+  hold: "test accuracy >= 0.95"
+  selective: "overall accuracy >= 0.95 and each of replacement A=B, replacement A!=B, hold A=B, hold A!=B >= 0.95"
+classifier:
+  same_as: EXP-012
+  target: "the trained task label, which is the current required bit"
+budget:
+  max_cpu_seconds_per_run: 300
+  max_cpu_seconds_total: 900
+  no_automatic_resume: true
+  no_seed_replacement: true
+environment_requirement:
+  python: "3.11.9"
+  torch: "2.13.0+cpu"
+  sklearn: 1.9.1
+outputs:
+  directory: results/EXP-017

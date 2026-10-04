@@ -1,0 +1,56 @@
+[
+  {
+    "delay": 64,
+    "final_hidden_rms": 58.342838,
+    "max_abs_hidden": 64.781937,
+    "model_type": "residual_tanh_rnn",
+    "seed": 17,
+    "source": "results/EXP-002/raw_metrics.jsonl",
+    "test_accuracy": 1.0
+  },
+  {
+    "delay": 64,
+    "final_hidden_rms": 49.509018,
+    "max_abs_hidden": 64.222954,
+    "model_type": "residual_tanh_rnn",
+    "seed": 29,
+    "source": "results/EXP-002/raw_metrics.jsonl",
+    "test_accuracy": 1.0
+  },
+  {
+    "delay": 64,
+    "final_hidden_rms": 55.586555,
+    "max_abs_hidden": 64.842224,
+    "model_type": "residual_tanh_rnn",
+    "seed": 43,
+    "source": "results/EXP-002/raw_metrics.jsonl",
+    "test_accuracy": 1.0
+  },
+  {
+    "delay": 128,
+    "final_hidden_rms": 108.10466,
+    "max_abs_hidden": 128.672134,
+    "model_type": "residual_tanh_rnn",
+    "seed": 17,
+    "source": "results/EXP-002/raw_metrics.jsonl",
+    "test_accuracy": 1.0
+  },
+  {
+    "delay": 128,
+    "final_hidden_rms": 91.671318,
+    "max_abs_hidden": 126.949707,
+    "model_type": "residual_tanh_rnn",
+    "seed": 29,
+    "source": "results/EXP-002/raw_metrics.jsonl",
+    "test_accuracy": 1.0
+  },
+  {
+    "delay": 128,
+    "final_hidden_rms": 119.106941,
+    "max_abs_hidden": 128.881058,
+    "model_type": "residual_tanh_rnn",
+    "seed": 43,
+    "source": "results/EXP-002/raw_metrics.jsonl",
+    "test_accuracy": 1.0
+  }
+]

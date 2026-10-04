@@ -1,0 +1,80 @@
+[
+  {
+    "clipping_versus_none_within_final_16": {
+      "both_succeed": 0,
+      "incomplete": 0,
+      "left": "final_16_clip5",
+      "left_only": 1,
+      "neither": 7,
+      "right": "final_16_noclip",
+      "right_only": 2
+    },
+    "clipping_versus_none_within_full_history": {
+      "both_succeed": 10,
+      "incomplete": 0,
+      "left": "full_history_clip5",
+      "left_only": 0,
+      "neither": 0,
+      "right": "full_history_noclip",
+      "right_only": 0
+    },
+    "delay": 64,
+    "full_versus_final16_with_clipping": {
+      "both_succeed": 1,
+      "incomplete": 0,
+      "left": "full_history_clip5",
+      "left_only": 9,
+      "neither": 0,
+      "right": "final_16_clip5",
+      "right_only": 0
+    },
+    "full_versus_final16_without_clipping": {
+      "both_succeed": 2,
+      "incomplete": 0,
+      "left": "full_history_noclip",
+      "left_only": 8,
+      "neither": 0,
+      "right": "final_16_noclip",
+      "right_only": 0
+    }
+  },
+  {
+    "clipping_versus_none_within_final_16": {
+      "both_succeed": 0,
+      "incomplete": 0,
+      "left": "final_16_clip5",
+      "left_only": 0,
+      "neither": 10,
+      "right": "final_16_noclip",
+      "right_only": 0
+    },
+    "clipping_versus_none_within_full_history": {
+      "both_succeed": 7,
+      "incomplete": 0,
+      "left": "full_history_clip5",
+      "left_only": 3,
+      "neither": 0,
+      "right": "full_history_noclip",
+      "right_only": 0
+    },
+    "delay": 128,
+    "full_versus_final16_with_clipping": {
+      "both_succeed": 0,
+      "incomplete": 0,
+      "left": "full_history_clip5",
+      "left_only": 10,
+      "neither": 0,
+      "right": "final_16_clip5",
+      "right_only": 0
+    },
+    "full_versus_final16_without_clipping": {
+      "both_succeed": 0,
+      "incomplete": 0,
+      "left": "full_history_noclip",
+      "left_only": 7,
+      "neither": 3,
+      "right": "final_16_noclip",
+      "right_only": 0
+    }
+  }
+]

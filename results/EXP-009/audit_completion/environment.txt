@@ -1,0 +1,3 @@
+Python: 3.11.9
+PyTorch: 2.13.0+cpu
+Audit code revision: b8a42b7d8bb62ede8e24e2b457b4a02c5b9e6e26

@@ -1,0 +1,8 @@
+{
+  "budget_seconds": 180,
+  "code_revision": "b8a42b7d8bb62ede8e24e2b457b4a02c5b9e6e26",
+  "does_not_reconstruct_original_training_runtime": true,
+  "kind": "diagnostic_only",
+  "started_unix": 1791076893.1981828,
+  "timing_method": "time.perf_counter inside this process"
+}

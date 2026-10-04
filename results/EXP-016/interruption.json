@@ -1,0 +1,17 @@
+{
+  "experiment_id": "EXP-016",
+  "status": "interrupted",
+  "code_revision": "8ccb69e9e4470c5dec29c11e8a4b96d0a040cd75",
+  "last_recorded_session_seconds": 218.353,
+  "interrupted_condition": {"seed": 439, "condition": "vanilla_noise1p0", "stage": "training, after the start record and before a finish record"},
+  "resume_attempt": "refused because measurement files already existed",
+  "automatic_resume": false,
+  "unstarted": [
+    {"seed": 439, "condition": "vanilla_noise1p0", "reason": "process stopped during training"},
+    {"seed": 439, "condition": "additive_noise1p0", "reason": "not started"},
+    {"seed": 439, "stage": "diagnostic and audit", "reason": "not started"},
+    {"seed": 443, "condition": "all four", "reason": "not started"},
+    {"seed": 449, "condition": "all four", "reason": "not started"},
+    {"seed": 457, "condition": "all four", "reason": "not started"}
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "automatic_resume": false,
+  "code_revision": "573bd668d03ead59d0c7723ed1902e893faecec1",
+  "experiment_id": "EXP-009",
+  "started_unix": 1791075223.7494617,
+  "timestamp_inference": false,
+  "timing_method": "time.perf_counter inside this process"
+}

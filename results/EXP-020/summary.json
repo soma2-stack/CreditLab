@@ -1,0 +1,3216 @@
+{
+  "elapsed_seconds": 587.026,
+  "experiment_id": "EXP-020",
+  "preflight": {
+    "generator_fingerprints_saved_by_exp017": false,
+    "gradient_gap": 0.0,
+    "logit_gap": 0.0,
+    "matched": true,
+    "parameter_count": 1249,
+    "state_gap": 0.0,
+    "three_channel_fingerprint": "17fd0937f367db22426db520ce57d7ae379f3e53d6ba0647780d2386a1b18382"
+  },
+  "records": [
+    {
+      "attempt": 1,
+      "audits": {
+        "ignore_obsolete_initial": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 1.0
+        },
+        "ignore_unmarked_later": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "replacement_bit": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "retained_initial": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 1.0
+        }
+      },
+      "checkpoint_sha256": "a853ddda0ed283c3c4bd3e1d623145e248fa78c04225a8fb8771b3bd0dbc1559",
+      "classifier_sha256": "62c43322068f4dee8df4756e34078f690487c6612d621ac7a4424444ef5423c1",
+      "code_revision": "398ea44b44748e818227870aee6c2f36a0f68ee8",
+      "condition": "additive_hold",
+      "diagnostic_test_accuracy": 1.0,
+      "entry": {
+        "equal_after_update_fraction": 0.0,
+        "equal_at_query_fraction": 0.0,
+        "mean_l2_after_update": 0.09621192514896393,
+        "mean_l2_at_query": 0.0153403514996171
+      },
+      "experiment_id": "EXP-020",
+      "final_hidden_rms": 123.49334716796875,
+      "grad_clip_fraction": 0.18,
+      "hold_success": true,
+      "marked_magnitude_after_reset": null,
+      "max_abs_hidden": 129.21945190429688,
+      "mean_magnitude_after_reset": 335.53155517578125,
+      "mean_magnitude_after_update": 341.0810546875,
+      "mean_magnitude_before_update": 335.53155517578125,
+      "mean_raw_grad_norm": 36.22614715752554,
+      "model_type": "additive_tanh_rnn",
+      "parameter_count": 1249,
+      "runtime_seconds": 11.33,
+      "saturation_fraction": 0.92340087890625,
+      "seed": 503,
+      "status": "ok",
+      "stop_reason": null,
+      "task": "hold",
+      "test_accuracy": 1.0,
+      "test_correct": 512,
+      "test_loss": 1.3718808532757476e-13,
+      "updates_completed": 400
+    },
+    {
+      "attempt": 1,
+      "audits": {
+        "ignore_obsolete_initial": {
+          "both_correct_fraction": 0.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "ignore_unmarked_later": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "replacement_bit": {
+          "both_correct_fraction": 0.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 1.0
+        },
+        "retained_initial": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 1.0
+        }
+      },
+      "checkpoint_sha256": "7e4bea00385062779f2a544f1bd6b0fd014d01e30aeec7665a2fead746a1f77c",
+      "classifier_sha256": "62c43322068f4dee8df4756e34078f690487c6612d621ac7a4424444ef5423c1",
+      "code_revision": "398ea44b44748e818227870aee6c2f36a0f68ee8",
+      "condition": "reset_hold",
+      "diagnostic_test_accuracy": 1.0,
+      "entry": {
+        "equal_after_update_fraction": 0.0,
+        "equal_at_query_fraction": 0.0,
+        "mean_l2_after_update": 1.6739568710327148,
+        "mean_l2_at_query": 430.2980041503906
+      },
+      "experiment_id": "EXP-020",
+      "final_hidden_rms": 123.49334716796875,
+      "grad_clip_fraction": 0.18,
+      "hold_success": true,
+      "marked_magnitude_after_reset": null,
+      "max_abs_hidden": 129.21945190429688,
+      "mean_magnitude_after_reset": 335.53155517578125,
+      "mean_magnitude_after_update": 341.0810546875,
+      "mean_magnitude_before_update": 335.53155517578125,
+      "mean_raw_grad_norm": 36.22614715752554,
+      "model_type": "marker_reset_additive",
+      "parameter_count": 1249,
+      "runtime_seconds": 11.919,
+      "saturation_fraction": 0.92340087890625,
+      "seed": 503,
+      "status": "ok",
+      "stop_reason": null,
+      "task": "hold",
+      "test_accuracy": 1.0,
+      "test_correct": 512,
+      "test_loss": 1.3718808532757476e-13,
+      "updates_completed": 400
+    },
+    {
+      "attempt": 1,
+      "audits": {
+        "ignore_obsolete_initial": {
+          "both_correct_fraction": 0.5,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "ignore_unmarked_later": {
+          "both_correct_fraction": 0.5,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "replacement_bit": {
+          "both_correct_fraction": 0.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "retained_initial": {
+          "both_correct_fraction": 0.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        }
+      },
+      "checkpoint_sha256": "5da626ad4e61972e9c52a0751690eff1514f345012c518b83b1d89166a086370",
+      "classifier_sha256": "14f22f695a6b34caa552c405eba56270fb54aa252309cd4276118461b316d088",
+      "code_revision": "398ea44b44748e818227870aee6c2f36a0f68ee8",
+      "condition": "additive_selective",
+      "diagnostic_subgroups": {
+        "hold_conflict": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "hold_equal": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "replacement_conflict": {
+          "accuracy": 0.015625,
+          "correct": 2,
+          "size": 128
+        },
+        "replacement_equal": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        }
+      },
+      "diagnostic_test_accuracy": 0.75390625,
+      "entry": {
+        "equal_after_update_fraction": 1.0,
+        "equal_at_query_fraction": 1.0,
+        "mean_l2_after_update": 0.0,
+        "mean_l2_at_query": 0.0
+      },
+      "experiment_id": "EXP-020",
+      "final_hidden_rms": 126.74276733398438,
+      "grad_clip_fraction": 0.9975,
+      "marked_magnitude_after_reset": 346.71722412109375,
+      "max_abs_hidden": 129.31044006347656,
+      "mean_magnitude_after_reset": 348.1787109375,
+      "mean_magnitude_after_update": 353.83306884765625,
+      "mean_magnitude_before_update": 348.1787109375,
+      "mean_raw_grad_norm": 184.8106699375522,
+      "model_type": "additive_tanh_rnn",
+      "parameter_count": 1249,
+      "runtime_seconds": 10.369,
+      "saturation_fraction": 1.0,
+      "seed": 503,
+      "selective_success": false,
+      "status": "ok",
+      "stop_reason": null,
+      "subgroups": {
+        "hold_conflict": {
+          "accuracy": 0.5,
+          "correct": 64,
+          "size": 128
+        },
+        "hold_equal": {
+          "accuracy": 0.5,
+          "correct": 64,
+          "size": 128
+        },
+        "replacement_conflict": {
+          "accuracy": 0.5,
+          "correct": 64,
+          "size": 128
+        },
+        "replacement_equal": {
+          "accuracy": 0.5,
+          "correct": 64,
+          "size": 128
+        }
+      },
+      "task": "selective",
+      "test_accuracy": 0.5,
+      "test_correct": 256,
+      "test_loss": 1.6388722658157349,
+      "updates_completed": 400
+    },
+    {
+      "attempt": 1,
+      "audits": {
+        "ignore_obsolete_initial": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "ignore_unmarked_later": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "replacement_bit": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 1.0
+        },
+        "retained_initial": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 1.0
+        }
+      },
+      "checkpoint_sha256": "92248e2f24ed4c6ef808027af9042cfb8c5a7948c93b2065742aa6255f113847",
+      "classifier_sha256": "f791fb3f612dc6fd482bbccb0bd122e7b0712611fdb861470908bd82b05092e0",
+      "code_revision": "398ea44b44748e818227870aee6c2f36a0f68ee8",
+      "condition": "reset_selective",
+      "diagnostic_subgroups": {
+        "hold_conflict": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "hold_equal": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "replacement_conflict": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "replacement_equal": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        }
+      },
+      "diagnostic_test_accuracy": 1.0,
+      "entry": {
+        "equal_after_update_fraction": 0.0,
+        "equal_at_query_fraction": 0.0,
+        "mean_l2_after_update": 1.7631748914718628,
+        "mean_l2_at_query": 688.042724609375
+      },
+      "experiment_id": "EXP-020",
+      "final_hidden_rms": 100.24847412109375,
+      "grad_clip_fraction": 0.2925,
+      "marked_magnitude_after_reset": 0.0,
+      "max_abs_hidden": 129.17831420898438,
+      "mean_magnitude_after_reset": 173.9307861328125,
+      "mean_magnitude_after_update": 177.37876892089844,
+      "mean_magnitude_before_update": 346.5356140136719,
+      "mean_raw_grad_norm": 115.41125306365154,
+      "model_type": "marker_reset_additive",
+      "parameter_count": 1249,
+      "runtime_seconds": 11.944,
+      "saturation_fraction": 0.486572265625,
+      "seed": 503,
+      "selective_success": true,
+      "status": "ok",
+      "stop_reason": null,
+      "subgroups": {
+        "hold_conflict": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "hold_equal": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "replacement_conflict": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "replacement_equal": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        }
+      },
+      "task": "selective",
+      "test_accuracy": 1.0,
+      "test_correct": 512,
+      "test_loss": 7.934380846563727e-06,
+      "updates_completed": 400
+    },
+    {
+      "attempt": 1,
+      "audits": {
+        "ignore_obsolete_initial": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 1.0
+        },
+        "ignore_unmarked_later": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "replacement_bit": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "retained_initial": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 1.0
+        }
+      },
+      "checkpoint_sha256": "1ac08c479f18dc6663927c5539c261f2e1829dafcaa1ea196d58b8af6247fe02",
+      "classifier_sha256": "21caab0b64d7ad386b4bbc90f0f6ca46ee789e3a13a2b390f832168cd67ca0d9",
+      "code_revision": "398ea44b44748e818227870aee6c2f36a0f68ee8",
+      "condition": "additive_hold",
+      "diagnostic_test_accuracy": 0.998046875,
+      "entry": {
+        "equal_after_update_fraction": 0.0,
+        "equal_at_query_fraction": 0.00390625,
+        "mean_l2_after_update": 0.16809067130088806,
+        "mean_l2_at_query": 0.4813767373561859
+      },
+      "experiment_id": "EXP-020",
+      "final_hidden_rms": 118.28068542480469,
+      "grad_clip_fraction": 0.15,
+      "hold_success": true,
+      "marked_magnitude_after_reset": null,
+      "max_abs_hidden": 128.98255920410156,
+      "mean_magnitude_after_reset": 316.84271240234375,
+      "mean_magnitude_after_update": 322.21026611328125,
+      "mean_magnitude_before_update": 316.84271240234375,
+      "mean_raw_grad_norm": 24.54955124196259,
+      "model_type": "additive_tanh_rnn",
+      "parameter_count": 1249,
+      "runtime_seconds": 10.262,
+      "saturation_fraction": 0.86517333984375,
+      "seed": 509,
+      "status": "ok",
+      "stop_reason": null,
+      "task": "hold",
+      "test_accuracy": 1.0,
+      "test_correct": 512,
+      "test_loss": 5.788213326904379e-07,
+      "updates_completed": 400
+    },
+    {
+      "attempt": 1,
+      "audits": {
+        "ignore_obsolete_initial": {
+          "both_correct_fraction": 0.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "ignore_unmarked_later": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "replacement_bit": {
+          "both_correct_fraction": 0.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 1.0
+        },
+        "retained_initial": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 1.0
+        }
+      },
+      "checkpoint_sha256": "e9914bf6df423145056c4d7010538ab0a57230c470dcf95caae16186dfb7fb8d",
+      "classifier_sha256": "21caab0b64d7ad386b4bbc90f0f6ca46ee789e3a13a2b390f832168cd67ca0d9",
+      "code_revision": "398ea44b44748e818227870aee6c2f36a0f68ee8",
+      "condition": "reset_hold",
+      "diagnostic_test_accuracy": 0.998046875,
+      "entry": {
+        "equal_after_update_fraction": 0.0,
+        "equal_at_query_fraction": 0.0,
+        "mean_l2_after_update": 1.5642377138137817,
+        "mean_l2_at_query": 476.50262451171875
+      },
+      "experiment_id": "EXP-020",
+      "final_hidden_rms": 118.28068542480469,
+      "grad_clip_fraction": 0.15,
+      "hold_success": true,
+      "marked_magnitude_after_reset": null,
+      "max_abs_hidden": 128.98255920410156,
+      "mean_magnitude_after_reset": 316.84271240234375,
+      "mean_magnitude_after_update": 322.21026611328125,
+      "mean_magnitude_before_update": 316.84271240234375,
+      "mean_raw_grad_norm": 24.54955124196259,
+      "model_type": "marker_reset_additive",
+      "parameter_count": 1249,
+      "runtime_seconds": 11.892,
+      "saturation_fraction": 0.86517333984375,
+      "seed": 509,
+      "status": "ok",
+      "stop_reason": null,
+      "task": "hold",
+      "test_accuracy": 1.0,
+      "test_correct": 512,
+      "test_loss": 5.788213326904379e-07,
+      "updates_completed": 400
+    },
+    {
+      "attempt": 1,
+      "audits": {
+        "ignore_obsolete_initial": {
+          "both_correct_fraction": 0.5,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "ignore_unmarked_later": {
+          "both_correct_fraction": 0.5,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "replacement_bit": {
+          "both_correct_fraction": 0.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "retained_initial": {
+          "both_correct_fraction": 0.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        }
+      },
+      "checkpoint_sha256": "5a05b612b31b92602de9fae32250700c95f3339d575d5b67e02abceafa3a7a1a",
+      "classifier_sha256": "907a545aad4b8957153b15eb85d86e894ae56d83fc3f024150c0adaf7c35286b",
+      "code_revision": "398ea44b44748e818227870aee6c2f36a0f68ee8",
+      "condition": "additive_selective",
+      "diagnostic_subgroups": {
+        "hold_conflict": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "hold_equal": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "replacement_conflict": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "size": 128
+        },
+        "replacement_equal": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        }
+      },
+      "diagnostic_test_accuracy": 0.75,
+      "entry": {
+        "equal_after_update_fraction": 0.0,
+        "equal_at_query_fraction": 0.0546875,
+        "mean_l2_after_update": 0.10052763670682907,
+        "mean_l2_at_query": 0.00024473751545883715
+      },
+      "experiment_id": "EXP-020",
+      "final_hidden_rms": 120.59396362304688,
+      "grad_clip_fraction": 0.99,
+      "marked_magnitude_after_reset": 319.5190734863281,
+      "max_abs_hidden": 129.1145782470703,
+      "mean_magnitude_after_reset": 320.0882568359375,
+      "mean_magnitude_after_update": 325.61505126953125,
+      "mean_magnitude_before_update": 320.0882568359375,
+      "mean_raw_grad_norm": 217.94738793564363,
+      "model_type": "additive_tanh_rnn",
+      "parameter_count": 1249,
+      "runtime_seconds": 10.632,
+      "saturation_fraction": 0.94366455078125,
+      "seed": 509,
+      "selective_success": false,
+      "status": "ok",
+      "stop_reason": null,
+      "subgroups": {
+        "hold_conflict": {
+          "accuracy": 0.5,
+          "correct": 64,
+          "size": 128
+        },
+        "hold_equal": {
+          "accuracy": 0.5,
+          "correct": 64,
+          "size": 128
+        },
+        "replacement_conflict": {
+          "accuracy": 0.5,
+          "correct": 64,
+          "size": 128
+        },
+        "replacement_equal": {
+          "accuracy": 0.5,
+          "correct": 64,
+          "size": 128
+        }
+      },
+      "task": "selective",
+      "test_accuracy": 0.5,
+      "test_correct": 256,
+      "test_loss": 1.1865047216415405,
+      "updates_completed": 400
+    },
+    {
+      "attempt": 1,
+      "audits": {
+        "ignore_obsolete_initial": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "ignore_unmarked_later": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "replacement_bit": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 1.0
+        },
+        "retained_initial": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 1.0
+        }
+      },
+      "checkpoint_sha256": "659eae300c2c14789f63d47138bff4f5ea832fead2e7e40ca663631e69009d3d",
+      "classifier_sha256": "19a23a83af45b606c7d11bc63e718abc3967511617896d26088f2fc894b91ff5",
+      "code_revision": "398ea44b44748e818227870aee6c2f36a0f68ee8",
+      "condition": "reset_selective",
+      "diagnostic_subgroups": {
+        "hold_conflict": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "hold_equal": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "replacement_conflict": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "replacement_equal": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        }
+      },
+      "diagnostic_test_accuracy": 1.0,
+      "entry": {
+        "equal_after_update_fraction": 0.0,
+        "equal_at_query_fraction": 0.0,
+        "mean_l2_after_update": 1.5955471992492676,
+        "mean_l2_at_query": 219.17738342285156
+      },
+      "experiment_id": "EXP-020",
+      "final_hidden_rms": 98.40342712402344,
+      "grad_clip_fraction": 0.195,
+      "marked_magnitude_after_reset": 0.0,
+      "max_abs_hidden": 128.9879913330078,
+      "mean_magnitude_after_reset": 169.9075927734375,
+      "mean_magnitude_after_update": 173.37164306640625,
+      "mean_magnitude_before_update": 339.146484375,
+      "mean_raw_grad_norm": 34.98985768494512,
+      "model_type": "marker_reset_additive",
+      "parameter_count": 1249,
+      "runtime_seconds": 11.989,
+      "saturation_fraction": 0.46844482421875,
+      "seed": 509,
+      "selective_success": true,
+      "status": "ok",
+      "stop_reason": null,
+      "subgroups": {
+        "hold_conflict": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "hold_equal": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "replacement_conflict": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "replacement_equal": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        }
+      },
+      "task": "selective",
+      "test_accuracy": 1.0,
+      "test_correct": 512,
+      "test_loss": 2.2128723685455043e-05,
+      "updates_completed": 400
+    },
+    {
+      "attempt": 1,
+      "audits": {
+        "ignore_obsolete_initial": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 1.0
+        },
+        "ignore_unmarked_later": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "replacement_bit": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "retained_initial": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 1.0
+        }
+      },
+      "checkpoint_sha256": "b219ee8569c3fb45554590cdfa7d3cc3c530efae79073f4013b9f95172d28f51",
+      "classifier_sha256": "967440cb35a26b2e54ff320d27b23359a682143eb4098c56088f0e9942f248b1",
+      "code_revision": "398ea44b44748e818227870aee6c2f36a0f68ee8",
+      "condition": "additive_hold",
+      "diagnostic_test_accuracy": 1.0,
+      "entry": {
+        "equal_after_update_fraction": 0.0,
+        "equal_at_query_fraction": 0.0,
+        "mean_l2_after_update": 0.20430566370487213,
+        "mean_l2_at_query": 0.23081743717193604
+      },
+      "experiment_id": "EXP-020",
+      "final_hidden_rms": 104.73861694335938,
+      "grad_clip_fraction": 0.16,
+      "hold_success": true,
+      "marked_magnitude_after_reset": null,
+      "max_abs_hidden": 127.53489685058594,
+      "mean_magnitude_after_reset": 266.94989013671875,
+      "mean_magnitude_after_update": 271.64569091796875,
+      "mean_magnitude_before_update": 266.94989013671875,
+      "mean_raw_grad_norm": 38.78944446198678,
+      "model_type": "additive_tanh_rnn",
+      "parameter_count": 1249,
+      "runtime_seconds": 10.843,
+      "saturation_fraction": 0.841064453125,
+      "seed": 521,
+      "status": "ok",
+      "stop_reason": null,
+      "task": "hold",
+      "test_accuracy": 1.0,
+      "test_correct": 512,
+      "test_loss": 2.0116567611695408e-07,
+      "updates_completed": 400
+    },
+    {
+      "attempt": 1,
+      "audits": {
+        "ignore_obsolete_initial": {
+          "both_correct_fraction": 0.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "ignore_unmarked_later": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "replacement_bit": {
+          "both_correct_fraction": 0.3359375,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.29296875
+        },
+        "retained_initial": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 1.0
+        }
+      },
+      "checkpoint_sha256": "ed737e10bd261014af9da738d1974efda0fca1986326ee9216fc5ef85c5a6545",
+      "classifier_sha256": "967440cb35a26b2e54ff320d27b23359a682143eb4098c56088f0e9942f248b1",
+      "code_revision": "398ea44b44748e818227870aee6c2f36a0f68ee8",
+      "condition": "reset_hold",
+      "diagnostic_test_accuracy": 1.0,
+      "entry": {
+        "equal_after_update_fraction": 0.0,
+        "equal_at_query_fraction": 0.0,
+        "mean_l2_after_update": 1.705952525138855,
+        "mean_l2_at_query": 247.037841796875
+      },
+      "experiment_id": "EXP-020",
+      "final_hidden_rms": 104.73861694335938,
+      "grad_clip_fraction": 0.16,
+      "hold_success": true,
+      "marked_magnitude_after_reset": null,
+      "max_abs_hidden": 127.53489685058594,
+      "mean_magnitude_after_reset": 266.94989013671875,
+      "mean_magnitude_after_update": 271.64569091796875,
+      "mean_magnitude_before_update": 266.94989013671875,
+      "mean_raw_grad_norm": 38.78944446198678,
+      "model_type": "marker_reset_additive",
+      "parameter_count": 1249,
+      "runtime_seconds": 12.071,
+      "saturation_fraction": 0.841064453125,
+      "seed": 521,
+      "status": "ok",
+      "stop_reason": null,
+      "task": "hold",
+      "test_accuracy": 1.0,
+      "test_correct": 512,
+      "test_loss": 2.0116567611695408e-07,
+      "updates_completed": 400
+    },
+    {
+      "attempt": 1,
+      "audits": {
+        "ignore_obsolete_initial": {
+          "both_correct_fraction": 0.43359375,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.12890625
+        },
+        "ignore_unmarked_later": {
+          "both_correct_fraction": 0.55859375,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "replacement_bit": {
+          "both_correct_fraction": 0.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "retained_initial": {
+          "both_correct_fraction": 0.12890625,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.12890625
+        }
+      },
+      "checkpoint_sha256": "3e860da91ae5486b8be383123a0cb3dbc45a60fed37f18565301ad442f4eb8b3",
+      "classifier_sha256": "ed3aebd9b185ad77200234b15f859c79073aa61e7e8b32148392ebc4637d3c99",
+      "code_revision": "398ea44b44748e818227870aee6c2f36a0f68ee8",
+      "condition": "additive_selective",
+      "diagnostic_subgroups": {
+        "hold_conflict": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "hold_equal": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "replacement_conflict": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "size": 128
+        },
+        "replacement_equal": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        }
+      },
+      "diagnostic_test_accuracy": 0.75,
+      "entry": {
+        "equal_after_update_fraction": 0.71875,
+        "equal_at_query_fraction": 0.75390625,
+        "mean_l2_after_update": 2.259761095046997e-05,
+        "mean_l2_at_query": 2.2679567337036133e-05
+      },
+      "experiment_id": "EXP-020",
+      "final_hidden_rms": 124.22763061523438,
+      "grad_clip_fraction": 0.9925,
+      "marked_magnitude_after_reset": 319.1910095214844,
+      "max_abs_hidden": 128.7415313720703,
+      "mean_magnitude_after_reset": 318.1524963378906,
+      "mean_magnitude_after_update": 323.7924499511719,
+      "mean_magnitude_before_update": 318.1524963378906,
+      "mean_raw_grad_norm": 209.62153262600054,
+      "model_type": "additive_tanh_rnn",
+      "parameter_count": 1249,
+      "runtime_seconds": 10.812,
+      "saturation_fraction": 0.98779296875,
+      "seed": 521,
+      "selective_success": false,
+      "status": "ok",
+      "stop_reason": null,
+      "subgroups": {
+        "hold_conflict": {
+          "accuracy": 0.5546875,
+          "correct": 71,
+          "size": 128
+        },
+        "hold_equal": {
+          "accuracy": 0.5859375,
+          "correct": 75,
+          "size": 128
+        },
+        "replacement_conflict": {
+          "accuracy": 0.4453125,
+          "correct": 57,
+          "size": 128
+        },
+        "replacement_equal": {
+          "accuracy": 0.5859375,
+          "correct": 75,
+          "size": 128
+        }
+      },
+      "task": "selective",
+      "test_accuracy": 0.54296875,
+      "test_correct": 278,
+      "test_loss": 0.7303187549114227,
+      "updates_completed": 400
+    },
+    {
+      "attempt": 1,
+      "audits": {
+        "ignore_obsolete_initial": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "ignore_unmarked_later": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "replacement_bit": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 1.0
+        },
+        "retained_initial": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 1.0
+        }
+      },
+      "checkpoint_sha256": "d6a2732b1e7caef2bfeb7360ee778626598e1e1dfa5736e90dc08211a698d18c",
+      "classifier_sha256": "dd1d6c6d7b51c96625a6b3c1ac1c9c309685fc26f28eb700dbc1b58819d4c1fa",
+      "code_revision": "398ea44b44748e818227870aee6c2f36a0f68ee8",
+      "condition": "reset_selective",
+      "diagnostic_subgroups": {
+        "hold_conflict": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "hold_equal": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "replacement_conflict": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "replacement_equal": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        }
+      },
+      "diagnostic_test_accuracy": 1.0,
+      "entry": {
+        "equal_after_update_fraction": 0.0,
+        "equal_at_query_fraction": 0.0,
+        "mean_l2_after_update": 1.424413800239563,
+        "mean_l2_at_query": 360.6372375488281
+      },
+      "experiment_id": "EXP-020",
+      "final_hidden_rms": 88.51659393310547,
+      "grad_clip_fraction": 0.1475,
+      "marked_magnitude_after_reset": 0.0,
+      "max_abs_hidden": 129.0224151611328,
+      "mean_magnitude_after_reset": 142.66494750976562,
+      "mean_magnitude_after_update": 145.82919311523438,
+      "mean_magnitude_before_update": 285.89111328125,
+      "mean_raw_grad_norm": 20.019287993009605,
+      "model_type": "marker_reset_additive",
+      "parameter_count": 1249,
+      "runtime_seconds": 13.557,
+      "saturation_fraction": 0.43023681640625,
+      "seed": 521,
+      "selective_success": true,
+      "status": "ok",
+      "stop_reason": null,
+      "subgroups": {
+        "hold_conflict": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "hold_equal": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "replacement_conflict": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "replacement_equal": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        }
+      },
+      "task": "selective",
+      "test_accuracy": 1.0,
+      "test_correct": 512,
+      "test_loss": 3.040054203040654e-06,
+      "updates_completed": 400
+    },
+    {
+      "attempt": 1,
+      "audits": {
+        "ignore_obsolete_initial": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 1.0
+        },
+        "ignore_unmarked_later": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "replacement_bit": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "retained_initial": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 1.0
+        }
+      },
+      "checkpoint_sha256": "f0aa4ab2f7810681fc2d281e44b6a9fbbff727dce27ff42dd8bd6d6469038d61",
+      "classifier_sha256": "28a55cfcf7621a9cdd0dffb2ad3cf2e0bd72632f5e373e1f55df821a6e350214",
+      "code_revision": "398ea44b44748e818227870aee6c2f36a0f68ee8",
+      "condition": "additive_hold",
+      "diagnostic_test_accuracy": 1.0,
+      "entry": {
+        "equal_after_update_fraction": 0.03125,
+        "equal_at_query_fraction": 0.03125,
+        "mean_l2_after_update": 0.07996858656406403,
+        "mean_l2_at_query": 0.08428925275802612
+      },
+      "experiment_id": "EXP-020",
+      "final_hidden_rms": 117.26397705078125,
+      "grad_clip_fraction": 0.21,
+      "hold_success": true,
+      "marked_magnitude_after_reset": null,
+      "max_abs_hidden": 129.21044921875,
+      "mean_magnitude_after_reset": 301.7950439453125,
+      "mean_magnitude_after_update": 307.0263671875,
+      "mean_magnitude_before_update": 301.7950439453125,
+      "mean_raw_grad_norm": 79.25013778429589,
+      "model_type": "additive_tanh_rnn",
+      "parameter_count": 1249,
+      "runtime_seconds": 11.21,
+      "saturation_fraction": 0.882080078125,
+      "seed": 523,
+      "status": "ok",
+      "stop_reason": null,
+      "task": "hold",
+      "test_accuracy": 1.0,
+      "test_correct": 512,
+      "test_loss": 2.507221817313332e-09,
+      "updates_completed": 400
+    },
+    {
+      "attempt": 1,
+      "audits": {
+        "ignore_obsolete_initial": {
+          "both_correct_fraction": 0.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "ignore_unmarked_later": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "replacement_bit": {
+          "both_correct_fraction": 0.20703125,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.6015625
+        },
+        "retained_initial": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 1.0
+        }
+      },
+      "checkpoint_sha256": "fe2e30c1ed328e9ca02f269625066bf74f1922f31825f6275e56d0b2263a4421",
+      "classifier_sha256": "28a55cfcf7621a9cdd0dffb2ad3cf2e0bd72632f5e373e1f55df821a6e350214",
+      "code_revision": "398ea44b44748e818227870aee6c2f36a0f68ee8",
+      "condition": "reset_hold",
+      "diagnostic_test_accuracy": 1.0,
+      "entry": {
+        "equal_after_update_fraction": 0.0,
+        "equal_at_query_fraction": 0.0,
+        "mean_l2_after_update": 1.3421849012374878,
+        "mean_l2_at_query": 346.45294189453125
+      },
+      "experiment_id": "EXP-020",
+      "final_hidden_rms": 117.26397705078125,
+      "grad_clip_fraction": 0.21,
+      "hold_success": true,
+      "marked_magnitude_after_reset": null,
+      "max_abs_hidden": 129.21044921875,
+      "mean_magnitude_after_reset": 301.7950439453125,
+      "mean_magnitude_after_update": 307.0263671875,
+      "mean_magnitude_before_update": 301.7950439453125,
+      "mean_raw_grad_norm": 79.25013778429589,
+      "model_type": "marker_reset_additive",
+      "parameter_count": 1249,
+      "runtime_seconds": 12.471,
+      "saturation_fraction": 0.882080078125,
+      "seed": 523,
+      "status": "ok",
+      "stop_reason": null,
+      "task": "hold",
+      "test_accuracy": 1.0,
+      "test_correct": 512,
+      "test_loss": 2.507221817313332e-09,
+      "updates_completed": 400
+    },
+    {
+      "attempt": 1,
+      "audits": {
+        "ignore_obsolete_initial": {
+          "both_correct_fraction": 0.46875,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0625
+        },
+        "ignore_unmarked_later": {
+          "both_correct_fraction": 0.51953125,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "replacement_bit": {
+          "both_correct_fraction": 0.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "retained_initial": {
+          "both_correct_fraction": 0.0625,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0625
+        }
+      },
+      "checkpoint_sha256": "2037f3803750d03a7b4c5e2d05b734b851fbebcd30c9af8f75353945cd6c5a76",
+      "classifier_sha256": "2a21e9fcc9c8a057f228a123217a67ff25568c1d95577637ffe005e0ce404649",
+      "code_revision": "398ea44b44748e818227870aee6c2f36a0f68ee8",
+      "condition": "additive_selective",
+      "diagnostic_subgroups": {
+        "hold_conflict": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "hold_equal": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "replacement_conflict": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "size": 128
+        },
+        "replacement_equal": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        }
+      },
+      "diagnostic_test_accuracy": 0.75,
+      "entry": {
+        "equal_after_update_fraction": 0.84765625,
+        "equal_at_query_fraction": 0.91796875,
+        "mean_l2_after_update": 1.2472354455894674e-06,
+        "mean_l2_at_query": 1.3092929975755396e-06
+      },
+      "experiment_id": "EXP-020",
+      "final_hidden_rms": 125.5081787109375,
+      "grad_clip_fraction": 0.99,
+      "marked_magnitude_after_reset": 322.9369812011719,
+      "max_abs_hidden": 129.45303344726562,
+      "mean_magnitude_after_reset": 327.70501708984375,
+      "mean_magnitude_after_update": 333.3415832519531,
+      "mean_magnitude_before_update": 327.70501708984375,
+      "mean_raw_grad_norm": 211.15390492017548,
+      "model_type": "additive_tanh_rnn",
+      "parameter_count": 1249,
+      "runtime_seconds": 10.51,
+      "saturation_fraction": 0.98577880859375,
+      "seed": 523,
+      "selective_success": false,
+      "status": "ok",
+      "stop_reason": null,
+      "subgroups": {
+        "hold_conflict": {
+          "accuracy": 0.5,
+          "correct": 64,
+          "size": 128
+        },
+        "hold_equal": {
+          "accuracy": 0.5390625,
+          "correct": 69,
+          "size": 128
+        },
+        "replacement_conflict": {
+          "accuracy": 0.4453125,
+          "correct": 57,
+          "size": 128
+        },
+        "replacement_equal": {
+          "accuracy": 0.515625,
+          "correct": 66,
+          "size": 128
+        }
+      },
+      "task": "selective",
+      "test_accuracy": 0.5,
+      "test_correct": 256,
+      "test_loss": 1.1178772449493408,
+      "updates_completed": 400
+    },
+    {
+      "attempt": 1,
+      "audits": {
+        "ignore_obsolete_initial": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "ignore_unmarked_later": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "replacement_bit": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 1.0
+        },
+        "retained_initial": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 1.0
+        }
+      },
+      "checkpoint_sha256": "7eb44595fa97ce5b8ea9818628631043a86019ca289a5a092f14d2aee3f50ec9",
+      "classifier_sha256": "9c673e7183bc3ba051d66dfa717ae42beb9db9b14668d2e216139be46e45f7b3",
+      "code_revision": "398ea44b44748e818227870aee6c2f36a0f68ee8",
+      "condition": "reset_selective",
+      "diagnostic_subgroups": {
+        "hold_conflict": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "hold_equal": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "replacement_conflict": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "replacement_equal": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        }
+      },
+      "diagnostic_test_accuracy": 1.0,
+      "entry": {
+        "equal_after_update_fraction": 0.0,
+        "equal_at_query_fraction": 0.0,
+        "mean_l2_after_update": 1.4024275541305542,
+        "mean_l2_at_query": 306.22943115234375
+      },
+      "experiment_id": "EXP-020",
+      "final_hidden_rms": 86.91947937011719,
+      "grad_clip_fraction": 0.13,
+      "marked_magnitude_after_reset": 0.0,
+      "max_abs_hidden": 128.94915771484375,
+      "mean_magnitude_after_reset": 141.62466430664062,
+      "mean_magnitude_after_update": 144.72706604003906,
+      "mean_magnitude_before_update": 279.98785400390625,
+      "mean_raw_grad_norm": 36.75983824283403,
+      "model_type": "marker_reset_additive",
+      "parameter_count": 1249,
+      "runtime_seconds": 11.578,
+      "saturation_fraction": 0.41949462890625,
+      "seed": 523,
+      "selective_success": true,
+      "status": "ok",
+      "stop_reason": null,
+      "subgroups": {
+        "hold_conflict": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "hold_equal": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "replacement_conflict": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "replacement_equal": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        }
+      },
+      "task": "selective",
+      "test_accuracy": 1.0,
+      "test_correct": 512,
+      "test_loss": 2.7834838647322613e-06,
+      "updates_completed": 400
+    },
+    {
+      "attempt": 1,
+      "audits": {
+        "ignore_obsolete_initial": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 1.0
+        },
+        "ignore_unmarked_later": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "replacement_bit": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "retained_initial": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 1.0
+        }
+      },
+      "checkpoint_sha256": "f379f32fe31e5da9b1492ab94629615b6bbd3aa949cab077b8631a7b2f5b829d",
+      "classifier_sha256": "5ac01aa0de2f9f51fdb09b07ddbc4b33d954327021ca01e1861d7eb5a44dceed",
+      "code_revision": "398ea44b44748e818227870aee6c2f36a0f68ee8",
+      "condition": "additive_hold",
+      "diagnostic_test_accuracy": 1.0,
+      "entry": {
+        "equal_after_update_fraction": 0.74609375,
+        "equal_at_query_fraction": 0.77734375,
+        "mean_l2_after_update": 0.019493000581860542,
+        "mean_l2_at_query": 0.021796569228172302
+      },
+      "experiment_id": "EXP-020",
+      "final_hidden_rms": 123.7217788696289,
+      "grad_clip_fraction": 0.145,
+      "hold_success": true,
+      "marked_magnitude_after_reset": null,
+      "max_abs_hidden": 129.1729736328125,
+      "mean_magnitude_after_reset": 336.4914855957031,
+      "mean_magnitude_after_update": 342.03326416015625,
+      "mean_magnitude_before_update": 336.4914855957031,
+      "mean_raw_grad_norm": 24.12659434613949,
+      "model_type": "additive_tanh_rnn",
+      "parameter_count": 1249,
+      "runtime_seconds": 10.447,
+      "saturation_fraction": 0.98956298828125,
+      "seed": 541,
+      "status": "ok",
+      "stop_reason": null,
+      "task": "hold",
+      "test_accuracy": 1.0,
+      "test_correct": 512,
+      "test_loss": 6.233159055568649e-08,
+      "updates_completed": 400
+    },
+    {
+      "attempt": 1,
+      "audits": {
+        "ignore_obsolete_initial": {
+          "both_correct_fraction": 0.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "ignore_unmarked_later": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "replacement_bit": {
+          "both_correct_fraction": 0.125,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.7734375
+        },
+        "retained_initial": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 1.0
+        }
+      },
+      "checkpoint_sha256": "7d72881be8e29bcb81f458072b8a18c827365cad57467b5855394e25011f1b69",
+      "classifier_sha256": "5ac01aa0de2f9f51fdb09b07ddbc4b33d954327021ca01e1861d7eb5a44dceed",
+      "code_revision": "398ea44b44748e818227870aee6c2f36a0f68ee8",
+      "condition": "reset_hold",
+      "diagnostic_test_accuracy": 1.0,
+      "entry": {
+        "equal_after_update_fraction": 0.0,
+        "equal_at_query_fraction": 0.0,
+        "mean_l2_after_update": 1.841330647468567,
+        "mean_l2_at_query": 636.0054931640625
+      },
+      "experiment_id": "EXP-020",
+      "final_hidden_rms": 123.7217788696289,
+      "grad_clip_fraction": 0.145,
+      "hold_success": true,
+      "marked_magnitude_after_reset": null,
+      "max_abs_hidden": 129.1729736328125,
+      "mean_magnitude_after_reset": 336.4914855957031,
+      "mean_magnitude_after_update": 342.03326416015625,
+      "mean_magnitude_before_update": 336.4914855957031,
+      "mean_raw_grad_norm": 24.12659434613949,
+      "model_type": "marker_reset_additive",
+      "parameter_count": 1249,
+      "runtime_seconds": 12.086,
+      "saturation_fraction": 0.98956298828125,
+      "seed": 541,
+      "status": "ok",
+      "stop_reason": null,
+      "task": "hold",
+      "test_accuracy": 1.0,
+      "test_correct": 512,
+      "test_loss": 6.233159055568649e-08,
+      "updates_completed": 400
+    },
+    {
+      "attempt": 1,
+      "audits": {
+        "ignore_obsolete_initial": {
+          "both_correct_fraction": 0.5,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "ignore_unmarked_later": {
+          "both_correct_fraction": 0.5,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "replacement_bit": {
+          "both_correct_fraction": 0.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "retained_initial": {
+          "both_correct_fraction": 0.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        }
+      },
+      "checkpoint_sha256": "b4ffd4d468004e602594a34a2adf6a91b708616de57c748db0b228e20e197070",
+      "classifier_sha256": "f595cc5a043b8bdb37b08a8caf35bc44792023e8decb7fd8f1f7ebabc21b19b0",
+      "code_revision": "398ea44b44748e818227870aee6c2f36a0f68ee8",
+      "condition": "additive_selective",
+      "diagnostic_subgroups": {
+        "hold_conflict": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "hold_equal": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "replacement_conflict": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "size": 128
+        },
+        "replacement_equal": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        }
+      },
+      "diagnostic_test_accuracy": 0.75,
+      "entry": {
+        "equal_after_update_fraction": 0.98828125,
+        "equal_at_query_fraction": 0.99609375,
+        "mean_l2_after_update": 2.9802322387695312e-08,
+        "mean_l2_at_query": 2.9802322387695312e-08
+      },
+      "experiment_id": "EXP-020",
+      "final_hidden_rms": 126.40706634521484,
+      "grad_clip_fraction": 0.985,
+      "marked_magnitude_after_reset": 355.3768310546875,
+      "max_abs_hidden": 129.02633666992188,
+      "mean_magnitude_after_reset": 347.34228515625,
+      "mean_magnitude_after_update": 352.9958190917969,
+      "mean_magnitude_before_update": 347.34228515625,
+      "mean_raw_grad_norm": 206.35877441672835,
+      "model_type": "additive_tanh_rnn",
+      "parameter_count": 1249,
+      "runtime_seconds": 10.355,
+      "saturation_fraction": 0.9986572265625,
+      "seed": 541,
+      "selective_success": false,
+      "status": "ok",
+      "stop_reason": null,
+      "subgroups": {
+        "hold_conflict": {
+          "accuracy": 0.5,
+          "correct": 64,
+          "size": 128
+        },
+        "hold_equal": {
+          "accuracy": 0.5,
+          "correct": 64,
+          "size": 128
+        },
+        "replacement_conflict": {
+          "accuracy": 0.5,
+          "correct": 64,
+          "size": 128
+        },
+        "replacement_equal": {
+          "accuracy": 0.5,
+          "correct": 64,
+          "size": 128
+        }
+      },
+      "task": "selective",
+      "test_accuracy": 0.5,
+      "test_correct": 256,
+      "test_loss": 1.5897403359413147,
+      "updates_completed": 400
+    },
+    {
+      "attempt": 1,
+      "audits": {
+        "ignore_obsolete_initial": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "ignore_unmarked_later": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "replacement_bit": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 1.0
+        },
+        "retained_initial": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 1.0
+        }
+      },
+      "checkpoint_sha256": "2f388ce5e2977c9e387904c3e93c0f3b847ec58bd0af7113bfaa88ef04bc17e0",
+      "classifier_sha256": "64c89b211f33bfeaa9ba6082e929ebf47cb8690e60e6efbc3ecfaaaf4b71402f",
+      "code_revision": "398ea44b44748e818227870aee6c2f36a0f68ee8",
+      "condition": "reset_selective",
+      "diagnostic_subgroups": {
+        "hold_conflict": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "hold_equal": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "replacement_conflict": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "replacement_equal": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        }
+      },
+      "diagnostic_test_accuracy": 1.0,
+      "entry": {
+        "equal_after_update_fraction": 0.0,
+        "equal_at_query_fraction": 0.0,
+        "mean_l2_after_update": 1.7321664094924927,
+        "mean_l2_at_query": 403.62628173828125
+      },
+      "experiment_id": "EXP-020",
+      "final_hidden_rms": 86.82244110107422,
+      "grad_clip_fraction": 0.17,
+      "marked_magnitude_after_reset": 0.0,
+      "max_abs_hidden": 128.6846923828125,
+      "mean_magnitude_after_reset": 145.9146270751953,
+      "mean_magnitude_after_update": 149.10040283203125,
+      "mean_magnitude_before_update": 299.1632080078125,
+      "mean_raw_grad_norm": 13.551100799537512,
+      "model_type": "marker_reset_additive",
+      "parameter_count": 1249,
+      "runtime_seconds": 11.964,
+      "saturation_fraction": 0.466796875,
+      "seed": 541,
+      "selective_success": true,
+      "status": "ok",
+      "stop_reason": null,
+      "subgroups": {
+        "hold_conflict": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "hold_equal": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "replacement_conflict": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "replacement_equal": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        }
+      },
+      "task": "selective",
+      "test_accuracy": 1.0,
+      "test_correct": 512,
+      "test_loss": 1.0808513934534858e-05,
+      "updates_completed": 400
+    },
+    {
+      "attempt": 1,
+      "audits": {
+        "ignore_obsolete_initial": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 1.0
+        },
+        "ignore_unmarked_later": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "replacement_bit": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "retained_initial": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 1.0
+        }
+      },
+      "checkpoint_sha256": "a7273d82554ccf5d32866195a9ca80f6a979726b4601f02a597842c3c353465e",
+      "classifier_sha256": "0e3592f6d872e03826c1a4897b72755d061560058093bb5fda03ccdbe4648af6",
+      "code_revision": "398ea44b44748e818227870aee6c2f36a0f68ee8",
+      "condition": "additive_hold",
+      "diagnostic_test_accuracy": 0.998046875,
+      "entry": {
+        "equal_after_update_fraction": 0.1171875,
+        "equal_at_query_fraction": 0.12109375,
+        "mean_l2_after_update": 0.08784563094377518,
+        "mean_l2_at_query": 0.14824412763118744
+      },
+      "experiment_id": "EXP-020",
+      "final_hidden_rms": 98.60720825195312,
+      "grad_clip_fraction": 0.095,
+      "hold_success": true,
+      "marked_magnitude_after_reset": null,
+      "max_abs_hidden": 128.86349487304688,
+      "mean_magnitude_after_reset": 275.14349365234375,
+      "mean_magnitude_after_update": 279.4747314453125,
+      "mean_magnitude_before_update": 275.14349365234375,
+      "mean_raw_grad_norm": 30.336120466833567,
+      "model_type": "additive_tanh_rnn",
+      "parameter_count": 1249,
+      "runtime_seconds": 14.648,
+      "saturation_fraction": 0.8883056640625,
+      "seed": 547,
+      "status": "ok",
+      "stop_reason": null,
+      "task": "hold",
+      "test_accuracy": 1.0,
+      "test_correct": 512,
+      "test_loss": 1.9002492734898624e-07,
+      "updates_completed": 400
+    },
+    {
+      "attempt": 1,
+      "audits": {
+        "ignore_obsolete_initial": {
+          "both_correct_fraction": 0.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "ignore_unmarked_later": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "replacement_bit": {
+          "both_correct_fraction": 0.01171875,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.98828125
+        },
+        "retained_initial": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 1.0
+        }
+      },
+      "checkpoint_sha256": "bffb26138ad0e3fa1761b9618449dfddc9d13529ab08213802cbb5ca747c37f5",
+      "classifier_sha256": "0e3592f6d872e03826c1a4897b72755d061560058093bb5fda03ccdbe4648af6",
+      "code_revision": "398ea44b44748e818227870aee6c2f36a0f68ee8",
+      "condition": "reset_hold",
+      "diagnostic_test_accuracy": 0.998046875,
+      "entry": {
+        "equal_after_update_fraction": 0.0,
+        "equal_at_query_fraction": 0.0,
+        "mean_l2_after_update": 1.6275938749313354,
+        "mean_l2_at_query": 425.10247802734375
+      },
+      "experiment_id": "EXP-020",
+      "final_hidden_rms": 98.60720825195312,
+      "grad_clip_fraction": 0.095,
+      "hold_success": true,
+      "marked_magnitude_after_reset": null,
+      "max_abs_hidden": 128.86349487304688,
+      "mean_magnitude_after_reset": 275.14349365234375,
+      "mean_magnitude_after_update": 279.4747314453125,
+      "mean_magnitude_before_update": 275.14349365234375,
+      "mean_raw_grad_norm": 30.336120466833567,
+      "model_type": "marker_reset_additive",
+      "parameter_count": 1249,
+      "runtime_seconds": 16.168,
+      "saturation_fraction": 0.8883056640625,
+      "seed": 547,
+      "status": "ok",
+      "stop_reason": null,
+      "task": "hold",
+      "test_accuracy": 1.0,
+      "test_correct": 512,
+      "test_loss": 1.9002492734898624e-07,
+      "updates_completed": 400
+    },
+    {
+      "attempt": 1,
+      "audits": {
+        "ignore_obsolete_initial": {
+          "both_correct_fraction": 0.3828125,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.20703125
+        },
+        "ignore_unmarked_later": {
+          "both_correct_fraction": 0.60546875,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "replacement_bit": {
+          "both_correct_fraction": 0.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "retained_initial": {
+          "both_correct_fraction": 0.20703125,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.20703125
+        }
+      },
+      "checkpoint_sha256": "e5203360ba5097c51fec9ac97f31826a437d06f266e27bdc71bda2f7699f0b82",
+      "classifier_sha256": "0260fb047ab9efe1c0893451392c0441a762a6c592c61cb2fbf904015f19078c",
+      "code_revision": "398ea44b44748e818227870aee6c2f36a0f68ee8",
+      "condition": "additive_selective",
+      "diagnostic_subgroups": {
+        "hold_conflict": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "hold_equal": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "replacement_conflict": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "size": 128
+        },
+        "replacement_equal": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        }
+      },
+      "diagnostic_test_accuracy": 0.75,
+      "entry": {
+        "equal_after_update_fraction": 0.0,
+        "equal_at_query_fraction": 0.0390625,
+        "mean_l2_after_update": 0.27741533517837524,
+        "mean_l2_at_query": 6.45439058644115e-06
+      },
+      "experiment_id": "EXP-020",
+      "final_hidden_rms": 114.08207702636719,
+      "grad_clip_fraction": 0.9925,
+      "marked_magnitude_after_reset": 281.11517333984375,
+      "max_abs_hidden": 128.76171875,
+      "mean_magnitude_after_reset": 286.0272521972656,
+      "mean_magnitude_after_update": 291.3486633300781,
+      "mean_magnitude_before_update": 286.0272521972656,
+      "mean_raw_grad_norm": 172.35963527905366,
+      "model_type": "additive_tanh_rnn",
+      "parameter_count": 1249,
+      "runtime_seconds": 10.634,
+      "saturation_fraction": 0.9322509765625,
+      "seed": 547,
+      "selective_success": false,
+      "status": "ok",
+      "stop_reason": null,
+      "subgroups": {
+        "hold_conflict": {
+          "accuracy": 0.5859375,
+          "correct": 75,
+          "size": 128
+        },
+        "hold_equal": {
+          "accuracy": 0.6015625,
+          "correct": 77,
+          "size": 128
+        },
+        "replacement_conflict": {
+          "accuracy": 0.375,
+          "correct": 48,
+          "size": 128
+        },
+        "replacement_equal": {
+          "accuracy": 0.5703125,
+          "correct": 73,
+          "size": 128
+        }
+      },
+      "task": "selective",
+      "test_accuracy": 0.533203125,
+      "test_correct": 273,
+      "test_loss": 0.8450987040996552,
+      "updates_completed": 400
+    },
+    {
+      "attempt": 1,
+      "audits": {
+        "ignore_obsolete_initial": {
+          "both_correct_fraction": 0.99609375,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "ignore_unmarked_later": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "replacement_bit": {
+          "both_correct_fraction": 0.99609375,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.99609375
+        },
+        "retained_initial": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 1.0
+        }
+      },
+      "checkpoint_sha256": "3bbfe9d35d7b1411bb38469bb020d847a42c38eefdce99805f4bee06612e2349",
+      "classifier_sha256": "9e371252337436c7ebca53bafa5ff14387e53a5cd90083bdc248a9b4bb58b588",
+      "code_revision": "398ea44b44748e818227870aee6c2f36a0f68ee8",
+      "condition": "reset_selective",
+      "diagnostic_subgroups": {
+        "hold_conflict": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "hold_equal": {
+          "accuracy": 0.984375,
+          "correct": 126,
+          "size": 128
+        },
+        "replacement_conflict": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "replacement_equal": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        }
+      },
+      "diagnostic_test_accuracy": 0.99609375,
+      "entry": {
+        "equal_after_update_fraction": 0.0,
+        "equal_at_query_fraction": 0.0,
+        "mean_l2_after_update": 1.6148816347122192,
+        "mean_l2_at_query": 446.0049743652344
+      },
+      "experiment_id": "EXP-020",
+      "final_hidden_rms": 79.15856170654297,
+      "grad_clip_fraction": 0.11,
+      "marked_magnitude_after_reset": 0.0,
+      "max_abs_hidden": 128.6440887451172,
+      "mean_magnitude_after_reset": 136.2917938232422,
+      "mean_magnitude_after_update": 139.1907196044922,
+      "mean_magnitude_before_update": 268.8163146972656,
+      "mean_raw_grad_norm": 7.994922472978491,
+      "model_type": "marker_reset_additive",
+      "parameter_count": 1249,
+      "runtime_seconds": 12.011,
+      "saturation_fraction": 0.42669677734375,
+      "seed": 547,
+      "selective_success": true,
+      "status": "ok",
+      "stop_reason": null,
+      "subgroups": {
+        "hold_conflict": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "hold_equal": {
+          "accuracy": 0.9921875,
+          "correct": 127,
+          "size": 128
+        },
+        "replacement_conflict": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "replacement_equal": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        }
+      },
+      "task": "selective",
+      "test_accuracy": 0.998046875,
+      "test_correct": 511,
+      "test_loss": 0.018569910898804665,
+      "updates_completed": 400
+    },
+    {
+      "attempt": 1,
+      "audits": {
+        "ignore_obsolete_initial": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 1.0
+        },
+        "ignore_unmarked_later": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "replacement_bit": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "retained_initial": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 1.0
+        }
+      },
+      "checkpoint_sha256": "71f87c1035d83fb7a70c9c7ba2ba502f791bcd8c41097b85231dc71fdb724833",
+      "classifier_sha256": "1212ead32b8c7e8611bc6d02d81da444ff7461e67f9a2ec73ad6f0c8cbeb886f",
+      "code_revision": "398ea44b44748e818227870aee6c2f36a0f68ee8",
+      "condition": "additive_hold",
+      "diagnostic_test_accuracy": 1.0,
+      "entry": {
+        "equal_after_update_fraction": 0.0,
+        "equal_at_query_fraction": 0.0,
+        "mean_l2_after_update": 0.2556847333908081,
+        "mean_l2_at_query": 0.37896543741226196
+      },
+      "experiment_id": "EXP-020",
+      "final_hidden_rms": 107.95967102050781,
+      "grad_clip_fraction": 0.1975,
+      "hold_success": true,
+      "marked_magnitude_after_reset": null,
+      "max_abs_hidden": 129.07858276367188,
+      "mean_magnitude_after_reset": 276.7785339355469,
+      "mean_magnitude_after_update": 281.6065368652344,
+      "mean_magnitude_before_update": 276.7785339355469,
+      "mean_raw_grad_norm": 106.29970449618115,
+      "model_type": "additive_tanh_rnn",
+      "parameter_count": 1249,
+      "runtime_seconds": 10.568,
+      "saturation_fraction": 0.77056884765625,
+      "seed": 557,
+      "status": "ok",
+      "stop_reason": null,
+      "task": "hold",
+      "test_accuracy": 1.0,
+      "test_correct": 512,
+      "test_loss": 3.56271826618193e-17,
+      "updates_completed": 400
+    },
+    {
+      "attempt": 1,
+      "audits": {
+        "ignore_obsolete_initial": {
+          "both_correct_fraction": 0.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "ignore_unmarked_later": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "replacement_bit": {
+          "both_correct_fraction": 0.02734375,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.9375
+        },
+        "retained_initial": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 1.0
+        }
+      },
+      "checkpoint_sha256": "8cc178417a36a2985e67d895a406e5dc4ef5f83dce497fde0ed7351bba208bdd",
+      "classifier_sha256": "1212ead32b8c7e8611bc6d02d81da444ff7461e67f9a2ec73ad6f0c8cbeb886f",
+      "code_revision": "398ea44b44748e818227870aee6c2f36a0f68ee8",
+      "condition": "reset_hold",
+      "diagnostic_test_accuracy": 1.0,
+      "entry": {
+        "equal_after_update_fraction": 0.0,
+        "equal_at_query_fraction": 0.0,
+        "mean_l2_after_update": 1.5038642883300781,
+        "mean_l2_at_query": 273.57513427734375
+      },
+      "experiment_id": "EXP-020",
+      "final_hidden_rms": 107.95967102050781,
+      "grad_clip_fraction": 0.1975,
+      "hold_success": true,
+      "marked_magnitude_after_reset": null,
+      "max_abs_hidden": 129.07858276367188,
+      "mean_magnitude_after_reset": 276.7785339355469,
+      "mean_magnitude_after_update": 281.6065368652344,
+      "mean_magnitude_before_update": 276.7785339355469,
+      "mean_raw_grad_norm": 106.29970449618115,
+      "model_type": "marker_reset_additive",
+      "parameter_count": 1249,
+      "runtime_seconds": 12.007,
+      "saturation_fraction": 0.77056884765625,
+      "seed": 557,
+      "status": "ok",
+      "stop_reason": null,
+      "task": "hold",
+      "test_accuracy": 1.0,
+      "test_correct": 512,
+      "test_loss": 3.56271826618193e-17,
+      "updates_completed": 400
+    },
+    {
+      "attempt": 1,
+      "audits": {
+        "ignore_obsolete_initial": {
+          "both_correct_fraction": 0.41015625,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.1953125
+        },
+        "ignore_unmarked_later": {
+          "both_correct_fraction": 0.6015625,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "replacement_bit": {
+          "both_correct_fraction": 0.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "retained_initial": {
+          "both_correct_fraction": 0.1953125,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.1953125
+        }
+      },
+      "checkpoint_sha256": "936ecd29c6b465397e118f0f051940999510e48801c01f4ec46eeddadf3abd1a",
+      "classifier_sha256": "3b48499a1ef8e232911f4ae24d4686f63a1ba4dd419163bfe50da46879ec568c",
+      "code_revision": "398ea44b44748e818227870aee6c2f36a0f68ee8",
+      "condition": "additive_selective",
+      "diagnostic_subgroups": {
+        "hold_conflict": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "hold_equal": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "replacement_conflict": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "size": 128
+        },
+        "replacement_equal": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        }
+      },
+      "diagnostic_test_accuracy": 0.75,
+      "entry": {
+        "equal_after_update_fraction": 0.0,
+        "equal_at_query_fraction": 0.1796875,
+        "mean_l2_after_update": 0.06659496575593948,
+        "mean_l2_at_query": 0.027919933199882507
+      },
+      "experiment_id": "EXP-020",
+      "final_hidden_rms": 112.59069061279297,
+      "grad_clip_fraction": 0.995,
+      "marked_magnitude_after_reset": 280.68206787109375,
+      "max_abs_hidden": 128.89779663085938,
+      "mean_magnitude_after_reset": 280.7100830078125,
+      "mean_magnitude_after_update": 285.7788391113281,
+      "mean_magnitude_before_update": 280.7100830078125,
+      "mean_raw_grad_norm": 221.60499620354534,
+      "model_type": "additive_tanh_rnn",
+      "parameter_count": 1249,
+      "runtime_seconds": 10.392,
+      "saturation_fraction": 0.89605712890625,
+      "seed": 557,
+      "selective_success": false,
+      "status": "ok",
+      "stop_reason": null,
+      "subgroups": {
+        "hold_conflict": {
+          "accuracy": 0.6171875,
+          "correct": 79,
+          "size": 128
+        },
+        "hold_equal": {
+          "accuracy": 0.6171875,
+          "correct": 79,
+          "size": 128
+        },
+        "replacement_conflict": {
+          "accuracy": 0.40625,
+          "correct": 52,
+          "size": 128
+        },
+        "replacement_equal": {
+          "accuracy": 0.6328125,
+          "correct": 81,
+          "size": 128
+        }
+      },
+      "task": "selective",
+      "test_accuracy": 0.568359375,
+      "test_correct": 291,
+      "test_loss": 0.7218345999717712,
+      "updates_completed": 400
+    },
+    {
+      "attempt": 1,
+      "audits": {
+        "ignore_obsolete_initial": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "ignore_unmarked_later": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "replacement_bit": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 1.0
+        },
+        "retained_initial": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 1.0
+        }
+      },
+      "checkpoint_sha256": "7e6ce50c9d6c647a553fc8bde09e1fcc60c23d2f8b8de477b1cb92dd45185099",
+      "classifier_sha256": "bb4657502477eff6beaf04fa963779fd645f8ec8a00300ef10eaed0592211cd4",
+      "code_revision": "398ea44b44748e818227870aee6c2f36a0f68ee8",
+      "condition": "reset_selective",
+      "diagnostic_subgroups": {
+        "hold_conflict": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "hold_equal": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "replacement_conflict": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "replacement_equal": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        }
+      },
+      "diagnostic_test_accuracy": 1.0,
+      "entry": {
+        "equal_after_update_fraction": 0.0,
+        "equal_at_query_fraction": 0.0,
+        "mean_l2_after_update": 1.6397582292556763,
+        "mean_l2_at_query": 260.3518371582031
+      },
+      "experiment_id": "EXP-020",
+      "final_hidden_rms": 73.29765319824219,
+      "grad_clip_fraction": 0.215,
+      "marked_magnitude_after_reset": 0.0,
+      "max_abs_hidden": 128.72654724121094,
+      "mean_magnitude_after_reset": 126.65240478515625,
+      "mean_magnitude_after_update": 129.360107421875,
+      "mean_magnitude_before_update": 252.90719604492188,
+      "mean_raw_grad_norm": 50.78265548055344,
+      "model_type": "marker_reset_additive",
+      "parameter_count": 1249,
+      "runtime_seconds": 13.264,
+      "saturation_fraction": 0.368896484375,
+      "seed": 557,
+      "selective_success": true,
+      "status": "ok",
+      "stop_reason": null,
+      "subgroups": {
+        "hold_conflict": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "hold_equal": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "replacement_conflict": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "replacement_equal": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        }
+      },
+      "task": "selective",
+      "test_accuracy": 1.0,
+      "test_correct": 512,
+      "test_loss": 1.3565815493166156e-06,
+      "updates_completed": 400
+    },
+    {
+      "attempt": 1,
+      "audits": {
+        "ignore_obsolete_initial": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 1.0
+        },
+        "ignore_unmarked_later": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "replacement_bit": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "retained_initial": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 1.0
+        }
+      },
+      "checkpoint_sha256": "3592c9bc231b81971722e12a166c17f1248cc605a5c5328e9f56517e92ee8c64",
+      "classifier_sha256": "7dade980656b13a5a9dd31f1c66dbc67eed0d154f751aaf6cb9ddfaf58313487",
+      "code_revision": "398ea44b44748e818227870aee6c2f36a0f68ee8",
+      "condition": "additive_hold",
+      "diagnostic_test_accuracy": 1.0,
+      "entry": {
+        "equal_after_update_fraction": 0.0390625,
+        "equal_at_query_fraction": 0.0546875,
+        "mean_l2_after_update": 0.05623738840222359,
+        "mean_l2_at_query": 0.07703232020139694
+      },
+      "experiment_id": "EXP-020",
+      "final_hidden_rms": 111.24777221679688,
+      "grad_clip_fraction": 0.1025,
+      "hold_success": true,
+      "marked_magnitude_after_reset": null,
+      "max_abs_hidden": 128.83177185058594,
+      "mean_magnitude_after_reset": 296.151611328125,
+      "mean_magnitude_after_update": 301.08172607421875,
+      "mean_magnitude_before_update": 296.151611328125,
+      "mean_raw_grad_norm": 31.943932018733808,
+      "model_type": "additive_tanh_rnn",
+      "parameter_count": 1249,
+      "runtime_seconds": 10.47,
+      "saturation_fraction": 0.90478515625,
+      "seed": 563,
+      "status": "ok",
+      "stop_reason": null,
+      "task": "hold",
+      "test_accuracy": 1.0,
+      "test_correct": 512,
+      "test_loss": 5.965362248616657e-07,
+      "updates_completed": 400
+    },
+    {
+      "attempt": 1,
+      "audits": {
+        "ignore_obsolete_initial": {
+          "both_correct_fraction": 0.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "ignore_unmarked_later": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "replacement_bit": {
+          "both_correct_fraction": 0.32421875,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.37109375
+        },
+        "retained_initial": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 1.0
+        }
+      },
+      "checkpoint_sha256": "b10b207cc4fdd62a86e2230b9179dc0144cd7b2bd61c0af3ea557572642c5a39",
+      "classifier_sha256": "7dade980656b13a5a9dd31f1c66dbc67eed0d154f751aaf6cb9ddfaf58313487",
+      "code_revision": "398ea44b44748e818227870aee6c2f36a0f68ee8",
+      "condition": "reset_hold",
+      "diagnostic_test_accuracy": 1.0,
+      "entry": {
+        "equal_after_update_fraction": 0.0,
+        "equal_at_query_fraction": 0.0,
+        "mean_l2_after_update": 1.1860151290893555,
+        "mean_l2_at_query": 238.7628173828125
+      },
+      "experiment_id": "EXP-020",
+      "final_hidden_rms": 111.24777221679688,
+      "grad_clip_fraction": 0.1025,
+      "hold_success": true,
+      "marked_magnitude_after_reset": null,
+      "max_abs_hidden": 128.83177185058594,
+      "mean_magnitude_after_reset": 296.151611328125,
+      "mean_magnitude_after_update": 301.08172607421875,
+      "mean_magnitude_before_update": 296.151611328125,
+      "mean_raw_grad_norm": 31.943932018733808,
+      "model_type": "marker_reset_additive",
+      "parameter_count": 1249,
+      "runtime_seconds": 11.986,
+      "saturation_fraction": 0.90478515625,
+      "seed": 563,
+      "status": "ok",
+      "stop_reason": null,
+      "task": "hold",
+      "test_accuracy": 1.0,
+      "test_correct": 512,
+      "test_loss": 5.965362248616657e-07,
+      "updates_completed": 400
+    },
+    {
+      "attempt": 1,
+      "audits": {
+        "ignore_obsolete_initial": {
+          "both_correct_fraction": 0.4765625,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0390625
+        },
+        "ignore_unmarked_later": {
+          "both_correct_fraction": 0.51953125,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "replacement_bit": {
+          "both_correct_fraction": 0.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "retained_initial": {
+          "both_correct_fraction": 0.0390625,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0390625
+        }
+      },
+      "checkpoint_sha256": "0a226ce20c6e61b83cea25b573340b15e672dbb212b5267b84450a4ada274e9e",
+      "classifier_sha256": "70a1a21c9f1715849a67c574d6faf4716b46017b75ebc71e001bab82fd3e359e",
+      "code_revision": "398ea44b44748e818227870aee6c2f36a0f68ee8",
+      "condition": "additive_selective",
+      "diagnostic_subgroups": {
+        "hold_conflict": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "hold_equal": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "replacement_conflict": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "size": 128
+        },
+        "replacement_equal": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        }
+      },
+      "diagnostic_test_accuracy": 0.75,
+      "entry": {
+        "equal_after_update_fraction": 0.01953125,
+        "equal_at_query_fraction": 0.05078125,
+        "mean_l2_after_update": 0.015491055324673653,
+        "mean_l2_at_query": 0.011506096459925175
+      },
+      "experiment_id": "EXP-020",
+      "final_hidden_rms": 116.86006164550781,
+      "grad_clip_fraction": 0.99,
+      "marked_magnitude_after_reset": 310.8332824707031,
+      "max_abs_hidden": 128.50784301757812,
+      "mean_magnitude_after_reset": 300.20721435546875,
+      "mean_magnitude_after_update": 305.48004150390625,
+      "mean_magnitude_before_update": 300.20721435546875,
+      "mean_raw_grad_norm": 216.3868489666286,
+      "model_type": "additive_tanh_rnn",
+      "parameter_count": 1249,
+      "runtime_seconds": 10.734,
+      "saturation_fraction": 0.908935546875,
+      "seed": 563,
+      "selective_success": false,
+      "status": "ok",
+      "stop_reason": null,
+      "subgroups": {
+        "hold_conflict": {
+          "accuracy": 0.5234375,
+          "correct": 67,
+          "size": 128
+        },
+        "hold_equal": {
+          "accuracy": 0.5234375,
+          "correct": 67,
+          "size": 128
+        },
+        "replacement_conflict": {
+          "accuracy": 0.4765625,
+          "correct": 61,
+          "size": 128
+        },
+        "replacement_equal": {
+          "accuracy": 0.515625,
+          "correct": 66,
+          "size": 128
+        }
+      },
+      "task": "selective",
+      "test_accuracy": 0.509765625,
+      "test_correct": 261,
+      "test_loss": 0.8137691915035248,
+      "updates_completed": 400
+    },
+    {
+      "attempt": 1,
+      "audits": {
+        "ignore_obsolete_initial": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "ignore_unmarked_later": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "replacement_bit": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 1.0
+        },
+        "retained_initial": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 1.0
+        }
+      },
+      "checkpoint_sha256": "a3557d1e4028ea4d4d32787e5e51ebdc12a21c8dbadccbeabe7edf107c38ff83",
+      "classifier_sha256": "5077c498991bc9eee3ab204883cdaee824be524b773f52cd7ad91f0234260226",
+      "code_revision": "398ea44b44748e818227870aee6c2f36a0f68ee8",
+      "condition": "reset_selective",
+      "diagnostic_subgroups": {
+        "hold_conflict": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "hold_equal": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "replacement_conflict": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "replacement_equal": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        }
+      },
+      "diagnostic_test_accuracy": 1.0,
+      "entry": {
+        "equal_after_update_fraction": 0.0,
+        "equal_at_query_fraction": 0.0,
+        "mean_l2_after_update": 1.3244706392288208,
+        "mean_l2_at_query": 434.856689453125
+      },
+      "experiment_id": "EXP-020",
+      "final_hidden_rms": 89.48726654052734,
+      "grad_clip_fraction": 0.13,
+      "marked_magnitude_after_reset": 0.0,
+      "max_abs_hidden": 128.44630432128906,
+      "mean_magnitude_after_reset": 145.81463623046875,
+      "mean_magnitude_after_update": 149.0043182373047,
+      "mean_magnitude_before_update": 301.3573303222656,
+      "mean_raw_grad_norm": 21.921636524752195,
+      "model_type": "marker_reset_additive",
+      "parameter_count": 1249,
+      "runtime_seconds": 13.729,
+      "saturation_fraction": 0.4267578125,
+      "seed": 563,
+      "selective_success": true,
+      "status": "ok",
+      "stop_reason": null,
+      "subgroups": {
+        "hold_conflict": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "hold_equal": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "replacement_conflict": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "replacement_equal": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        }
+      },
+      "task": "selective",
+      "test_accuracy": 1.0,
+      "test_correct": 512,
+      "test_loss": 1.1219627253922226e-06,
+      "updates_completed": 400
+    },
+    {
+      "attempt": 1,
+      "audits": {
+        "ignore_obsolete_initial": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 1.0
+        },
+        "ignore_unmarked_later": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "replacement_bit": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "retained_initial": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 1.0
+        }
+      },
+      "checkpoint_sha256": "d247e46ae01d7f9846bbf1f362cfc307d53cd27fb2d4cab64d7d330f5c2d26c6",
+      "classifier_sha256": "357cea754c9d9454ef8a4eb1f85d6cc5fa3be0d0ccfb5810a90c220feb5d6d51",
+      "code_revision": "398ea44b44748e818227870aee6c2f36a0f68ee8",
+      "condition": "additive_hold",
+      "diagnostic_test_accuracy": 1.0,
+      "entry": {
+        "equal_after_update_fraction": 0.0,
+        "equal_at_query_fraction": 0.0,
+        "mean_l2_after_update": 0.10866750776767731,
+        "mean_l2_at_query": 0.08859703689813614
+      },
+      "experiment_id": "EXP-020",
+      "final_hidden_rms": 117.39675903320312,
+      "grad_clip_fraction": 0.26,
+      "hold_success": true,
+      "marked_magnitude_after_reset": null,
+      "max_abs_hidden": 128.9624786376953,
+      "mean_magnitude_after_reset": 307.7955017089844,
+      "mean_magnitude_after_update": 313.0758972167969,
+      "mean_magnitude_before_update": 307.7955017089844,
+      "mean_raw_grad_norm": 85.1434143939527,
+      "model_type": "additive_tanh_rnn",
+      "parameter_count": 1249,
+      "runtime_seconds": 10.733,
+      "saturation_fraction": 0.88958740234375,
+      "seed": 569,
+      "status": "ok",
+      "stop_reason": null,
+      "task": "hold",
+      "test_accuracy": 1.0,
+      "test_correct": 512,
+      "test_loss": 3.152088510205431e-07,
+      "updates_completed": 400
+    },
+    {
+      "attempt": 1,
+      "audits": {
+        "ignore_obsolete_initial": {
+          "both_correct_fraction": 0.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "ignore_unmarked_later": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "replacement_bit": {
+          "both_correct_fraction": 0.00390625,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.984375
+        },
+        "retained_initial": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 1.0
+        }
+      },
+      "checkpoint_sha256": "adeafc490f3bfb1c6af3c7f2086ec4c5b558d97bcc6b052e5f6ac7214682a264",
+      "classifier_sha256": "357cea754c9d9454ef8a4eb1f85d6cc5fa3be0d0ccfb5810a90c220feb5d6d51",
+      "code_revision": "398ea44b44748e818227870aee6c2f36a0f68ee8",
+      "condition": "reset_hold",
+      "diagnostic_test_accuracy": 1.0,
+      "entry": {
+        "equal_after_update_fraction": 0.0,
+        "equal_at_query_fraction": 0.0,
+        "mean_l2_after_update": 1.5339030027389526,
+        "mean_l2_at_query": 280.26507568359375
+      },
+      "experiment_id": "EXP-020",
+      "final_hidden_rms": 117.39675903320312,
+      "grad_clip_fraction": 0.26,
+      "hold_success": true,
+      "marked_magnitude_after_reset": null,
+      "max_abs_hidden": 128.9624786376953,
+      "mean_magnitude_after_reset": 307.7955017089844,
+      "mean_magnitude_after_update": 313.0758972167969,
+      "mean_magnitude_before_update": 307.7955017089844,
+      "mean_raw_grad_norm": 85.1434143939527,
+      "model_type": "marker_reset_additive",
+      "parameter_count": 1249,
+      "runtime_seconds": 11.925,
+      "saturation_fraction": 0.88958740234375,
+      "seed": 569,
+      "status": "ok",
+      "stop_reason": null,
+      "task": "hold",
+      "test_accuracy": 1.0,
+      "test_correct": 512,
+      "test_loss": 3.152088510205431e-07,
+      "updates_completed": 400
+    },
+    {
+      "attempt": 1,
+      "audits": {
+        "ignore_obsolete_initial": {
+          "both_correct_fraction": 0.1796875,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.6015625
+        },
+        "ignore_unmarked_later": {
+          "both_correct_fraction": 0.81640625,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "replacement_bit": {
+          "both_correct_fraction": 0.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "retained_initial": {
+          "both_correct_fraction": 0.6015625,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.6015625
+        }
+      },
+      "checkpoint_sha256": "7b4d9a8f88097ca97ae59ccc9bd3e1245c883b7b3314846199da7c6d7277e710",
+      "classifier_sha256": "b26aaac6abbeb8950a07689474141a8c9ef6bdc9ce07d1dd1e54b6ec8a0df19a",
+      "code_revision": "398ea44b44748e818227870aee6c2f36a0f68ee8",
+      "condition": "additive_selective",
+      "diagnostic_subgroups": {
+        "hold_conflict": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "hold_equal": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "replacement_conflict": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "size": 128
+        },
+        "replacement_equal": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        }
+      },
+      "diagnostic_test_accuracy": 0.75,
+      "entry": {
+        "equal_after_update_fraction": 1.0,
+        "equal_at_query_fraction": 1.0,
+        "mean_l2_after_update": 0.0,
+        "mean_l2_at_query": 0.0
+      },
+      "experiment_id": "EXP-020",
+      "final_hidden_rms": 126.31382751464844,
+      "grad_clip_fraction": 0.985,
+      "marked_magnitude_after_reset": 334.6717529296875,
+      "max_abs_hidden": 128.68898010253906,
+      "mean_magnitude_after_reset": 335.0018615722656,
+      "mean_magnitude_after_update": 340.65576171875,
+      "mean_magnitude_before_update": 335.0018615722656,
+      "mean_raw_grad_norm": 239.11367780065913,
+      "model_type": "additive_tanh_rnn",
+      "parameter_count": 1249,
+      "runtime_seconds": 10.908,
+      "saturation_fraction": 1.0,
+      "seed": 569,
+      "selective_success": false,
+      "status": "ok",
+      "stop_reason": null,
+      "subgroups": {
+        "hold_conflict": {
+          "accuracy": 0.8125,
+          "correct": 104,
+          "size": 128
+        },
+        "hold_equal": {
+          "accuracy": 0.8125,
+          "correct": 104,
+          "size": 128
+        },
+        "replacement_conflict": {
+          "accuracy": 0.1875,
+          "correct": 24,
+          "size": 128
+        },
+        "replacement_equal": {
+          "accuracy": 0.796875,
+          "correct": 102,
+          "size": 128
+        }
+      },
+      "task": "selective",
+      "test_accuracy": 0.65234375,
+      "test_correct": 334,
+      "test_loss": 0.642756313085556,
+      "updates_completed": 400
+    },
+    {
+      "attempt": 1,
+      "audits": {
+        "ignore_obsolete_initial": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "ignore_unmarked_later": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "replacement_bit": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 1.0
+        },
+        "retained_initial": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 1.0
+        }
+      },
+      "checkpoint_sha256": "7dcf7356fb997a35f62d47d7be8579cd492115a1b7210e2c8ed69935abca9a79",
+      "classifier_sha256": "8171bc4c4039452f4b45cbedc231a6e959bccf2021db499167a1903ad38ac253",
+      "code_revision": "398ea44b44748e818227870aee6c2f36a0f68ee8",
+      "condition": "reset_selective",
+      "diagnostic_subgroups": {
+        "hold_conflict": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "hold_equal": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "replacement_conflict": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "replacement_equal": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        }
+      },
+      "diagnostic_test_accuracy": 1.0,
+      "entry": {
+        "equal_after_update_fraction": 0.0,
+        "equal_at_query_fraction": 0.0,
+        "mean_l2_after_update": 1.5935496091842651,
+        "mean_l2_at_query": 464.33538818359375
+      },
+      "experiment_id": "EXP-020",
+      "final_hidden_rms": 93.54164123535156,
+      "grad_clip_fraction": 0.1925,
+      "marked_magnitude_after_reset": 0.0,
+      "max_abs_hidden": 129.2109375,
+      "mean_magnitude_after_reset": 152.50209045410156,
+      "mean_magnitude_after_update": 155.79156494140625,
+      "mean_magnitude_before_update": 304.3265686035156,
+      "mean_raw_grad_norm": 35.412453932882585,
+      "model_type": "marker_reset_additive",
+      "parameter_count": 1249,
+      "runtime_seconds": 14.522,
+      "saturation_fraction": 0.433837890625,
+      "seed": 569,
+      "selective_success": true,
+      "status": "ok",
+      "stop_reason": null,
+      "subgroups": {
+        "hold_conflict": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "hold_equal": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "replacement_conflict": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "replacement_equal": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        }
+      },
+      "task": "selective",
+      "test_accuracy": 1.0,
+      "test_correct": 512,
+      "test_loss": 8.728022976356442e-06,
+      "updates_completed": 400
+    },
+    {
+      "attempt": 1,
+      "audits": {
+        "ignore_obsolete_initial": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 1.0
+        },
+        "ignore_unmarked_later": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "replacement_bit": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "retained_initial": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 1.0
+        }
+      },
+      "checkpoint_sha256": "07be70b77e808d19fe12b67098592621c623e6db5b36d71620f46a0d4c62d154",
+      "classifier_sha256": "e3a58e8b68230bac74c1df01ca9b98ecfb91b30d787b2e3549bd2a645d057df5",
+      "code_revision": "398ea44b44748e818227870aee6c2f36a0f68ee8",
+      "condition": "additive_hold",
+      "diagnostic_test_accuracy": 1.0,
+      "entry": {
+        "equal_after_update_fraction": 0.1171875,
+        "equal_at_query_fraction": 0.13671875,
+        "mean_l2_after_update": 0.10629560053348541,
+        "mean_l2_at_query": 0.07175181061029434
+      },
+      "experiment_id": "EXP-020",
+      "final_hidden_rms": 118.50308990478516,
+      "grad_clip_fraction": 0.1175,
+      "hold_success": true,
+      "marked_magnitude_after_reset": null,
+      "max_abs_hidden": 128.9557647705078,
+      "mean_magnitude_after_reset": 316.9702453613281,
+      "mean_magnitude_after_update": 322.27569580078125,
+      "mean_magnitude_before_update": 316.9702453613281,
+      "mean_raw_grad_norm": 21.135157797229066,
+      "model_type": "additive_tanh_rnn",
+      "parameter_count": 1249,
+      "runtime_seconds": 15.031,
+      "saturation_fraction": 0.9227294921875,
+      "seed": 571,
+      "status": "ok",
+      "stop_reason": null,
+      "task": "hold",
+      "test_accuracy": 1.0,
+      "test_correct": 512,
+      "test_loss": 1.6763806343078613e-08,
+      "updates_completed": 400
+    },
+    {
+      "attempt": 1,
+      "audits": {
+        "ignore_obsolete_initial": {
+          "both_correct_fraction": 0.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "ignore_unmarked_later": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "replacement_bit": {
+          "both_correct_fraction": 0.03125,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.953125
+        },
+        "retained_initial": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 1.0
+        }
+      },
+      "checkpoint_sha256": "43da623d8a2e3d2514be81f9efb4ea8b6799a41bfa2b66cbc6c037eeca89903d",
+      "classifier_sha256": "e3a58e8b68230bac74c1df01ca9b98ecfb91b30d787b2e3549bd2a645d057df5",
+      "code_revision": "398ea44b44748e818227870aee6c2f36a0f68ee8",
+      "condition": "reset_hold",
+      "diagnostic_test_accuracy": 1.0,
+      "entry": {
+        "equal_after_update_fraction": 0.0,
+        "equal_at_query_fraction": 0.0,
+        "mean_l2_after_update": 1.563859462738037,
+        "mean_l2_at_query": 434.85833740234375
+      },
+      "experiment_id": "EXP-020",
+      "final_hidden_rms": 118.50308990478516,
+      "grad_clip_fraction": 0.1175,
+      "hold_success": true,
+      "marked_magnitude_after_reset": null,
+      "max_abs_hidden": 128.9557647705078,
+      "mean_magnitude_after_reset": 316.9702453613281,
+      "mean_magnitude_after_update": 322.27569580078125,
+      "mean_magnitude_before_update": 316.9702453613281,
+      "mean_raw_grad_norm": 21.135157797229066,
+      "model_type": "marker_reset_additive",
+      "parameter_count": 1249,
+      "runtime_seconds": 17.69,
+      "saturation_fraction": 0.9227294921875,
+      "seed": 571,
+      "status": "ok",
+      "stop_reason": null,
+      "task": "hold",
+      "test_accuracy": 1.0,
+      "test_correct": 512,
+      "test_loss": 1.6763806343078613e-08,
+      "updates_completed": 400
+    },
+    {
+      "attempt": 1,
+      "audits": {
+        "ignore_obsolete_initial": {
+          "both_correct_fraction": 0.5,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "ignore_unmarked_later": {
+          "both_correct_fraction": 0.5,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "replacement_bit": {
+          "both_correct_fraction": 0.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "retained_initial": {
+          "both_correct_fraction": 0.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        }
+      },
+      "checkpoint_sha256": "f40f95f0bbaf860c4df83a448250bde8587023efda820349720471041e41bd4d",
+      "classifier_sha256": "b2430e4e5091e16d02313ada2713bfa643c99dcee13bd9a57e749c759aa6e6fc",
+      "code_revision": "398ea44b44748e818227870aee6c2f36a0f68ee8",
+      "condition": "additive_selective",
+      "diagnostic_subgroups": {
+        "hold_conflict": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "hold_equal": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "replacement_conflict": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "size": 128
+        },
+        "replacement_equal": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        }
+      },
+      "diagnostic_test_accuracy": 0.75,
+      "entry": {
+        "equal_after_update_fraction": 1.0,
+        "equal_at_query_fraction": 1.0,
+        "mean_l2_after_update": 0.0,
+        "mean_l2_at_query": 0.0
+      },
+      "experiment_id": "EXP-020",
+      "final_hidden_rms": 126.57633209228516,
+      "grad_clip_fraction": 0.985,
+      "marked_magnitude_after_reset": 337.454345703125,
+      "max_abs_hidden": 129.14706420898438,
+      "mean_magnitude_after_reset": 340.74969482421875,
+      "mean_magnitude_after_update": 346.40020751953125,
+      "mean_magnitude_before_update": 340.74969482421875,
+      "mean_raw_grad_norm": 189.30868166932655,
+      "model_type": "additive_tanh_rnn",
+      "parameter_count": 1249,
+      "runtime_seconds": 10.53,
+      "saturation_fraction": 1.0,
+      "seed": 571,
+      "selective_success": false,
+      "status": "ok",
+      "stop_reason": null,
+      "subgroups": {
+        "hold_conflict": {
+          "accuracy": 0.5,
+          "correct": 64,
+          "size": 128
+        },
+        "hold_equal": {
+          "accuracy": 0.5,
+          "correct": 64,
+          "size": 128
+        },
+        "replacement_conflict": {
+          "accuracy": 0.5,
+          "correct": 64,
+          "size": 128
+        },
+        "replacement_equal": {
+          "accuracy": 0.5,
+          "correct": 64,
+          "size": 128
+        }
+      },
+      "task": "selective",
+      "test_accuracy": 0.5,
+      "test_correct": 256,
+      "test_loss": 0.6857285499572754,
+      "updates_completed": 400
+    },
+    {
+      "attempt": 1,
+      "audits": {
+        "ignore_obsolete_initial": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "ignore_unmarked_later": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 0.0
+        },
+        "replacement_bit": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 1.0
+        },
+        "retained_initial": {
+          "both_correct_fraction": 1.0,
+          "construction": "original candidate marker and clean control are set together",
+          "prediction_flip_fraction": 1.0
+        }
+      },
+      "checkpoint_sha256": "4de308884e5e92c4e9b2348f408eb3a5c4f99c2d468f18bc88d3011b631a68c0",
+      "classifier_sha256": "e2cd0bc5d92fb4eda9d7c853765a24de451fbac010fe2be8356173de266ee791",
+      "code_revision": "398ea44b44748e818227870aee6c2f36a0f68ee8",
+      "condition": "reset_selective",
+      "diagnostic_subgroups": {
+        "hold_conflict": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "hold_equal": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "replacement_conflict": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "replacement_equal": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        }
+      },
+      "diagnostic_test_accuracy": 1.0,
+      "entry": {
+        "equal_after_update_fraction": 0.0,
+        "equal_at_query_fraction": 0.0,
+        "mean_l2_after_update": 1.7861231565475464,
+        "mean_l2_at_query": 619.4912719726562
+      },
+      "experiment_id": "EXP-020",
+      "final_hidden_rms": 98.12361145019531,
+      "grad_clip_fraction": 0.1675,
+      "marked_magnitude_after_reset": 0.0,
+      "max_abs_hidden": 129.1579132080078,
+      "mean_magnitude_after_reset": 165.50820922851562,
+      "mean_magnitude_after_update": 168.92774963378906,
+      "mean_magnitude_before_update": 328.0176086425781,
+      "mean_raw_grad_norm": 16.835157308149462,
+      "model_type": "marker_reset_additive",
+      "parameter_count": 1249,
+      "runtime_seconds": 13.218,
+      "saturation_fraction": 0.47503662109375,
+      "seed": 571,
+      "selective_success": true,
+      "status": "ok",
+      "stop_reason": null,
+      "subgroups": {
+        "hold_conflict": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "hold_equal": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "replacement_conflict": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        },
+        "replacement_equal": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "size": 128
+        }
+      },
+      "task": "selective",
+      "test_accuracy": 1.0,
+      "test_correct": 512,
+      "test_loss": 5.43546838094322e-09,
+      "updates_completed": 400
+    }
+  ],
+  "unstarted": []
+}

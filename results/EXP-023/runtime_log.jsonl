@@ -1,0 +1,20 @@
+{"event": "start", "seed": 701, "session_elapsed_seconds": 0.334}
+{"event": "finish", "exit_code": 0, "runtime_seconds": 2.349, "seed": 701, "session_elapsed_seconds": 2.682}
+{"event": "start", "seed": 709, "session_elapsed_seconds": 2.683}
+{"event": "finish", "exit_code": 0, "runtime_seconds": 2.559, "seed": 709, "session_elapsed_seconds": 5.243}
+{"event": "start", "seed": 719, "session_elapsed_seconds": 5.243}
+{"event": "finish", "exit_code": 0, "runtime_seconds": 2.654, "seed": 719, "session_elapsed_seconds": 7.897}
+{"event": "start", "seed": 727, "session_elapsed_seconds": 7.898}
+{"event": "finish", "exit_code": 0, "runtime_seconds": 2.365, "seed": 727, "session_elapsed_seconds": 10.262}
+{"event": "start", "seed": 733, "session_elapsed_seconds": 10.263}
+{"event": "finish", "exit_code": 0, "runtime_seconds": 2.275, "seed": 733, "session_elapsed_seconds": 12.539}
+{"event": "start", "seed": 739, "session_elapsed_seconds": 12.539}
+{"event": "finish", "exit_code": 0, "runtime_seconds": 2.353, "seed": 739, "session_elapsed_seconds": 14.892}
+{"event": "start", "seed": 743, "session_elapsed_seconds": 14.893}
+{"event": "finish", "exit_code": 0, "runtime_seconds": 2.429, "seed": 743, "session_elapsed_seconds": 17.322}
+{"event": "start", "seed": 751, "session_elapsed_seconds": 17.323}
+{"event": "finish", "exit_code": 0, "runtime_seconds": 2.344, "seed": 751, "session_elapsed_seconds": 19.667}
+{"event": "start", "seed": 757, "session_elapsed_seconds": 19.667}
+{"event": "finish", "exit_code": 0, "runtime_seconds": 2.256, "seed": 757, "session_elapsed_seconds": 21.924}
+{"event": "start", "seed": 761, "session_elapsed_seconds": 21.924}
+{"event": "finish", "exit_code": 0, "runtime_seconds": 2.577, "seed": 761, "session_elapsed_seconds": 24.501}

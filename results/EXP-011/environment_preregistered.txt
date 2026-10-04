@@ -1,0 +1,3 @@
+Python: 3.11.9
+PyTorch: 2.13.0+cpu
+The training-code commit is the preregistration commit. The runner records its full hash when training starts.

@@ -1,11 +1,9 @@
 # Project Status
 
-- **Current phase:** Phase 0 — repository foundation / no architecture result yet.
-- **What exists:** Project documentation, a minimal CPU-friendly PyTorch vanilla RNN, deterministic CPU seed helper, JSONL result logger, an EXP-001 design config, and quick foundation tests.
-- **What has been tested:** Seven foundation tests pass; the CPU smoke check passes. Tests cover deterministic initialization, model output shapes, CPU execution, input validation, and JSONL logging. No task experiment has run.
+- **Current phase:** EXP-023 is complete. No experiment is running.
+- **What was tested:** Whether two linear readouts could recover both current memory values from the frozen state just before the question.
+- **Latest result:** Original stored bits were often readable. The replacement bit was not. Choosing a readout with the supplied query address raised the score and left every model below the success line. A bit written only before a whole-state wipe stayed unreadable.
 - **Currently running:** Nothing.
-- **Latest important result:** Foundation validation only; no experimental result has been collected.
-- **Blockers:** None known. A clean-environment dependency installation has not been checked. EXP-001 still needs a small training/evaluation runner and a baseline run.
-- **Next recommended action:** Implement the delayed-bit data generator and a minimal training/evaluation script for EXP-001; review its config and tests, then run within its small CPU budget.
+- **Next recommended action:** Stop. Do not train the recurrent models again, and do not start EXP-024.
 
-Theory notes are motivation only. This repository contains no proof results.
+See `results/EXP-023/analysis.md`. Earlier analyses and the EXP-019 stop record were not rewritten.

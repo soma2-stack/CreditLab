@@ -1,0 +1,10 @@
+{
+  "base_seed": 8000,
+  "generator_fingerprints_saved_by_exp017": false,
+  "gradient_gap": 0.0,
+  "logit_gap": 0.0,
+  "matched": true,
+  "parameter_count": 1249,
+  "state_gap": 0.0,
+  "three_channel_fingerprint": "f24f853932ee8b42677cb2899e4e6e4b08aa4cd41d7b5502c1ce2051d09d1ad8"
+}

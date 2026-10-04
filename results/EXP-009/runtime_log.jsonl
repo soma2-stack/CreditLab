@@ -1,0 +1,85 @@
+{"delay": 64, "event": "start", "regime": "full", "seed": 101, "session_elapsed_seconds": 0.046}
+{"delay": 64, "event": "finish", "regime": "full", "runtime_seconds": 8.12, "seed": 101, "session_elapsed_seconds": 8.186, "status": "ok"}
+{"delay": 64, "event": "start", "regime": "readout_only", "seed": 101, "session_elapsed_seconds": 8.187}
+{"delay": 64, "event": "finish", "regime": "readout_only", "runtime_seconds": 2.754, "seed": 101, "session_elapsed_seconds": 10.956, "status": "ok"}
+{"delay": 64, "event": "start", "regime": "bias_plus_readout", "seed": 101, "session_elapsed_seconds": 10.957}
+{"delay": 64, "event": "finish", "regime": "bias_plus_readout", "runtime_seconds": 5.019, "seed": 101, "session_elapsed_seconds": 15.994, "status": "ok"}
+{"delay": 64, "event": "start", "regime": "matrices_plus_readout", "seed": 101, "session_elapsed_seconds": 15.995}
+{"delay": 64, "event": "finish", "regime": "matrices_plus_readout", "runtime_seconds": 5.907, "seed": 101, "session_elapsed_seconds": 21.918, "status": "ok"}
+{"delay": 64, "event": "start", "regime": "full", "seed": 113, "session_elapsed_seconds": 21.96}
+{"delay": 64, "event": "finish", "regime": "full", "runtime_seconds": 6.493, "seed": 113, "session_elapsed_seconds": 28.47, "status": "ok"}
+{"delay": 64, "event": "start", "regime": "readout_only", "seed": 113, "session_elapsed_seconds": 28.471}
+{"delay": 64, "event": "finish", "regime": "readout_only", "runtime_seconds": 2.815, "seed": 113, "session_elapsed_seconds": 31.302, "status": "ok"}
+{"delay": 64, "event": "start", "regime": "bias_plus_readout", "seed": 113, "session_elapsed_seconds": 31.303}
+{"delay": 64, "event": "finish", "regime": "bias_plus_readout", "runtime_seconds": 4.824, "seed": 113, "session_elapsed_seconds": 36.143, "status": "ok"}
+{"delay": 64, "event": "start", "regime": "matrices_plus_readout", "seed": 113, "session_elapsed_seconds": 36.143}
+{"delay": 64, "event": "finish", "regime": "matrices_plus_readout", "runtime_seconds": 5.852, "seed": 113, "session_elapsed_seconds": 42.015, "status": "ok"}
+{"delay": 64, "event": "start", "regime": "full", "seed": 127, "session_elapsed_seconds": 42.054}
+{"delay": 64, "event": "finish", "regime": "full", "runtime_seconds": 6.464, "seed": 127, "session_elapsed_seconds": 48.534, "status": "ok"}
+{"delay": 64, "event": "start", "regime": "readout_only", "seed": 127, "session_elapsed_seconds": 48.535}
+{"delay": 64, "event": "finish", "regime": "readout_only", "runtime_seconds": 2.969, "seed": 127, "session_elapsed_seconds": 51.521, "status": "ok"}
+{"delay": 64, "event": "start", "regime": "bias_plus_readout", "seed": 127, "session_elapsed_seconds": 51.521}
+{"delay": 64, "event": "finish", "regime": "bias_plus_readout", "runtime_seconds": 5.042, "seed": 127, "session_elapsed_seconds": 56.58, "status": "ok"}
+{"delay": 64, "event": "start", "regime": "matrices_plus_readout", "seed": 127, "session_elapsed_seconds": 56.581}
+{"delay": 64, "event": "finish", "regime": "matrices_plus_readout", "runtime_seconds": 5.928, "seed": 127, "session_elapsed_seconds": 62.526, "status": "ok"}
+{"delay": 64, "event": "start", "regime": "full", "seed": 139, "session_elapsed_seconds": 62.568}
+{"delay": 64, "event": "finish", "regime": "full", "runtime_seconds": 6.482, "seed": 139, "session_elapsed_seconds": 69.067, "status": "ok"}
+{"delay": 64, "event": "start", "regime": "readout_only", "seed": 139, "session_elapsed_seconds": 69.067}
+{"delay": 64, "event": "finish", "regime": "readout_only", "runtime_seconds": 2.853, "seed": 139, "session_elapsed_seconds": 71.936, "status": "ok"}
+{"delay": 64, "event": "start", "regime": "bias_plus_readout", "seed": 139, "session_elapsed_seconds": 71.937}
+{"delay": 64, "event": "finish", "regime": "bias_plus_readout", "runtime_seconds": 5.117, "seed": 139, "session_elapsed_seconds": 77.072, "status": "ok"}
+{"delay": 64, "event": "start", "regime": "matrices_plus_readout", "seed": 139, "session_elapsed_seconds": 77.073}
+{"delay": 64, "event": "finish", "regime": "matrices_plus_readout", "runtime_seconds": 6.653, "seed": 139, "session_elapsed_seconds": 83.742, "status": "ok"}
+{"delay": 64, "event": "start", "regime": "full", "seed": 151, "session_elapsed_seconds": 83.782}
+{"delay": 64, "event": "finish", "regime": "full", "runtime_seconds": 6.918, "seed": 151, "session_elapsed_seconds": 90.717, "status": "ok"}
+{"delay": 64, "event": "start", "regime": "readout_only", "seed": 151, "session_elapsed_seconds": 90.718}
+{"delay": 64, "event": "finish", "regime": "readout_only", "runtime_seconds": 2.935, "seed": 151, "session_elapsed_seconds": 93.671, "status": "ok"}
+{"delay": 64, "event": "start", "regime": "bias_plus_readout", "seed": 151, "session_elapsed_seconds": 93.672}
+{"delay": 64, "event": "finish", "regime": "bias_plus_readout", "runtime_seconds": 4.915, "seed": 151, "session_elapsed_seconds": 98.604, "status": "ok"}
+{"delay": 64, "event": "start", "regime": "matrices_plus_readout", "seed": 151, "session_elapsed_seconds": 98.604}
+{"delay": 64, "event": "finish", "regime": "matrices_plus_readout", "runtime_seconds": 6.059, "seed": 151, "session_elapsed_seconds": 104.681, "status": "ok"}
+{"delay": 64, "event": "start", "regime": "full", "seed": 163, "session_elapsed_seconds": 104.732}
+{"delay": 64, "event": "finish", "regime": "full", "runtime_seconds": 6.466, "seed": 163, "session_elapsed_seconds": 111.217, "status": "ok"}
+{"delay": 64, "event": "start", "regime": "readout_only", "seed": 163, "session_elapsed_seconds": 111.218}
+{"delay": 64, "event": "finish", "regime": "readout_only", "runtime_seconds": 2.913, "seed": 163, "session_elapsed_seconds": 114.147, "status": "ok"}
+{"delay": 64, "event": "start", "regime": "bias_plus_readout", "seed": 163, "session_elapsed_seconds": 114.148}
+{"delay": 64, "event": "finish", "regime": "bias_plus_readout", "runtime_seconds": 5.047, "seed": 163, "session_elapsed_seconds": 119.212, "status": "ok"}
+{"delay": 64, "event": "start", "regime": "matrices_plus_readout", "seed": 163, "session_elapsed_seconds": 119.212}
+{"delay": 64, "event": "finish", "regime": "matrices_plus_readout", "runtime_seconds": 6.037, "seed": 163, "session_elapsed_seconds": 125.265, "status": "ok"}
+{"delay": 64, "event": "start", "regime": "full", "seed": 179, "session_elapsed_seconds": 125.313}
+{"delay": 64, "event": "finish", "regime": "full", "runtime_seconds": 6.615, "seed": 179, "session_elapsed_seconds": 131.945, "status": "ok"}
+{"delay": 64, "event": "start", "regime": "readout_only", "seed": 179, "session_elapsed_seconds": 131.945}
+{"delay": 64, "event": "finish", "regime": "readout_only", "runtime_seconds": 2.838, "seed": 179, "session_elapsed_seconds": 134.798, "status": "ok"}
+{"delay": 64, "event": "start", "regime": "bias_plus_readout", "seed": 179, "session_elapsed_seconds": 134.799}
+{"delay": 64, "event": "finish", "regime": "bias_plus_readout", "runtime_seconds": 5.032, "seed": 179, "session_elapsed_seconds": 139.848, "status": "ok"}
+{"delay": 64, "event": "start", "regime": "matrices_plus_readout", "seed": 179, "session_elapsed_seconds": 139.849}
+{"delay": 64, "event": "finish", "regime": "matrices_plus_readout", "runtime_seconds": 6.267, "seed": 179, "session_elapsed_seconds": 146.133, "status": "ok"}
+{"delay": 64, "event": "start", "regime": "full", "seed": 191, "session_elapsed_seconds": 146.178}
+{"delay": 64, "event": "finish", "regime": "full", "runtime_seconds": 6.97, "seed": 191, "session_elapsed_seconds": 153.166, "status": "ok"}
+{"delay": 64, "event": "start", "regime": "readout_only", "seed": 191, "session_elapsed_seconds": 153.167}
+{"delay": 64, "event": "finish", "regime": "readout_only", "runtime_seconds": 2.945, "seed": 191, "session_elapsed_seconds": 156.128, "status": "ok"}
+{"delay": 64, "event": "start", "regime": "bias_plus_readout", "seed": 191, "session_elapsed_seconds": 156.129}
+{"delay": 64, "event": "finish", "regime": "bias_plus_readout", "runtime_seconds": 5.307, "seed": 191, "session_elapsed_seconds": 161.455, "status": "ok"}
+{"delay": 64, "event": "start", "regime": "matrices_plus_readout", "seed": 191, "session_elapsed_seconds": 161.455}
+{"delay": 64, "event": "finish", "regime": "matrices_plus_readout", "runtime_seconds": 6.148, "seed": 191, "session_elapsed_seconds": 167.62, "status": "ok"}
+{"delay": 64, "event": "start", "regime": "full", "seed": 211, "session_elapsed_seconds": 167.664}
+{"delay": 64, "event": "finish", "regime": "full", "runtime_seconds": 7.269, "seed": 211, "session_elapsed_seconds": 174.952, "status": "ok"}
+{"delay": 64, "event": "start", "regime": "readout_only", "seed": 211, "session_elapsed_seconds": 174.952}
+{"delay": 64, "event": "finish", "regime": "readout_only", "runtime_seconds": 2.92, "seed": 211, "session_elapsed_seconds": 177.889, "status": "ok"}
+{"delay": 64, "event": "start", "regime": "bias_plus_readout", "seed": 211, "session_elapsed_seconds": 177.889}
+{"delay": 64, "event": "finish", "regime": "bias_plus_readout", "runtime_seconds": 5.024, "seed": 211, "session_elapsed_seconds": 182.928, "status": "ok"}
+{"delay": 64, "event": "start", "regime": "matrices_plus_readout", "seed": 211, "session_elapsed_seconds": 182.929}
+{"delay": 64, "event": "finish", "regime": "matrices_plus_readout", "runtime_seconds": 5.932, "seed": 211, "session_elapsed_seconds": 188.879, "status": "ok"}
+{"delay": 64, "event": "start", "regime": "full", "seed": 223, "session_elapsed_seconds": 188.926}
+{"delay": 64, "event": "finish", "regime": "full", "runtime_seconds": 6.821, "seed": 223, "session_elapsed_seconds": 195.766, "status": "ok"}
+{"delay": 64, "event": "start", "regime": "readout_only", "seed": 223, "session_elapsed_seconds": 195.766}
+{"delay": 64, "event": "finish", "regime": "readout_only", "runtime_seconds": 3.002, "seed": 223, "session_elapsed_seconds": 198.783, "status": "ok"}
+{"delay": 64, "event": "start", "regime": "bias_plus_readout", "seed": 223, "session_elapsed_seconds": 198.784}
+{"delay": 64, "event": "finish", "regime": "bias_plus_readout", "runtime_seconds": 5.251, "seed": 223, "session_elapsed_seconds": 204.052, "status": "ok"}
+{"delay": 64, "event": "start", "regime": "matrices_plus_readout", "seed": 223, "session_elapsed_seconds": 204.053}
+{"delay": 64, "event": "finish", "regime": "matrices_plus_readout", "runtime_seconds": 6.204, "seed": 223, "session_elapsed_seconds": 210.274, "status": "ok"}
+{"delay": 128, "event": "start", "regime": "full", "seed": 101, "session_elapsed_seconds": 210.345}
+{"delay": 128, "event": "finish", "regime": "full", "runtime_seconds": 13.16, "seed": 101, "session_elapsed_seconds": 223.522, "status": "ok"}
+{"delay": 128, "event": "start", "regime": "readout_only", "seed": 101, "session_elapsed_seconds": 223.523}
+{"delay": 128, "event": "finish", "regime": "readout_only", "runtime_seconds": 5.545, "seed": 101, "session_elapsed_seconds": 229.084, "status": "ok"}
+{"delay": 128, "event": "start", "regime": "bias_plus_readout", "seed": 101, "session_elapsed_seconds": 229.085}

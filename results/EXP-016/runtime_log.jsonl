@@ -1,0 +1,53 @@
+{"condition": "vanilla_noise0p3", "event": "start", "seed": 401, "session_elapsed_seconds": 0.142}
+{"condition": "vanilla_noise0p3", "event": "finish", "runtime_seconds": 6.415, "seed": 401, "session_elapsed_seconds": 6.586, "status": "ok"}
+{"condition": "additive_noise0p3", "event": "start", "seed": 401, "session_elapsed_seconds": 6.587}
+{"condition": "additive_noise0p3", "event": "finish", "runtime_seconds": 10.149, "seed": 401, "session_elapsed_seconds": 16.775, "status": "ok"}
+{"condition": "vanilla_noise1p0", "event": "start", "seed": 401, "session_elapsed_seconds": 16.775}
+{"condition": "vanilla_noise1p0", "event": "finish", "runtime_seconds": 5.068, "seed": 401, "session_elapsed_seconds": 21.865, "status": "ok"}
+{"condition": "additive_noise1p0", "event": "start", "seed": 401, "session_elapsed_seconds": 21.866}
+{"condition": "additive_noise1p0", "event": "finish", "runtime_seconds": 10.642, "seed": 401, "session_elapsed_seconds": 32.535, "status": "ok"}
+{"condition": "vanilla_noise0p3", "event": "start", "seed": 409, "session_elapsed_seconds": 33.319}
+{"condition": "vanilla_noise0p3", "event": "finish", "runtime_seconds": 5.288, "seed": 409, "session_elapsed_seconds": 38.631, "status": "ok"}
+{"condition": "additive_noise0p3", "event": "start", "seed": 409, "session_elapsed_seconds": 38.632}
+{"condition": "additive_noise0p3", "event": "finish", "runtime_seconds": 10.293, "seed": 409, "session_elapsed_seconds": 48.949, "status": "ok"}
+{"condition": "vanilla_noise1p0", "event": "start", "seed": 409, "session_elapsed_seconds": 48.95}
+{"condition": "vanilla_noise1p0", "event": "finish", "runtime_seconds": 5.155, "seed": 409, "session_elapsed_seconds": 54.131, "status": "ok"}
+{"condition": "additive_noise1p0", "event": "start", "seed": 409, "session_elapsed_seconds": 54.132}
+{"condition": "additive_noise1p0", "event": "finish", "runtime_seconds": 11.999, "seed": 409, "session_elapsed_seconds": 66.157, "status": "ok"}
+{"condition": "vanilla_noise0p3", "event": "start", "seed": 419, "session_elapsed_seconds": 66.93}
+{"condition": "vanilla_noise0p3", "event": "finish", "runtime_seconds": 5.317, "seed": 419, "session_elapsed_seconds": 72.27, "status": "ok"}
+{"condition": "additive_noise0p3", "event": "start", "seed": 419, "session_elapsed_seconds": 72.27}
+{"condition": "additive_noise0p3", "event": "finish", "runtime_seconds": 10.275, "seed": 419, "session_elapsed_seconds": 82.569, "status": "ok"}
+{"condition": "vanilla_noise1p0", "event": "start", "seed": 419, "session_elapsed_seconds": 82.57}
+{"condition": "vanilla_noise1p0", "event": "finish", "runtime_seconds": 5.072, "seed": 419, "session_elapsed_seconds": 87.665, "status": "ok"}
+{"condition": "additive_noise1p0", "event": "start", "seed": 419, "session_elapsed_seconds": 87.666}
+{"condition": "additive_noise1p0", "event": "finish", "runtime_seconds": 10.381, "seed": 419, "session_elapsed_seconds": 98.087, "status": "ok"}
+{"condition": "vanilla_noise0p3", "event": "start", "seed": 421, "session_elapsed_seconds": 98.888}
+{"condition": "vanilla_noise0p3", "event": "finish", "runtime_seconds": 10.135, "seed": 421, "session_elapsed_seconds": 109.045, "status": "ok"}
+{"condition": "additive_noise0p3", "event": "start", "seed": 421, "session_elapsed_seconds": 109.045}
+{"condition": "additive_noise0p3", "event": "finish", "runtime_seconds": 10.366, "seed": 421, "session_elapsed_seconds": 119.451, "status": "ok"}
+{"condition": "vanilla_noise1p0", "event": "start", "seed": 421, "session_elapsed_seconds": 119.452}
+{"condition": "vanilla_noise1p0", "event": "finish", "runtime_seconds": 5.58, "seed": 421, "session_elapsed_seconds": 125.055, "status": "ok"}
+{"condition": "additive_noise1p0", "event": "start", "seed": 421, "session_elapsed_seconds": 125.056}
+{"condition": "additive_noise1p0", "event": "finish", "runtime_seconds": 10.14, "seed": 421, "session_elapsed_seconds": 135.235, "status": "ok"}
+{"condition": "vanilla_noise0p3", "event": "start", "seed": 431, "session_elapsed_seconds": 135.952}
+{"condition": "vanilla_noise0p3", "event": "finish", "runtime_seconds": 6.367, "seed": 431, "session_elapsed_seconds": 142.343, "status": "ok"}
+{"condition": "additive_noise0p3", "event": "start", "seed": 431, "session_elapsed_seconds": 142.343}
+{"condition": "additive_noise0p3", "event": "finish", "runtime_seconds": 10.221, "seed": 431, "session_elapsed_seconds": 152.591, "status": "ok"}
+{"condition": "vanilla_noise1p0", "event": "start", "seed": 431, "session_elapsed_seconds": 152.591}
+{"condition": "vanilla_noise1p0", "event": "finish", "runtime_seconds": 5.142, "seed": 431, "session_elapsed_seconds": 157.757, "status": "ok"}
+{"condition": "additive_noise1p0", "event": "start", "seed": 431, "session_elapsed_seconds": 157.757}
+{"condition": "additive_noise1p0", "event": "finish", "runtime_seconds": 9.658, "seed": 431, "session_elapsed_seconds": 167.455, "status": "ok"}
+{"condition": "vanilla_noise0p3", "event": "start", "seed": 433, "session_elapsed_seconds": 168.257}
+{"condition": "vanilla_noise0p3", "event": "finish", "runtime_seconds": 5.198, "seed": 433, "session_elapsed_seconds": 173.478, "status": "ok"}
+{"condition": "additive_noise0p3", "event": "start", "seed": 433, "session_elapsed_seconds": 173.479}
+{"condition": "additive_noise0p3", "event": "finish", "runtime_seconds": 10.154, "seed": 433, "session_elapsed_seconds": 183.667, "status": "ok"}
+{"condition": "vanilla_noise1p0", "event": "start", "seed": 433, "session_elapsed_seconds": 183.668}
+{"condition": "vanilla_noise1p0", "event": "finish", "runtime_seconds": 5.672, "seed": 433, "session_elapsed_seconds": 189.364, "status": "ok"}
+{"condition": "additive_noise1p0", "event": "start", "seed": 433, "session_elapsed_seconds": 189.365}
+{"condition": "additive_noise1p0", "event": "finish", "runtime_seconds": 10.562, "seed": 433, "session_elapsed_seconds": 199.957, "status": "ok"}
+{"condition": "vanilla_noise0p3", "event": "start", "seed": 439, "session_elapsed_seconds": 200.706}
+{"condition": "vanilla_noise0p3", "event": "finish", "runtime_seconds": 5.305, "seed": 439, "session_elapsed_seconds": 206.034, "status": "ok"}
+{"condition": "additive_noise0p3", "event": "start", "seed": 439, "session_elapsed_seconds": 206.034}
+{"condition": "additive_noise0p3", "event": "finish", "runtime_seconds": 12.28, "seed": 439, "session_elapsed_seconds": 218.353, "status": "ok"}
+{"condition": "vanilla_noise1p0", "event": "start", "seed": 439, "session_elapsed_seconds": 218.353}

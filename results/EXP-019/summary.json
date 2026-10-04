@@ -1,0 +1,8 @@
+{
+  "elapsed_seconds": 0.294,
+  "experiment_id": "EXP-019",
+  "reason": "Hold trajectories do not match. The EXP-017 generator puts competitor write markers and distractor noise on the same channel the reset reads, so the reset is not confined to the initial event.",
+  "status": "stopped_before_training",
+  "training_runs": 0,
+  "unstarted": "all 40 conditions"
+}

@@ -1,0 +1,60 @@
+# EXP-015 preregistration. Delays, endpoints, and data rules were fixed
+# before any length-generalization score was collected.
+experiment_id: EXP-015
+config_revision: 1
+status: preregistered_before_evaluation
+kind: frozen_model_length_generalization
+device: cpu
+source_experiment: EXP-014
+seeds: [307, 311, 313, 317, 331, 337, 347, 349, 353, 359]
+representations:
+  - initialized
+  - full_history
+  - final_16
+endpoints:
+  - initialized_diagnostic
+  - full_history_original
+  - full_history_diagnostic
+  - final_16_original
+  - final_16_diagnostic
+delays:
+  reference: 128
+  primary: 256
+  secondary: 512
+data:
+  base_seed: 4000
+  evaluation_split_index: 4
+  audit_split_index: 5
+  samples: 512
+  audit_samples: 512
+  distractor_noise_std: 0.3
+  competitor_rate: 0.4
+  competitor_flip_prob: 0.5
+  run_mode: HARD_V2
+verification_data:
+  base_seed: 3000
+  test_split_index: 2
+  delay: 128
+  samples: 512
+  note: "Original EXP-014 test tensors. Used only to reproduce saved counts. Classifiers are not refit."
+magnitude_indices:
+  after_event: 0
+  halfway_distractor: "delay // 2, a distractor step inside indices 1 through delay"
+  before_query: "delay, which is T - 2"
+  after_query: "delay + 1, which is T - 1"
+success_test_accuracy_at_least: 0.95
+prediction_rules:
+  original_readout: "sign of the logit; an exact 0 counts as +1"
+  diagnostic_classifier: "decision value greater than 0 counts as +1; an exact 0 counts as -1"
+budget:
+  max_cpu_seconds_total: 300
+  no_automatic_resume: true
+  no_training: true
+  no_refit: true
+environment_requirement:
+  python: "3.11.9"
+  torch: "2.13.0+cpu"
+  sklearn: 1.9.1
+limitation: "Longer delays add more distractors under the same per-step distribution. This is not a pure elapsed-time test."
+outputs:
+  directory: results/EXP-015

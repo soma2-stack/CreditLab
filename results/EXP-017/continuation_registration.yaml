@@ -1,0 +1,181 @@
+experiment_id: EXP-017
+kind: task_capability
+not_a_hard_v2_replication: true
+seeds:
+- 503
+- 509
+- 521
+- 523
+- 541
+- 547
+- 557
+- 563
+- 569
+- 571
+base_seed: 7000
+jobs:
+- seed: 503
+  model_type: vanilla_tanh_rnn
+  task: hold
+  attempt: 1
+- seed: 503
+  model_type: additive_tanh_rnn
+  task: hold
+  attempt: 1
+- seed: 503
+  model_type: vanilla_tanh_rnn
+  task: selective
+  attempt: 1
+- seed: 503
+  model_type: additive_tanh_rnn
+  task: selective
+  attempt: 1
+- seed: 509
+  model_type: vanilla_tanh_rnn
+  task: hold
+  attempt: 1
+- seed: 509
+  model_type: additive_tanh_rnn
+  task: hold
+  attempt: 1
+- seed: 509
+  model_type: vanilla_tanh_rnn
+  task: selective
+  attempt: 1
+- seed: 509
+  model_type: additive_tanh_rnn
+  task: selective
+  attempt: 1
+- seed: 521
+  model_type: vanilla_tanh_rnn
+  task: hold
+  attempt: 1
+- seed: 521
+  model_type: additive_tanh_rnn
+  task: hold
+  attempt: 1
+- seed: 521
+  model_type: vanilla_tanh_rnn
+  task: selective
+  attempt: 1
+- seed: 521
+  model_type: additive_tanh_rnn
+  task: selective
+  attempt: 1
+- seed: 523
+  model_type: vanilla_tanh_rnn
+  task: hold
+  attempt: 1
+- seed: 523
+  model_type: additive_tanh_rnn
+  task: hold
+  attempt: 1
+- seed: 523
+  model_type: vanilla_tanh_rnn
+  task: selective
+  attempt: 1
+- seed: 523
+  model_type: additive_tanh_rnn
+  task: selective
+  attempt: 1
+- seed: 541
+  model_type: vanilla_tanh_rnn
+  task: hold
+  attempt: 1
+- seed: 541
+  model_type: additive_tanh_rnn
+  task: hold
+  attempt: 1
+- seed: 541
+  model_type: vanilla_tanh_rnn
+  task: selective
+  attempt: 1
+- seed: 541
+  model_type: additive_tanh_rnn
+  task: selective
+  attempt: 1
+- seed: 547
+  model_type: vanilla_tanh_rnn
+  task: hold
+  attempt: 1
+- seed: 547
+  model_type: additive_tanh_rnn
+  task: hold
+  attempt: 1
+- seed: 547
+  model_type: vanilla_tanh_rnn
+  task: selective
+  attempt: 1
+- seed: 547
+  model_type: additive_tanh_rnn
+  task: selective
+  attempt: 1
+- seed: 557
+  model_type: vanilla_tanh_rnn
+  task: hold
+  attempt: 1
+- seed: 557
+  model_type: additive_tanh_rnn
+  task: hold
+  attempt: 1
+- seed: 557
+  model_type: vanilla_tanh_rnn
+  task: selective
+  attempt: 1
+- seed: 557
+  model_type: additive_tanh_rnn
+  task: selective
+  attempt: 1
+- seed: 563
+  model_type: vanilla_tanh_rnn
+  task: hold
+  attempt: 1
+- seed: 563
+  model_type: additive_tanh_rnn
+  task: hold
+  attempt: 1
+- seed: 563
+  model_type: vanilla_tanh_rnn
+  task: selective
+  attempt: 1
+- seed: 563
+  model_type: additive_tanh_rnn
+  task: selective
+  attempt: 1
+- seed: 569
+  model_type: vanilla_tanh_rnn
+  task: hold
+  attempt: 1
+- seed: 569
+  model_type: additive_tanh_rnn
+  task: hold
+  attempt: 1
+- seed: 569
+  model_type: vanilla_tanh_rnn
+  task: selective
+  attempt: 1
+- seed: 569
+  model_type: additive_tanh_rnn
+  task: selective
+  attempt: 1
+- seed: 571
+  model_type: vanilla_tanh_rnn
+  task: hold
+  attempt: 1
+- seed: 571
+  model_type: additive_tanh_rnn
+  task: hold
+  attempt: 1
+- seed: 571
+  model_type: vanilla_tanh_rnn
+  task: selective
+  attempt: 1
+- seed: 571
+  model_type: additive_tanh_rnn
+  task: selective
+  attempt: 1
+seed_conflicts: []
+success_hold: 0.95
+success_selective: overall and four subgroups each >= 0.95
+budget_seconds_per_run: 300.0
+budget_seconds_total: 900.0

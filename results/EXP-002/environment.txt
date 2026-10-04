@@ -1,0 +1,6 @@
+Python: 3.11.9
+PyTorch: 2.13.0+cpu
+CPU architecture: AMD64
+Recorded training code revision: b17fa60c8e3c
+All runs used CPU.
+Residual scale 1.0 was fixed before these runs and was not tuned.

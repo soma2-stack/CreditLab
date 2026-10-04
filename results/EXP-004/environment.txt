@@ -1,0 +1,7 @@
+Python: 3.11.9
+PyTorch: 2.13.0+cpu
+CPU architecture: AMD64
+Training code revision: 14bdc4786549081938d4a58b9023c5ef076c3395
+Device: cpu
+Bound B=4.0 was fixed before training and was not tuned.
+All three models used this same process.

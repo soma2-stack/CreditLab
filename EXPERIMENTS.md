@@ -1,39 +1,279 @@
 # Experiment Registry
 
-Registry entries are plans until a dated result is added to `RESULTS.md`. Each run must save its exact configuration, seeds, code revision, measurements, compute use, and deviations under `results/<experiment_id>/`.
+Registry entries describe completed experiments or plans. Every run saves its exact configuration, seeds, code revision, measurements, and compute use under `results/<experiment_id>/`.
 
-## EXP-001 — Delayed-bit vanilla RNN baseline
+## EXP-001 — Delayed-bit vanilla RNN baseline (completed, frozen)
 
 - **Question:** How do task performance and available learning signal change as the delay between a relevant bit and the final prediction grows?
-- **Hypothesis:** Longer delays and stronger distractors will make the standard RNN baseline harder to train and may reduce useful gradient/hidden-state signal. This is a hypothesis, not an expected result.
 - **Baseline:** Small vanilla tanh RNN trained with a terminal binary prediction loss.
-- **Change tested:** None; baseline characterization only.
-- **Dataset/task:** Synthetic delayed-bit sequence. One marked event carries a random bit; distractor steps follow; a terminal query marker requests the bit. Delay and distractor noise are controlled. No task ID is supplied.
-- **Metrics:** Loss, accuracy by delay/difficulty, gradient norm by event age, relevant-bit decodability from hidden state, and a simple recurrent-Jacobian/contraction diagnostic where practical.
-- **Seeds:** 17, 29, 43 (fixed in `configs/exp001_delayed_credit.yaml`).
-- **Compute budget:** Small CPU pilot, at most 5 CPU-minutes per seed/config initially. Stop on invalid numerics or repeated failures; do not silently expand.
-- **Stopping criteria:** Complete the registered tiny sweep or stop at the budget; preserve partial results and explain the stop.
-- **Result:** Not run.
-- **Interpretation:** Pending.
-- **Follow-up:** Only after baseline analysis, decide whether to define EXP-002 credit-difficulty predictors.
+- **Dataset/task:** Original synthetic delayed-marked-bit task with EASY and HARD modes.
+- **Seeds / configuration:** Seeds 17, 29, and 43; frozen config revision 2. The completed run includes delays through 256.
+- **Result:** Completed. EASY remains successful through delay 32, then shows a seed split at 64 and is near chance by 128. Original HARD stays above chance at long delays, but EXP-001B found a target-correlated competitor shortcut in this generator.
+- **Interpretation:** Keep original EXP-001 measurements unchanged. See `results/EXP-001/analysis.md`.
+- **Follow-up:** EXP-001B checks the HARD shortcut and the vanilla-RNN failure region.
 
-## EXP-002 — Credit-difficulty signals
+## EXP-001B — HARD shortcut and credit diagnostic follow-up (completed)
 
-- **Question:** Can online signals such as delay, gradient decay, contraction, or event sparsity predict which sequences need longer-lived learning credit?
-- **Hypothesis:** At least one measurable signal will separate easy and difficult delay cases beyond task metadata alone.
-- **Baseline:** EXP-001 measurements and a simple delay-only predictor.
-- **Change tested:** Compare candidate signals as predictors; no adaptive mechanism yet.
-- **Dataset/task:** Reuse the EXP-001 task under a separately saved config.
-- **Metrics:** Prediction quality for a preregistered difficulty label, calibration, and compute overhead.
-- **Seeds / compute / stopping:** To be preregistered before running.
-- **Result / interpretation / follow-up:** Not run.
+- **Question:** Does the original HARD task leak target information through competitors, why can the old early-event gradient be tiny, and where does the baseline begin failing?
+- **Baseline:** Same vanilla tanh RNN and training settings as EXP-001.
+- **Change tested:** Added corrected HARD-v2 with competitor bits independent of the target; measured accuracy by first competitor agreement/disagreement; added per-example loss-gradient norms while retaining the original event-sensitivity metric.
+- **Delays / modes:** 16, 32, 64, 128, and 256; EASY, original HARD, and HARD-v2.
+- **Seeds / compute:** 17, 29, and 43; 400 Adam updates per run, 45 runs, 0 numerical failures, 273 seconds summed model runtime. No tuning.
+- **Result:** Original HARD competitors agree with the target about 75% of the time, versus about 50% in HARD-v2. At delay 256, mean accuracy is 0.723 on original HARD and 0.491 on HARD-v2. EASY and HARD-v2 show a one-success/two-failure split at delay 64.
+- **Interpretation:** The original HARD long-delay advantage is partly a shortcut. Failed EASY/HARD-v2 runs generally lack a linearly readable target in the final hidden state, and have very small early-event sensitivity and loss gradients. Loss gradients can also be small on already-correct examples, so they are not a standalone failure detector.
+- **Files:** Frozen config at `configs/exp001b_hard_shortcut_credit.yaml`; raw and aggregated records plus analysis under `results/EXP-001B/`.
+- **Follow-up:** EXP-002 tested one fixed residual state path on HARD-v2. EXP-001B files were not changed.
 
-## EXP-003 — Minimal adaptive-credit prototype
+## EXP-002 — Fixed residual recurrent path (completed)
 
-- **Question:** Does allocating a small amount of extra credit memory based on a validated difficulty signal improve the matched baseline tradeoff?
-- **Hypothesis:** A simple adaptive allocation may preserve performance at lower average credit-state cost on mixed easy/hard sequences.
-- **Baseline:** Standard RNN and a fixed-budget credit-memory control.
-- **Change tested:** One minimal adaptive-credit rule, selected only after EXP-001/002.
-- **Dataset/task:** Not yet frozen.
-- **Metrics / seeds / compute / stopping:** Must be preregistered before implementation evaluation.
-- **Result / interpretation / follow-up:** Not run.
+- **Question:** Does a direct residual copy through recurrent state make success at delay 64 on corrected HARD-v2 more reliable across seeds than the vanilla tanh RNN?
+- **Hypothesis:** The vanilla failure happens because state and learning signal must repeatedly pass through the tanh recurrent map. A fixed identity skip around that map should make delay-64 success more reliable.
+- **Baseline:** The vanilla tanh RNN retrained inside EXP-002, on the same machine process as the residual model. Hidden size 32, Adam settings, data sizes, seeds 17, 29, and 43, and diagnostics match EXP-001B. Frozen EXP-001 and EXP-001B files were not changed. Those frozen runs used the earlier Python 3.12 environment (EXP-001B records Python 3.12.14 and PyTorch 2.14.1+cpu). That interpreter could not be recovered, so EXP-002 used Python 3.11.9 and PyTorch 2.13.0+cpu for both models. Differences between the frozen files and this vanilla rerun are environment differences, not architecture effects.
+- **Change tested:** One residual recurrence, `h_t = h_{t-1} + candidate_t`, with fixed scale 1.0 chosen before any EXP-002 test result. Same parameter count and initialization family. No LSTM, GRU, attention, external memory, or extra labels.
+- **Dataset/task:** Corrected HARD-v2 only, through the unchanged EXP-001B generator. Primary delay 64. Confirmation delay 128 only after the delay-64 records were saved.
+- **Metrics:** Test accuracy, train and validation loss, hidden-state retention probe, event sensitivity, per-example loss gradient, step-to-step gain, and numerical stability. Residual runs also record the size of the tanh candidate and the hidden state.
+- **Success rule, locked beforehand:** Accuracy of at least 0.75 counts as success. Probe R^2 of at least 0.5 counts as clearly readable retention.
+- **Seeds / compute:** 17, 29, and 43; 400 updates; 12 runs; 0 numerical failures; 64.7 seconds wall time. Both models: Python 3.11.9, PyTorch 2.13.0+cpu, code revision `b17fa60c8e3c`. The scale was not tuned. No second control run was required.
+- **Result:** At delay 64, vanilla accuracies were 0.4961, 0.4570, and 1.0000. Residual accuracies were 1.0000, 1.0000, and 1.0000. Residual probe R^2 was about 0.98 on every seed; vanilla probe R^2 was near zero on the two failures and 0.995 on the success. At delay 128, vanilla accuracies were 0.5098, 0.5039, and 0.4590; residual accuracies were 1.0000 on all three seeds.
+- **Interpretation:** Outcome A against the matched Python 3.11 vanilla control. The direct path made success and retention reliable, and the smallest step-to-step gain stayed near 0.7–0.9 instead of near 0. The loss gradient stayed small because the residual answers were already correct. The residual state also grew to about one unit per step, so state size changed along with the path. This does not prove the broader theory or establish an architecture. Frozen-file differences are not part of this conclusion.
+- **Files:** `configs/exp002_residual_recurrent.yaml` and `results/EXP-002/`.
+- **Follow-up:** EXP-003 tested one fixed half-and-half mixture. EXP-002 files were not changed.
+
+## EXP-003 — Bounded half-and-half mixture (completed)
+
+- **Question:** Did EXP-002’s direct path help because it preserves information through time, or did that result depend on hidden-state magnitude growing much larger?
+- **Hypothesis:** A fixed mix, `h_t = 0.5 h_{t-1} + 0.5 candidate_t`, keeps a direct path while preventing additive growth. If it still beats the matched vanilla RNN, the direct path itself is useful here. If it does not, magnitude or the additive update was an important part of EXP-002.
+- **Baseline:** Vanilla tanh RNN trained in the same Python 3.11.9 / PyTorch 2.13.0+cpu process. Same hidden size, data, optimizer, learning rate, update budget, seeds, and diagnostics as EXP-002.
+- **Change tested:** One bounded mixture with both weights fixed at 0.5 before any EXP-003 test result. No second mechanism. EXP-002 was not rerun; its saved state sizes were copied for comparison.
+- **Dataset/task:** Corrected HARD-v2. Delays 64 and 128. Seeds 17, 29, and 43.
+- **Rules locked beforehand:** Success is test accuracy of at least 0.75. Readable retention is probe R^2 of at least 0.5. Controlled magnitude is a largest absolute hidden entry of at most 1.01.
+- **Seeds / compute:** 12 runs, 0 numerical failures, 111.9 seconds. Code revision `ec69be58e3c8`. Weights were not tuned.
+- **Result:** Delay-64 vanilla accuracies were 0.4961, 0.4570, and 1.0000. Bounded accuracies were 0.5293, 0.4805, and 0.4688. Delay-128 vanilla accuracies were 0.5098, 0.5039, and 0.4590. Bounded accuracies were 0.4902, 0.5098, and 0.4805. Bounded probe R^2 stayed near zero. Largest absolute hidden values stayed between about 0.41 and 0.83, versus about 65 and 129 for the saved EXP-002 additive model.
+- **Interpretation:** The EXP-002 advantage did not survive this bound. The half-and-half model kept state size controlled and did not preserve the bit or beat the matched vanilla model at either delay. A factor of 0.5 each step also fades a pure copy of the original state, so this does not isolate magnitude from a full-strength copy. It does not prove the broader theory or establish an architecture.
+- **Files:** `configs/exp003_bounded_mixture.yaml` and `results/EXP-003/`.
+- **Follow-up:** Not run. The next question is whether a full-strength copy can be kept while a single preregistered bound stops the state from growing with the delay.
+
+## EXP-004 — Fixed-bound additive recurrence (completed)
+
+- **Question:** Does the additive update keep its delayed-learning advantage when one fixed clamp limits hidden-state size, without shrinking the previous state on every step?
+- **Models:** Vanilla, additive `h_t = h_{t-1} + candidate_t`, and bounded additive `h_t = clamp(h_{t-1} + candidate_t, -4, 4)`. `B = 4` was fixed before any EXP-004 accuracy result.
+- **Task:** Corrected HARD-v2 with explicit noise standard deviation 0.3 and competitor rate 0.4. Historical configuration files were not edited. Three models in each seed and delay shared data, initialization, and minibatches.
+- **Rules:** Success is final test accuracy of at least 0.95. Delay 128 ran because the additive control succeeded on 3 of 3 delay-64 seeds. Active clipping means at least 1 percent of validation coordinates were outside [-4, 4] before the clamp. Python 3.11.9, PyTorch 2.13.0+cpu, training code `14bdc4786549`.
+- **Result:** Eighteen runs, zero failures. Delay-64 accuracy was vanilla 0.4961, 0.4570, 1.0000; additive 1.0000 on all three seeds; bounded 1.0000, 0.5098, 0.5195. Delay-128 accuracy was vanilla 0.5098, 0.5039, 0.4590; additive 1.0000 on all three seeds; bounded 1.0000, 0.5098, 0.6289. Bounded probe R^2 was about 0.996 and 0.997 on seed 17 and about zero on the other delay-64 seeds. Clipping fraction on the bounded test rollouts was about 0.71 to 0.94. Stored bounded states were capped at 4. Additive states reached about 65 and 129.
+- **Interpretation:** Mixed, so inconclusive. The additive control reproduced. Clipping was active even on the bounded success, so growth to 65–129 was not required for that one seed. The same bound did not succeed on the other seeds. Co-occurrence of saturation and failure is not treated as proof that clipping caused the failure. This is not an architecture result and it does not validate the broader theory.
+- **Files:** `configs/exp004_bounded_additive.yaml` and `results/EXP-004/`.
+- **Follow-up:** Not started. Do not change B from these results, and do not start another experiment from this run.
+
+## EXP-005 — Counterfactual early-bit retention audit (completed)
+
+- **Question:** When later inputs are held fixed, does flipping only the original event bit change the final hidden state and the prediction?
+- **Models:** Replayed EXP-004 vanilla, additive, and bounded-additive models. No new architecture. `B` stayed 4. EXP-004 had saved no checkpoints.
+- **Recovery:** All 18 replays matched the saved EXP-004 correct counts, losses, retention, and hidden magnitudes within the pre-registered tolerances. Python 3.11.9, PyTorch 2.13.0+cpu. Audit code `3ebc12f0e389`.
+- **Fresh data:** 512 sequences per seed and delay, split index 3. Only the original bit differed within a pair.
+- **Result:** Successful additive runs and bounded seed 17 changed state, boundary sign pattern, logit, and prediction when the bit flipped. Bounded seed 29 at both delays, and bounded seed 43 at delay 64, produced exactly identical states, identical boundary signs, identical logits, and recorded bit gradients of 0.0. Bounded seed 43 at delay 128 was mixed: 393 pairs were identical, and 119 pairs changed state, logit, and prediction despite a recorded bit gradient of 0.0 on every example.
+- **Interpretation:** EXPERIMENTAL RESULT. Zero local sensitivity agreed with no finite change for some bounded failures, and missed a real finite change for part of bounded seed 43 at delay 128. Failed bounded models did not all forget in the same way. This is not an architecture result and it does not validate the broader theory.
+- **Files:** `configs/exp005_counterfactual_audit.yaml` and `results/EXP-005/`.
+- **Follow-up:** Not started.
+
+## EXP-006 — Fresh-seed replication (completed)
+
+- **Question:** How consistently do the unchanged additive and B=4 bounded models learn delayed memory across ten new seeds and fresh datasets, compared with matched vanilla controls?
+- **Seeds:** 101, 113, 127, 139, 151, 163, 179, 191, 211, 223. Data base seed 2000. Not pooled with seeds 17, 29, and 43.
+- **Models:** Unchanged EXP-004 vanilla, additive, and bounded-additive equations. `B` stayed 4.
+- **Result:** All 60 training runs and 60 bit-flip audits finished in 529 seconds. No failures and no unstarted runs. Delay 64 successes were vanilla 3/10, additive 10/10, and bounded 6/10. The additive gate passed, so fresh delay-128 training ran. Delay 128 successes were vanilla 1/10, additive 10/10, and bounded 5/10. Paired counts at delay 64 were 6 both-succeed and 4 additive-only. Exact 95 percent intervals for the delay-64 success rates were about 0.07–0.65 for vanilla, 0.69–1.00 for additive, and 0.26–0.88 for bounded.
+- **Audit:** Models that reached 0.95 accuracy also passed the bit-flip check. Some bounded misses still changed state on part of the pairs despite a recorded bit gradient of 0.0, notably delay-64 seed 139. Other bounded misses had exactly identical final states.
+- **Interpretation:** EXPERIMENTAL RESULT. Additive success repeated on every new seed. Bounded success is not confined to the old seed 17, and it was less reliable than additive in the paired comparison. Ten seeds leave a wide interval. This is not an architecture result and it does not validate the broader theory.
+- **Files:** `configs/exp006_replication.yaml` and `results/EXP-006/`.
+- **Follow-up:** Not started.
+
+## EXP-007 — Readout-only versus full training (completed)
+
+- **Question:** Does additive delayed-memory success require learning the recurrent weights, or is the initial recurrent dynamics enough if only the readout is trained?
+- **Change:** No new forward equation. `B` stayed 4. Each model was trained either fully or with input and recurrent weights frozen at initialization.
+- **Result:** All 120 runs and 120 audits finished. Full additive succeeded on 10/10 seeds at both delays. Readout-only additive succeeded on 0/10 at both delays, with accuracy mostly about 0.80–0.93. Full bounded succeeded on 6/10 and 5/10. Readout-only bounded succeeded on 0/10 at both delays. Frozen recurrent weights and hidden states stayed unchanged in every readout-only run. The initial additive probe R^2 was about 0.53 at delay 64 and about 0.45 at delay 128, and it did not change when only the readout was trained.
+- **Interpretation:** EXPERIMENTAL RESULT, outcome B. Under this schedule, learning the recurrent weights is needed for reliable additive success. Freezing did not repair bounded reliability. This is not an architecture result and it does not validate the broader theory.
+- **Clarification added later:** The readout-only condition froze both the input-side parameters (`W_x`, `b_x`) and the recurrent-side parameters (`W_h`, `b_h`). The supported claim is that training the input/recurrent module improves reliable additive success under this schedule. It does not show that learning the hidden-to-hidden matrix by itself is necessary. Fewer successful seeds is also not the same as lower accuracy on every paired seed. On 18 of 60 paired comparisons, readout-only accuracy was higher than full training.
+- **Files:** `configs/exp007_readout_only.yaml` and `results/EXP-007/`.
+- **Follow-up:** EXP-008 separates input-side training from recurrent-side training. The EXP-007 analysis file was not rewritten.
+
+## EXP-008 — Which parameter group enables additive learning? (completed)
+
+- **Question:** Can reliable additive delayed learning happen while the hidden-to-hidden weights stay fixed, if the input-side weights and the readout are trained? Can recurrent-side weights plus the readout also succeed?
+- **Result:** All 80 runs and 80 audits finished in 625 seconds. Full training succeeded on 10/10 seeds at both delays. Readout-only succeeded on 0/10. Input-side plus readout succeeded on 10/10. Recurrent-side plus readout succeeded on 10/10. Frozen parameters stayed fixed. Readout-only hidden states stayed unchanged.
+- **Interpretation:** EXPERIMENTAL RESULT, outcome C. Either parameter group, together with the readout, was sufficient under this schedule. Learning the hidden-to-hidden matrix was not necessary. This is not an architecture result and it does not validate the broader theory.
+- **Files:** `configs/exp008_parameter_groups.yaml` and `results/EXP-008/`.
+- **Follow-up:** EXP-009 asks whether one preactivation bias, or the two matrices, is enough. The EXP-008 analysis file was not rewritten.
+
+## EXP-009 — Can bias adaptation alone enable additive success? (interrupted)
+
+- **Question:** Can one learned preactivation bias plus the readout solve the additive task while both weight matrices stay at initialization? Can matrix learning plus the readout solve it while both preactivation biases stay fixed?
+- **Result:** All 40 delay-64 runs finished. Full training succeeded on 10/10 seeds. Readout-only succeeded on 0/10. Bias plus readout (`b_x` only) succeeded on 8/10. Matrices plus readout succeeded on 10/10. The process then stopped during delay-128 seed 101 bias-plus-readout. Delay 128 is incomplete. No bit-flip audit was run. Training was not resumed.
+- **Interpretation:** EXPERIMENTAL RESULT for delay 64 only. Matrix learning was sufficient on every seed with both biases frozen. One preactivation bias was sufficient on 8 seeds and missed 2. This does not show that EXP-008 used the bias-only route, and it does not validate the broader theory.
+- **Files:** `configs/exp009_bias_ablation.yaml` and `results/EXP-009/`.
+- **Follow-up:** Stopped for coordinator review. Do not resume delay 128 automatically. Do not tune B and do not start EXP-010.
+
+## EXP-009 delay-64 audit continuation (diagnostic only)
+
+- **Authorization:** After the interruption, only the bit-flip audit of the 40 saved delay-64 checkpoints was authorized. Delay 128 was not resumed.
+- **Result:** All 40 checkpoints matched their saved test counts. The audit took 10.649 seconds and did not change earlier files. Bias-only successes changed the final state when only the original bit was flipped. Seeds 151 and 191 still showed partial bit dependence. Matrix-trained runs did too. This separate clock does not reconstruct the unfinished training run.
+- **Interpretation:** DIAGNOSTIC RESULT. The ordinary test scores and the pair scores are different measurements. This does not explain EXP-008, does not establish delay 128, and does not validate the broader theory.
+- **Files:** `results/EXP-009/audit_completion/`. The original interruption note and training analysis were not rewritten.
+
+## EXP-009 delay-128 continuation (authorized completion of the planned comparison)
+
+- **Authorization:** Reuse seed 101 full and seed 101 readout-only. Restart seed 101 bias-plus-readout once from initialization. Train the other 37 delay-128 conditions. No other training.
+- **Result:** All 38 jobs finished in 381.534 seconds. No failures and no unstarted jobs. Delay-128 success counts were full 10/10, readout only 0/10, bias plus readout 2/10, and matrices plus readout 10/10. The two bias successes were seeds 127 and 211. The bit-flip audit covered all 40 models. Frozen parameters stayed fixed.
+- **Interpretation:** EXPERIMENTAL RESULT for the completed delay-128 cohort. Bias-only adaptation did not remain sufficient for most seeds at this delay. Matrix adaptation remained sufficient on every seed with both biases fixed. The original session is still interrupted, and this clock is not its missing cost. This is not an architecture result and it does not validate the broader theory.
+- **Files:** `results/EXP-009/delay128_completion/`. The interruption note was not rewritten.
+
+## EXP-010 — Does additive learning need long-horizon backpropagation? (completed)
+
+- **Question:** Does the additive model still learn the delayed bit reliably when the state is carried forward through the whole sequence, but the training gradient is sent back only through the final 16 steps?
+- **Result:** All 40 runs and 40 audits finished in 472 seconds. Full-history training succeeded on 10/10 seeds at both delays. Final-16 training succeeded on 1/10 at delay 64 and 0/10 at delay 128. The delay-64 success was seed 223 at 0.998. The training-graph gradient at the original event was a computational zero on every final-16 run. The separate full-forward check still showed some bit sensitivity, and the bit-flip check still changed the final state.
+- **Interpretation:** EXPERIMENTAL RESULT, outcome B. Explicit long-horizon backpropagation improved reliable success under this schedule. It was not required for every seed, and several misses still kept partial information. This is not an architecture result and it does not validate the broader theory.
+- **Files:** `configs/exp010_truncated_bptt.yaml` and `results/EXP-010/`.
+- **Follow-up:** EXP-011 asks whether that gap remains when clipping is turned off. The EXP-010 analysis file was not rewritten.
+
+## EXP-011 — Gradient horizon × clipping policy (completed)
+
+- **Question:** Does the full-history advantage remain when gradient clipping is turned off, with every other setting unchanged?
+- **Result:** All 80 runs and 80 audits finished in 1032 seconds. No numerical failures and no unstarted runs. At delay 64 the success counts were full with clipping 10/10, final 16 with clipping 1/10, full without clipping 10/10, and final 16 without clipping 2/10. At delay 128 they were 10/10, 0/10, 7/10, and 0/10. The clipped runs matched EXP-010. No unclipped run rescaled a gradient.
+- **Interpretation:** EXPERIMENTAL RESULT, outcome D. At delay 64 the full-history advantage remains without clipping. At delay 128, turning clipping off makes full-history training less consistent and still does not make final-16 training reliable. This is not an architecture result and it does not validate the broader theory.
+- **Files:** `configs/exp011_clipping_horizon.yaml` and `results/EXP-011/`.
+- **Follow-up:** EXP-012 asks whether a new linear readout can use the hidden states the final-16 runs already learned. The EXP-011 analysis file was not rewritten.
+
+## EXP-012 — Frozen-state linear readout rescue (completed)
+
+- **Question:** Can a separately fitted linear classifier answer the task from the final hidden states of the 80 saved EXP-011 models?
+- **Result:** All 80 checkpoints verified and all 80 classifiers converged in 15.6 seconds. Of 37 final-16 misses, 36 reached at least 0.95 with the new readout, and those rescues held up on the bit-flip check. Delay 128, seed 179, final-16 without clipping, rose from 0.594 to 0.881 and stayed below 0.95. Every full-history refit stayed at or above 0.973.
+- **Interpretation:** DIAGNOSTIC RESULT, outcome C. Most final-16 misses had enough linearly readable information that the original readout did not fully use. One miss was only partly improved. This does not erase the full-history advantage during joint training, and it does not validate the broader theory.
+- **Files:** `configs/exp012_readout_refit.yaml` and `results/EXP-012/`.
+- **Follow-up:** Not started. Do not train recurrent weights, do not tune C, and do not start EXP-013.
+
+## EXP-007 readout schedule, clarified after EXP-013
+
+- **Clarification:** EXP-007 showed that training the input and recurrent weights improved reliable success under that experiment’s original readout-training schedule. It did not show that recurrent training is necessary for every way of fitting a readout. The saved EXP-007 analysis file was not rewritten.
+
+## EXP-013 — Does initialized additive memory already suffice? (completed)
+
+- **Question:** Can the EXP-012 classifier solve the task from additive hidden states whose input and recurrent weights were never trained?
+- **Result:** All 60 checks verified, including exact initialization matches, and the trained-state fits reproduced EXP-012. Initialized states reached 0.95 on 6 of 10 seeds at delay 64 and 5 of 10 at delay 128. Full-history and final-16 states reached it on all 10 seeds at both delays. The diagnostic took 11.3 seconds.
+- **Interpretation:** DIAGNOSTIC RESULT, outcome C. Untrained dynamics are already enough on some seeds under this readout, and learning still improves the others. Final-16 learning produced that improvement without a training gradient back to the original event. This does not validate the broader theory.
+- **Files:** `configs/exp013_initialized_readout.yaml` and `results/EXP-013/`.
+- **Follow-up:** Not started. Do not train recurrent weights, do not tune C, and do not start EXP-014.
+
+## EXP-014 — Independent replication of representation versus readout (completed)
+
+- **Question:** On ten new seeds at delay 128, does final-16 training again leave a weak original readout while a separate linear classifier can read the state?
+- **Result:** All 20 training runs and 30 classifier fits finished in 340 seconds. Full-history original and diagnostic scores succeeded on 10/10 seeds. Final-16 original scores succeeded on 1/10. Final-16 diagnostic scores succeeded on 8/10. Untrained states succeeded on 4/10. The early final-16 training gradient was blocked. Seeds 331 and 353 stayed below 0.95 after the new readout.
+- **Interpretation:** EXPERIMENTAL RESULT. The readout-rescue pattern mostly replicated, with two exceptions. Some untrained states were already readable. Full-history training remained reliable. This is not an architecture result and it does not validate the broader theory.
+- **Files:** `configs/exp014_replication.yaml` and `results/EXP-014/`.
+- **Follow-up:** Not started. Do not tune the classifier or the horizon, and do not start EXP-015.
+
+## Pause lifted for EXP-015 only
+
+- **Authorization:** The documentation pause was lifted only for an evaluation of the saved EXP-014 models at longer delays. No training and no classifier refitting.
+
+## EXP-015 — Frozen-model length generalization (completed)
+
+- **Question:** Do the saved delay-128 models and readouts still answer at delays 256 and 512, with no further adaptation?
+- **Result:** All 30 checkpoints and classifiers verified. All scores finished in 15.8 seconds. On a fresh delay-128 draw, success counts were initialized diagnostic 4/10, full-history original 10/10, full-history diagnostic 10/10, final-16 original 1/10, and final-16 diagnostic 8/10. At delay 256 those counts were 0, 8, 4, 1, and 0. At delay 512 they were 0, 6, 3, 0, and 0. States still changed when only the original bit was flipped. No numerical failures.
+- **Interpretation:** EXPERIMENTAL RESULT. The saved diagnostic readout does not generalize to the longer delays. The full-history original readout still does on many seeds. Bit dependence can remain after the answer has fallen to chance. Longer sequences also add distractors, so this is not a pure time test. This does not validate the broader theory.
+- **Files:** `configs/exp015_length_generalization.yaml` and `results/EXP-015/`.
+- **Follow-up:** Not started. Do not test delay 1024, do not retrain, and do not start EXP-016.
+
+## EXP-015 length result
+
+- **Clarification:** A fixed-length readout rescue did not establish length robustness. EXP-015 scored saved models at longer delays without new training. The separate linear readout did not stay reliable at delays 256 and 512.
+
+## Pause lifted for EXP-016 only
+
+- **Authorization:** The stop after EXP-015 is lifted only for a fresh vanilla-versus-additive comparison at delay 128, with distractor noise 0.3 and 1.0. Noise 1.0 does not replace the frozen noise-0.3 experiments.
+
+## EXP-016 — Additive advantage under stronger noise (interrupted)
+
+- **Question:** At delay 128, does additive recurrence stay more reliable than vanilla recurrence when distractor noise increases from 0.3 to 1.0?
+- **Result:** Interrupted. The process stopped during seed 439, vanilla, noise 1.0, with no score for that run. A second start was refused. On the finished runs, additive test accuracy was 1.000 on all 7 noise-0.3 runs and all 6 noise-1.0 runs. Vanilla was below 0.95 on all of those runs, from 0.457 to 0.730. The diagnostic readout matched that split on the six seeds that received it. Seeds 443, 449, and 457 were not started.
+- **Interpretation:** The finished runs are consistent with the additive advantage surviving noise 1.0. EXPERIMENTAL RESULT is not claimed for the full ten-seed cohort, because the run is incomplete. Noise 1.0 does not replace the frozen noise-0.3 experiments. This does not validate the broader theory.
+- **Files:** `configs/exp016_noise_robustness.yaml` and `results/EXP-016/`.
+- **Follow-up:** Not started. Do not resume automatically. Do not raise the budget. Do not start EXP-017.
+
+## EXP-016 completion — full cohort (completed through an authorized continuation)
+
+- **Question:** At delay 128, does additive recurrence stay more reliable than vanilla recurrence when distractor noise increases from 0.3 to 1.0?
+- **Result:** The 26 saved checkpoints verified. Fourteen new jobs finished in a continuation of 170.4 seconds. Seed 439, vanilla, noise 1.0, was restarted once from initialization. Additive accuracy was 1.000 on all 10 seeds at both noise levels. Vanilla was below 0.95 on 9 of 10 seeds at noise 0.3 and on all 10 at noise 1.0. The exception was seed 457 at noise 0.3, accuracy 1.000. The diagnostic readout agreed with that success line on every condition.
+- **Interpretation:** EXPERIMENTAL RESULT for the completed cohort, obtained through an authorized continuation rather than an uninterrupted original session. The additive advantage remains at noise 1.0. This is not general robustness, and it does not validate the broader theory.
+- **Files:** `results/EXP-016/completion/`. The original interruption note was not rewritten.
+- **Follow-up:** Not started. Do not start EXP-017. Do not begin a selective-overwrite task.
+
+## EXP-017 — Selective overwrite versus continued retention (completed)
+
+- **Question:** Can the existing additive model replace an old bit when the later bit is marked as an update, and keep the old bit when that later bit is only a distractor?
+- **Result:** All 40 runs finished in 471.9 seconds. Additive hold accuracy was 1.000 on 10 of 10 seeds. Vanilla hold succeeded on 1 of 10, seed 503. No model met the selective rule. The additive failure was concentrated on marked updates whose new bit differed from the old one. The separate readout scored exactly 0.750 on every additive selective model by answering the old bit.
+- **Interpretation:** EXPERIMENTAL RESULT. Persistence worked. Controlled replacement did not, under this task and this 400-update schedule. This does not show that the old bit was erased, and it does not authorize a new gate by itself. It does not validate the broader theory.
+- **Files:** `configs/exp017_selective_overwrite.yaml` and `results/EXP-017/`.
+- **Follow-up:** Not started. Do not add a gate. Do not train a video model. Do not start EXP-018.
+
+## EXP-018 — Where selective overwrite fails (completed)
+
+- **Question:** In the saved overwrite models, does the new bit fail to enter the state, enter and then disappear, or remain unused by the saved readouts?
+- **Result:** All 40 checkpoints and readouts verified. The diagnostic took 11.4 seconds. On the additive selective models, some seeds show little or no ordinary-precision change when the marked bit flips, and those candidates are mostly saturated. Other seeds change and keep the change. Both saved readouts follow that marked bit on none of the fresh pairs. Exact float32 equality is often lost in float64, while the typical difference stays tiny.
+- **Interpretation:** NUMERICAL EVIDENCE. The failure is not one thing. Weak entry, later loss, and unused persistent differences all occur. Saturation is associated with weaker entry. It is not shown to be the cause. This does not show erasure or a universal limit, and it does not validate the broader theory.
+- **Files:** `configs/exp018_failure_location.yaml` and `results/EXP-018/`.
+- **Follow-up:** Not started. Do not add a gate. Do not fit a new readout. Do not start EXP-019.
+
+## EXP-019 — Explicit marked reset (stopped before training)
+
+- **Question:** Does wiping the carried state before a marked write let the additive model replace the old bit, without hurting the hold task?
+- **Result:** Stopped before training. On the hold task the write channel is not a clean on/off mark: competitors use it, and distractor noise is added to it. The reset and the ordinary additive model, from the same weights, already disagree at the first distractor step. The largest state gap was about 145. No accuracy was collected.
+- **Interpretation:** The registered hold-match check failed. This is not evidence that a reset cannot help, and it is not a new accuracy result. The marker definition was not changed after the check.
+- **Files:** `configs/exp019_marker_reset.yaml` and `results/EXP-019/`.
+- **Follow-up:** Not started. Do not add a learned gate. Do not start EXP-020.
+
+## EXP-019 interpretation, stated before EXP-020
+
+- **Correction:** EXP-019 collected no training results. Its assumption that the write channel was a clean marker was false. EXP-017 tested overwrite under that actual noisy input encoding, not under an unambiguous binary write-control interface. EXP-019 is not classified as a model failure.
+
+## EXP-020 — Clean write control (completed)
+
+- **Question:** If both models receive the same explicit on/off write signal, does the reset version replace the old bit more reliably than the ordinary additive version?
+- **Result:** The clean-control checks passed, including an exact hold-task match. All 40 runs finished in 587 seconds. Both hold versions scored 1.000 on 10 of 10 seeds. Ordinary additive selective succeeded on 0 of 10. Reset additive selective succeeded on 10 of 10, including conflicting replacement at 128 of 128 on every seed. Seed 547 was 511 of 512 overall.
+- **Interpretation:** EXPERIMENTAL RESULT. The new instruction channel alone did not produce replacement. The fixed reset did, under this shared interface and budget. This is not learned gating, not an EXP-017 rerun, and not a video result.
+- **Files:** `configs/exp020_clean_write.yaml` and `results/EXP-020/`.
+- **Follow-up:** Not started. Do not add a learned gate. Do not start EXP-021.
+
+## EXP-021 — Independent replication of clean-control overwrite (completed)
+
+- **Question:** On ten new seeds, does the fixed reset again replace the old bit more reliably than ordinary additive recurrence when both receive the same clean write signal?
+- **Result:** The preflight check passed. All 40 runs finished in 612 seconds. Hold success was 10/10 for both versions. Selective success was 0/10 for ordinary additive and 10/10 for the reset. Seed 607 was 511/512 overall, with conflicting replacement at 127/128. The audits agreed.
+- **Interpretation:** EXPERIMENTAL RESULT. The EXP-020 pattern replicated on a new cohort. The cohorts are not pooled. This is not a learned gate and not a video result.
+- **Files:** `configs/exp021_replication.yaml` and `results/EXP-021/`.
+- **Follow-up:** Not started. Do not add a learned gate. Do not start EXP-022.
+
+## EXP-022 — Update one memory without losing another (completed)
+
+- **Question:** Can a fixed reset of one half of the state update one stored bit and keep the other?
+- **Design:** A new six-channel two-memory task. Ordinary additive, whole-state reset, and addressed reset. Ten new seeds. Data base seed 9000. Thirty runs. This is not an EXP-021 replication.
+- **Result:** The preflight check passed, including an exact whole-state equality after flipping a bit written only before the wipe. All 30 runs finished in 640 seconds. Success was 0/30. The best addressed overall score was 375/512. Conflicting replacement stayed near chance, and changing the query address did not change the answer.
+- **Interpretation:** EXPERIMENTAL RESULT. The fixed half-state reset was not sufficient for this two-memory task. Whole-state misses on a pre-wipe bit were a structural limit, checked before training. This is not learned routing and not a video result.
+- **Files:** `configs/exp022_two_memory.yaml` and `results/EXP-022/`.
+- **Follow-up:** Stop. Do not add a learned gate. Do not start EXP-023.
+
+## EXP-023 — Are both current memory values readable? (completed)
+
+- **Question:** Before the final question, can two linear readouts recover both current memory values from the same frozen state, and does choosing between them with the supplied query address improve the task score?
+- **Design:** Diagnostic only, on the 30 saved EXP-022 models. No recurrent training. Features are the hidden state after step 128. Sixty linear heads, fit on training states only.
+- **Result:** All 30 checkpoints reproduced their saved correct counts. All 60 fits converged. The diagnostic took 25 seconds. Success was 0/30. The best routed score was 449/512. Original bits were readable. Replacement was not. A whole-state wipe still left the pre-wipe bit unreadable, with exact state equality.
+- **Interpretation:** EXPERIMENTAL RESULT. Explicit routing raised scores above the saved readout and did not solve the task. Retained bits and updated bits do not behave the same way under this linear diagnostic. This is not learned addressing and not a video result.
+- **Files:** `configs/exp023_two_head_diagnostic.yaml` and `results/EXP-023/`.
+- **Follow-up:** Stop. Do not train the recurrent models again. Do not start EXP-024.
+
+## EXP-014 rescue denominator, clarified after the checkpoint
+
+- **Clarification:** “8 of 10 diagnostic successes” is not “8 misses rescued.” Seed 311 already scored at least 0.95 with the original final-16 readout. Of the 9 original misses, 7 were rescued: 307, 313, 317, 337, 347, 349, and 359. Seeds 331 and 353 stayed below 0.95. The saved EXP-014 analysis was not edited.
+- **Not the same fraction:** EXP-012’s 36 of 37 covers both delays and both clipping settings. The matching saved cell, delay 128 and final-16 with clipping, on seeds 101–223, was 10 original misses and 10 rescues. That cell is not pooled with EXP-014’s 7 of 9.
+
+## Scientific checkpoint
+
+- **Status:** EXP-023 is complete. The two-head diagnostic did not solve the task. EXP-024 is not authorized.
+- **Document:** `SCIENTIFIC_CHECKPOINT.md`. The audit of saved records is `DOCUMENTATION_AUDIT.md`.

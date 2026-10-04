@@ -1,0 +1,1597 @@
+{
+  "audit_wall_seconds": 3.284,
+  "code_revision": "3ebc12f0e3898de7053076d223211992c7c43a61",
+  "rows": [
+    {
+      "accuracy": 0.5,
+      "bit_sensitivity_negative": {
+        "count": 512,
+        "exact_computational_zeros": 0,
+        "max_abs": 0.0001524677500128746,
+        "mean": 2.91547166852979e-06,
+        "median": 4.0837682035999023e-07,
+        "min_nonzero_abs": 1.9475798751500406e-10,
+        "nonzero_count": 512,
+        "quantiles": {
+          "0.05": -8.78197079146048e-06,
+          "0.25": -4.6836396450089524e-07,
+          "0.50": 4.1755191659831326e-07,
+          "0.75": 3.4503498227422824e-06,
+          "0.95": 2.2489166440209374e-05
+        }
+      },
+      "bit_sensitivity_positive": {
+        "count": 512,
+        "exact_computational_zeros": 0,
+        "max_abs": 0.00019363811588846147,
+        "mean": 2.8335632578091463e-06,
+        "median": 2.5727990760060493e-07,
+        "min_nonzero_abs": 1.5967103195180243e-09,
+        "nonzero_count": 512,
+        "quantiles": {
+          "0.05": -1.2161841368651949e-05,
+          "0.25": -1.0847090834431583e-06,
+          "0.50": 2.5881058718368877e-07,
+          "0.75": 3.2867501431610435e-06,
+          "0.95": 2.5961218852899037e-05
+        }
+      },
+      "both_correct_fraction": 0.0,
+      "both_wrong_fraction": 0.0,
+      "delay": 64,
+      "exactly_one_correct_fraction": 1.0,
+      "final_l2": {
+        "count": 512,
+        "exact_computational_zeros": 0,
+        "max_abs": 0.002035432029515505,
+        "mean": 0.00010264760931022465,
+        "median": 3.228714194847271e-05,
+        "min_nonzero_abs": 2.593026806607668e-07,
+        "nonzero_count": 512,
+        "quantiles": {
+          "0.05": 1.6308890735672321e-06,
+          "0.25": 1.0465163541084621e-05,
+          "0.50": 3.2606927561573684e-05,
+          "0.75": 0.00010770549124572426,
+          "0.95": 0.0004132828034926206
+        }
+      },
+      "final_sign_pattern_identical_fraction": 1.0,
+      "final_states_exactly_equal_fraction": 0.0,
+      "identical_logits_fraction": 0.00390625,
+      "logit_difference": {
+        "count": 512,
+        "exact_computational_zeros": 2,
+        "max_abs": 0.00039523839950561523,
+        "mean": 6.506372301373631e-06,
+        "median": 9.760260581970215e-07,
+        "min_nonzero_abs": 7.450580596923828e-09,
+        "nonzero_count": 510,
+        "quantiles": {
+          "0.05": -2.524256706237793e-05,
+          "0.25": -1.7490237951278687e-06,
+          "0.50": 9.760260581970215e-07,
+          "0.75": 7.27921724319458e-06,
+          "0.95": 5.437579602585174e-05
+        }
+      },
+      "marker_sensitivity_negative_mean_abs": 5.464977675728733e-06,
+      "marker_sensitivity_positive_mean_abs": 6.5195590650546364e-06,
+      "model_type": "vanilla_tanh_rnn",
+      "n_pairs": 512,
+      "n_sequences": 1024,
+      "pairs_both_bit_grads_exact_zero": 0,
+      "pairs_zero_local_grad_but_logit_changes": 0,
+      "pairs_zero_local_grad_but_state_changes": 0,
+      "positive_logit_difference_fraction": 0.61328125,
+      "prediction_flip_fraction": 0.0,
+      "runtime_seconds": 0.063,
+      "seed": 17
+    },
+    {
+      "accuracy": 0.9990234375,
+      "bit_sensitivity_negative": {
+        "count": 512,
+        "exact_computational_zeros": 0,
+        "max_abs": 1975.9593505859375,
+        "mean": 13.263452529907227,
+        "median": 4.525572299957275,
+        "min_nonzero_abs": 1.923882246017456,
+        "nonzero_count": 512,
+        "quantiles": {
+          "0.05": 2.8797733783721924,
+          "0.25": 3.7305264472961426,
+          "0.50": 4.527475833892822,
+          "0.75": 6.148089408874512,
+          "0.95": 15.986607551574707
+        }
+      },
+      "bit_sensitivity_positive": {
+        "count": 512,
+        "exact_computational_zeros": 0,
+        "max_abs": 4348.40478515625,
+        "mean": -5.223645210266113,
+        "median": -1.0379327535629272,
+        "min_nonzero_abs": 0.006314456462860107,
+        "nonzero_count": 512,
+        "quantiles": {
+          "0.05": -30.318309783935547,
+          "0.25": -3.1664211750030518,
+          "0.50": -1.0343983173370361,
+          "0.75": 1.5931034088134766,
+          "0.95": 80.51532745361328
+        }
+      },
+      "both_correct_fraction": 0.998046875,
+      "both_wrong_fraction": 0.0,
+      "delay": 64,
+      "exactly_one_correct_fraction": 0.001953125,
+      "final_l2": {
+        "count": 512,
+        "exact_computational_zeros": 0,
+        "max_abs": 441.64324951171875,
+        "mean": 364.9228820800781,
+        "median": 375.00714111328125,
+        "min_nonzero_abs": 248.10940551757812,
+        "nonzero_count": 512,
+        "quantiles": {
+          "0.05": 301.27154541015625,
+          "0.25": 371.5018005371094,
+          "0.50": 375.011474609375,
+          "0.75": 377.6878662109375,
+          "0.95": 393.5887145996094
+        }
+      },
+      "final_sign_pattern_identical_fraction": 0.0,
+      "final_states_exactly_equal_fraction": 0.0,
+      "identical_logits_fraction": 0.0,
+      "logit_difference": {
+        "count": 512,
+        "exact_computational_zeros": 0,
+        "max_abs": 87.79203796386719,
+        "mean": 55.112884521484375,
+        "median": 50.23634338378906,
+        "min_nonzero_abs": 2.6601123809814453,
+        "nonzero_count": 512,
+        "quantiles": {
+          "0.05": 47.79718017578125,
+          "0.25": 48.94736862182617,
+          "0.50": 50.23639678955078,
+          "0.75": 53.9871940612793,
+          "0.95": 77.65656280517578
+        }
+      },
+      "marker_sensitivity_negative_mean_abs": 2.391942024230957,
+      "marker_sensitivity_positive_mean_abs": 1.6035947799682617,
+      "model_type": "additive_tanh_rnn",
+      "n_pairs": 512,
+      "n_sequences": 1024,
+      "pairs_both_bit_grads_exact_zero": 0,
+      "pairs_zero_local_grad_but_logit_changes": 0,
+      "pairs_zero_local_grad_but_state_changes": 0,
+      "positive_logit_difference_fraction": 0.998046875,
+      "prediction_flip_fraction": 0.998046875,
+      "runtime_seconds": 0.138,
+      "seed": 17
+    },
+    {
+      "accuracy": 1.0,
+      "bit_sensitivity_negative": {
+        "count": 512,
+        "exact_computational_zeros": 0,
+        "max_abs": 138.66070556640625,
+        "mean": 1.0246092081069946,
+        "median": 0.022311067208647728,
+        "min_nonzero_abs": 1.667998731136322e-06,
+        "nonzero_count": 512,
+        "quantiles": {
+          "0.05": -1.1223785877227783,
+          "0.25": -0.02211255021393299,
+          "0.50": 0.02284751832485199,
+          "0.75": 0.19792130589485168,
+          "0.95": 7.327150821685791
+        }
+      },
+      "bit_sensitivity_positive": {
+        "count": 512,
+        "exact_computational_zeros": 0,
+        "max_abs": 41.52740478515625,
+        "mean": 0.08457185328006744,
+        "median": 0.0015351474285125732,
+        "min_nonzero_abs": 9.492447134107351e-06,
+        "nonzero_count": 512,
+        "quantiles": {
+          "0.05": -0.18877793848514557,
+          "0.25": -0.026850227266550064,
+          "0.50": 0.001879088580608368,
+          "0.75": 0.14271245896816254,
+          "0.95": 1.428849697113037
+        }
+      },
+      "both_correct_fraction": 1.0,
+      "both_wrong_fraction": 0.0,
+      "boundary": {
+        "mean_fraction_coordinates_at_boundary": 0.9241943359375,
+        "pairs_different_boundary_sign_pattern": 512,
+        "pairs_identical_boundary_sign_pattern": 0,
+        "pairs_no_boundary_coordinate": 0,
+        "pairs_with_any_boundary_coordinate": 512
+      },
+      "delay": 64,
+      "exactly_one_correct_fraction": 0.0,
+      "final_l2": {
+        "count": 512,
+        "exact_computational_zeros": 0,
+        "max_abs": 44.15176010131836,
+        "mean": 41.90152359008789,
+        "median": 42.67483139038086,
+        "min_nonzero_abs": 28.401689529418945,
+        "nonzero_count": 512,
+        "quantiles": {
+          "0.05": 38.29788589477539,
+          "0.25": 41.20863342285156,
+          "0.50": 42.6780891418457,
+          "0.75": 43.05142593383789,
+          "0.95": 43.43325424194336
+        }
+      },
+      "final_sign_pattern_identical_fraction": 0.0,
+      "final_states_exactly_equal_fraction": 0.0,
+      "identical_logits_fraction": 0.0,
+      "logit_difference": {
+        "count": 512,
+        "exact_computational_zeros": 0,
+        "max_abs": 18.347949981689453,
+        "mean": 17.642242431640625,
+        "median": 18.052486419677734,
+        "min_nonzero_abs": 13.31985855102539,
+        "nonzero_count": 512,
+        "quantiles": {
+          "0.05": 16.167495727539062,
+          "0.25": 17.073932647705078,
+          "0.50": 18.053218841552734,
+          "0.75": 18.1840877532959,
+          "0.95": 18.277114868164062
+        }
+      },
+      "marker_sensitivity_negative_mean_abs": 0.45636439323425293,
+      "marker_sensitivity_positive_mean_abs": 0.43815863132476807,
+      "model_type": "bounded_additive_tanh_rnn",
+      "n_pairs": 512,
+      "n_sequences": 1024,
+      "pairs_both_bit_grads_exact_zero": 0,
+      "pairs_zero_local_grad_but_logit_changes": 0,
+      "pairs_zero_local_grad_but_state_changes": 0,
+      "positive_logit_difference_fraction": 1.0,
+      "prediction_flip_fraction": 1.0,
+      "runtime_seconds": 0.143,
+      "seed": 17
+    },
+    {
+      "accuracy": 0.5,
+      "bit_sensitivity_negative": {
+        "count": 512,
+        "exact_computational_zeros": 0,
+        "max_abs": 2.0185178528642211e-10,
+        "mean": 4.345544410422342e-11,
+        "median": 4.1428093594531035e-11,
+        "min_nonzero_abs": 2.0658821875407796e-13,
+        "nonzero_count": 512,
+        "quantiles": {
+          "0.05": -2.5282959753569756e-11,
+          "0.25": 1.802222780733498e-11,
+          "0.50": 4.1500393399562796e-11,
+          "0.75": 6.958707915449835e-11,
+          "0.95": 1.1893350193581398e-10
+        }
+      },
+      "bit_sensitivity_positive": {
+        "count": 512,
+        "exact_computational_zeros": 0,
+        "max_abs": 1.8273374480237692e-10,
+        "mean": 3.79025769103869e-11,
+        "median": 3.591718589213144e-11,
+        "min_nonzero_abs": 1.8751666885918894e-13,
+        "nonzero_count": 512,
+        "quantiles": {
+          "0.05": -2.697993044253888e-11,
+          "0.25": 1.514107242361895e-11,
+          "0.50": 3.596481445988786e-11,
+          "0.75": 6.154693421578372e-11,
+          "0.95": 1.0700976216249103e-10
+        }
+      },
+      "both_correct_fraction": 0.0,
+      "both_wrong_fraction": 0.0,
+      "delay": 64,
+      "exactly_one_correct_fraction": 1.0,
+      "final_l2": {
+        "count": 512,
+        "exact_computational_zeros": 0,
+        "max_abs": 2.1709206521336455e-07,
+        "mean": 1.16082468082368e-07,
+        "median": 1.147002279822118e-07,
+        "min_nonzero_abs": 5.866592900360956e-08,
+        "nonzero_count": 512,
+        "quantiles": {
+          "0.05": 7.585779826513317e-08,
+          "0.25": 9.797926736609952e-08,
+          "0.50": 1.147002279822118e-07,
+          "0.75": 1.305712942212267e-07,
+          "0.95": 1.5889098392563028e-07
+        }
+      },
+      "final_sign_pattern_identical_fraction": 1.0,
+      "final_states_exactly_equal_fraction": 0.0,
+      "identical_logits_fraction": 0.365234375,
+      "logit_difference": {
+        "count": 512,
+        "exact_computational_zeros": 187,
+        "max_abs": 5.960464477539063e-08,
+        "mean": 9.304130799137056e-10,
+        "median": 0.0,
+        "min_nonzero_abs": 4.656612873077393e-10,
+        "nonzero_count": 325,
+        "quantiles": {
+          "0.05": -1.6577537564899103e-08,
+          "0.25": -7.450580596923828e-09,
+          "0.50": 0.0,
+          "0.75": 7.450580596923828e-09,
+          "0.95": 2.9802322387695312e-08
+        }
+      },
+      "marker_sensitivity_negative_mean_abs": 1.1095920016135352e-10,
+      "marker_sensitivity_positive_mean_abs": 1.077120892478689e-10,
+      "model_type": "vanilla_tanh_rnn",
+      "n_pairs": 512,
+      "n_sequences": 1024,
+      "pairs_both_bit_grads_exact_zero": 0,
+      "pairs_zero_local_grad_but_logit_changes": 0,
+      "pairs_zero_local_grad_but_state_changes": 0,
+      "positive_logit_difference_fraction": 0.34375,
+      "prediction_flip_fraction": 0.0,
+      "runtime_seconds": 0.061,
+      "seed": 29
+    },
+    {
+      "accuracy": 1.0,
+      "bit_sensitivity_negative": {
+        "count": 512,
+        "exact_computational_zeros": 0,
+        "max_abs": 183.87359619140625,
+        "mean": 3.870997190475464,
+        "median": 2.0178866386413574,
+        "min_nonzero_abs": 0.0002390146255493164,
+        "nonzero_count": 512,
+        "quantiles": {
+          "0.05": -1.9932920932769775,
+          "0.25": -0.6084041595458984,
+          "0.50": 2.0406317710876465,
+          "0.75": 6.09608268737793,
+          "0.95": 10.917414665222168
+        }
+      },
+      "bit_sensitivity_positive": {
+        "count": 512,
+        "exact_computational_zeros": 0,
+        "max_abs": 34.01694869995117,
+        "mean": 10.066442489624023,
+        "median": 11.976999282836914,
+        "min_nonzero_abs": 0.21261084079742432,
+        "nonzero_count": 512,
+        "quantiles": {
+          "0.05": -9.153568267822266,
+          "0.25": 7.447146892547607,
+          "0.50": 11.990220069885254,
+          "0.75": 15.795938491821289,
+          "0.95": 23.4654483795166
+        }
+      },
+      "both_correct_fraction": 1.0,
+      "both_wrong_fraction": 0.0,
+      "delay": 64,
+      "exactly_one_correct_fraction": 0.0,
+      "final_l2": {
+        "count": 512,
+        "exact_computational_zeros": 0,
+        "max_abs": 308.2481994628906,
+        "mean": 235.10902404785156,
+        "median": 226.19927978515625,
+        "min_nonzero_abs": 184.2239227294922,
+        "nonzero_count": 512,
+        "quantiles": {
+          "0.05": 204.07867431640625,
+          "0.25": 213.51669311523438,
+          "0.50": 226.42335510253906,
+          "0.75": 253.56515502929688,
+          "0.95": 288.10980224609375
+        }
+      },
+      "final_sign_pattern_identical_fraction": 0.0,
+      "final_states_exactly_equal_fraction": 0.0,
+      "identical_logits_fraction": 0.0,
+      "logit_difference": {
+        "count": 512,
+        "exact_computational_zeros": 0,
+        "max_abs": 51.73359680175781,
+        "mean": 39.22649383544922,
+        "median": 39.926368713378906,
+        "min_nonzero_abs": 26.740875244140625,
+        "nonzero_count": 512,
+        "quantiles": {
+          "0.05": 30.5775203704834,
+          "0.25": 35.66130065917969,
+          "0.50": 39.93009948730469,
+          "0.75": 43.05207824707031,
+          "0.95": 46.21170425415039
+        }
+      },
+      "marker_sensitivity_negative_mean_abs": 1.1215111017227173,
+      "marker_sensitivity_positive_mean_abs": 4.230875015258789,
+      "model_type": "additive_tanh_rnn",
+      "n_pairs": 512,
+      "n_sequences": 1024,
+      "pairs_both_bit_grads_exact_zero": 0,
+      "pairs_zero_local_grad_but_logit_changes": 0,
+      "pairs_zero_local_grad_but_state_changes": 0,
+      "positive_logit_difference_fraction": 1.0,
+      "prediction_flip_fraction": 1.0,
+      "runtime_seconds": 0.14,
+      "seed": 29
+    },
+    {
+      "accuracy": 0.5,
+      "bit_sensitivity_negative": {
+        "count": 512,
+        "exact_computational_zeros": 512,
+        "max_abs": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min_nonzero_abs": null,
+        "nonzero_count": 0,
+        "quantiles": {
+          "0.05": 0.0,
+          "0.25": 0.0,
+          "0.50": 0.0,
+          "0.75": 0.0,
+          "0.95": 0.0
+        }
+      },
+      "bit_sensitivity_positive": {
+        "count": 512,
+        "exact_computational_zeros": 512,
+        "max_abs": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min_nonzero_abs": null,
+        "nonzero_count": 0,
+        "quantiles": {
+          "0.05": 0.0,
+          "0.25": 0.0,
+          "0.50": 0.0,
+          "0.75": 0.0,
+          "0.95": 0.0
+        }
+      },
+      "both_correct_fraction": 0.0,
+      "both_wrong_fraction": 0.0,
+      "boundary": {
+        "mean_fraction_coordinates_at_boundary": 1.0,
+        "pairs_different_boundary_sign_pattern": 0,
+        "pairs_identical_boundary_sign_pattern": 512,
+        "pairs_no_boundary_coordinate": 0,
+        "pairs_with_any_boundary_coordinate": 512
+      },
+      "delay": 64,
+      "exactly_one_correct_fraction": 1.0,
+      "final_l2": {
+        "count": 512,
+        "exact_computational_zeros": 512,
+        "max_abs": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min_nonzero_abs": null,
+        "nonzero_count": 0,
+        "quantiles": {
+          "0.05": 0.0,
+          "0.25": 0.0,
+          "0.50": 0.0,
+          "0.75": 0.0,
+          "0.95": 0.0
+        }
+      },
+      "final_sign_pattern_identical_fraction": 1.0,
+      "final_states_exactly_equal_fraction": 1.0,
+      "identical_logits_fraction": 1.0,
+      "logit_difference": {
+        "count": 512,
+        "exact_computational_zeros": 512,
+        "max_abs": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min_nonzero_abs": null,
+        "nonzero_count": 0,
+        "quantiles": {
+          "0.05": 0.0,
+          "0.25": 0.0,
+          "0.50": 0.0,
+          "0.75": 0.0,
+          "0.95": 0.0
+        }
+      },
+      "marker_sensitivity_negative_mean_abs": 0.0,
+      "marker_sensitivity_positive_mean_abs": 0.0,
+      "model_type": "bounded_additive_tanh_rnn",
+      "n_pairs": 512,
+      "n_sequences": 1024,
+      "pairs_both_bit_grads_exact_zero": 512,
+      "pairs_zero_local_grad_but_logit_changes": 0,
+      "pairs_zero_local_grad_but_state_changes": 0,
+      "positive_logit_difference_fraction": 0.0,
+      "prediction_flip_fraction": 0.0,
+      "runtime_seconds": 0.157,
+      "seed": 29
+    },
+    {
+      "accuracy": 1.0,
+      "bit_sensitivity_negative": {
+        "count": 512,
+        "exact_computational_zeros": 0,
+        "max_abs": 5.479615211486816,
+        "mean": 0.473949134349823,
+        "median": 0.2738928198814392,
+        "min_nonzero_abs": 0.00015367940068244934,
+        "nonzero_count": 512,
+        "quantiles": {
+          "0.05": -0.1964935064315796,
+          "0.25": 0.0542447566986084,
+          "0.50": 0.27427202463150024,
+          "0.75": 0.6413801908493042,
+          "0.95": 1.6835319995880127
+        }
+      },
+      "bit_sensitivity_positive": {
+        "count": 512,
+        "exact_computational_zeros": 0,
+        "max_abs": 6.422088623046875,
+        "mean": 0.6065182685852051,
+        "median": 0.3240334391593933,
+        "min_nonzero_abs": 0.0006062305765226483,
+        "nonzero_count": 512,
+        "quantiles": {
+          "0.05": -0.30978333950042725,
+          "0.25": 0.06043583154678345,
+          "0.50": 0.32456696033477783,
+          "0.75": 0.8261380195617676,
+          "0.95": 2.620459794998169
+        }
+      },
+      "both_correct_fraction": 1.0,
+      "both_wrong_fraction": 0.0,
+      "delay": 64,
+      "exactly_one_correct_fraction": 0.0,
+      "final_l2": {
+        "count": 512,
+        "exact_computational_zeros": 0,
+        "max_abs": 9.860703468322754,
+        "mean": 9.0237455368042,
+        "median": 9.169975280761719,
+        "min_nonzero_abs": 6.387636661529541,
+        "nonzero_count": 512,
+        "quantiles": {
+          "0.05": 7.714783668518066,
+          "0.25": 8.628396987915039,
+          "0.50": 9.175146102905273,
+          "0.75": 9.574965476989746,
+          "0.95": 9.798147201538086
+        }
+      },
+      "final_sign_pattern_identical_fraction": 0.0,
+      "final_states_exactly_equal_fraction": 0.0,
+      "identical_logits_fraction": 0.0,
+      "logit_difference": {
+        "count": 512,
+        "exact_computational_zeros": 0,
+        "max_abs": 11.8356294631958,
+        "mean": 10.878602981567383,
+        "median": 11.118936538696289,
+        "min_nonzero_abs": 7.888481140136719,
+        "nonzero_count": 512,
+        "quantiles": {
+          "0.05": 9.589411735534668,
+          "0.25": 10.604887008666992,
+          "0.50": 11.119569778442383,
+          "0.75": 11.304702758789062,
+          "0.95": 11.530351638793945
+        }
+      },
+      "marker_sensitivity_negative_mean_abs": 0.16589011251926422,
+      "marker_sensitivity_positive_mean_abs": 0.16633516550064087,
+      "model_type": "vanilla_tanh_rnn",
+      "n_pairs": 512,
+      "n_sequences": 1024,
+      "pairs_both_bit_grads_exact_zero": 0,
+      "pairs_zero_local_grad_but_logit_changes": 0,
+      "pairs_zero_local_grad_but_state_changes": 0,
+      "positive_logit_difference_fraction": 1.0,
+      "prediction_flip_fraction": 1.0,
+      "runtime_seconds": 0.055,
+      "seed": 43
+    },
+    {
+      "accuracy": 1.0,
+      "bit_sensitivity_negative": {
+        "count": 512,
+        "exact_computational_zeros": 0,
+        "max_abs": 616.150634765625,
+        "mean": 13.921089172363281,
+        "median": 18.006763458251953,
+        "min_nonzero_abs": 0.08686339855194092,
+        "nonzero_count": 512,
+        "quantiles": {
+          "0.05": -51.71442794799805,
+          "0.25": -6.540492057800293,
+          "0.50": 18.06698989868164,
+          "0.75": 35.88032150268555,
+          "0.95": 81.3258285522461
+        }
+      },
+      "bit_sensitivity_positive": {
+        "count": 512,
+        "exact_computational_zeros": 0,
+        "max_abs": 15.532962799072266,
+        "mean": 1.6866635084152222,
+        "median": 1.5534212589263916,
+        "min_nonzero_abs": 0.007161855697631836,
+        "nonzero_count": 512,
+        "quantiles": {
+          "0.05": 0.14826302230358124,
+          "0.25": 0.9462406039237976,
+          "0.50": 1.562299132347107,
+          "0.75": 2.492255687713623,
+          "0.95": 3.963412046432495
+        }
+      },
+      "both_correct_fraction": 1.0,
+      "both_wrong_fraction": 0.0,
+      "delay": 64,
+      "exactly_one_correct_fraction": 0.0,
+      "final_l2": {
+        "count": 512,
+        "exact_computational_zeros": 0,
+        "max_abs": 629.5587768554688,
+        "mean": 280.6015625,
+        "median": 258.1083679199219,
+        "min_nonzero_abs": 116.13642120361328,
+        "nonzero_count": 512,
+        "quantiles": {
+          "0.05": 146.5126495361328,
+          "0.25": 198.843017578125,
+          "0.50": 258.28289794921875,
+          "0.75": 320.4329833984375,
+          "0.95": 523.7086791992188
+        }
+      },
+      "final_sign_pattern_identical_fraction": 0.0,
+      "final_states_exactly_equal_fraction": 0.0,
+      "identical_logits_fraction": 0.0,
+      "logit_difference": {
+        "count": 512,
+        "exact_computational_zeros": 0,
+        "max_abs": 55.338218688964844,
+        "mean": 33.79701232910156,
+        "median": 31.435937881469727,
+        "min_nonzero_abs": 18.56259536743164,
+        "nonzero_count": 512,
+        "quantiles": {
+          "0.05": 23.049968719482422,
+          "0.25": 27.796693801879883,
+          "0.50": 31.438079833984375,
+          "0.75": 38.89425277709961,
+          "0.95": 50.29356384277344
+        }
+      },
+      "marker_sensitivity_negative_mean_abs": 12.147346496582031,
+      "marker_sensitivity_positive_mean_abs": 0.6621174812316895,
+      "model_type": "additive_tanh_rnn",
+      "n_pairs": 512,
+      "n_sequences": 1024,
+      "pairs_both_bit_grads_exact_zero": 0,
+      "pairs_zero_local_grad_but_logit_changes": 0,
+      "pairs_zero_local_grad_but_state_changes": 0,
+      "positive_logit_difference_fraction": 1.0,
+      "prediction_flip_fraction": 1.0,
+      "runtime_seconds": 0.127,
+      "seed": 43
+    },
+    {
+      "accuracy": 0.5,
+      "bit_sensitivity_negative": {
+        "count": 512,
+        "exact_computational_zeros": 512,
+        "max_abs": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min_nonzero_abs": null,
+        "nonzero_count": 0,
+        "quantiles": {
+          "0.05": 0.0,
+          "0.25": 0.0,
+          "0.50": 0.0,
+          "0.75": 0.0,
+          "0.95": 0.0
+        }
+      },
+      "bit_sensitivity_positive": {
+        "count": 512,
+        "exact_computational_zeros": 512,
+        "max_abs": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min_nonzero_abs": null,
+        "nonzero_count": 0,
+        "quantiles": {
+          "0.05": 0.0,
+          "0.25": 0.0,
+          "0.50": 0.0,
+          "0.75": 0.0,
+          "0.95": 0.0
+        }
+      },
+      "both_correct_fraction": 0.0,
+      "both_wrong_fraction": 0.0,
+      "boundary": {
+        "mean_fraction_coordinates_at_boundary": 1.0,
+        "pairs_different_boundary_sign_pattern": 0,
+        "pairs_identical_boundary_sign_pattern": 512,
+        "pairs_no_boundary_coordinate": 0,
+        "pairs_with_any_boundary_coordinate": 512
+      },
+      "delay": 64,
+      "exactly_one_correct_fraction": 1.0,
+      "final_l2": {
+        "count": 512,
+        "exact_computational_zeros": 512,
+        "max_abs": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min_nonzero_abs": null,
+        "nonzero_count": 0,
+        "quantiles": {
+          "0.05": 0.0,
+          "0.25": 0.0,
+          "0.50": 0.0,
+          "0.75": 0.0,
+          "0.95": 0.0
+        }
+      },
+      "final_sign_pattern_identical_fraction": 1.0,
+      "final_states_exactly_equal_fraction": 1.0,
+      "identical_logits_fraction": 1.0,
+      "logit_difference": {
+        "count": 512,
+        "exact_computational_zeros": 512,
+        "max_abs": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min_nonzero_abs": null,
+        "nonzero_count": 0,
+        "quantiles": {
+          "0.05": 0.0,
+          "0.25": 0.0,
+          "0.50": 0.0,
+          "0.75": 0.0,
+          "0.95": 0.0
+        }
+      },
+      "marker_sensitivity_negative_mean_abs": 0.0,
+      "marker_sensitivity_positive_mean_abs": 0.0,
+      "model_type": "bounded_additive_tanh_rnn",
+      "n_pairs": 512,
+      "n_sequences": 1024,
+      "pairs_both_bit_grads_exact_zero": 512,
+      "pairs_zero_local_grad_but_logit_changes": 0,
+      "pairs_zero_local_grad_but_state_changes": 0,
+      "positive_logit_difference_fraction": 0.0,
+      "prediction_flip_fraction": 0.0,
+      "runtime_seconds": 0.152,
+      "seed": 43
+    },
+    {
+      "accuracy": 0.529296875,
+      "bit_sensitivity_negative": {
+        "count": 512,
+        "exact_computational_zeros": 0,
+        "max_abs": 5.355237007141113,
+        "mean": -0.00019491324201226234,
+        "median": 0.000914011150598526,
+        "min_nonzero_abs": 5.999065137984871e-07,
+        "nonzero_count": 512,
+        "quantiles": {
+          "0.05": -0.0423184335231781,
+          "0.25": -0.003061578143388033,
+          "0.50": 0.0009207292459905148,
+          "0.75": 0.010011727921664715,
+          "0.95": 0.08135925978422165
+        }
+      },
+      "bit_sensitivity_positive": {
+        "count": 512,
+        "exact_computational_zeros": 0,
+        "max_abs": 1.673447847366333,
+        "mean": 0.006723117083311081,
+        "median": 0.0012453885283321142,
+        "min_nonzero_abs": 3.452599048614502e-05,
+        "nonzero_count": 512,
+        "quantiles": {
+          "0.05": -0.09982375055551529,
+          "0.25": -0.008130472153425217,
+          "0.50": 0.0012584237847477198,
+          "0.75": 0.017225459218025208,
+          "0.95": 0.11665321886539459
+        }
+      },
+      "both_correct_fraction": 0.080078125,
+      "both_wrong_fraction": 0.021484375,
+      "delay": 128,
+      "exactly_one_correct_fraction": 0.8984375,
+      "final_l2": {
+        "count": 512,
+        "exact_computational_zeros": 0,
+        "max_abs": 4.150875091552734,
+        "mean": 0.7555159330368042,
+        "median": 0.26802095770835876,
+        "min_nonzero_abs": 0.001664535142481327,
+        "nonzero_count": 512,
+        "quantiles": {
+          "0.05": 0.013815936632454395,
+          "0.25": 0.09663510322570801,
+          "0.50": 0.2702951431274414,
+          "0.75": 1.0298771858215332,
+          "0.95": 3.3856759071350098
+        }
+      },
+      "final_sign_pattern_identical_fraction": 0.369140625,
+      "final_states_exactly_equal_fraction": 0.0,
+      "identical_logits_fraction": 0.0,
+      "logit_difference": {
+        "count": 512,
+        "exact_computational_zeros": 0,
+        "max_abs": 0.6788983941078186,
+        "mean": 0.03067970648407936,
+        "median": 0.0035836994647979736,
+        "min_nonzero_abs": 4.982948303222656e-05,
+        "nonzero_count": 512,
+        "quantiles": {
+          "0.05": -0.13059301674365997,
+          "0.25": -0.009166475385427475,
+          "0.50": 0.0035920292139053345,
+          "0.75": 0.047338806092739105,
+          "0.95": 0.26075437664985657
+        }
+      },
+      "marker_sensitivity_negative_mean_abs": 0.09156367927789688,
+      "marker_sensitivity_positive_mean_abs": 0.10304698348045349,
+      "model_type": "vanilla_tanh_rnn",
+      "n_pairs": 512,
+      "n_sequences": 1024,
+      "pairs_both_bit_grads_exact_zero": 0,
+      "pairs_zero_local_grad_but_logit_changes": 0,
+      "pairs_zero_local_grad_but_state_changes": 0,
+      "positive_logit_difference_fraction": 0.580078125,
+      "prediction_flip_fraction": 0.1015625,
+      "runtime_seconds": 0.122,
+      "seed": 17
+    },
+    {
+      "accuracy": 1.0,
+      "bit_sensitivity_negative": {
+        "count": 512,
+        "exact_computational_zeros": 0,
+        "max_abs": 33.48298263549805,
+        "mean": 7.731533527374268,
+        "median": 6.040159702301025,
+        "min_nonzero_abs": 2.078521251678467,
+        "nonzero_count": 512,
+        "quantiles": {
+          "0.05": 3.479004144668579,
+          "0.25": 4.688323497772217,
+          "0.50": 6.042702674865723,
+          "0.75": 10.198583602905273,
+          "0.95": 16.241666793823242
+        }
+      },
+      "bit_sensitivity_positive": {
+        "count": 512,
+        "exact_computational_zeros": 0,
+        "max_abs": 854.882080078125,
+        "mean": 8.35851001739502,
+        "median": 1.9216933250427246,
+        "min_nonzero_abs": 0.006093263626098633,
+        "nonzero_count": 512,
+        "quantiles": {
+          "0.05": -13.709212303161621,
+          "0.25": -2.4483180046081543,
+          "0.50": 1.9249061346054077,
+          "0.75": 5.7901387214660645,
+          "0.95": 18.500991821289062
+        }
+      },
+      "both_correct_fraction": 1.0,
+      "both_wrong_fraction": 0.0,
+      "delay": 128,
+      "exactly_one_correct_fraction": 0.0,
+      "final_l2": {
+        "count": 512,
+        "exact_computational_zeros": 0,
+        "max_abs": 963.02880859375,
+        "mean": 382.60467529296875,
+        "median": 339.78863525390625,
+        "min_nonzero_abs": 149.99330139160156,
+        "nonzero_count": 512,
+        "quantiles": {
+          "0.05": 190.7617645263672,
+          "0.25": 233.367431640625,
+          "0.50": 340.6773681640625,
+          "0.75": 522.7423706054688,
+          "0.95": 612.5747680664062
+        }
+      },
+      "final_sign_pattern_identical_fraction": 0.01171875,
+      "final_states_exactly_equal_fraction": 0.0,
+      "identical_logits_fraction": 0.0,
+      "logit_difference": {
+        "count": 512,
+        "exact_computational_zeros": 0,
+        "max_abs": 98.35942077636719,
+        "mean": 44.399078369140625,
+        "median": 44.32911682128906,
+        "min_nonzero_abs": 25.668107986450195,
+        "nonzero_count": 512,
+        "quantiles": {
+          "0.05": 34.05899429321289,
+          "0.25": 39.687461853027344,
+          "0.50": 44.35633087158203,
+          "0.75": 48.545989990234375,
+          "0.95": 54.500492095947266
+        }
+      },
+      "marker_sensitivity_negative_mean_abs": 1.0527158975601196,
+      "marker_sensitivity_positive_mean_abs": 8.422876358032227,
+      "model_type": "additive_tanh_rnn",
+      "n_pairs": 512,
+      "n_sequences": 1024,
+      "pairs_both_bit_grads_exact_zero": 0,
+      "pairs_zero_local_grad_but_logit_changes": 0,
+      "pairs_zero_local_grad_but_state_changes": 0,
+      "positive_logit_difference_fraction": 1.0,
+      "prediction_flip_fraction": 1.0,
+      "runtime_seconds": 0.262,
+      "seed": 17
+    },
+    {
+      "accuracy": 1.0,
+      "bit_sensitivity_negative": {
+        "count": 512,
+        "exact_computational_zeros": 0,
+        "max_abs": 70.9075698852539,
+        "mean": 0.32230135798454285,
+        "median": -0.005376298911869526,
+        "min_nonzero_abs": 9.587204112904146e-05,
+        "nonzero_count": 512,
+        "quantiles": {
+          "0.05": -1.4960722923278809,
+          "0.25": -0.15776532888412476,
+          "0.50": -0.004987858235836029,
+          "0.75": 0.12841078639030457,
+          "0.95": 2.2813425064086914
+        }
+      },
+      "bit_sensitivity_positive": {
+        "count": 512,
+        "exact_computational_zeros": 18,
+        "max_abs": 66.12589263916016,
+        "mean": 0.41558441519737244,
+        "median": 0.10088911652565002,
+        "min_nonzero_abs": 6.649931310676038e-05,
+        "nonzero_count": 494,
+        "quantiles": {
+          "0.05": -1.4681514501571655,
+          "0.25": -0.17449961602687836,
+          "0.50": 0.10194006562232971,
+          "0.75": 0.7193443775177002,
+          "0.95": 4.203131198883057
+        }
+      },
+      "both_correct_fraction": 1.0,
+      "both_wrong_fraction": 0.0,
+      "boundary": {
+        "mean_fraction_coordinates_at_boundary": 0.93255615234375,
+        "pairs_different_boundary_sign_pattern": 512,
+        "pairs_identical_boundary_sign_pattern": 0,
+        "pairs_no_boundary_coordinate": 0,
+        "pairs_with_any_boundary_coordinate": 512
+      },
+      "delay": 128,
+      "exactly_one_correct_fraction": 0.0,
+      "final_l2": {
+        "count": 512,
+        "exact_computational_zeros": 0,
+        "max_abs": 41.45838165283203,
+        "mean": 38.70338439941406,
+        "median": 38.872894287109375,
+        "min_nonzero_abs": 34.4205207824707,
+        "nonzero_count": 512,
+        "quantiles": {
+          "0.05": 36.254493713378906,
+          "0.25": 37.757843017578125,
+          "0.50": 38.873779296875,
+          "0.75": 39.86132049560547,
+          "0.95": 40.60966110229492
+        }
+      },
+      "final_sign_pattern_identical_fraction": 0.0,
+      "final_states_exactly_equal_fraction": 0.0,
+      "identical_logits_fraction": 0.0,
+      "logit_difference": {
+        "count": 512,
+        "exact_computational_zeros": 0,
+        "max_abs": 19.867305755615234,
+        "mean": 19.30374526977539,
+        "median": 19.394973754882812,
+        "min_nonzero_abs": 15.865118026733398,
+        "nonzero_count": 512,
+        "quantiles": {
+          "0.05": 18.633621215820312,
+          "0.25": 19.110198974609375,
+          "0.50": 19.39542579650879,
+          "0.75": 19.551794052124023,
+          "0.95": 19.74956703186035
+        }
+      },
+      "marker_sensitivity_negative_mean_abs": 0.2303767055273056,
+      "marker_sensitivity_positive_mean_abs": 0.2786685824394226,
+      "model_type": "bounded_additive_tanh_rnn",
+      "n_pairs": 512,
+      "n_sequences": 1024,
+      "pairs_both_bit_grads_exact_zero": 0,
+      "pairs_zero_local_grad_but_logit_changes": 0,
+      "pairs_zero_local_grad_but_state_changes": 0,
+      "positive_logit_difference_fraction": 1.0,
+      "prediction_flip_fraction": 1.0,
+      "runtime_seconds": 0.294,
+      "seed": 17
+    },
+    {
+      "accuracy": 0.5,
+      "bit_sensitivity_negative": {
+        "count": 512,
+        "exact_computational_zeros": 0,
+        "max_abs": 2.3143138960790566e-08,
+        "mean": 1.625235390712021e-09,
+        "median": 7.52837514550464e-10,
+        "min_nonzero_abs": 6.416291109534455e-13,
+        "nonzero_count": 512,
+        "quantiles": {
+          "0.05": -2.2297295954043506e-10,
+          "0.25": 1.607043942364328e-10,
+          "0.50": 7.534833312838884e-10,
+          "0.75": 1.956514061873804e-09,
+          "0.95": 6.72110456179098e-09
+        }
+      },
+      "bit_sensitivity_positive": {
+        "count": 512,
+        "exact_computational_zeros": 0,
+        "max_abs": 2.8045288757994058e-08,
+        "mean": 1.7799934859397126e-09,
+        "median": 8.422742503455538e-10,
+        "min_nonzero_abs": 7.535818323523014e-12,
+        "nonzero_count": 512,
+        "quantiles": {
+          "0.05": -2.2274104782837867e-10,
+          "0.25": 1.932622117895022e-10,
+          "0.50": 8.422970099175586e-10,
+          "0.75": 2.143527355613628e-09,
+          "0.95": 7.132016310862355e-09
+        }
+      },
+      "both_correct_fraction": 0.0,
+      "both_wrong_fraction": 0.0,
+      "delay": 128,
+      "exactly_one_correct_fraction": 1.0,
+      "final_l2": {
+        "count": 512,
+        "exact_computational_zeros": 0,
+        "max_abs": 4.977133016836888e-07,
+        "mean": 1.4208566767592856e-07,
+        "median": 1.3534651088775718e-07,
+        "min_nonzero_abs": 5.2419480311982625e-08,
+        "nonzero_count": 512,
+        "quantiles": {
+          "0.05": 8.20029271153544e-08,
+          "0.25": 1.112140779468973e-07,
+          "0.50": 1.353721472696634e-07,
+          "0.75": 1.6255248169727565e-07,
+          "0.95": 2.3172816554506426e-07
+        }
+      },
+      "final_sign_pattern_identical_fraction": 1.0,
+      "final_states_exactly_equal_fraction": 0.0,
+      "identical_logits_fraction": 0.296875,
+      "logit_difference": {
+        "count": 512,
+        "exact_computational_zeros": 152,
+        "max_abs": 5.587935447692871e-08,
+        "mean": 3.3123797038570046e-09,
+        "median": 0.0,
+        "min_nonzero_abs": 9.313225746154785e-10,
+        "nonzero_count": 360,
+        "quantiles": {
+          "0.05": -1.4901161193847656e-08,
+          "0.25": -1.862645149230957e-09,
+          "0.50": 0.0,
+          "0.75": 1.1175870895385742e-08,
+          "0.95": 2.2351741790771484e-08
+        }
+      },
+      "marker_sensitivity_negative_mean_abs": 1.883964984017439e-09,
+      "marker_sensitivity_positive_mean_abs": 1.9803794160111465e-09,
+      "model_type": "vanilla_tanh_rnn",
+      "n_pairs": 512,
+      "n_sequences": 1024,
+      "pairs_both_bit_grads_exact_zero": 0,
+      "pairs_zero_local_grad_but_logit_changes": 0,
+      "pairs_zero_local_grad_but_state_changes": 0,
+      "positive_logit_difference_fraction": 0.44921875,
+      "prediction_flip_fraction": 0.0,
+      "runtime_seconds": 0.114,
+      "seed": 29
+    },
+    {
+      "accuracy": 1.0,
+      "bit_sensitivity_negative": {
+        "count": 512,
+        "exact_computational_zeros": 0,
+        "max_abs": 74.903076171875,
+        "mean": 3.150249719619751,
+        "median": 3.007812738418579,
+        "min_nonzero_abs": 0.008421003818511963,
+        "nonzero_count": 512,
+        "quantiles": {
+          "0.05": -24.9019832611084,
+          "0.25": -4.495903015136719,
+          "0.50": 3.0176045894622803,
+          "0.75": 11.838912963867188,
+          "0.95": 26.617868423461914
+        }
+      },
+      "bit_sensitivity_positive": {
+        "count": 512,
+        "exact_computational_zeros": 0,
+        "max_abs": 163.28335571289062,
+        "mean": 39.81451416015625,
+        "median": 39.86955261230469,
+        "min_nonzero_abs": 0.01912243664264679,
+        "nonzero_count": 512,
+        "quantiles": {
+          "0.05": -10.774252891540527,
+          "0.25": 24.183521270751953,
+          "0.50": 40.116241455078125,
+          "0.75": 62.99330139160156,
+          "0.95": 94.98841094970703
+        }
+      },
+      "both_correct_fraction": 1.0,
+      "both_wrong_fraction": 0.0,
+      "delay": 128,
+      "exactly_one_correct_fraction": 0.0,
+      "final_l2": {
+        "count": 512,
+        "exact_computational_zeros": 0,
+        "max_abs": 869.5844116210938,
+        "mean": 568.625,
+        "median": 616.4495849609375,
+        "min_nonzero_abs": 281.6327819824219,
+        "nonzero_count": 512,
+        "quantiles": {
+          "0.05": 310.5987243652344,
+          "0.25": 375.2414855957031,
+          "0.50": 616.6377563476562,
+          "0.75": 741.126220703125,
+          "0.95": 813.3209228515625
+        }
+      },
+      "final_sign_pattern_identical_fraction": 0.0,
+      "final_states_exactly_equal_fraction": 0.0,
+      "identical_logits_fraction": 0.0,
+      "logit_difference": {
+        "count": 512,
+        "exact_computational_zeros": 0,
+        "max_abs": 123.47159576416016,
+        "mean": 76.8680191040039,
+        "median": 83.52642822265625,
+        "min_nonzero_abs": 28.383525848388672,
+        "nonzero_count": 512,
+        "quantiles": {
+          "0.05": 35.384368896484375,
+          "0.25": 46.629791259765625,
+          "0.50": 83.58938598632812,
+          "0.75": 105.3756103515625,
+          "0.95": 112.5718994140625
+        }
+      },
+      "marker_sensitivity_negative_mean_abs": 1.6688295602798462,
+      "marker_sensitivity_positive_mean_abs": 10.357749938964844,
+      "model_type": "additive_tanh_rnn",
+      "n_pairs": 512,
+      "n_sequences": 1024,
+      "pairs_both_bit_grads_exact_zero": 0,
+      "pairs_zero_local_grad_but_logit_changes": 0,
+      "pairs_zero_local_grad_but_state_changes": 0,
+      "positive_logit_difference_fraction": 1.0,
+      "prediction_flip_fraction": 1.0,
+      "runtime_seconds": 0.266,
+      "seed": 29
+    },
+    {
+      "accuracy": 0.5,
+      "bit_sensitivity_negative": {
+        "count": 512,
+        "exact_computational_zeros": 512,
+        "max_abs": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min_nonzero_abs": null,
+        "nonzero_count": 0,
+        "quantiles": {
+          "0.05": 0.0,
+          "0.25": 0.0,
+          "0.50": 0.0,
+          "0.75": 0.0,
+          "0.95": 0.0
+        }
+      },
+      "bit_sensitivity_positive": {
+        "count": 512,
+        "exact_computational_zeros": 512,
+        "max_abs": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min_nonzero_abs": null,
+        "nonzero_count": 0,
+        "quantiles": {
+          "0.05": 0.0,
+          "0.25": 0.0,
+          "0.50": 0.0,
+          "0.75": 0.0,
+          "0.95": 0.0
+        }
+      },
+      "both_correct_fraction": 0.0,
+      "both_wrong_fraction": 0.0,
+      "boundary": {
+        "mean_fraction_coordinates_at_boundary": 1.0,
+        "pairs_different_boundary_sign_pattern": 0,
+        "pairs_identical_boundary_sign_pattern": 512,
+        "pairs_no_boundary_coordinate": 0,
+        "pairs_with_any_boundary_coordinate": 512
+      },
+      "delay": 128,
+      "exactly_one_correct_fraction": 1.0,
+      "final_l2": {
+        "count": 512,
+        "exact_computational_zeros": 512,
+        "max_abs": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min_nonzero_abs": null,
+        "nonzero_count": 0,
+        "quantiles": {
+          "0.05": 0.0,
+          "0.25": 0.0,
+          "0.50": 0.0,
+          "0.75": 0.0,
+          "0.95": 0.0
+        }
+      },
+      "final_sign_pattern_identical_fraction": 1.0,
+      "final_states_exactly_equal_fraction": 1.0,
+      "identical_logits_fraction": 1.0,
+      "logit_difference": {
+        "count": 512,
+        "exact_computational_zeros": 512,
+        "max_abs": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min_nonzero_abs": null,
+        "nonzero_count": 0,
+        "quantiles": {
+          "0.05": 0.0,
+          "0.25": 0.0,
+          "0.50": 0.0,
+          "0.75": 0.0,
+          "0.95": 0.0
+        }
+      },
+      "marker_sensitivity_negative_mean_abs": 0.0,
+      "marker_sensitivity_positive_mean_abs": 0.0,
+      "model_type": "bounded_additive_tanh_rnn",
+      "n_pairs": 512,
+      "n_sequences": 1024,
+      "pairs_both_bit_grads_exact_zero": 512,
+      "pairs_zero_local_grad_but_logit_changes": 0,
+      "pairs_zero_local_grad_but_state_changes": 0,
+      "positive_logit_difference_fraction": 0.0,
+      "prediction_flip_fraction": 0.0,
+      "runtime_seconds": 0.307,
+      "seed": 29
+    },
+    {
+      "accuracy": 0.5,
+      "bit_sensitivity_negative": {
+        "count": 512,
+        "exact_computational_zeros": 0,
+        "max_abs": 0.013412603177130222,
+        "mean": -1.3997769201523624e-05,
+        "median": -7.317452173083439e-07,
+        "min_nonzero_abs": 2.1649434245318844e-08,
+        "nonzero_count": 512,
+        "quantiles": {
+          "0.05": -0.0002836286148522049,
+          "0.25": -2.613790456962306e-05,
+          "0.50": -7.018192604846263e-07,
+          "0.75": 1.015170528262388e-05,
+          "0.95": 0.0002144571190001443
+        }
+      },
+      "bit_sensitivity_positive": {
+        "count": 512,
+        "exact_computational_zeros": 0,
+        "max_abs": 0.0040743169374763966,
+        "mean": -4.12843182857614e-05,
+        "median": -2.487227277470083e-07,
+        "min_nonzero_abs": 1.8256767209123836e-09,
+        "nonzero_count": 512,
+        "quantiles": {
+          "0.05": -0.0004655134107451886,
+          "0.25": -2.6484918635105714e-05,
+          "0.50": -2.1082135504002508e-07,
+          "0.75": 1.3386389582592528e-05,
+          "0.95": 0.0001930602447828278
+        }
+      },
+      "both_correct_fraction": 0.0,
+      "both_wrong_fraction": 0.0,
+      "delay": 128,
+      "exactly_one_correct_fraction": 1.0,
+      "final_l2": {
+        "count": 512,
+        "exact_computational_zeros": 0,
+        "max_abs": 0.43792060017585754,
+        "mean": 0.01699558086693287,
+        "median": 0.003174810204654932,
+        "min_nonzero_abs": 1.6762522818680736e-06,
+        "nonzero_count": 512,
+        "quantiles": {
+          "0.05": 7.995616033440456e-05,
+          "0.25": 0.0007920453790575266,
+          "0.50": 0.0031892675906419754,
+          "0.75": 0.011386198922991753,
+          "0.95": 0.07081370055675507
+        }
+      },
+      "final_sign_pattern_identical_fraction": 0.939453125,
+      "final_states_exactly_equal_fraction": 0.0,
+      "identical_logits_fraction": 0.00390625,
+      "logit_difference": {
+        "count": 512,
+        "exact_computational_zeros": 2,
+        "max_abs": 0.011329181492328644,
+        "mean": -9.555194992572069e-05,
+        "median": -1.3709068298339844e-06,
+        "min_nonzero_abs": 7.450580596923828e-09,
+        "nonzero_count": 510,
+        "quantiles": {
+          "0.05": -0.0007370215025730431,
+          "0.25": -6.937794387340546e-05,
+          "0.50": -1.3560056686401367e-06,
+          "0.75": 3.6988407373428345e-05,
+          "0.95": 0.0006467794883064926
+        }
+      },
+      "marker_sensitivity_negative_mean_abs": 0.00013767287600785494,
+      "marker_sensitivity_positive_mean_abs": 0.00011800827633123845,
+      "model_type": "vanilla_tanh_rnn",
+      "n_pairs": 512,
+      "n_sequences": 1024,
+      "pairs_both_bit_grads_exact_zero": 0,
+      "pairs_zero_local_grad_but_logit_changes": 0,
+      "pairs_zero_local_grad_but_state_changes": 0,
+      "positive_logit_difference_fraction": 0.462890625,
+      "prediction_flip_fraction": 0.0,
+      "runtime_seconds": 0.113,
+      "seed": 43
+    },
+    {
+      "accuracy": 1.0,
+      "bit_sensitivity_negative": {
+        "count": 512,
+        "exact_computational_zeros": 0,
+        "max_abs": 4475.796875,
+        "mean": 4.457042694091797,
+        "median": 51.101959228515625,
+        "min_nonzero_abs": 0.7513006925582886,
+        "nonzero_count": 512,
+        "quantiles": {
+          "0.05": -301.785888671875,
+          "0.25": -35.11933135986328,
+          "0.50": 51.30276107788086,
+          "0.75": 89.89408874511719,
+          "0.95": 169.2427215576172
+        }
+      },
+      "bit_sensitivity_positive": {
+        "count": 512,
+        "exact_computational_zeros": 0,
+        "max_abs": 9.078182220458984,
+        "mean": 1.4953237771987915,
+        "median": 1.0266083478927612,
+        "min_nonzero_abs": 0.0015669465065002441,
+        "nonzero_count": 512,
+        "quantiles": {
+          "0.05": -0.18978849053382874,
+          "0.25": 0.36685535311698914,
+          "0.50": 1.0307056903839111,
+          "0.75": 2.3864197731018066,
+          "0.95": 4.293556213378906
+        }
+      },
+      "both_correct_fraction": 1.0,
+      "both_wrong_fraction": 0.0,
+      "delay": 128,
+      "exactly_one_correct_fraction": 0.0,
+      "final_l2": {
+        "count": 512,
+        "exact_computational_zeros": 0,
+        "max_abs": 1319.4970703125,
+        "mean": 583.2366333007812,
+        "median": 479.32855224609375,
+        "min_nonzero_abs": 162.14544677734375,
+        "nonzero_count": 512,
+        "quantiles": {
+          "0.05": 267.51947021484375,
+          "0.25": 381.99639892578125,
+          "0.50": 479.9098205566406,
+          "0.75": 751.2581176757812,
+          "0.95": 1300.6729736328125
+        }
+      },
+      "final_sign_pattern_identical_fraction": 0.0,
+      "final_states_exactly_equal_fraction": 0.0,
+      "identical_logits_fraction": 0.0,
+      "logit_difference": {
+        "count": 512,
+        "exact_computational_zeros": 0,
+        "max_abs": 109.03645324707031,
+        "mean": 75.27320098876953,
+        "median": 74.26384735107422,
+        "min_nonzero_abs": 29.789047241210938,
+        "nonzero_count": 512,
+        "quantiles": {
+          "0.05": 49.8985710144043,
+          "0.25": 60.973018646240234,
+          "0.50": 74.3714599609375,
+          "0.75": 90.59771728515625,
+          "0.95": 101.29532623291016
+        }
+      },
+      "marker_sensitivity_negative_mean_abs": 51.394744873046875,
+      "marker_sensitivity_positive_mean_abs": 0.6788715124130249,
+      "model_type": "additive_tanh_rnn",
+      "n_pairs": 512,
+      "n_sequences": 1024,
+      "pairs_both_bit_grads_exact_zero": 0,
+      "pairs_zero_local_grad_but_logit_changes": 0,
+      "pairs_zero_local_grad_but_state_changes": 0,
+      "positive_logit_difference_fraction": 1.0,
+      "prediction_flip_fraction": 1.0,
+      "runtime_seconds": 0.269,
+      "seed": 43
+    },
+    {
+      "accuracy": 0.6162109375,
+      "bit_sensitivity_negative": {
+        "count": 512,
+        "exact_computational_zeros": 512,
+        "max_abs": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min_nonzero_abs": null,
+        "nonzero_count": 0,
+        "quantiles": {
+          "0.05": 0.0,
+          "0.25": 0.0,
+          "0.50": 0.0,
+          "0.75": 0.0,
+          "0.95": 0.0
+        }
+      },
+      "bit_sensitivity_positive": {
+        "count": 512,
+        "exact_computational_zeros": 512,
+        "max_abs": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min_nonzero_abs": null,
+        "nonzero_count": 0,
+        "quantiles": {
+          "0.05": 0.0,
+          "0.25": 0.0,
+          "0.50": 0.0,
+          "0.75": 0.0,
+          "0.95": 0.0
+        }
+      },
+      "both_correct_fraction": 0.232421875,
+      "both_wrong_fraction": 0.0,
+      "boundary": {
+        "mean_fraction_coordinates_at_boundary": 1.0,
+        "pairs_different_boundary_sign_pattern": 119,
+        "pairs_identical_boundary_sign_pattern": 393,
+        "pairs_no_boundary_coordinate": 0,
+        "pairs_with_any_boundary_coordinate": 512
+      },
+      "delay": 128,
+      "exactly_one_correct_fraction": 0.767578125,
+      "final_l2": {
+        "count": 512,
+        "exact_computational_zeros": 393,
+        "max_abs": 13.856406211853027,
+        "mean": 3.220531940460205,
+        "median": 0.0,
+        "min_nonzero_abs": 13.856406211853027,
+        "nonzero_count": 119,
+        "quantiles": {
+          "0.05": 0.0,
+          "0.25": 0.0,
+          "0.50": 0.0,
+          "0.75": 0.0,
+          "0.95": 13.856406211853027
+        }
+      },
+      "final_sign_pattern_identical_fraction": 0.767578125,
+      "final_states_exactly_equal_fraction": 0.767578125,
+      "identical_logits_fraction": 0.767578125,
+      "logit_difference": {
+        "count": 512,
+        "exact_computational_zeros": 393,
+        "max_abs": 4.597555160522461,
+        "mean": 1.0685724020004272,
+        "median": 0.0,
+        "min_nonzero_abs": 4.597555160522461,
+        "nonzero_count": 119,
+        "quantiles": {
+          "0.05": 0.0,
+          "0.25": 0.0,
+          "0.50": 0.0,
+          "0.75": 0.0,
+          "0.95": 4.597555160522461
+        }
+      },
+      "marker_sensitivity_negative_mean_abs": 0.0,
+      "marker_sensitivity_positive_mean_abs": 0.0,
+      "model_type": "bounded_additive_tanh_rnn",
+      "n_pairs": 512,
+      "n_sequences": 1024,
+      "pairs_both_bit_grads_exact_zero": 512,
+      "pairs_zero_local_grad_but_logit_changes": 119,
+      "pairs_zero_local_grad_but_state_changes": 119,
+      "positive_logit_difference_fraction": 0.232421875,
+      "prediction_flip_fraction": 0.232421875,
+      "runtime_seconds": 0.268,
+      "seed": 43
+    }
+  ],
+  "total_wall_seconds": 162.521
+}

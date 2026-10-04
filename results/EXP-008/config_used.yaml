@@ -1,0 +1,102 @@
+# EXP-008 preregistration. Parameter groups, seeds, and the gate were fixed
+# before any EXP-008 accuracy was collected.
+experiment_id: EXP-008
+config_revision: 1
+status: preregistered_before_training
+device: cpu
+model_equation: "h_t = h_{t-1} + tanh(W_h h_{t-1} + W_x x_t + b_h + b_x)"
+seeds: [101, 113, 127, 139, 151, 163, 179, 191, 211, 223]
+delays:
+  primary: 64
+  secondary: 128
+regimes:
+  - full
+  - readout_only
+  - input_plus_readout
+  - recurrent_plus_readout
+parameter_names:
+  input_side:
+    - recurrent.weight_ih_l0
+    - recurrent.bias_ih_l0
+  recurrent_side:
+    - recurrent.weight_hh_l0
+    - recurrent.bias_hh_l0
+  readout:
+    - readout.weight
+    - readout.bias
+frozen_by_regime:
+  full: []
+  readout_only:
+    - recurrent.weight_ih_l0
+    - recurrent.weight_hh_l0
+    - recurrent.bias_ih_l0
+    - recurrent.bias_hh_l0
+  input_plus_readout:
+    - recurrent.weight_hh_l0
+    - recurrent.bias_hh_l0
+  recurrent_plus_readout:
+    - recurrent.weight_ih_l0
+    - recurrent.bias_ih_l0
+limitations:
+  biases: "b_x and b_h are added inside the same preactivation. They are not separate physical memory mechanisms."
+  input_matrix: "W_x is shared across timesteps, so input-side learning can affect the event, distractors, and query. It is not only learning to write the first bit."
+  clipping: "Gradient clipping is applied to the trainable set of that regime. Changing the trainable set changes the clipping operation."
+model:
+  type: additive_tanh_rnn
+  input_size: 3
+  hidden_size: 32
+  output_size: 1
+  initial_hidden_state: zero
+bound_unchanged: 4.0
+training:
+  optimizer: Adam
+  adam_defaults: "betas (0.9, 0.999), eps 1e-8"
+  learning_rate: 0.003
+  batch_size: 64
+  eval_batch_size: 256
+  updates_per_run: 400
+  grad_clip_norm: 5.0
+  loss: binary_cross_entropy_with_logits
+  diagnostic_updates: [0, 50, 100, 200, 400]
+  checkpoint_selection: final update only
+task:
+  run_mode: HARD_V2
+  distractor_noise_std: 0.3
+  competitor_rate: 0.4
+  competitor_flip_prob: 0.5
+data:
+  train_samples: 1536
+  val_samples: 512
+  test_samples: 512
+  base_seed: 2000
+  audit_split_index: 3
+  audit_samples: 512
+interpretation:
+  success_test_accuracy_at_least: 0.95
+  delay_128_gate: "fresh delay-128 training for all four regimes only if full additive succeeds on at least 8 of 10 delay-64 seeds"
+  do_not_pool_with_earlier_counts: true
+  outcomes:
+    A: "Input-side plus readout succeeds with W_h and b_h fixed."
+    B: "Recurrent-side plus readout succeeds and input-side plus readout does not."
+    C: "Both partial regimes succeed."
+    D: "Only full training reliably succeeds."
+    E: "Readout-only now succeeds substantially, or the full control fails. Investigate before a new mechanism claim."
+budget:
+  max_cpu_seconds_per_run: 300
+  max_cpu_seconds_total: 900
+  no_automatic_retry: true
+  interruption: "If interrupted, skip condition keys already saved and count prior file span toward the 900-second cap. Do not retrain completed conditions."
+environment_requirement:
+  python: "3.11.9"
+  torch: "2.13.0+cpu"
+outputs:
+  directory: results/EXP-008
+  refuse_overwrite_of_completed_conditions: true
+diagnostics:
+  bit_channel: "gradient of the final logit w.r.t. inputs[:, 0, 0]"
+  marker_channel: "gradient w.r.t. inputs[:, 0, 1], stored separately"
+  checkpoint_probe_split: "validation indices 0:256 fit and 256:512 score"
+  final_probe: "fit on all validation states, score on test states"
+  exact_state_equality: "direct coordinate equality"
+  computational_zero: "a recorded float equal to 0.0"
+  paired_forward_tolerance: 1.0e-5

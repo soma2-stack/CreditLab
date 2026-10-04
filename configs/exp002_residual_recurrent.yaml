@@ -1,0 +1,81 @@
+# EXP-002 preregistration. residual_scale and the success/retention cutoffs
+# were fixed before any EXP-002 test measurement. Do not change them after
+# seeing test accuracy.
+experiment_id: EXP-002
+config_revision: 1
+status: preregistered
+seeds: [17, 29, 43]
+device: cpu
+hypothesis: >
+  At delay 64 on corrected HARD-v2, the vanilla tanh RNN is unreliable because
+  useful state and useful learning signal must repeatedly pass through the
+  recurrent transformation. A fixed direct residual path through hidden state
+  should make success more reliable across seeds.
+models:
+  - vanilla_tanh_rnn
+  - residual_tanh_rnn
+model:
+  input_size: 3
+  hidden_size: 32
+  output_size: 1
+residual:
+  formulation: "h_t = h_{t-1} + residual_scale * tanh(W_h h_{t-1} + W_x x_t + b)"
+  residual_scale: 1.0
+  scale_chosen_before_test_results: true
+  scale_is_learned: false
+  why_this_scale: >
+    Scale 1 copies the previous hidden state forward and adds the usual tanh
+    candidate. A convex mix such as one half would multiply that direct copy
+    by one half at every step, so almost none of it would remain after 64
+    steps. No scale search is part of this experiment.
+interpretation:
+  success_test_accuracy_at_least: 0.75
+  retention_clearly_readable_r2_at_least: 0.5
+  cutoff_source: >
+    Set from frozen EXP-001B HARD-v2 outcomes before EXP-002 ran. Failed
+    seeds were near 0.46-0.50 accuracy with probe R^2 near zero. Successful
+    seeds were at 0.96-1.00 accuracy with probe R^2 about 0.87-0.99.
+task:
+  type: delayed_marked_bit
+  run_mode: HARD_V2
+  primary_delay: 64
+  confirmation_delay: 128
+  generator: EXP-001B make_split path, unchanged
+  inherited_generator_note: >
+    The shared make_split helper applies distractor noise 1.0 only when mode
+    is HARD. HARD_V2 therefore keeps independent competitor bits at rate 0.4
+    but uses the EASY noise standard deviation 0.3. EXP-002 does not change
+    that helper. The HARD_V2 noise value below is the config record; the
+    runner applies noise through the same helper as EXP-001B.
+  modes:
+    EASY:
+      distractor_noise_std: 0.3
+    HARD:
+      distractor_noise_std: 1.0
+      competitor_rate: 0.4
+      competitor_flip_prob: 0.5
+    HARD_V2:
+      distractor_noise_std: 1.0
+      competitor_rate: 0.4
+      competitor_flip_prob: 0.5
+training:
+  optimizer: Adam
+  learning_rate: 0.003
+  batch_size: 64
+  eval_batch_size: 256
+  updates_per_run: 400
+  grad_clip_norm: 5.0
+  loss: binary_cross_entropy_with_logits
+data:
+  train_samples: 1536
+  val_samples: 512
+  test_samples: 512
+  base_seed: 1000
+budget:
+  stop_on_nan_or_inf: true
+  no_automatic_budget_expansion: true
+  no_residual_scale_tuning: true
+outputs:
+  directory: results/EXP-002
+  raw_metrics: raw_metrics.jsonl
+  summary_metrics: summary.csv

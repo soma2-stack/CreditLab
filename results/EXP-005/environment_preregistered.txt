@@ -1,0 +1,4 @@
+Python: 3.11.9
+PyTorch: 2.13.0+cpu
+CPU architecture: AMD64
+Required before replay and audit. Do not install a substitute.

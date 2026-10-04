@@ -1,0 +1,58 @@
+{
+  "regimes": {
+    "bias_plus_readout": {
+      "frozen": [
+        "recurrent.weight_ih_l0",
+        "recurrent.weight_hh_l0",
+        "recurrent.bias_hh_l0"
+      ],
+      "trainable": [
+        "recurrent.bias_ih_l0",
+        "readout.weight",
+        "readout.bias"
+      ],
+      "trainable_count": 65
+    },
+    "full": {
+      "frozen": [],
+      "trainable": [
+        "recurrent.weight_ih_l0",
+        "recurrent.weight_hh_l0",
+        "recurrent.bias_ih_l0",
+        "recurrent.bias_hh_l0",
+        "readout.weight",
+        "readout.bias"
+      ],
+      "trainable_count": 1217
+    },
+    "matrices_plus_readout": {
+      "frozen": [
+        "recurrent.bias_ih_l0",
+        "recurrent.bias_hh_l0"
+      ],
+      "trainable": [
+        "recurrent.weight_ih_l0",
+        "recurrent.weight_hh_l0",
+        "readout.weight",
+        "readout.bias"
+      ],
+      "trainable_count": 1153
+    },
+    "readout_only": {
+      "frozen": [
+        "recurrent.weight_ih_l0",
+        "recurrent.weight_hh_l0",
+        "recurrent.bias_ih_l0",
+        "recurrent.bias_hh_l0"
+      ],
+      "trainable": [
+        "readout.weight",
+        "readout.bias"
+      ],
+      "trainable_count": 33
+    }
+  },
+  "seed_used_for_count_check": 101,
+  "single_trainable_preactivation_bias": "recurrent.bias_ih_l0",
+  "total_parameters": 1217
+}

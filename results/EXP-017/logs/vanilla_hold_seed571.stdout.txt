@@ -1,0 +1,1 @@
+{"condition": "vanilla_hold", "seed": 571, "status": "ok", "test_accuracy": 0.494140625}

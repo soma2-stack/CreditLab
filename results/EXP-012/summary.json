@@ -1,0 +1,10 @@
+{
+  "code_revision": "bc4fcdd1e130d7177bb0de55ef8d3b7e18755cbb",
+  "completed": 80,
+  "elapsed_seconds": 15.582,
+  "inconclusive": 0,
+  "sklearn": "1.9.1",
+  "timing_method": "time.perf_counter inside this process",
+  "unstarted": [],
+  "verified_checkpoints": 80
+}

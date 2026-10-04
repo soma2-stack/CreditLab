@@ -1,0 +1,69 @@
+{
+  "additive_delay64_successes": 3,
+  "bound": 4.0,
+  "cells": [
+    {
+      "delay": 64,
+      "model_type": "additive_tanh_rnn",
+      "num_not_success": 0,
+      "num_numerical_or_budget_failures": 0,
+      "num_seeds": 3,
+      "num_success": 3,
+      "phase": "primary"
+    },
+    {
+      "delay": 64,
+      "model_type": "bounded_additive_tanh_rnn",
+      "num_not_success": 2,
+      "num_numerical_or_budget_failures": 0,
+      "num_seeds": 3,
+      "num_success": 1,
+      "phase": "primary"
+    },
+    {
+      "delay": 64,
+      "model_type": "vanilla_tanh_rnn",
+      "num_not_success": 2,
+      "num_numerical_or_budget_failures": 0,
+      "num_seeds": 3,
+      "num_success": 1,
+      "phase": "primary"
+    },
+    {
+      "delay": 128,
+      "model_type": "additive_tanh_rnn",
+      "num_not_success": 0,
+      "num_numerical_or_budget_failures": 0,
+      "num_seeds": 3,
+      "num_success": 3,
+      "phase": "secondary"
+    },
+    {
+      "delay": 128,
+      "model_type": "bounded_additive_tanh_rnn",
+      "num_not_success": 2,
+      "num_numerical_or_budget_failures": 0,
+      "num_seeds": 3,
+      "num_success": 1,
+      "phase": "secondary"
+    },
+    {
+      "delay": 128,
+      "model_type": "vanilla_tanh_rnn",
+      "num_not_success": 3,
+      "num_numerical_or_budget_failures": 0,
+      "num_seeds": 3,
+      "num_success": 0,
+      "phase": "secondary"
+    }
+  ],
+  "code_revision": "14bdc4786549081938d4a58b9023c5ef076c3395",
+  "delay_128_ran": true,
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "success_test_accuracy_at_least": 0.95,
+  "total_wall_seconds": 153.867
+}

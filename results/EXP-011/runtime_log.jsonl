@@ -1,0 +1,160 @@
+{"applied_per_run_cap_seconds": 300.0, "condition": "full_history_clip5", "delay": 64, "event": "start", "seed": 101, "session_elapsed_seconds": 0.056, "started_unix": 1791079973.03028}
+{"condition": "full_history_clip5", "delay": 64, "event": "finish", "runtime_seconds": 10.482, "seed": 101, "session_elapsed_seconds": 10.56, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "final_16_clip5", "delay": 64, "event": "start", "seed": 101, "session_elapsed_seconds": 10.561, "started_unix": 1791079983.5344622}
+{"condition": "final_16_clip5", "delay": 64, "event": "finish", "runtime_seconds": 9.459, "seed": 101, "session_elapsed_seconds": 20.035, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "full_history_noclip", "delay": 64, "event": "start", "seed": 101, "session_elapsed_seconds": 20.036, "started_unix": 1791079993.0100567}
+{"condition": "full_history_noclip", "delay": 64, "event": "finish", "runtime_seconds": 9.29, "seed": 101, "session_elapsed_seconds": 29.341, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "final_16_noclip", "delay": 64, "event": "start", "seed": 101, "session_elapsed_seconds": 29.341, "started_unix": 1791080002.315263}
+{"condition": "final_16_noclip", "delay": 64, "event": "finish", "runtime_seconds": 9.216, "seed": 101, "session_elapsed_seconds": 38.573, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "full_history_clip5", "delay": 64, "event": "start", "seed": 113, "session_elapsed_seconds": 38.62, "started_unix": 1791080011.5943906}
+{"condition": "full_history_clip5", "delay": 64, "event": "finish", "runtime_seconds": 6.649, "seed": 113, "session_elapsed_seconds": 45.286, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "final_16_clip5", "delay": 64, "event": "start", "seed": 113, "session_elapsed_seconds": 45.287, "started_unix": 1791080018.2608309}
+{"condition": "final_16_clip5", "delay": 64, "event": "finish", "runtime_seconds": 6.389, "seed": 113, "session_elapsed_seconds": 51.691, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "full_history_noclip", "delay": 64, "event": "start", "seed": 113, "session_elapsed_seconds": 51.692, "started_unix": 1791080024.6657288}
+{"condition": "full_history_noclip", "delay": 64, "event": "finish", "runtime_seconds": 6.31, "seed": 113, "session_elapsed_seconds": 58.018, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "final_16_noclip", "delay": 64, "event": "start", "seed": 113, "session_elapsed_seconds": 58.018, "started_unix": 1791080030.9921844}
+{"condition": "final_16_noclip", "delay": 64, "event": "finish", "runtime_seconds": 6.381, "seed": 113, "session_elapsed_seconds": 64.414, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "full_history_clip5", "delay": 64, "event": "start", "seed": 127, "session_elapsed_seconds": 64.449, "started_unix": 1791080037.4234636}
+{"condition": "full_history_clip5", "delay": 64, "event": "finish", "runtime_seconds": 6.365, "seed": 127, "session_elapsed_seconds": 70.83, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "final_16_clip5", "delay": 64, "event": "start", "seed": 127, "session_elapsed_seconds": 70.831, "started_unix": 1791080043.8051944}
+{"condition": "final_16_clip5", "delay": 64, "event": "finish", "runtime_seconds": 6.573, "seed": 127, "session_elapsed_seconds": 77.42, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "full_history_noclip", "delay": 64, "event": "start", "seed": 127, "session_elapsed_seconds": 77.42, "started_unix": 1791080050.395025}
+{"condition": "full_history_noclip", "delay": 64, "event": "finish", "runtime_seconds": 6.402, "seed": 127, "session_elapsed_seconds": 83.838, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "final_16_noclip", "delay": 64, "event": "start", "seed": 127, "session_elapsed_seconds": 83.839, "started_unix": 1791080056.813353}
+{"condition": "final_16_noclip", "delay": 64, "event": "finish", "runtime_seconds": 6.34, "seed": 127, "session_elapsed_seconds": 90.195, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "full_history_clip5", "delay": 64, "event": "start", "seed": 139, "session_elapsed_seconds": 90.224, "started_unix": 1791080063.1976576}
+{"condition": "full_history_clip5", "delay": 64, "event": "finish", "runtime_seconds": 6.404, "seed": 139, "session_elapsed_seconds": 96.643, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "final_16_clip5", "delay": 64, "event": "start", "seed": 139, "session_elapsed_seconds": 96.644, "started_unix": 1791080069.617496}
+{"condition": "final_16_clip5", "delay": 64, "event": "finish", "runtime_seconds": 6.66, "seed": 139, "session_elapsed_seconds": 103.32, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "full_history_noclip", "delay": 64, "event": "start", "seed": 139, "session_elapsed_seconds": 103.321, "started_unix": 1791080076.2952394}
+{"condition": "full_history_noclip", "delay": 64, "event": "finish", "runtime_seconds": 6.386, "seed": 139, "session_elapsed_seconds": 109.723, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "final_16_noclip", "delay": 64, "event": "start", "seed": 139, "session_elapsed_seconds": 109.724, "started_unix": 1791080082.6975772}
+{"condition": "final_16_noclip", "delay": 64, "event": "finish", "runtime_seconds": 6.543, "seed": 139, "session_elapsed_seconds": 116.285, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "full_history_clip5", "delay": 64, "event": "start", "seed": 151, "session_elapsed_seconds": 116.317, "started_unix": 1791080089.2914462}
+{"condition": "full_history_clip5", "delay": 64, "event": "finish", "runtime_seconds": 6.345, "seed": 151, "session_elapsed_seconds": 122.679, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "final_16_clip5", "delay": 64, "event": "start", "seed": 151, "session_elapsed_seconds": 122.679, "started_unix": 1791080095.6529403}
+{"condition": "final_16_clip5", "delay": 64, "event": "finish", "runtime_seconds": 6.445, "seed": 151, "session_elapsed_seconds": 129.14, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "full_history_noclip", "delay": 64, "event": "start", "seed": 151, "session_elapsed_seconds": 129.141, "started_unix": 1791080102.115412}
+{"condition": "full_history_noclip", "delay": 64, "event": "finish", "runtime_seconds": 6.334, "seed": 151, "session_elapsed_seconds": 135.491, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "final_16_noclip", "delay": 64, "event": "start", "seed": 151, "session_elapsed_seconds": 135.491, "started_unix": 1791080108.464946}
+{"condition": "final_16_noclip", "delay": 64, "event": "finish", "runtime_seconds": 6.474, "seed": 151, "session_elapsed_seconds": 141.981, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "full_history_clip5", "delay": 64, "event": "start", "seed": 163, "session_elapsed_seconds": 142.011, "started_unix": 1791080114.9853618}
+{"condition": "full_history_clip5", "delay": 64, "event": "finish", "runtime_seconds": 6.487, "seed": 163, "session_elapsed_seconds": 148.513, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "final_16_clip5", "delay": 64, "event": "start", "seed": 163, "session_elapsed_seconds": 148.513, "started_unix": 1791080121.4871805}
+{"condition": "final_16_clip5", "delay": 64, "event": "finish", "runtime_seconds": 6.189, "seed": 163, "session_elapsed_seconds": 154.72, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "full_history_noclip", "delay": 64, "event": "start", "seed": 163, "session_elapsed_seconds": 154.721, "started_unix": 1791080127.694937}
+{"condition": "full_history_noclip", "delay": 64, "event": "finish", "runtime_seconds": 6.241, "seed": 163, "session_elapsed_seconds": 160.977, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "final_16_noclip", "delay": 64, "event": "start", "seed": 163, "session_elapsed_seconds": 160.977, "started_unix": 1791080133.951253}
+{"condition": "final_16_noclip", "delay": 64, "event": "finish", "runtime_seconds": 6.336, "seed": 163, "session_elapsed_seconds": 167.328, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "full_history_clip5", "delay": 64, "event": "start", "seed": 179, "session_elapsed_seconds": 167.373, "started_unix": 1791080140.3470232}
+{"condition": "full_history_clip5", "delay": 64, "event": "finish", "runtime_seconds": 6.58, "seed": 179, "session_elapsed_seconds": 173.97, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "final_16_clip5", "delay": 64, "event": "start", "seed": 179, "session_elapsed_seconds": 173.971, "started_unix": 1791080146.9456348}
+{"condition": "final_16_clip5", "delay": 64, "event": "finish", "runtime_seconds": 6.268, "seed": 179, "session_elapsed_seconds": 180.254, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "full_history_noclip", "delay": 64, "event": "start", "seed": 179, "session_elapsed_seconds": 180.255, "started_unix": 1791080153.229619}
+{"condition": "full_history_noclip", "delay": 64, "event": "finish", "runtime_seconds": 6.198, "seed": 179, "session_elapsed_seconds": 186.469, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "final_16_noclip", "delay": 64, "event": "start", "seed": 179, "session_elapsed_seconds": 186.469, "started_unix": 1791080159.443332}
+{"condition": "final_16_noclip", "delay": 64, "event": "finish", "runtime_seconds": 8.197, "seed": 179, "session_elapsed_seconds": 194.685, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "full_history_clip5", "delay": 64, "event": "start", "seed": 191, "session_elapsed_seconds": 194.738, "started_unix": 1791080167.7123988}
+{"condition": "full_history_clip5", "delay": 64, "event": "finish", "runtime_seconds": 9.219, "seed": 191, "session_elapsed_seconds": 203.971, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "final_16_clip5", "delay": 64, "event": "start", "seed": 191, "session_elapsed_seconds": 203.972, "started_unix": 1791080176.946111}
+{"condition": "final_16_clip5", "delay": 64, "event": "finish", "runtime_seconds": 6.296, "seed": 191, "session_elapsed_seconds": 210.284, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "full_history_noclip", "delay": 64, "event": "start", "seed": 191, "session_elapsed_seconds": 210.285, "started_unix": 1791080183.2592676}
+{"condition": "full_history_noclip", "delay": 64, "event": "finish", "runtime_seconds": 6.55, "seed": 191, "session_elapsed_seconds": 216.854, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "final_16_noclip", "delay": 64, "event": "start", "seed": 191, "session_elapsed_seconds": 216.855, "started_unix": 1791080189.828831}
+{"condition": "final_16_noclip", "delay": 64, "event": "finish", "runtime_seconds": 9.723, "seed": 191, "session_elapsed_seconds": 226.594, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "full_history_clip5", "delay": 64, "event": "start", "seed": 211, "session_elapsed_seconds": 226.641, "started_unix": 1791080199.6154978}
+{"condition": "full_history_clip5", "delay": 64, "event": "finish", "runtime_seconds": 9.819, "seed": 211, "session_elapsed_seconds": 236.477, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "final_16_clip5", "delay": 64, "event": "start", "seed": 211, "session_elapsed_seconds": 236.478, "started_unix": 1791080209.4521556}
+{"condition": "final_16_clip5", "delay": 64, "event": "finish", "runtime_seconds": 6.349, "seed": 211, "session_elapsed_seconds": 242.843, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "full_history_noclip", "delay": 64, "event": "start", "seed": 211, "session_elapsed_seconds": 242.844, "started_unix": 1791080215.8183355}
+{"condition": "full_history_noclip", "delay": 64, "event": "finish", "runtime_seconds": 6.087, "seed": 211, "session_elapsed_seconds": 248.946, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "final_16_noclip", "delay": 64, "event": "start", "seed": 211, "session_elapsed_seconds": 248.946, "started_unix": 1791080221.9204824}
+{"condition": "final_16_noclip", "delay": 64, "event": "finish", "runtime_seconds": 6.438, "seed": 211, "session_elapsed_seconds": 255.4, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "full_history_clip5", "delay": 64, "event": "start", "seed": 223, "session_elapsed_seconds": 255.429, "started_unix": 1791080228.4040983}
+{"condition": "full_history_clip5", "delay": 64, "event": "finish", "runtime_seconds": 6.487, "seed": 223, "session_elapsed_seconds": 261.933, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "final_16_clip5", "delay": 64, "event": "start", "seed": 223, "session_elapsed_seconds": 261.934, "started_unix": 1791080234.9082432}
+{"condition": "final_16_clip5", "delay": 64, "event": "finish", "runtime_seconds": 9.892, "seed": 223, "session_elapsed_seconds": 271.844, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "full_history_noclip", "delay": 64, "event": "start", "seed": 223, "session_elapsed_seconds": 271.844, "started_unix": 1791080244.8180094}
+{"condition": "full_history_noclip", "delay": 64, "event": "finish", "runtime_seconds": 9.324, "seed": 223, "session_elapsed_seconds": 281.185, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "final_16_noclip", "delay": 64, "event": "start", "seed": 223, "session_elapsed_seconds": 281.186, "started_unix": 1791080254.1596484}
+{"condition": "final_16_noclip", "delay": 64, "event": "finish", "runtime_seconds": 9.22, "seed": 223, "session_elapsed_seconds": 290.421, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "full_history_clip5", "delay": 128, "event": "start", "seed": 101, "session_elapsed_seconds": 290.498, "started_unix": 1791080263.4730353}
+{"condition": "full_history_clip5", "delay": 128, "event": "finish", "runtime_seconds": 19.209, "seed": 101, "session_elapsed_seconds": 309.723, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "final_16_clip5", "delay": 128, "event": "start", "seed": 101, "session_elapsed_seconds": 309.724, "started_unix": 1791080282.6977448}
+{"condition": "final_16_clip5", "delay": 128, "event": "finish", "runtime_seconds": 12.776, "seed": 101, "session_elapsed_seconds": 322.517, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "full_history_noclip", "delay": 128, "event": "start", "seed": 101, "session_elapsed_seconds": 322.518, "started_unix": 1791080295.4918926}
+{"condition": "full_history_noclip", "delay": 128, "event": "finish", "runtime_seconds": 13.921, "seed": 101, "session_elapsed_seconds": 336.455, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "final_16_noclip", "delay": 128, "event": "start", "seed": 101, "session_elapsed_seconds": 336.456, "started_unix": 1791080309.4300776}
+{"condition": "final_16_noclip", "delay": 128, "event": "finish", "runtime_seconds": 17.162, "seed": 101, "session_elapsed_seconds": 353.639, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "full_history_clip5", "delay": 128, "event": "start", "seed": 113, "session_elapsed_seconds": 353.73, "started_unix": 1791080326.704662}
+{"condition": "full_history_clip5", "delay": 128, "event": "finish", "runtime_seconds": 29.305, "seed": 113, "session_elapsed_seconds": 383.051, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "final_16_clip5", "delay": 128, "event": "start", "seed": 113, "session_elapsed_seconds": 383.051, "started_unix": 1791080356.0257673}
+{"condition": "final_16_clip5", "delay": 128, "event": "finish", "runtime_seconds": 11.383, "seed": 113, "session_elapsed_seconds": 394.452, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "full_history_noclip", "delay": 128, "event": "start", "seed": 113, "session_elapsed_seconds": 394.453, "started_unix": 1791080367.427433}
+{"condition": "full_history_noclip", "delay": 128, "event": "finish", "runtime_seconds": 16.034, "seed": 113, "session_elapsed_seconds": 410.501, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "final_16_noclip", "delay": 128, "event": "start", "seed": 113, "session_elapsed_seconds": 410.502, "started_unix": 1791080383.4760623}
+{"condition": "final_16_noclip", "delay": 128, "event": "finish", "runtime_seconds": 18.233, "seed": 113, "session_elapsed_seconds": 428.749, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "full_history_clip5", "delay": 128, "event": "start", "seed": 127, "session_elapsed_seconds": 428.821, "started_unix": 1791080401.795611}
+{"condition": "full_history_clip5", "delay": 128, "event": "finish", "runtime_seconds": 18.009, "seed": 127, "session_elapsed_seconds": 446.846, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "final_16_clip5", "delay": 128, "event": "start", "seed": 127, "session_elapsed_seconds": 446.847, "started_unix": 1791080419.8206482}
+{"condition": "final_16_clip5", "delay": 128, "event": "finish", "runtime_seconds": 17.578, "seed": 127, "session_elapsed_seconds": 464.444, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "full_history_noclip", "delay": 128, "event": "start", "seed": 127, "session_elapsed_seconds": 464.444, "started_unix": 1791080437.4186025}
+{"condition": "full_history_noclip", "delay": 128, "event": "finish", "runtime_seconds": 17.441, "seed": 127, "session_elapsed_seconds": 481.899, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "final_16_noclip", "delay": 128, "event": "start", "seed": 127, "session_elapsed_seconds": 481.899, "started_unix": 1791080454.8742378}
+{"condition": "final_16_noclip", "delay": 128, "event": "finish", "runtime_seconds": 18.816, "seed": 127, "session_elapsed_seconds": 500.733, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "full_history_clip5", "delay": 128, "event": "start", "seed": 139, "session_elapsed_seconds": 500.815, "started_unix": 1791080473.7894783}
+{"condition": "full_history_clip5", "delay": 128, "event": "finish", "runtime_seconds": 18.793, "seed": 139, "session_elapsed_seconds": 519.626, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "final_16_clip5", "delay": 128, "event": "start", "seed": 139, "session_elapsed_seconds": 519.627, "started_unix": 1791080492.6010962}
+{"condition": "final_16_clip5", "delay": 128, "event": "finish", "runtime_seconds": 17.192, "seed": 139, "session_elapsed_seconds": 536.834, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "full_history_noclip", "delay": 128, "event": "start", "seed": 139, "session_elapsed_seconds": 536.835, "started_unix": 1791080509.809298}
+{"condition": "full_history_noclip", "delay": 128, "event": "finish", "runtime_seconds": 17.104, "seed": 139, "session_elapsed_seconds": 553.955, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "final_16_noclip", "delay": 128, "event": "start", "seed": 139, "session_elapsed_seconds": 553.955, "started_unix": 1791080526.9299703}
+{"condition": "final_16_noclip", "delay": 128, "event": "finish", "runtime_seconds": 17.182, "seed": 139, "session_elapsed_seconds": 571.156, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "full_history_clip5", "delay": 128, "event": "start", "seed": 151, "session_elapsed_seconds": 571.242, "started_unix": 1791080544.2153504}
+{"condition": "full_history_clip5", "delay": 128, "event": "finish", "runtime_seconds": 17.738, "seed": 151, "session_elapsed_seconds": 588.996, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "final_16_clip5", "delay": 128, "event": "start", "seed": 151, "session_elapsed_seconds": 588.997, "started_unix": 1791080561.9713154}
+{"condition": "final_16_clip5", "delay": 128, "event": "finish", "runtime_seconds": 18.233, "seed": 151, "session_elapsed_seconds": 607.246, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "full_history_noclip", "delay": 128, "event": "start", "seed": 151, "session_elapsed_seconds": 607.246, "started_unix": 1791080580.2205791}
+{"condition": "full_history_noclip", "delay": 128, "event": "finish", "runtime_seconds": 17.641, "seed": 151, "session_elapsed_seconds": 624.906, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "final_16_noclip", "delay": 128, "event": "start", "seed": 151, "session_elapsed_seconds": 624.907, "started_unix": 1791080597.881275}
+{"condition": "final_16_noclip", "delay": 128, "event": "finish", "runtime_seconds": 16.535, "seed": 151, "session_elapsed_seconds": 641.458, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "full_history_clip5", "delay": 128, "event": "start", "seed": 163, "session_elapsed_seconds": 641.54, "started_unix": 1791080614.514902}
+{"condition": "full_history_clip5", "delay": 128, "event": "finish", "runtime_seconds": 25.681, "seed": 163, "session_elapsed_seconds": 667.237, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "final_16_clip5", "delay": 128, "event": "start", "seed": 163, "session_elapsed_seconds": 667.238, "started_unix": 1791080640.2119224}
+{"condition": "final_16_clip5", "delay": 128, "event": "finish", "runtime_seconds": 17.658, "seed": 163, "session_elapsed_seconds": 684.915, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "full_history_noclip", "delay": 128, "event": "start", "seed": 163, "session_elapsed_seconds": 684.915, "started_unix": 1791080657.8893085}
+{"condition": "full_history_noclip", "delay": 128, "event": "finish", "runtime_seconds": 16.985, "seed": 163, "session_elapsed_seconds": 701.917, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "final_16_noclip", "delay": 128, "event": "start", "seed": 163, "session_elapsed_seconds": 701.918, "started_unix": 1791080674.8918495}
+{"condition": "final_16_noclip", "delay": 128, "event": "finish", "runtime_seconds": 16.996, "seed": 163, "session_elapsed_seconds": 718.93, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "full_history_clip5", "delay": 128, "event": "start", "seed": 179, "session_elapsed_seconds": 719.007, "started_unix": 1791080691.9809804}
+{"condition": "full_history_clip5", "delay": 128, "event": "finish", "runtime_seconds": 17.602, "seed": 179, "session_elapsed_seconds": 736.626, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "final_16_clip5", "delay": 128, "event": "start", "seed": 179, "session_elapsed_seconds": 736.627, "started_unix": 1791080709.601553}
+{"condition": "final_16_clip5", "delay": 128, "event": "finish", "runtime_seconds": 17.164, "seed": 179, "session_elapsed_seconds": 753.808, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "full_history_noclip", "delay": 128, "event": "start", "seed": 179, "session_elapsed_seconds": 753.809, "started_unix": 1791080726.7827475}
+{"condition": "full_history_noclip", "delay": 128, "event": "finish", "runtime_seconds": 17.195, "seed": 179, "session_elapsed_seconds": 771.019, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "final_16_noclip", "delay": 128, "event": "start", "seed": 179, "session_elapsed_seconds": 771.02, "started_unix": 1791080743.99448}
+{"condition": "final_16_noclip", "delay": 128, "event": "finish", "runtime_seconds": 17.163, "seed": 179, "session_elapsed_seconds": 788.196, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "full_history_clip5", "delay": 128, "event": "start", "seed": 191, "session_elapsed_seconds": 788.269, "started_unix": 1791080761.243209}
+{"condition": "full_history_clip5", "delay": 128, "event": "finish", "runtime_seconds": 18.229, "seed": 191, "session_elapsed_seconds": 806.513, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "final_16_clip5", "delay": 128, "event": "start", "seed": 191, "session_elapsed_seconds": 806.513, "started_unix": 1791080779.4879704}
+{"condition": "final_16_clip5", "delay": 128, "event": "finish", "runtime_seconds": 17.712, "seed": 191, "session_elapsed_seconds": 824.241, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "full_history_noclip", "delay": 128, "event": "start", "seed": 191, "session_elapsed_seconds": 824.242, "started_unix": 1791080797.2165835}
+{"condition": "full_history_noclip", "delay": 128, "event": "finish", "runtime_seconds": 17.084, "seed": 191, "session_elapsed_seconds": 841.343, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "final_16_noclip", "delay": 128, "event": "start", "seed": 191, "session_elapsed_seconds": 841.344, "started_unix": 1791080814.3182507}
+{"condition": "final_16_noclip", "delay": 128, "event": "finish", "runtime_seconds": 16.157, "seed": 191, "session_elapsed_seconds": 857.519, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "full_history_clip5", "delay": 128, "event": "start", "seed": 211, "session_elapsed_seconds": 857.602, "started_unix": 1791080830.5765967}
+{"condition": "full_history_clip5", "delay": 128, "event": "finish", "runtime_seconds": 18.666, "seed": 211, "session_elapsed_seconds": 876.286, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "final_16_clip5", "delay": 128, "event": "start", "seed": 211, "session_elapsed_seconds": 876.287, "started_unix": 1791080849.2614021}
+{"condition": "final_16_clip5", "delay": 128, "event": "finish", "runtime_seconds": 18.311, "seed": 211, "session_elapsed_seconds": 894.614, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 300.0, "condition": "full_history_noclip", "delay": 128, "event": "start", "seed": 211, "session_elapsed_seconds": 894.615, "started_unix": 1791080867.5895772}
+{"condition": "full_history_noclip", "delay": 128, "event": "finish", "runtime_seconds": 17.233, "seed": 211, "session_elapsed_seconds": 911.864, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 288.13580659999934, "condition": "final_16_noclip", "delay": 128, "event": "start", "seed": 211, "session_elapsed_seconds": 911.864, "started_unix": 1791080884.8384857}
+{"condition": "final_16_noclip", "delay": 128, "event": "finish", "runtime_seconds": 16.913, "seed": 211, "session_elapsed_seconds": 928.793, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 271.1316338999968, "condition": "full_history_clip5", "delay": 128, "event": "start", "seed": 223, "session_elapsed_seconds": 928.868, "started_unix": 1791080901.8428068}
+{"condition": "full_history_clip5", "delay": 128, "event": "finish", "runtime_seconds": 18.077, "seed": 223, "session_elapsed_seconds": 946.962, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 253.03708069999993, "condition": "final_16_clip5", "delay": 128, "event": "start", "seed": 223, "session_elapsed_seconds": 946.963, "started_unix": 1791080919.937433}
+{"condition": "final_16_clip5", "delay": 128, "event": "finish", "runtime_seconds": 15.593, "seed": 223, "session_elapsed_seconds": 962.573, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 237.42661450000014, "condition": "full_history_noclip", "delay": 128, "event": "start", "seed": 223, "session_elapsed_seconds": 962.573, "started_unix": 1791080935.5475917}
+{"condition": "full_history_noclip", "delay": 128, "event": "finish", "runtime_seconds": 14.722, "seed": 223, "session_elapsed_seconds": 977.311, "status": "ok", "updates_completed": 400}
+{"applied_per_run_cap_seconds": 222.68809369999872, "condition": "final_16_noclip", "delay": 128, "event": "start", "seed": 223, "session_elapsed_seconds": 977.312, "started_unix": 1791080950.2865207}
+{"condition": "final_16_noclip", "delay": 128, "event": "finish", "runtime_seconds": 17.991, "seed": 223, "session_elapsed_seconds": 995.323, "status": "ok", "updates_completed": 400}

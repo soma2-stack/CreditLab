@@ -1,0 +1,7 @@
+{
+  "budget_seconds": 300,
+  "code_revision": "7b132c6ce6981a679fa0339c9c6d6141f7bb27d9",
+  "experiment_id": "EXP-013",
+  "started_unix": 1791083473.5764096,
+  "timing_method": "time.perf_counter inside this process"
+}

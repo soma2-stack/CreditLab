@@ -1,0 +1,6 @@
+Python: 3.11.9
+PyTorch: 2.13.0+cpu
+CPU architecture: AMD64
+Audit code revision: 3ebc12f0e3898de7053076d223211992c7c43a61
+Recovery: deterministic replay because EXP-004 saved no checkpoints.
+No optimizer steps are taken during the audit.

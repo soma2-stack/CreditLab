@@ -1,0 +1,172 @@
+{
+  "checks": [
+    {
+      "condition": "vanilla_noise0p3",
+      "correct": 253,
+      "seed": 401,
+      "sha256": "c2c3da610fbb1e934908fd006f00246e37a784b136931f0ec8b855f6877e7b42"
+    },
+    {
+      "condition": "additive_noise0p3",
+      "correct": 512,
+      "seed": 401,
+      "sha256": "9ae4bfe6b176be540902e6a47de646a574fa34d7ed008b7f59aeab7e2be564fa"
+    },
+    {
+      "condition": "vanilla_noise1p0",
+      "correct": 259,
+      "seed": 401,
+      "sha256": "df5ef86af0c63ecba4e3b31183dae345222a879c7e73a634a81b2490a6aa052c"
+    },
+    {
+      "condition": "additive_noise1p0",
+      "correct": 512,
+      "seed": 401,
+      "sha256": "b626bf90edeb228534617ddaf59f50c6247c23e7e35f711687861c1e83483306"
+    },
+    {
+      "condition": "vanilla_noise0p3",
+      "correct": 265,
+      "seed": 409,
+      "sha256": "b303c222f9083f65cd5283cd5f8a3d4b3b8a03950713bbb565f57e5012be479e"
+    },
+    {
+      "condition": "additive_noise0p3",
+      "correct": 512,
+      "seed": 409,
+      "sha256": "1735ab55840fd54b00920ddb8ff3ac896e2b68e44ff56039089ac857749b5664"
+    },
+    {
+      "condition": "vanilla_noise1p0",
+      "correct": 247,
+      "seed": 409,
+      "sha256": "127ebc401f4fc9bcc63f3273b97575667486c402340db2526a41da93b97bb83c"
+    },
+    {
+      "condition": "additive_noise1p0",
+      "correct": 512,
+      "seed": 409,
+      "sha256": "2efe11bfa34bea23d1ad7ad4a63b34dab1dd8ee5d99d9693e7950e95cf0fb843"
+    },
+    {
+      "condition": "vanilla_noise0p3",
+      "correct": 259,
+      "seed": 419,
+      "sha256": "8bf222b2347cd2325ec097b9458a21e2f24a6edc2babfa82ac3371f57e919c85"
+    },
+    {
+      "condition": "additive_noise0p3",
+      "correct": 512,
+      "seed": 419,
+      "sha256": "6d201aa8d34ae2e5b3bdc8bc5e508c022f227bc5dfc4d7890edd265bd9c1f863"
+    },
+    {
+      "condition": "vanilla_noise1p0",
+      "correct": 271,
+      "seed": 419,
+      "sha256": "b3aa99f2f2ee9a0e49fb80d31cd0327e3a147c412ed022ebbc72e05d20b70a61"
+    },
+    {
+      "condition": "additive_noise1p0",
+      "correct": 512,
+      "seed": 419,
+      "sha256": "b54733160377d5615c329496bf202f6952d96b0bb60a1b739d1766f8512c31b7"
+    },
+    {
+      "condition": "vanilla_noise0p3",
+      "correct": 374,
+      "seed": 421,
+      "sha256": "57414b419dddd2934b5deecd79b2c50a2dd6a558be2b079955e456f6d926582b"
+    },
+    {
+      "condition": "additive_noise0p3",
+      "correct": 512,
+      "seed": 421,
+      "sha256": "3c005a09c9f223a7499d69072378879d3a883908f784b05fa3b82ee0bcf2f80b"
+    },
+    {
+      "condition": "vanilla_noise1p0",
+      "correct": 292,
+      "seed": 421,
+      "sha256": "05e4124365fb18e3213ee0d351243e366fbcd0a7d7490f0c22745733fa4aea45"
+    },
+    {
+      "condition": "additive_noise1p0",
+      "correct": 512,
+      "seed": 421,
+      "sha256": "cdce30d4ea3ce7dcede6634831a31c2c678b2f250888a93573e5bfeea7ba45aa"
+    },
+    {
+      "condition": "vanilla_noise0p3",
+      "correct": 259,
+      "seed": 431,
+      "sha256": "13fd785725ee1b42d1d1d96159010a755b1065c10dbb34ad10fabbbbba92e5d8"
+    },
+    {
+      "condition": "additive_noise0p3",
+      "correct": 512,
+      "seed": 431,
+      "sha256": "9477254de73545991006050d5f0e685021f3b302c12d6ebc431ac7d201b17457"
+    },
+    {
+      "condition": "vanilla_noise1p0",
+      "correct": 273,
+      "seed": 431,
+      "sha256": "a0683b2779be569f5b06ab4458553df4002567de86e8808f9b7aaea9a1aae5fe"
+    },
+    {
+      "condition": "additive_noise1p0",
+      "correct": 512,
+      "seed": 431,
+      "sha256": "3961805d1cda5971b1e931d561a6ca150162f17b1cba1b6dc522cca1babbc366"
+    },
+    {
+      "condition": "vanilla_noise0p3",
+      "correct": 278,
+      "seed": 433,
+      "sha256": "a94a3840fd7c229edfc5958135b948852c678c60b53cda37541412e03f07458a"
+    },
+    {
+      "condition": "additive_noise0p3",
+      "correct": 512,
+      "seed": 433,
+      "sha256": "418f93d93cb9156e6bff7115a556eac45ec230e7cd4a47d692f2c8ffb3c1f6a8"
+    },
+    {
+      "condition": "vanilla_noise1p0",
+      "correct": 234,
+      "seed": 433,
+      "sha256": "b0c1f10084264398a9f982079812eaf5ef227fd81e83b5455aa5f93c6cd371db"
+    },
+    {
+      "condition": "additive_noise1p0",
+      "correct": 512,
+      "seed": 433,
+      "sha256": "122980971218fcd994010af2accfca715f8eee7870ec7502047c975128318eb7"
+    },
+    {
+      "condition": "vanilla_noise0p3",
+      "correct": 259,
+      "seed": 439,
+      "sha256": "f871466bdd86dde77874e812f7a3ab4bfbf20169918e3ad1a87805b443e0a633"
+    },
+    {
+      "condition": "additive_noise0p3",
+      "correct": 512,
+      "seed": 439,
+      "sha256": "b2f3b1e30404700fc43bf0eba1534db3bf8193aff8fa58b73f8e3ec1a6ee52e1"
+    }
+  ],
+  "interruption_cause": {
+    "cause": "unknown",
+    "condition": "vanilla_noise1p0",
+    "exception_text_in_runtime_log": false,
+    "finish_records": 0,
+    "last_recorded_session_seconds": 218.353,
+    "note": "A start record has no finish record. No exception text and no stderr file were saved. This is not evidence of a timeout or an out-of-memory event.",
+    "seed": 439,
+    "start_records": 1,
+    "stderr_files": []
+  },
+  "reused": 26
+}

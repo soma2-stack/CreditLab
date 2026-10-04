@@ -1,0 +1,44 @@
+[
+  {
+    "base_fingerprint": "6d55f888898ac29249235485c358fd96eaaaa25f4c85d815e9f36f202dd6ff2d",
+    "delay": 64,
+    "run_seed": 17,
+    "seed": 17,
+    "split_index": 3
+  },
+  {
+    "base_fingerprint": "92afc2eb451399cb21b5bac496926d3450e3f4de5ac0f3f1d17c381a9bbbe260",
+    "delay": 64,
+    "run_seed": 29,
+    "seed": 29,
+    "split_index": 3
+  },
+  {
+    "base_fingerprint": "b6ac2305dcdfa6485d41aa7454af81378b9486b9cca790ae03e71d830a2d6222",
+    "delay": 64,
+    "run_seed": 43,
+    "seed": 43,
+    "split_index": 3
+  },
+  {
+    "base_fingerprint": "066d528896ce6e6113521456899a5ed98328ff7991a2398435e1ceb72ccc9f4c",
+    "delay": 128,
+    "run_seed": 17,
+    "seed": 17,
+    "split_index": 3
+  },
+  {
+    "base_fingerprint": "9206e486569026f024b3d0d80daa7f9b6dd17c5eafc623cc5dae3af37b1e1f31",
+    "delay": 128,
+    "run_seed": 29,
+    "seed": 29,
+    "split_index": 3
+  },
+  {
+    "base_fingerprint": "72b8062522b04a830c22a4a4045d738acb0b8de0b7ec10172cfa6e0ff079483f",
+    "delay": 128,
+    "run_seed": 43,
+    "seed": 43,
+    "split_index": 3
+  }
+]

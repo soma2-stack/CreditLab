@@ -1,0 +1,1 @@
+{"model_type": "whole_reset_additive", "seed": 761, "status": "ok", "test_accuracy": 0.521484375}

@@ -1,0 +1,1 @@
+{"condition": "additive_noise1p0", "seed": 449, "status": "ok", "test_accuracy": 1.0}

@@ -1,0 +1,1 @@
+{"condition": "vanilla_noise1p0", "seed": 457, "status": "ok", "test_accuracy": 0.490234375}

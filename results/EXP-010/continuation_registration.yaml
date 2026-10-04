@@ -1,0 +1,21 @@
+experiment_id: EXP-010
+kind: preregistration
+k: 16
+regimes:
+- full_history
+- final_16
+seeds:
+- 101
+- 113
+- 127
+- 139
+- 151
+- 163
+- 179
+- 191
+- 211
+- 223
+forward_match: direct_equality
+budget_seconds: 600
+per_run_seconds: 300
+note: K stays 16. This is a backward cutoff, not a new model.

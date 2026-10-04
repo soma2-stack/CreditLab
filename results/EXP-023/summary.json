@@ -1,0 +1,6937 @@
+{
+  "experiment_id": "EXP-023",
+  "elapsed_seconds": 24.502,
+  "unstarted": [],
+  "records": [
+    {
+      "experiment_id": "EXP-023",
+      "seed": 701,
+      "model_type": "additive_tanh_rnn",
+      "source_checkpoint_sha256": "a2ae5c0ddabae364dda411a4d6d95328e694a49c29ce25e9e0a27b38a915fb54",
+      "weight_fingerprint": "ffe81a0cbb69ba2765c6e6cb4fa01d5f62a93ef87e322e5130d2a6eed3eeb0f8",
+      "reproduced_correct": 256,
+      "original_loss": 1.4801995158195496,
+      "original_accuracy": 0.5,
+      "fit_rows": 1536,
+      "iterations": [
+        189,
+        189
+      ],
+      "converged": true,
+      "convergence_warnings": [
+        [],
+        []
+      ],
+      "val": {
+        "size": 512,
+        "slot0": {
+          "correct": 448,
+          "loss": 0.38145910005716654,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 256,
+              "accuracy": 1.0
+            },
+            "updated": {
+              "size": 128,
+              "correct": 64,
+              "accuracy": 0.5
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 128,
+              "accuracy": 1.0
+            }
+          }
+        },
+        "slot1": {
+          "correct": 446,
+          "loss": 0.41181515267756297,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 256,
+              "accuracy": 1.0
+            },
+            "updated": {
+              "size": 128,
+              "correct": 62,
+              "accuracy": 0.484375
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 128,
+              "accuracy": 1.0
+            }
+          }
+        },
+        "both_correct": 382,
+        "routed_correct": 448,
+        "routed_loss": 0.39982411096593656,
+        "subgroups": {
+          "no_replacement_query0": {
+            "size": 128,
+            "correct": 128,
+            "accuracy": 1.0
+          },
+          "no_replacement_query1": {
+            "size": 128,
+            "correct": 128,
+            "accuracy": 1.0
+          },
+          "replacement_updated_same": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_updated_conflict": {
+            "size": 64,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "replacement_untouched_query0": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_untouched_query1": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "updated_slot_address_0": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          },
+          "updated_slot_address_1": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          }
+        }
+      },
+      "test": {
+        "size": 512,
+        "slot0": {
+          "correct": 448,
+          "loss": 0.3850585894359956,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 256,
+              "accuracy": 1.0
+            },
+            "updated": {
+              "size": 128,
+              "correct": 64,
+              "accuracy": 0.5
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 128,
+              "accuracy": 1.0
+            }
+          }
+        },
+        "slot1": {
+          "correct": 448,
+          "loss": 0.40652251383577453,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 256,
+              "accuracy": 1.0
+            },
+            "updated": {
+              "size": 128,
+              "correct": 64,
+              "accuracy": 0.5
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 128,
+              "accuracy": 1.0
+            }
+          }
+        },
+        "both_correct": 384,
+        "routed_correct": 448,
+        "routed_loss": 0.4008922848102648,
+        "subgroups": {
+          "no_replacement_query0": {
+            "size": 128,
+            "correct": 128,
+            "accuracy": 1.0
+          },
+          "no_replacement_query1": {
+            "size": 128,
+            "correct": 128,
+            "accuracy": 1.0
+          },
+          "replacement_updated_same": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_updated_conflict": {
+            "size": 64,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "replacement_untouched_query0": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_untouched_query1": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "updated_slot_address_0": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          },
+          "updated_slot_address_1": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          }
+        }
+      },
+      "success": false,
+      "status": "ok",
+      "audits": {
+        "marked_new_bit": {
+          "pairs": 256,
+          "both_correct": 0,
+          "prequery_state_equal": 39
+        },
+        "untouched_bit": {
+          "pairs": 256,
+          "both_correct": 256,
+          "prequery_state_equal": 0
+        },
+        "obsolete_bit": {
+          "pairs": 256,
+          "both_correct": 0,
+          "prequery_state_equal": 0
+        },
+        "unmarked_new_bit": {
+          "pairs": 256,
+          "both_correct": 256,
+          "prequery_state_equal": 49
+        },
+        "query_switch": {
+          "histories": 256,
+          "histories_with_different_current_values": 128,
+          "both_correct_on_different_values": 96,
+          "both_correct_on_all_histories": 191
+        }
+      },
+      "classifier_sha256": "f35a5230afa40bfb58851dbdd42e0a38de16a0d85a584b18ba93e7eb583d855d"
+    },
+    {
+      "experiment_id": "EXP-023",
+      "seed": 701,
+      "model_type": "whole_reset_additive",
+      "source_checkpoint_sha256": "90eb5c68467f2fbda5dd4edfa0ae5ed57c3c26861fa3306d013aacc4ce1271dd",
+      "weight_fingerprint": "6bae04b443318c2a93d8c729388fb6d56d176229e00e41856a9a4637b119d9b5",
+      "reproduced_correct": 256,
+      "original_loss": 0.9054261147975922,
+      "original_accuracy": 0.5,
+      "fit_rows": 1536,
+      "iterations": [
+        112,
+        77
+      ],
+      "converged": true,
+      "convergence_warnings": [
+        [],
+        []
+      ],
+      "val": {
+        "size": 512,
+        "slot0": {
+          "correct": 318,
+          "loss": 0.6732555615347868,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 128,
+              "accuracy": 0.5
+            },
+            "updated": {
+              "size": 128,
+              "correct": 128,
+              "accuracy": 1.0
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 62,
+              "accuracy": 0.484375
+            }
+          }
+        },
+        "slot1": {
+          "correct": 443,
+          "loss": 0.4301572420455586,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 253,
+              "accuracy": 0.98828125
+            },
+            "updated": {
+              "size": 128,
+              "correct": 126,
+              "accuracy": 0.984375
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 64,
+              "accuracy": 0.5
+            }
+          }
+        },
+        "both_correct": 252,
+        "routed_correct": 379,
+        "routed_loss": 0.563591829490301,
+        "subgroups": {
+          "no_replacement_query0": {
+            "size": 128,
+            "correct": 65,
+            "accuracy": 0.5078125
+          },
+          "no_replacement_query1": {
+            "size": 128,
+            "correct": 127,
+            "accuracy": 0.9921875
+          },
+          "replacement_updated_same": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_updated_conflict": {
+            "size": 64,
+            "correct": 62,
+            "accuracy": 0.96875
+          },
+          "replacement_untouched_query0": {
+            "size": 64,
+            "correct": 30,
+            "accuracy": 0.46875
+          },
+          "replacement_untouched_query1": {
+            "size": 64,
+            "correct": 31,
+            "accuracy": 0.484375
+          },
+          "updated_slot_address_0": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "updated_slot_address_1": {
+            "size": 64,
+            "correct": 62,
+            "accuracy": 0.96875
+          }
+        }
+      },
+      "test": {
+        "size": 512,
+        "slot0": {
+          "correct": 319,
+          "loss": 0.6635310093121926,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 127,
+              "accuracy": 0.49609375
+            },
+            "updated": {
+              "size": 128,
+              "correct": 127,
+              "accuracy": 0.9921875
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 65,
+              "accuracy": 0.5078125
+            }
+          }
+        },
+        "slot1": {
+          "correct": 446,
+          "loss": 0.4202451373261348,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 255,
+              "accuracy": 0.99609375
+            },
+            "updated": {
+              "size": 128,
+              "correct": 128,
+              "accuracy": 1.0
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 63,
+              "accuracy": 0.4921875
+            }
+          }
+        },
+        "both_correct": 255,
+        "routed_correct": 381,
+        "routed_loss": 0.5383401515692829,
+        "subgroups": {
+          "no_replacement_query0": {
+            "size": 128,
+            "correct": 64,
+            "accuracy": 0.5
+          },
+          "no_replacement_query1": {
+            "size": 128,
+            "correct": 127,
+            "accuracy": 0.9921875
+          },
+          "replacement_updated_same": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_updated_conflict": {
+            "size": 64,
+            "correct": 63,
+            "accuracy": 0.984375
+          },
+          "replacement_untouched_query0": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          },
+          "replacement_untouched_query1": {
+            "size": 64,
+            "correct": 31,
+            "accuracy": 0.484375
+          },
+          "updated_slot_address_0": {
+            "size": 64,
+            "correct": 63,
+            "accuracy": 0.984375
+          },
+          "updated_slot_address_1": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          }
+        }
+      },
+      "success": false,
+      "status": "ok",
+      "audits": {
+        "marked_new_bit": {
+          "pairs": 256,
+          "both_correct": 250,
+          "prequery_state_equal": 0
+        },
+        "untouched_bit": {
+          "pairs": 256,
+          "both_correct": 0,
+          "prequery_state_equal": 256
+        },
+        "obsolete_bit": {
+          "pairs": 256,
+          "both_correct": 256,
+          "prequery_state_equal": 256
+        },
+        "unmarked_new_bit": {
+          "pairs": 256,
+          "both_correct": 128,
+          "prequery_state_equal": 132
+        },
+        "query_switch": {
+          "histories": 256,
+          "histories_with_different_current_values": 128,
+          "both_correct_on_different_values": 0,
+          "both_correct_on_all_histories": 125
+        }
+      },
+      "classifier_sha256": "db6a5a036964fdc5d5d2407c583278d51f335de98ecd4bf292593b824f728ddc"
+    },
+    {
+      "experiment_id": "EXP-023",
+      "seed": 701,
+      "model_type": "addressed_reset_additive",
+      "source_checkpoint_sha256": "178e7bf9de178235519e436447a635069eae61ea58bb71c1cfaa3e031dd64573",
+      "weight_fingerprint": "a4eca4dfc406ae67b7ae91057b54374660f352cd3bb1babce3e22a62de8dc992",
+      "reproduced_correct": 351,
+      "original_loss": 0.7422153949737549,
+      "original_accuracy": 0.685546875,
+      "fit_rows": 1536,
+      "iterations": [
+        240,
+        300
+      ],
+      "converged": true,
+      "convergence_warnings": [
+        [],
+        []
+      ],
+      "val": {
+        "size": 512,
+        "slot0": {
+          "correct": 430,
+          "loss": 0.2988004822554959,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 245,
+              "accuracy": 0.95703125
+            },
+            "updated": {
+              "size": 128,
+              "correct": 65,
+              "accuracy": 0.5078125
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 120,
+              "accuracy": 0.9375
+            }
+          }
+        },
+        "slot1": {
+          "correct": 376,
+          "loss": 0.47824086818114986,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 220,
+              "accuracy": 0.859375
+            },
+            "updated": {
+              "size": 128,
+              "correct": 69,
+              "accuracy": 0.5390625
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 87,
+              "accuracy": 0.6796875
+            }
+          }
+        },
+        "both_correct": 323,
+        "routed_correct": 400,
+        "routed_loss": 0.3936057749827492,
+        "subgroups": {
+          "no_replacement_query0": {
+            "size": 128,
+            "correct": 122,
+            "accuracy": 0.953125
+          },
+          "no_replacement_query1": {
+            "size": 128,
+            "correct": 110,
+            "accuracy": 0.859375
+          },
+          "replacement_updated_same": {
+            "size": 64,
+            "correct": 37,
+            "accuracy": 0.578125
+          },
+          "replacement_updated_conflict": {
+            "size": 64,
+            "correct": 30,
+            "accuracy": 0.46875
+          },
+          "replacement_untouched_query0": {
+            "size": 64,
+            "correct": 59,
+            "accuracy": 0.921875
+          },
+          "replacement_untouched_query1": {
+            "size": 64,
+            "correct": 42,
+            "accuracy": 0.65625
+          },
+          "updated_slot_address_0": {
+            "size": 64,
+            "correct": 31,
+            "accuracy": 0.484375
+          },
+          "updated_slot_address_1": {
+            "size": 64,
+            "correct": 36,
+            "accuracy": 0.5625
+          }
+        }
+      },
+      "test": {
+        "size": 512,
+        "slot0": {
+          "correct": 436,
+          "loss": 0.25854475502136265,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 254,
+              "accuracy": 0.9921875
+            },
+            "updated": {
+              "size": 128,
+              "correct": 59,
+              "accuracy": 0.4609375
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 123,
+              "accuracy": 0.9609375
+            }
+          }
+        },
+        "slot1": {
+          "correct": 376,
+          "loss": 0.4777296693826155,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 222,
+              "accuracy": 0.8671875
+            },
+            "updated": {
+              "size": 128,
+              "correct": 60,
+              "accuracy": 0.46875
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 94,
+              "accuracy": 0.734375
+            }
+          }
+        },
+        "both_correct": 322,
+        "routed_correct": 407,
+        "routed_loss": 0.3658265785205724,
+        "subgroups": {
+          "no_replacement_query0": {
+            "size": 128,
+            "correct": 127,
+            "accuracy": 0.9921875
+          },
+          "no_replacement_query1": {
+            "size": 128,
+            "correct": 115,
+            "accuracy": 0.8984375
+          },
+          "replacement_updated_same": {
+            "size": 64,
+            "correct": 36,
+            "accuracy": 0.5625
+          },
+          "replacement_updated_conflict": {
+            "size": 64,
+            "correct": 23,
+            "accuracy": 0.359375
+          },
+          "replacement_untouched_query0": {
+            "size": 64,
+            "correct": 60,
+            "accuracy": 0.9375
+          },
+          "replacement_untouched_query1": {
+            "size": 64,
+            "correct": 46,
+            "accuracy": 0.71875
+          },
+          "updated_slot_address_0": {
+            "size": 64,
+            "correct": 28,
+            "accuracy": 0.4375
+          },
+          "updated_slot_address_1": {
+            "size": 64,
+            "correct": 31,
+            "accuracy": 0.484375
+          }
+        }
+      },
+      "success": false,
+      "status": "ok",
+      "audits": {
+        "marked_new_bit": {
+          "pairs": 256,
+          "both_correct": 1,
+          "prequery_state_equal": 5
+        },
+        "untouched_bit": {
+          "pairs": 256,
+          "both_correct": 238,
+          "prequery_state_equal": 0
+        },
+        "obsolete_bit": {
+          "pairs": 256,
+          "both_correct": 70,
+          "prequery_state_equal": 0
+        },
+        "unmarked_new_bit": {
+          "pairs": 256,
+          "both_correct": 246,
+          "prequery_state_equal": 45
+        },
+        "query_switch": {
+          "histories": 256,
+          "histories_with_different_current_values": 128,
+          "both_correct_on_different_values": 67,
+          "both_correct_on_all_histories": 152
+        }
+      },
+      "classifier_sha256": "1ece46a7d5c93c0b8715a9f996adab0cc5cd7211abc19a00458c24184492c5b6"
+    },
+    {
+      "experiment_id": "EXP-023",
+      "seed": 709,
+      "model_type": "additive_tanh_rnn",
+      "source_checkpoint_sha256": "34434cdc058713d807f9238dbd327c0eb37b36da398d5104845a9bd73ec7b9aa",
+      "weight_fingerprint": "8b53b10363da18d118c992f8b561dbeed058403d89c22892a425b67b2f0e5343",
+      "reproduced_correct": 256,
+      "original_loss": 1.157966673374176,
+      "original_accuracy": 0.5,
+      "fit_rows": 1536,
+      "iterations": [
+        201,
+        202
+      ],
+      "converged": true,
+      "convergence_warnings": [
+        [],
+        []
+      ],
+      "val": {
+        "size": 512,
+        "slot0": {
+          "correct": 448,
+          "loss": 0.3838661520871618,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 256,
+              "accuracy": 1.0
+            },
+            "updated": {
+              "size": 128,
+              "correct": 64,
+              "accuracy": 0.5
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 128,
+              "accuracy": 1.0
+            }
+          }
+        },
+        "slot1": {
+          "correct": 449,
+          "loss": 0.3849424392791929,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 256,
+              "accuracy": 1.0
+            },
+            "updated": {
+              "size": 128,
+              "correct": 65,
+              "accuracy": 0.5078125
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 128,
+              "accuracy": 1.0
+            }
+          }
+        },
+        "both_correct": 385,
+        "routed_correct": 449,
+        "routed_loss": 0.37840559609677255,
+        "subgroups": {
+          "no_replacement_query0": {
+            "size": 128,
+            "correct": 128,
+            "accuracy": 1.0
+          },
+          "no_replacement_query1": {
+            "size": 128,
+            "correct": 128,
+            "accuracy": 1.0
+          },
+          "replacement_updated_same": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_updated_conflict": {
+            "size": 64,
+            "correct": 1,
+            "accuracy": 0.015625
+          },
+          "replacement_untouched_query0": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_untouched_query1": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "updated_slot_address_0": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          },
+          "updated_slot_address_1": {
+            "size": 64,
+            "correct": 33,
+            "accuracy": 0.515625
+          }
+        }
+      },
+      "test": {
+        "size": 512,
+        "slot0": {
+          "correct": 448,
+          "loss": 0.38671554125783847,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 256,
+              "accuracy": 1.0
+            },
+            "updated": {
+              "size": 128,
+              "correct": 64,
+              "accuracy": 0.5
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 128,
+              "accuracy": 1.0
+            }
+          }
+        },
+        "slot1": {
+          "correct": 448,
+          "loss": 0.39668339701893285,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 256,
+              "accuracy": 1.0
+            },
+            "updated": {
+              "size": 128,
+              "correct": 64,
+              "accuracy": 0.5
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 128,
+              "accuracy": 1.0
+            }
+          }
+        },
+        "both_correct": 384,
+        "routed_correct": 448,
+        "routed_loss": 0.3932599811084476,
+        "subgroups": {
+          "no_replacement_query0": {
+            "size": 128,
+            "correct": 128,
+            "accuracy": 1.0
+          },
+          "no_replacement_query1": {
+            "size": 128,
+            "correct": 128,
+            "accuracy": 1.0
+          },
+          "replacement_updated_same": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_updated_conflict": {
+            "size": 64,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "replacement_untouched_query0": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_untouched_query1": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "updated_slot_address_0": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          },
+          "updated_slot_address_1": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          }
+        }
+      },
+      "success": false,
+      "status": "ok",
+      "audits": {
+        "marked_new_bit": {
+          "pairs": 256,
+          "both_correct": 0,
+          "prequery_state_equal": 202
+        },
+        "untouched_bit": {
+          "pairs": 256,
+          "both_correct": 256,
+          "prequery_state_equal": 0
+        },
+        "obsolete_bit": {
+          "pairs": 256,
+          "both_correct": 0,
+          "prequery_state_equal": 0
+        },
+        "unmarked_new_bit": {
+          "pairs": 256,
+          "both_correct": 256,
+          "prequery_state_equal": 201
+        },
+        "query_switch": {
+          "histories": 256,
+          "histories_with_different_current_values": 128,
+          "both_correct_on_different_values": 96,
+          "both_correct_on_all_histories": 192
+        }
+      },
+      "classifier_sha256": "4bfe1686e8c712e2d16e1e3d7f7ff25034362def408cfca8551288faa85dc9b7"
+    },
+    {
+      "experiment_id": "EXP-023",
+      "seed": 709,
+      "model_type": "whole_reset_additive",
+      "source_checkpoint_sha256": "1da2b4cc4c6933ce2ec951c86658bf3c4d08ebeb1ee75f536e63d075f94c724e",
+      "weight_fingerprint": "30ab71325cdb9386513f086814e4182ec8832d93ddbfdb8bd67dfdc7d87dd735",
+      "reproduced_correct": 276,
+      "original_loss": 0.9042016863822937,
+      "original_accuracy": 0.5390625,
+      "fit_rows": 1536,
+      "iterations": [
+        81,
+        31
+      ],
+      "converged": true,
+      "convergence_warnings": [
+        [],
+        []
+      ],
+      "val": {
+        "size": 512,
+        "slot0": {
+          "correct": 317,
+          "loss": 0.6721075766613274,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 130,
+              "accuracy": 0.5078125
+            },
+            "updated": {
+              "size": 128,
+              "correct": 121,
+              "accuracy": 0.9453125
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 66,
+              "accuracy": 0.515625
+            }
+          }
+        },
+        "slot1": {
+          "correct": 440,
+          "loss": 0.42575950087388204,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 253,
+              "accuracy": 0.98828125
+            },
+            "updated": {
+              "size": 128,
+              "correct": 123,
+              "accuracy": 0.9609375
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 64,
+              "accuracy": 0.5
+            }
+          }
+        },
+        "both_correct": 252,
+        "routed_correct": 378,
+        "routed_loss": 0.5546810053781424,
+        "subgroups": {
+          "no_replacement_query0": {
+            "size": 128,
+            "correct": 64,
+            "accuracy": 0.5
+          },
+          "no_replacement_query1": {
+            "size": 128,
+            "correct": 127,
+            "accuracy": 0.9921875
+          },
+          "replacement_updated_same": {
+            "size": 64,
+            "correct": 59,
+            "accuracy": 0.921875
+          },
+          "replacement_updated_conflict": {
+            "size": 64,
+            "correct": 62,
+            "accuracy": 0.96875
+          },
+          "replacement_untouched_query0": {
+            "size": 64,
+            "correct": 34,
+            "accuracy": 0.53125
+          },
+          "replacement_untouched_query1": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          },
+          "updated_slot_address_0": {
+            "size": 64,
+            "correct": 61,
+            "accuracy": 0.953125
+          },
+          "updated_slot_address_1": {
+            "size": 64,
+            "correct": 60,
+            "accuracy": 0.9375
+          }
+        }
+      },
+      "test": {
+        "size": 512,
+        "slot0": {
+          "correct": 311,
+          "loss": 0.6736497206051847,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 124,
+              "accuracy": 0.484375
+            },
+            "updated": {
+              "size": 128,
+              "correct": 120,
+              "accuracy": 0.9375
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 67,
+              "accuracy": 0.5234375
+            }
+          }
+        },
+        "slot1": {
+          "correct": 433,
+          "loss": 0.4254737541079895,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 250,
+              "accuracy": 0.9765625
+            },
+            "updated": {
+              "size": 128,
+              "correct": 118,
+              "accuracy": 0.921875
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 65,
+              "accuracy": 0.5078125
+            }
+          }
+        },
+        "both_correct": 244,
+        "routed_correct": 375,
+        "routed_loss": 0.5479037402017622,
+        "subgroups": {
+          "no_replacement_query0": {
+            "size": 128,
+            "correct": 64,
+            "accuracy": 0.5
+          },
+          "no_replacement_query1": {
+            "size": 128,
+            "correct": 126,
+            "accuracy": 0.984375
+          },
+          "replacement_updated_same": {
+            "size": 64,
+            "correct": 61,
+            "accuracy": 0.953125
+          },
+          "replacement_updated_conflict": {
+            "size": 64,
+            "correct": 59,
+            "accuracy": 0.921875
+          },
+          "replacement_untouched_query0": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          },
+          "replacement_untouched_query1": {
+            "size": 64,
+            "correct": 33,
+            "accuracy": 0.515625
+          },
+          "updated_slot_address_0": {
+            "size": 64,
+            "correct": 61,
+            "accuracy": 0.953125
+          },
+          "updated_slot_address_1": {
+            "size": 64,
+            "correct": 59,
+            "accuracy": 0.921875
+          }
+        }
+      },
+      "success": false,
+      "status": "ok",
+      "audits": {
+        "marked_new_bit": {
+          "pairs": 256,
+          "both_correct": 231,
+          "prequery_state_equal": 0
+        },
+        "untouched_bit": {
+          "pairs": 256,
+          "both_correct": 0,
+          "prequery_state_equal": 256
+        },
+        "obsolete_bit": {
+          "pairs": 256,
+          "both_correct": 229,
+          "prequery_state_equal": 256
+        },
+        "unmarked_new_bit": {
+          "pairs": 256,
+          "both_correct": 129,
+          "prequery_state_equal": 232
+        },
+        "query_switch": {
+          "histories": 256,
+          "histories_with_different_current_values": 128,
+          "both_correct_on_different_values": 0,
+          "both_correct_on_all_histories": 125
+        }
+      },
+      "classifier_sha256": "7b7e4816e40b7beb6ef7d39b73d46d6121b5fb6ee6e6116eb974fd24867d0a60"
+    },
+    {
+      "experiment_id": "EXP-023",
+      "seed": 709,
+      "model_type": "addressed_reset_additive",
+      "source_checkpoint_sha256": "0a0e45299a3e34d6b43c44b579e241954a482142e9cdfd53c4b5da6001ce058e",
+      "weight_fingerprint": "78362f70bae95b17931bc1fe0219124edfe6377f5c2f5e03cf0c04d5637bcfca",
+      "reproduced_correct": 282,
+      "original_loss": 0.8651947975158691,
+      "original_accuracy": 0.55078125,
+      "fit_rows": 1536,
+      "iterations": [
+        227,
+        267
+      ],
+      "converged": true,
+      "convergence_warnings": [
+        [],
+        []
+      ],
+      "val": {
+        "size": 512,
+        "slot0": {
+          "correct": 441,
+          "loss": 0.3060020426395268,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 254,
+              "accuracy": 0.9921875
+            },
+            "updated": {
+              "size": 128,
+              "correct": 63,
+              "accuracy": 0.4921875
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 124,
+              "accuracy": 0.96875
+            }
+          }
+        },
+        "slot1": {
+          "correct": 379,
+          "loss": 0.4520337358303539,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 214,
+              "accuracy": 0.8359375
+            },
+            "updated": {
+              "size": 128,
+              "correct": 65,
+              "accuracy": 0.5078125
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 100,
+              "accuracy": 0.78125
+            }
+          }
+        },
+        "both_correct": 323,
+        "routed_correct": 410,
+        "routed_loss": 0.38406077584832266,
+        "subgroups": {
+          "no_replacement_query0": {
+            "size": 128,
+            "correct": 128,
+            "accuracy": 1.0
+          },
+          "no_replacement_query1": {
+            "size": 128,
+            "correct": 108,
+            "accuracy": 0.84375
+          },
+          "replacement_updated_same": {
+            "size": 64,
+            "correct": 40,
+            "accuracy": 0.625
+          },
+          "replacement_updated_conflict": {
+            "size": 64,
+            "correct": 23,
+            "accuracy": 0.359375
+          },
+          "replacement_untouched_query0": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_untouched_query1": {
+            "size": 64,
+            "correct": 47,
+            "accuracy": 0.734375
+          },
+          "updated_slot_address_0": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          },
+          "updated_slot_address_1": {
+            "size": 64,
+            "correct": 31,
+            "accuracy": 0.484375
+          }
+        }
+      },
+      "test": {
+        "size": 512,
+        "slot0": {
+          "correct": 445,
+          "loss": 0.29812172778768165,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 253,
+              "accuracy": 0.98828125
+            },
+            "updated": {
+              "size": 128,
+              "correct": 67,
+              "accuracy": 0.5234375
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 125,
+              "accuracy": 0.9765625
+            }
+          }
+        },
+        "slot1": {
+          "correct": 386,
+          "loss": 0.4584150780402053,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 215,
+              "accuracy": 0.83984375
+            },
+            "updated": {
+              "size": 128,
+              "correct": 72,
+              "accuracy": 0.5625
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 99,
+              "accuracy": 0.7734375
+            }
+          }
+        },
+        "both_correct": 333,
+        "routed_correct": 419,
+        "routed_loss": 0.37447628955088397,
+        "subgroups": {
+          "no_replacement_query0": {
+            "size": 128,
+            "correct": 127,
+            "accuracy": 0.9921875
+          },
+          "no_replacement_query1": {
+            "size": 128,
+            "correct": 113,
+            "accuracy": 0.8828125
+          },
+          "replacement_updated_same": {
+            "size": 64,
+            "correct": 44,
+            "accuracy": 0.6875
+          },
+          "replacement_updated_conflict": {
+            "size": 64,
+            "correct": 23,
+            "accuracy": 0.359375
+          },
+          "replacement_untouched_query0": {
+            "size": 64,
+            "correct": 62,
+            "accuracy": 0.96875
+          },
+          "replacement_untouched_query1": {
+            "size": 64,
+            "correct": 50,
+            "accuracy": 0.78125
+          },
+          "updated_slot_address_0": {
+            "size": 64,
+            "correct": 33,
+            "accuracy": 0.515625
+          },
+          "updated_slot_address_1": {
+            "size": 64,
+            "correct": 34,
+            "accuracy": 0.53125
+          }
+        }
+      },
+      "success": false,
+      "status": "ok",
+      "audits": {
+        "marked_new_bit": {
+          "pairs": 256,
+          "both_correct": 1,
+          "prequery_state_equal": 0
+        },
+        "untouched_bit": {
+          "pairs": 256,
+          "both_correct": 235,
+          "prequery_state_equal": 0
+        },
+        "obsolete_bit": {
+          "pairs": 256,
+          "both_correct": 90,
+          "prequery_state_equal": 0
+        },
+        "unmarked_new_bit": {
+          "pairs": 256,
+          "both_correct": 250,
+          "prequery_state_equal": 0
+        },
+        "query_switch": {
+          "histories": 256,
+          "histories_with_different_current_values": 128,
+          "both_correct_on_different_values": 72,
+          "both_correct_on_all_histories": 160
+        }
+      },
+      "classifier_sha256": "a294614bcb4618a226e70202b7c0495184b6fd5a46d3be87c5096fed742e8292"
+    },
+    {
+      "experiment_id": "EXP-023",
+      "seed": 719,
+      "model_type": "additive_tanh_rnn",
+      "source_checkpoint_sha256": "fb6d8fd65941bc087ed4adc4cb197c2bb5aaf1386441dae6b8a63be6e23c27f6",
+      "weight_fingerprint": "61d054ed1f8f9bbe693b7915c5bb058c0a0bc9ece5729a2b541e7232f8534d56",
+      "reproduced_correct": 281,
+      "original_loss": 0.8274697959423065,
+      "original_accuracy": 0.548828125,
+      "fit_rows": 1536,
+      "iterations": [
+        186,
+        222
+      ],
+      "converged": true,
+      "convergence_warnings": [
+        [],
+        []
+      ],
+      "val": {
+        "size": 512,
+        "slot0": {
+          "correct": 448,
+          "loss": 0.3873212433052977,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 256,
+              "accuracy": 1.0
+            },
+            "updated": {
+              "size": 128,
+              "correct": 64,
+              "accuracy": 0.5
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 128,
+              "accuracy": 1.0
+            }
+          }
+        },
+        "slot1": {
+          "correct": 442,
+          "loss": 0.4371895960978016,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 253,
+              "accuracy": 0.98828125
+            },
+            "updated": {
+              "size": 128,
+              "correct": 63,
+              "accuracy": 0.4921875
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 126,
+              "accuracy": 0.984375
+            }
+          }
+        },
+        "both_correct": 378,
+        "routed_correct": 447,
+        "routed_loss": 0.40226583401742894,
+        "subgroups": {
+          "no_replacement_query0": {
+            "size": 128,
+            "correct": 128,
+            "accuracy": 1.0
+          },
+          "no_replacement_query1": {
+            "size": 128,
+            "correct": 128,
+            "accuracy": 1.0
+          },
+          "replacement_updated_same": {
+            "size": 64,
+            "correct": 63,
+            "accuracy": 0.984375
+          },
+          "replacement_updated_conflict": {
+            "size": 64,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "replacement_untouched_query0": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_untouched_query1": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "updated_slot_address_0": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          },
+          "updated_slot_address_1": {
+            "size": 64,
+            "correct": 31,
+            "accuracy": 0.484375
+          }
+        }
+      },
+      "test": {
+        "size": 512,
+        "slot0": {
+          "correct": 448,
+          "loss": 0.38171249399767215,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 256,
+              "accuracy": 1.0
+            },
+            "updated": {
+              "size": 128,
+              "correct": 64,
+              "accuracy": 0.5
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 128,
+              "accuracy": 1.0
+            }
+          }
+        },
+        "slot1": {
+          "correct": 439,
+          "loss": 0.42493180168800737,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 250,
+              "accuracy": 0.9765625
+            },
+            "updated": {
+              "size": 128,
+              "correct": 64,
+              "accuracy": 0.5
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 125,
+              "accuracy": 0.9765625
+            }
+          }
+        },
+        "both_correct": 375,
+        "routed_correct": 443,
+        "routed_loss": 0.40337581349116636,
+        "subgroups": {
+          "no_replacement_query0": {
+            "size": 128,
+            "correct": 128,
+            "accuracy": 1.0
+          },
+          "no_replacement_query1": {
+            "size": 128,
+            "correct": 125,
+            "accuracy": 0.9765625
+          },
+          "replacement_updated_same": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_updated_conflict": {
+            "size": 64,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "replacement_untouched_query0": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_untouched_query1": {
+            "size": 64,
+            "correct": 62,
+            "accuracy": 0.96875
+          },
+          "updated_slot_address_0": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          },
+          "updated_slot_address_1": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          }
+        }
+      },
+      "success": false,
+      "status": "ok",
+      "audits": {
+        "marked_new_bit": {
+          "pairs": 256,
+          "both_correct": 0,
+          "prequery_state_equal": 240
+        },
+        "untouched_bit": {
+          "pairs": 256,
+          "both_correct": 256,
+          "prequery_state_equal": 0
+        },
+        "obsolete_bit": {
+          "pairs": 256,
+          "both_correct": 0,
+          "prequery_state_equal": 0
+        },
+        "unmarked_new_bit": {
+          "pairs": 256,
+          "both_correct": 256,
+          "prequery_state_equal": 239
+        },
+        "query_switch": {
+          "histories": 256,
+          "histories_with_different_current_values": 128,
+          "both_correct_on_different_values": 95,
+          "both_correct_on_all_histories": 188
+        }
+      },
+      "classifier_sha256": "774523cec18ad8aa5a16270cb6554003a671226d1bf2e093091b77f630373936"
+    },
+    {
+      "experiment_id": "EXP-023",
+      "seed": 719,
+      "model_type": "whole_reset_additive",
+      "source_checkpoint_sha256": "a20921e757ca00098d8b98fb89511ceaeb23c7f2a751ad0feec33d1752f4f4aa",
+      "weight_fingerprint": "82848d58da414f84a8142eca1bf1f51083623a577d1ce15053ba3cb245151984",
+      "reproduced_correct": 373,
+      "original_loss": 0.5964789390563965,
+      "original_accuracy": 0.728515625,
+      "fit_rows": 1536,
+      "iterations": [
+        47,
+        69
+      ],
+      "converged": true,
+      "convergence_warnings": [
+        [],
+        []
+      ],
+      "val": {
+        "size": 512,
+        "slot0": {
+          "correct": 308,
+          "loss": 0.6718763139795377,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 132,
+              "accuracy": 0.515625
+            },
+            "updated": {
+              "size": 128,
+              "correct": 114,
+              "accuracy": 0.890625
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 62,
+              "accuracy": 0.484375
+            }
+          }
+        },
+        "slot1": {
+          "correct": 438,
+          "loss": 0.4230826452886498,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 246,
+              "accuracy": 0.9609375
+            },
+            "updated": {
+              "size": 128,
+              "correct": 126,
+              "accuracy": 0.984375
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 66,
+              "accuracy": 0.515625
+            }
+          }
+        },
+        "both_correct": 246,
+        "routed_correct": 368,
+        "routed_loss": 0.5464015266250701,
+        "subgroups": {
+          "no_replacement_query0": {
+            "size": 128,
+            "correct": 64,
+            "accuracy": 0.5
+          },
+          "no_replacement_query1": {
+            "size": 128,
+            "correct": 120,
+            "accuracy": 0.9375
+          },
+          "replacement_updated_same": {
+            "size": 64,
+            "correct": 60,
+            "accuracy": 0.9375
+          },
+          "replacement_updated_conflict": {
+            "size": 64,
+            "correct": 61,
+            "accuracy": 0.953125
+          },
+          "replacement_untouched_query0": {
+            "size": 64,
+            "correct": 31,
+            "accuracy": 0.484375
+          },
+          "replacement_untouched_query1": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          },
+          "updated_slot_address_0": {
+            "size": 64,
+            "correct": 57,
+            "accuracy": 0.890625
+          },
+          "updated_slot_address_1": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          }
+        }
+      },
+      "test": {
+        "size": 512,
+        "slot0": {
+          "correct": 307,
+          "loss": 0.6822510123149943,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 130,
+              "accuracy": 0.5078125
+            },
+            "updated": {
+              "size": 128,
+              "correct": 112,
+              "accuracy": 0.875
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 65,
+              "accuracy": 0.5078125
+            }
+          }
+        },
+        "slot1": {
+          "correct": 434,
+          "loss": 0.42017696882490607,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 241,
+              "accuracy": 0.94140625
+            },
+            "updated": {
+              "size": 128,
+              "correct": 126,
+              "accuracy": 0.984375
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 67,
+              "accuracy": 0.5234375
+            }
+          }
+        },
+        "both_correct": 243,
+        "routed_correct": 374,
+        "routed_loss": 0.550693278929994,
+        "subgroups": {
+          "no_replacement_query0": {
+            "size": 128,
+            "correct": 66,
+            "accuracy": 0.515625
+          },
+          "no_replacement_query1": {
+            "size": 128,
+            "correct": 119,
+            "accuracy": 0.9296875
+          },
+          "replacement_updated_same": {
+            "size": 64,
+            "correct": 60,
+            "accuracy": 0.9375
+          },
+          "replacement_updated_conflict": {
+            "size": 64,
+            "correct": 62,
+            "accuracy": 0.96875
+          },
+          "replacement_untouched_query0": {
+            "size": 64,
+            "correct": 33,
+            "accuracy": 0.515625
+          },
+          "replacement_untouched_query1": {
+            "size": 64,
+            "correct": 34,
+            "accuracy": 0.53125
+          },
+          "updated_slot_address_0": {
+            "size": 64,
+            "correct": 59,
+            "accuracy": 0.921875
+          },
+          "updated_slot_address_1": {
+            "size": 64,
+            "correct": 63,
+            "accuracy": 0.984375
+          }
+        }
+      },
+      "success": false,
+      "status": "ok",
+      "audits": {
+        "marked_new_bit": {
+          "pairs": 256,
+          "both_correct": 229,
+          "prequery_state_equal": 0
+        },
+        "untouched_bit": {
+          "pairs": 256,
+          "both_correct": 0,
+          "prequery_state_equal": 256
+        },
+        "obsolete_bit": {
+          "pairs": 256,
+          "both_correct": 209,
+          "prequery_state_equal": 256
+        },
+        "unmarked_new_bit": {
+          "pairs": 256,
+          "both_correct": 126,
+          "prequery_state_equal": 253
+        },
+        "query_switch": {
+          "histories": 256,
+          "histories_with_different_current_values": 128,
+          "both_correct_on_different_values": 0,
+          "both_correct_on_all_histories": 122
+        }
+      },
+      "classifier_sha256": "ab1ec8370adeb0b787f70be3ac12bcc738732f7c7ced420e4433e555e168882e"
+    },
+    {
+      "experiment_id": "EXP-023",
+      "seed": 719,
+      "model_type": "addressed_reset_additive",
+      "source_checkpoint_sha256": "fe8d86b67682f435a5961b52b4720063462f5755ab950a8101d91e17fa41e48a",
+      "weight_fingerprint": "5e2fc741804dd91227cac67d4241eba00b65c6a1e36c9d5988f07d9f75d80c9b",
+      "reproduced_correct": 359,
+      "original_loss": 0.6214181184768677,
+      "original_accuracy": 0.701171875,
+      "fit_rows": 1536,
+      "iterations": [
+        184,
+        235
+      ],
+      "converged": true,
+      "convergence_warnings": [
+        [],
+        []
+      ],
+      "val": {
+        "size": 512,
+        "slot0": {
+          "correct": 449,
+          "loss": 0.27887748565547277,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 256,
+              "accuracy": 1.0
+            },
+            "updated": {
+              "size": 128,
+              "correct": 65,
+              "accuracy": 0.5078125
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 128,
+              "accuracy": 1.0
+            }
+          }
+        },
+        "slot1": {
+          "correct": 379,
+          "loss": 0.460195547707857,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 217,
+              "accuracy": 0.84765625
+            },
+            "updated": {
+              "size": 128,
+              "correct": 61,
+              "accuracy": 0.4765625
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 101,
+              "accuracy": 0.7890625
+            }
+          }
+        },
+        "both_correct": 327,
+        "routed_correct": 419,
+        "routed_loss": 0.35940971292668805,
+        "subgroups": {
+          "no_replacement_query0": {
+            "size": 128,
+            "correct": 128,
+            "accuracy": 1.0
+          },
+          "no_replacement_query1": {
+            "size": 128,
+            "correct": 111,
+            "accuracy": 0.8671875
+          },
+          "replacement_updated_same": {
+            "size": 64,
+            "correct": 46,
+            "accuracy": 0.71875
+          },
+          "replacement_updated_conflict": {
+            "size": 64,
+            "correct": 18,
+            "accuracy": 0.28125
+          },
+          "replacement_untouched_query0": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_untouched_query1": {
+            "size": 64,
+            "correct": 52,
+            "accuracy": 0.8125
+          },
+          "updated_slot_address_0": {
+            "size": 64,
+            "correct": 34,
+            "accuracy": 0.53125
+          },
+          "updated_slot_address_1": {
+            "size": 64,
+            "correct": 30,
+            "accuracy": 0.46875
+          }
+        }
+      },
+      "test": {
+        "size": 512,
+        "slot0": {
+          "correct": 448,
+          "loss": 0.276866557524825,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 256,
+              "accuracy": 1.0
+            },
+            "updated": {
+              "size": 128,
+              "correct": 64,
+              "accuracy": 0.5
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 128,
+              "accuracy": 1.0
+            }
+          }
+        },
+        "slot1": {
+          "correct": 382,
+          "loss": 0.4607341088332332,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 217,
+              "accuracy": 0.84765625
+            },
+            "updated": {
+              "size": 128,
+              "correct": 65,
+              "accuracy": 0.5078125
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 100,
+              "accuracy": 0.78125
+            }
+          }
+        },
+        "both_correct": 331,
+        "routed_correct": 421,
+        "routed_loss": 0.3597355663452949,
+        "subgroups": {
+          "no_replacement_query0": {
+            "size": 128,
+            "correct": 128,
+            "accuracy": 1.0
+          },
+          "no_replacement_query1": {
+            "size": 128,
+            "correct": 114,
+            "accuracy": 0.890625
+          },
+          "replacement_updated_same": {
+            "size": 64,
+            "correct": 52,
+            "accuracy": 0.8125
+          },
+          "replacement_updated_conflict": {
+            "size": 64,
+            "correct": 11,
+            "accuracy": 0.171875
+          },
+          "replacement_untouched_query0": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_untouched_query1": {
+            "size": 64,
+            "correct": 52,
+            "accuracy": 0.8125
+          },
+          "updated_slot_address_0": {
+            "size": 64,
+            "correct": 34,
+            "accuracy": 0.53125
+          },
+          "updated_slot_address_1": {
+            "size": 64,
+            "correct": 29,
+            "accuracy": 0.453125
+          }
+        }
+      },
+      "success": false,
+      "status": "ok",
+      "audits": {
+        "marked_new_bit": {
+          "pairs": 256,
+          "both_correct": 0,
+          "prequery_state_equal": 0
+        },
+        "untouched_bit": {
+          "pairs": 256,
+          "both_correct": 256,
+          "prequery_state_equal": 0
+        },
+        "obsolete_bit": {
+          "pairs": 256,
+          "both_correct": 67,
+          "prequery_state_equal": 0
+        },
+        "unmarked_new_bit": {
+          "pairs": 256,
+          "both_correct": 256,
+          "prequery_state_equal": 1
+        },
+        "query_switch": {
+          "histories": 256,
+          "histories_with_different_current_values": 128,
+          "both_correct_on_different_values": 80,
+          "both_correct_on_all_histories": 170
+        }
+      },
+      "classifier_sha256": "b7b5d171bc4537c0358590c0697f5a6f3d7e2bbd7329a5f6b06a1f09cadf4a38"
+    },
+    {
+      "experiment_id": "EXP-023",
+      "seed": 727,
+      "model_type": "additive_tanh_rnn",
+      "source_checkpoint_sha256": "4f142255ddb1128e43c335d9d60098d71a93903fc4418111b50e35d0a18b1454",
+      "weight_fingerprint": "c4b083ce32ea8d8218e69ebae687546084012a6ce679756a7c2a96042ae95fd4",
+      "reproduced_correct": 355,
+      "original_loss": 0.5790974199771881,
+      "original_accuracy": 0.693359375,
+      "fit_rows": 1536,
+      "iterations": [
+        191,
+        215
+      ],
+      "converged": true,
+      "convergence_warnings": [
+        [],
+        []
+      ],
+      "val": {
+        "size": 512,
+        "slot0": {
+          "correct": 448,
+          "loss": 0.3841398578455569,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 256,
+              "accuracy": 1.0
+            },
+            "updated": {
+              "size": 128,
+              "correct": 64,
+              "accuracy": 0.5
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 128,
+              "accuracy": 1.0
+            }
+          }
+        },
+        "slot1": {
+          "correct": 440,
+          "loss": 0.442658936399527,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 251,
+              "accuracy": 0.98046875
+            },
+            "updated": {
+              "size": 128,
+              "correct": 63,
+              "accuracy": 0.4921875
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 126,
+              "accuracy": 0.984375
+            }
+          }
+        },
+        "both_correct": 377,
+        "routed_correct": 444,
+        "routed_loss": 0.4193768010933635,
+        "subgroups": {
+          "no_replacement_query0": {
+            "size": 128,
+            "correct": 128,
+            "accuracy": 1.0
+          },
+          "no_replacement_query1": {
+            "size": 128,
+            "correct": 125,
+            "accuracy": 0.9765625
+          },
+          "replacement_updated_same": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_updated_conflict": {
+            "size": 64,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "replacement_untouched_query0": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_untouched_query1": {
+            "size": 64,
+            "correct": 63,
+            "accuracy": 0.984375
+          },
+          "updated_slot_address_0": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          },
+          "updated_slot_address_1": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          }
+        }
+      },
+      "test": {
+        "size": 512,
+        "slot0": {
+          "correct": 448,
+          "loss": 0.37962536130062086,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 256,
+              "accuracy": 1.0
+            },
+            "updated": {
+              "size": 128,
+              "correct": 64,
+              "accuracy": 0.5
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 128,
+              "accuracy": 1.0
+            }
+          }
+        },
+        "slot1": {
+          "correct": 438,
+          "loss": 0.432385335202206,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 253,
+              "accuracy": 0.98828125
+            },
+            "updated": {
+              "size": 128,
+              "correct": 63,
+              "accuracy": 0.4921875
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 122,
+              "accuracy": 0.953125
+            }
+          }
+        },
+        "both_correct": 377,
+        "routed_correct": 444,
+        "routed_loss": 0.39997664526064347,
+        "subgroups": {
+          "no_replacement_query0": {
+            "size": 128,
+            "correct": 128,
+            "accuracy": 1.0
+          },
+          "no_replacement_query1": {
+            "size": 128,
+            "correct": 127,
+            "accuracy": 0.9921875
+          },
+          "replacement_updated_same": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_updated_conflict": {
+            "size": 64,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "replacement_untouched_query0": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_untouched_query1": {
+            "size": 64,
+            "correct": 61,
+            "accuracy": 0.953125
+          },
+          "updated_slot_address_0": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          },
+          "updated_slot_address_1": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          }
+        }
+      },
+      "success": false,
+      "status": "ok",
+      "audits": {
+        "marked_new_bit": {
+          "pairs": 256,
+          "both_correct": 0,
+          "prequery_state_equal": 75
+        },
+        "untouched_bit": {
+          "pairs": 256,
+          "both_correct": 256,
+          "prequery_state_equal": 0
+        },
+        "obsolete_bit": {
+          "pairs": 256,
+          "both_correct": 0,
+          "prequery_state_equal": 0
+        },
+        "unmarked_new_bit": {
+          "pairs": 256,
+          "both_correct": 256,
+          "prequery_state_equal": 77
+        },
+        "query_switch": {
+          "histories": 256,
+          "histories_with_different_current_values": 128,
+          "both_correct_on_different_values": 95,
+          "both_correct_on_all_histories": 190
+        }
+      },
+      "classifier_sha256": "49635623f81111ea5025028c57e62663673c9a5d837cb0c07ab073e6d3cdd7ca"
+    },
+    {
+      "experiment_id": "EXP-023",
+      "seed": 727,
+      "model_type": "whole_reset_additive",
+      "source_checkpoint_sha256": "9c6093095fe53e82a87f0136e62f82736602eb4f0e07ae0b28125a3ed7a47634",
+      "weight_fingerprint": "57c5798be94f5807cc3075c8fa81cebeebca20e1ebbfa3206620b96d0cadde4d",
+      "reproduced_correct": 366,
+      "original_loss": 0.619211345911026,
+      "original_accuracy": 0.71484375,
+      "fit_rows": 1536,
+      "iterations": [
+        110,
+        85
+      ],
+      "converged": true,
+      "convergence_warnings": [
+        [],
+        []
+      ],
+      "val": {
+        "size": 512,
+        "slot0": {
+          "correct": 311,
+          "loss": 0.6647444515504219,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 127,
+              "accuracy": 0.49609375
+            },
+            "updated": {
+              "size": 128,
+              "correct": 124,
+              "accuracy": 0.96875
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 60,
+              "accuracy": 0.46875
+            }
+          }
+        },
+        "slot1": {
+          "correct": 443,
+          "loss": 0.4169989378288752,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 256,
+              "accuracy": 1.0
+            },
+            "updated": {
+              "size": 128,
+              "correct": 126,
+              "accuracy": 0.984375
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 61,
+              "accuracy": 0.4765625
+            }
+          }
+        },
+        "both_correct": 245,
+        "routed_correct": 381,
+        "routed_loss": 0.5289733249137082,
+        "subgroups": {
+          "no_replacement_query0": {
+            "size": 128,
+            "correct": 65,
+            "accuracy": 0.5078125
+          },
+          "no_replacement_query1": {
+            "size": 128,
+            "correct": 128,
+            "accuracy": 1.0
+          },
+          "replacement_updated_same": {
+            "size": 64,
+            "correct": 62,
+            "accuracy": 0.96875
+          },
+          "replacement_updated_conflict": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_untouched_query0": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          },
+          "replacement_untouched_query1": {
+            "size": 64,
+            "correct": 30,
+            "accuracy": 0.46875
+          },
+          "updated_slot_address_0": {
+            "size": 64,
+            "correct": 62,
+            "accuracy": 0.96875
+          },
+          "updated_slot_address_1": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          }
+        }
+      },
+      "test": {
+        "size": 512,
+        "slot0": {
+          "correct": 313,
+          "loss": 0.6702705966972093,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 129,
+              "accuracy": 0.50390625
+            },
+            "updated": {
+              "size": 128,
+              "correct": 120,
+              "accuracy": 0.9375
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 64,
+              "accuracy": 0.5
+            }
+          }
+        },
+        "slot1": {
+          "correct": 447,
+          "loss": 0.38333547669232626,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 256,
+              "accuracy": 1.0
+            },
+            "updated": {
+              "size": 128,
+              "correct": 126,
+              "accuracy": 0.984375
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 65,
+              "accuracy": 0.5078125
+            }
+          }
+        },
+        "both_correct": 255,
+        "routed_correct": 382,
+        "routed_loss": 0.5313552259856915,
+        "subgroups": {
+          "no_replacement_query0": {
+            "size": 128,
+            "correct": 66,
+            "accuracy": 0.515625
+          },
+          "no_replacement_query1": {
+            "size": 128,
+            "correct": 128,
+            "accuracy": 1.0
+          },
+          "replacement_updated_same": {
+            "size": 64,
+            "correct": 61,
+            "accuracy": 0.953125
+          },
+          "replacement_updated_conflict": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_untouched_query0": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          },
+          "replacement_untouched_query1": {
+            "size": 64,
+            "correct": 31,
+            "accuracy": 0.484375
+          },
+          "updated_slot_address_0": {
+            "size": 64,
+            "correct": 62,
+            "accuracy": 0.96875
+          },
+          "updated_slot_address_1": {
+            "size": 64,
+            "correct": 63,
+            "accuracy": 0.984375
+          }
+        }
+      },
+      "success": false,
+      "status": "ok",
+      "audits": {
+        "marked_new_bit": {
+          "pairs": 256,
+          "both_correct": 237,
+          "prequery_state_equal": 0
+        },
+        "untouched_bit": {
+          "pairs": 256,
+          "both_correct": 0,
+          "prequery_state_equal": 256
+        },
+        "obsolete_bit": {
+          "pairs": 256,
+          "both_correct": 224,
+          "prequery_state_equal": 256
+        },
+        "unmarked_new_bit": {
+          "pairs": 256,
+          "both_correct": 129,
+          "prequery_state_equal": 14
+        },
+        "query_switch": {
+          "histories": 256,
+          "histories_with_different_current_values": 128,
+          "both_correct_on_different_values": 6,
+          "both_correct_on_all_histories": 123
+        }
+      },
+      "classifier_sha256": "bdbca4c64624d33ec985a593815fcfe3b193a49590cf7c77df835d07eac3293b"
+    },
+    {
+      "experiment_id": "EXP-023",
+      "seed": 727,
+      "model_type": "addressed_reset_additive",
+      "source_checkpoint_sha256": "4f5e4bec48f525c8da24be80926e2d4fc2fc1209e55c9ab98bb13ca83b2e9ee9",
+      "weight_fingerprint": "5c53d0316937c622704099f607f414ef558906f9629b6674d15096a55c56693d",
+      "reproduced_correct": 353,
+      "original_loss": 0.5835775136947632,
+      "original_accuracy": 0.689453125,
+      "fit_rows": 1536,
+      "iterations": [
+        165,
+        181
+      ],
+      "converged": true,
+      "convergence_warnings": [
+        [],
+        []
+      ],
+      "val": {
+        "size": 512,
+        "slot0": {
+          "correct": 441,
+          "loss": 0.2712548863833816,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 256,
+              "accuracy": 1.0
+            },
+            "updated": {
+              "size": 128,
+              "correct": 57,
+              "accuracy": 0.4453125
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 128,
+              "accuracy": 1.0
+            }
+          }
+        },
+        "slot1": {
+          "correct": 427,
+          "loss": 0.3626033949810062,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 243,
+              "accuracy": 0.94921875
+            },
+            "updated": {
+              "size": 128,
+              "correct": 67,
+              "accuracy": 0.5234375
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 117,
+              "accuracy": 0.9140625
+            }
+          }
+        },
+        "both_correct": 364,
+        "routed_correct": 438,
+        "routed_loss": 0.3167981502065392,
+        "subgroups": {
+          "no_replacement_query0": {
+            "size": 128,
+            "correct": 128,
+            "accuracy": 1.0
+          },
+          "no_replacement_query1": {
+            "size": 128,
+            "correct": 122,
+            "accuracy": 0.953125
+          },
+          "replacement_updated_same": {
+            "size": 64,
+            "correct": 49,
+            "accuracy": 0.765625
+          },
+          "replacement_updated_conflict": {
+            "size": 64,
+            "correct": 18,
+            "accuracy": 0.28125
+          },
+          "replacement_untouched_query0": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_untouched_query1": {
+            "size": 64,
+            "correct": 57,
+            "accuracy": 0.890625
+          },
+          "updated_slot_address_0": {
+            "size": 64,
+            "correct": 31,
+            "accuracy": 0.484375
+          },
+          "updated_slot_address_1": {
+            "size": 64,
+            "correct": 36,
+            "accuracy": 0.5625
+          }
+        }
+      },
+      "test": {
+        "size": 512,
+        "slot0": {
+          "correct": 438,
+          "loss": 0.2762440306529362,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 256,
+              "accuracy": 1.0
+            },
+            "updated": {
+              "size": 128,
+              "correct": 54,
+              "accuracy": 0.421875
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 128,
+              "accuracy": 1.0
+            }
+          }
+        },
+        "slot1": {
+          "correct": 409,
+          "loss": 0.38084611956874637,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 238,
+              "accuracy": 0.9296875
+            },
+            "updated": {
+              "size": 128,
+              "correct": 60,
+              "accuracy": 0.46875
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 111,
+              "accuracy": 0.8671875
+            }
+          }
+        },
+        "both_correct": 347,
+        "routed_correct": 424,
+        "routed_loss": 0.32662130458113336,
+        "subgroups": {
+          "no_replacement_query0": {
+            "size": 128,
+            "correct": 128,
+            "accuracy": 1.0
+          },
+          "no_replacement_query1": {
+            "size": 128,
+            "correct": 119,
+            "accuracy": 0.9296875
+          },
+          "replacement_updated_same": {
+            "size": 64,
+            "correct": 44,
+            "accuracy": 0.6875
+          },
+          "replacement_updated_conflict": {
+            "size": 64,
+            "correct": 12,
+            "accuracy": 0.1875
+          },
+          "replacement_untouched_query0": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_untouched_query1": {
+            "size": 64,
+            "correct": 57,
+            "accuracy": 0.890625
+          },
+          "updated_slot_address_0": {
+            "size": 64,
+            "correct": 29,
+            "accuracy": 0.453125
+          },
+          "updated_slot_address_1": {
+            "size": 64,
+            "correct": 27,
+            "accuracy": 0.421875
+          }
+        }
+      },
+      "success": false,
+      "status": "ok",
+      "audits": {
+        "marked_new_bit": {
+          "pairs": 256,
+          "both_correct": 0,
+          "prequery_state_equal": 0
+        },
+        "untouched_bit": {
+          "pairs": 256,
+          "both_correct": 256,
+          "prequery_state_equal": 0
+        },
+        "obsolete_bit": {
+          "pairs": 256,
+          "both_correct": 69,
+          "prequery_state_equal": 0
+        },
+        "unmarked_new_bit": {
+          "pairs": 256,
+          "both_correct": 256,
+          "prequery_state_equal": 13
+        },
+        "query_switch": {
+          "histories": 256,
+          "histories_with_different_current_values": 128,
+          "both_correct_on_different_values": 80,
+          "both_correct_on_all_histories": 173
+        }
+      },
+      "classifier_sha256": "24333126a9a76a9d9339c222e46627322a4d066fdd6c53ed4c6af583af443526"
+    },
+    {
+      "experiment_id": "EXP-023",
+      "seed": 733,
+      "model_type": "additive_tanh_rnn",
+      "source_checkpoint_sha256": "7b7a288d2baa88a355c7c4550fb1bea83c4b18c24a4db97272c762eba164918f",
+      "weight_fingerprint": "dc490fd21e94d62da2382080574139f5aa377b197f925e4dfa07eda218e218b4",
+      "reproduced_correct": 356,
+      "original_loss": 0.6203784048557281,
+      "original_accuracy": 0.6953125,
+      "fit_rows": 1536,
+      "iterations": [
+        184,
+        227
+      ],
+      "converged": true,
+      "convergence_warnings": [
+        [],
+        []
+      ],
+      "val": {
+        "size": 512,
+        "slot0": {
+          "correct": 448,
+          "loss": 0.381417482717459,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 256,
+              "accuracy": 1.0
+            },
+            "updated": {
+              "size": 128,
+              "correct": 64,
+              "accuracy": 0.5
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 128,
+              "accuracy": 1.0
+            }
+          }
+        },
+        "slot1": {
+          "correct": 437,
+          "loss": 0.42402447238122964,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 248,
+              "accuracy": 0.96875
+            },
+            "updated": {
+              "size": 128,
+              "correct": 64,
+              "accuracy": 0.5
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 125,
+              "accuracy": 0.9765625
+            }
+          }
+        },
+        "both_correct": 374,
+        "routed_correct": 445,
+        "routed_loss": 0.40351975916785476,
+        "subgroups": {
+          "no_replacement_query0": {
+            "size": 128,
+            "correct": 128,
+            "accuracy": 1.0
+          },
+          "no_replacement_query1": {
+            "size": 128,
+            "correct": 125,
+            "accuracy": 0.9765625
+          },
+          "replacement_updated_same": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_updated_conflict": {
+            "size": 64,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "replacement_untouched_query0": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_untouched_query1": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "updated_slot_address_0": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          },
+          "updated_slot_address_1": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          }
+        }
+      },
+      "test": {
+        "size": 512,
+        "slot0": {
+          "correct": 448,
+          "loss": 0.38147059626633856,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 256,
+              "accuracy": 1.0
+            },
+            "updated": {
+              "size": 128,
+              "correct": 64,
+              "accuracy": 0.5
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 128,
+              "accuracy": 1.0
+            }
+          }
+        },
+        "slot1": {
+          "correct": 441,
+          "loss": 0.43665001331582876,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 252,
+              "accuracy": 0.984375
+            },
+            "updated": {
+              "size": 128,
+              "correct": 63,
+              "accuracy": 0.4921875
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 126,
+              "accuracy": 0.984375
+            }
+          }
+        },
+        "both_correct": 379,
+        "routed_correct": 445,
+        "routed_loss": 0.40483612769571165,
+        "subgroups": {
+          "no_replacement_query0": {
+            "size": 128,
+            "correct": 128,
+            "accuracy": 1.0
+          },
+          "no_replacement_query1": {
+            "size": 128,
+            "correct": 127,
+            "accuracy": 0.9921875
+          },
+          "replacement_updated_same": {
+            "size": 64,
+            "correct": 63,
+            "accuracy": 0.984375
+          },
+          "replacement_updated_conflict": {
+            "size": 64,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "replacement_untouched_query0": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_untouched_query1": {
+            "size": 64,
+            "correct": 63,
+            "accuracy": 0.984375
+          },
+          "updated_slot_address_0": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          },
+          "updated_slot_address_1": {
+            "size": 64,
+            "correct": 31,
+            "accuracy": 0.484375
+          }
+        }
+      },
+      "success": false,
+      "status": "ok",
+      "audits": {
+        "marked_new_bit": {
+          "pairs": 256,
+          "both_correct": 0,
+          "prequery_state_equal": 256
+        },
+        "untouched_bit": {
+          "pairs": 256,
+          "both_correct": 256,
+          "prequery_state_equal": 0
+        },
+        "obsolete_bit": {
+          "pairs": 256,
+          "both_correct": 0,
+          "prequery_state_equal": 0
+        },
+        "unmarked_new_bit": {
+          "pairs": 256,
+          "both_correct": 256,
+          "prequery_state_equal": 254
+        },
+        "query_switch": {
+          "histories": 256,
+          "histories_with_different_current_values": 128,
+          "both_correct_on_different_values": 93,
+          "both_correct_on_all_histories": 189
+        }
+      },
+      "classifier_sha256": "183c46a83b76bb18842b7c76e3457b85ba74fafa91dd9ef82f5fa0173fe145b3"
+    },
+    {
+      "experiment_id": "EXP-023",
+      "seed": 733,
+      "model_type": "whole_reset_additive",
+      "source_checkpoint_sha256": "61bbd3dd761ae9102a47bc11840a099fa68e058dce5f9bcde4c037de7bcd2a93",
+      "weight_fingerprint": "c1ea8f8417cc96d76f44c4daa33d1b3d7afda6e826d736d4344dc037e41b0894",
+      "reproduced_correct": 382,
+      "original_loss": 0.5842126309871674,
+      "original_accuracy": 0.74609375,
+      "fit_rows": 1536,
+      "iterations": [
+        90,
+        34
+      ],
+      "converged": true,
+      "convergence_warnings": [
+        [],
+        []
+      ],
+      "val": {
+        "size": 512,
+        "slot0": {
+          "correct": 320,
+          "loss": 0.672554604671175,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 128,
+              "accuracy": 0.5
+            },
+            "updated": {
+              "size": 128,
+              "correct": 128,
+              "accuracy": 1.0
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 64,
+              "accuracy": 0.5
+            }
+          }
+        },
+        "slot1": {
+          "correct": 448,
+          "loss": 0.37405181321596537,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 256,
+              "accuracy": 1.0
+            },
+            "updated": {
+              "size": 128,
+              "correct": 128,
+              "accuracy": 1.0
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 64,
+              "accuracy": 0.5
+            }
+          }
+        },
+        "both_correct": 256,
+        "routed_correct": 384,
+        "routed_loss": 0.5237232961021073,
+        "subgroups": {
+          "no_replacement_query0": {
+            "size": 128,
+            "correct": 64,
+            "accuracy": 0.5
+          },
+          "no_replacement_query1": {
+            "size": 128,
+            "correct": 128,
+            "accuracy": 1.0
+          },
+          "replacement_updated_same": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_updated_conflict": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_untouched_query0": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          },
+          "replacement_untouched_query1": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          },
+          "updated_slot_address_0": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "updated_slot_address_1": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          }
+        }
+      },
+      "test": {
+        "size": 512,
+        "slot0": {
+          "correct": 320,
+          "loss": 0.6727036229688061,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 128,
+              "accuracy": 0.5
+            },
+            "updated": {
+              "size": 128,
+              "correct": 128,
+              "accuracy": 1.0
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 64,
+              "accuracy": 0.5
+            }
+          }
+        },
+        "slot1": {
+          "correct": 448,
+          "loss": 0.37664340411194486,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 256,
+              "accuracy": 1.0
+            },
+            "updated": {
+              "size": 128,
+              "correct": 128,
+              "accuracy": 1.0
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 64,
+              "accuracy": 0.5
+            }
+          }
+        },
+        "both_correct": 256,
+        "routed_correct": 384,
+        "routed_loss": 0.5158687734191177,
+        "subgroups": {
+          "no_replacement_query0": {
+            "size": 128,
+            "correct": 64,
+            "accuracy": 0.5
+          },
+          "no_replacement_query1": {
+            "size": 128,
+            "correct": 128,
+            "accuracy": 1.0
+          },
+          "replacement_updated_same": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_updated_conflict": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_untouched_query0": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          },
+          "replacement_untouched_query1": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          },
+          "updated_slot_address_0": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "updated_slot_address_1": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          }
+        }
+      },
+      "success": false,
+      "status": "ok",
+      "audits": {
+        "marked_new_bit": {
+          "pairs": 256,
+          "both_correct": 255,
+          "prequery_state_equal": 0
+        },
+        "untouched_bit": {
+          "pairs": 256,
+          "both_correct": 0,
+          "prequery_state_equal": 256
+        },
+        "obsolete_bit": {
+          "pairs": 256,
+          "both_correct": 254,
+          "prequery_state_equal": 256
+        },
+        "unmarked_new_bit": {
+          "pairs": 256,
+          "both_correct": 128,
+          "prequery_state_equal": 256
+        },
+        "query_switch": {
+          "histories": 256,
+          "histories_with_different_current_values": 128,
+          "both_correct_on_different_values": 0,
+          "both_correct_on_all_histories": 128
+        }
+      },
+      "classifier_sha256": "2a418790cbab27dd81b2c09f97c60bf36de0884e3893e8dee922fd563bc578e0"
+    },
+    {
+      "experiment_id": "EXP-023",
+      "seed": 733,
+      "model_type": "addressed_reset_additive",
+      "source_checkpoint_sha256": "74a43d480ac9043e5192bb646c5cb32bbad5894d4d9b7ba58623dcf03de320b3",
+      "weight_fingerprint": "967163b635b5a12f887560ea6b5de150d31a6c90cc56576e64dc426452e35be2",
+      "reproduced_correct": 375,
+      "original_loss": 0.5444540083408356,
+      "original_accuracy": 0.732421875,
+      "fit_rows": 1536,
+      "iterations": [
+        156,
+        213
+      ],
+      "converged": true,
+      "convergence_warnings": [
+        [],
+        []
+      ],
+      "val": {
+        "size": 512,
+        "slot0": {
+          "correct": 442,
+          "loss": 0.25634547863977925,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 256,
+              "accuracy": 1.0
+            },
+            "updated": {
+              "size": 128,
+              "correct": 58,
+              "accuracy": 0.453125
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 128,
+              "accuracy": 1.0
+            }
+          }
+        },
+        "slot1": {
+          "correct": 395,
+          "loss": 0.4779107011910275,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 220,
+              "accuracy": 0.859375
+            },
+            "updated": {
+              "size": 128,
+              "correct": 62,
+              "accuracy": 0.484375
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 113,
+              "accuracy": 0.8828125
+            }
+          }
+        },
+        "both_correct": 333,
+        "routed_correct": 419,
+        "routed_loss": 0.3712399871607054,
+        "subgroups": {
+          "no_replacement_query0": {
+            "size": 128,
+            "correct": 128,
+            "accuracy": 1.0
+          },
+          "no_replacement_query1": {
+            "size": 128,
+            "correct": 110,
+            "accuracy": 0.859375
+          },
+          "replacement_updated_same": {
+            "size": 64,
+            "correct": 41,
+            "accuracy": 0.640625
+          },
+          "replacement_updated_conflict": {
+            "size": 64,
+            "correct": 21,
+            "accuracy": 0.328125
+          },
+          "replacement_untouched_query0": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_untouched_query1": {
+            "size": 64,
+            "correct": 55,
+            "accuracy": 0.859375
+          },
+          "updated_slot_address_0": {
+            "size": 64,
+            "correct": 31,
+            "accuracy": 0.484375
+          },
+          "updated_slot_address_1": {
+            "size": 64,
+            "correct": 31,
+            "accuracy": 0.484375
+          }
+        }
+      },
+      "test": {
+        "size": 512,
+        "slot0": {
+          "correct": 450,
+          "loss": 0.257080430733131,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 255,
+              "accuracy": 0.99609375
+            },
+            "updated": {
+              "size": 128,
+              "correct": 67,
+              "accuracy": 0.5234375
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 128,
+              "accuracy": 1.0
+            }
+          }
+        },
+        "slot1": {
+          "correct": 392,
+          "loss": 0.4730608292951396,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 222,
+              "accuracy": 0.8671875
+            },
+            "updated": {
+              "size": 128,
+              "correct": 61,
+              "accuracy": 0.4765625
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 109,
+              "accuracy": 0.8515625
+            }
+          }
+        },
+        "both_correct": 339,
+        "routed_correct": 420,
+        "routed_loss": 0.3691761963133682,
+        "subgroups": {
+          "no_replacement_query0": {
+            "size": 128,
+            "correct": 128,
+            "accuracy": 1.0
+          },
+          "no_replacement_query1": {
+            "size": 128,
+            "correct": 114,
+            "accuracy": 0.890625
+          },
+          "replacement_updated_same": {
+            "size": 64,
+            "correct": 38,
+            "accuracy": 0.59375
+          },
+          "replacement_updated_conflict": {
+            "size": 64,
+            "correct": 24,
+            "accuracy": 0.375
+          },
+          "replacement_untouched_query0": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_untouched_query1": {
+            "size": 64,
+            "correct": 52,
+            "accuracy": 0.8125
+          },
+          "updated_slot_address_0": {
+            "size": 64,
+            "correct": 34,
+            "accuracy": 0.53125
+          },
+          "updated_slot_address_1": {
+            "size": 64,
+            "correct": 28,
+            "accuracy": 0.4375
+          }
+        }
+      },
+      "success": false,
+      "status": "ok",
+      "audits": {
+        "marked_new_bit": {
+          "pairs": 256,
+          "both_correct": 0,
+          "prequery_state_equal": 0
+        },
+        "untouched_bit": {
+          "pairs": 256,
+          "both_correct": 256,
+          "prequery_state_equal": 0
+        },
+        "obsolete_bit": {
+          "pairs": 256,
+          "both_correct": 30,
+          "prequery_state_equal": 0
+        },
+        "unmarked_new_bit": {
+          "pairs": 256,
+          "both_correct": 255,
+          "prequery_state_equal": 222
+        },
+        "query_switch": {
+          "histories": 256,
+          "histories_with_different_current_values": 128,
+          "both_correct_on_different_values": 56,
+          "both_correct_on_all_histories": 168
+        }
+      },
+      "classifier_sha256": "ddc1ddc2ba4954842b00dce7016a4055a0fbee2e1666c76a983661265b041d82"
+    },
+    {
+      "experiment_id": "EXP-023",
+      "seed": 739,
+      "model_type": "additive_tanh_rnn",
+      "source_checkpoint_sha256": "016f09f4b7382b1b55fe3760f4f6be11640601e053486a2c2dcb92e1121935b7",
+      "weight_fingerprint": "32e151adc69a38ce30768f99f6b995becb91332a54a26fabf37564c5d732f62c",
+      "reproduced_correct": 352,
+      "original_loss": 0.5622633397579193,
+      "original_accuracy": 0.6875,
+      "fit_rows": 1536,
+      "iterations": [
+        187,
+        190
+      ],
+      "converged": true,
+      "convergence_warnings": [
+        [],
+        []
+      ],
+      "val": {
+        "size": 512,
+        "slot0": {
+          "correct": 448,
+          "loss": 0.38437512758833564,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 256,
+              "accuracy": 1.0
+            },
+            "updated": {
+              "size": 128,
+              "correct": 64,
+              "accuracy": 0.5
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 128,
+              "accuracy": 1.0
+            }
+          }
+        },
+        "slot1": {
+          "correct": 448,
+          "loss": 0.3948529123774096,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 256,
+              "accuracy": 1.0
+            },
+            "updated": {
+              "size": 128,
+              "correct": 64,
+              "accuracy": 0.5
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 128,
+              "accuracy": 1.0
+            }
+          }
+        },
+        "both_correct": 384,
+        "routed_correct": 448,
+        "routed_loss": 0.39493921059534404,
+        "subgroups": {
+          "no_replacement_query0": {
+            "size": 128,
+            "correct": 128,
+            "accuracy": 1.0
+          },
+          "no_replacement_query1": {
+            "size": 128,
+            "correct": 128,
+            "accuracy": 1.0
+          },
+          "replacement_updated_same": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_updated_conflict": {
+            "size": 64,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "replacement_untouched_query0": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_untouched_query1": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "updated_slot_address_0": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          },
+          "updated_slot_address_1": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          }
+        }
+      },
+      "test": {
+        "size": 512,
+        "slot0": {
+          "correct": 448,
+          "loss": 0.3784820417000746,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 256,
+              "accuracy": 1.0
+            },
+            "updated": {
+              "size": 128,
+              "correct": 64,
+              "accuracy": 0.5
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 128,
+              "accuracy": 1.0
+            }
+          }
+        },
+        "slot1": {
+          "correct": 448,
+          "loss": 0.3888310024399573,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 256,
+              "accuracy": 1.0
+            },
+            "updated": {
+              "size": 128,
+              "correct": 64,
+              "accuracy": 0.5
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 128,
+              "accuracy": 1.0
+            }
+          }
+        },
+        "both_correct": 384,
+        "routed_correct": 448,
+        "routed_loss": 0.3828512775191346,
+        "subgroups": {
+          "no_replacement_query0": {
+            "size": 128,
+            "correct": 128,
+            "accuracy": 1.0
+          },
+          "no_replacement_query1": {
+            "size": 128,
+            "correct": 128,
+            "accuracy": 1.0
+          },
+          "replacement_updated_same": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_updated_conflict": {
+            "size": 64,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "replacement_untouched_query0": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_untouched_query1": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "updated_slot_address_0": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          },
+          "updated_slot_address_1": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          }
+        }
+      },
+      "success": false,
+      "status": "ok",
+      "audits": {
+        "marked_new_bit": {
+          "pairs": 256,
+          "both_correct": 0,
+          "prequery_state_equal": 53
+        },
+        "untouched_bit": {
+          "pairs": 256,
+          "both_correct": 256,
+          "prequery_state_equal": 0
+        },
+        "obsolete_bit": {
+          "pairs": 256,
+          "both_correct": 0,
+          "prequery_state_equal": 0
+        },
+        "unmarked_new_bit": {
+          "pairs": 256,
+          "both_correct": 256,
+          "prequery_state_equal": 52
+        },
+        "query_switch": {
+          "histories": 256,
+          "histories_with_different_current_values": 128,
+          "both_correct_on_different_values": 96,
+          "both_correct_on_all_histories": 192
+        }
+      },
+      "classifier_sha256": "c32b29c24b977b4952f10dc21a6af95374a51c81a7b98ecc1b8ede1d1b967cac"
+    },
+    {
+      "experiment_id": "EXP-023",
+      "seed": 739,
+      "model_type": "whole_reset_additive",
+      "source_checkpoint_sha256": "edda1a0a47600599d14568931faf8afce06e7f701fb79bae0dc758c86931481a",
+      "weight_fingerprint": "3c80420f59573979e0d464cb7072666cc9c11156a10aea37470287eec24f05f2",
+      "reproduced_correct": 264,
+      "original_loss": 1.4500929713249207,
+      "original_accuracy": 0.515625,
+      "fit_rows": 1536,
+      "iterations": [
+        105,
+        86
+      ],
+      "converged": true,
+      "convergence_warnings": [
+        [],
+        []
+      ],
+      "val": {
+        "size": 512,
+        "slot0": {
+          "correct": 320,
+          "loss": 0.6588091179998463,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 128,
+              "accuracy": 0.5
+            },
+            "updated": {
+              "size": 128,
+              "correct": 128,
+              "accuracy": 1.0
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 64,
+              "accuracy": 0.5
+            }
+          }
+        },
+        "slot1": {
+          "correct": 448,
+          "loss": 0.4132726489075377,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 256,
+              "accuracy": 1.0
+            },
+            "updated": {
+              "size": 128,
+              "correct": 128,
+              "accuracy": 1.0
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 64,
+              "accuracy": 0.5
+            }
+          }
+        },
+        "both_correct": 256,
+        "routed_correct": 384,
+        "routed_loss": 0.5372473264863118,
+        "subgroups": {
+          "no_replacement_query0": {
+            "size": 128,
+            "correct": 64,
+            "accuracy": 0.5
+          },
+          "no_replacement_query1": {
+            "size": 128,
+            "correct": 128,
+            "accuracy": 1.0
+          },
+          "replacement_updated_same": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_updated_conflict": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_untouched_query0": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          },
+          "replacement_untouched_query1": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          },
+          "updated_slot_address_0": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "updated_slot_address_1": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          }
+        }
+      },
+      "test": {
+        "size": 512,
+        "slot0": {
+          "correct": 320,
+          "loss": 0.6612957154951229,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 128,
+              "accuracy": 0.5
+            },
+            "updated": {
+              "size": 128,
+              "correct": 128,
+              "accuracy": 1.0
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 64,
+              "accuracy": 0.5
+            }
+          }
+        },
+        "slot1": {
+          "correct": 449,
+          "loss": 0.39250940219568015,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 256,
+              "accuracy": 1.0
+            },
+            "updated": {
+              "size": 128,
+              "correct": 128,
+              "accuracy": 1.0
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 65,
+              "accuracy": 0.5078125
+            }
+          }
+        },
+        "both_correct": 257,
+        "routed_correct": 385,
+        "routed_loss": 0.5225417359582133,
+        "subgroups": {
+          "no_replacement_query0": {
+            "size": 128,
+            "correct": 64,
+            "accuracy": 0.5
+          },
+          "no_replacement_query1": {
+            "size": 128,
+            "correct": 128,
+            "accuracy": 1.0
+          },
+          "replacement_updated_same": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_updated_conflict": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_untouched_query0": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          },
+          "replacement_untouched_query1": {
+            "size": 64,
+            "correct": 33,
+            "accuracy": 0.515625
+          },
+          "updated_slot_address_0": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "updated_slot_address_1": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          }
+        }
+      },
+      "success": false,
+      "status": "ok",
+      "audits": {
+        "marked_new_bit": {
+          "pairs": 256,
+          "both_correct": 256,
+          "prequery_state_equal": 0
+        },
+        "untouched_bit": {
+          "pairs": 256,
+          "both_correct": 0,
+          "prequery_state_equal": 256
+        },
+        "obsolete_bit": {
+          "pairs": 256,
+          "both_correct": 256,
+          "prequery_state_equal": 256
+        },
+        "unmarked_new_bit": {
+          "pairs": 256,
+          "both_correct": 128,
+          "prequery_state_equal": 246
+        },
+        "query_switch": {
+          "histories": 256,
+          "histories_with_different_current_values": 128,
+          "both_correct_on_different_values": 1,
+          "both_correct_on_all_histories": 128
+        }
+      },
+      "classifier_sha256": "6c805163cbae43a7e1f6e8807cb349877cc23519b3b8780f304cdf254ce2267e"
+    },
+    {
+      "experiment_id": "EXP-023",
+      "seed": 739,
+      "model_type": "addressed_reset_additive",
+      "source_checkpoint_sha256": "80c801381ee2d3ba67b046ec589d723cdd9905fed37520f93bcdb2236a28efbe",
+      "weight_fingerprint": "f1a7b77dc69708336595c21dbfa2b071033bd062c431f4b4b93515715c9d185b",
+      "reproduced_correct": 284,
+      "original_loss": 0.9381613731384277,
+      "original_accuracy": 0.5546875,
+      "fit_rows": 1536,
+      "iterations": [
+        238,
+        210
+      ],
+      "converged": true,
+      "convergence_warnings": [
+        [],
+        []
+      ],
+      "val": {
+        "size": 512,
+        "slot0": {
+          "correct": 393,
+          "loss": 0.4709531239082092,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 218,
+              "accuracy": 0.8515625
+            },
+            "updated": {
+              "size": 128,
+              "correct": 67,
+              "accuracy": 0.5234375
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 108,
+              "accuracy": 0.84375
+            }
+          }
+        },
+        "slot1": {
+          "correct": 367,
+          "loss": 0.48036090345013654,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 201,
+              "accuracy": 0.78515625
+            },
+            "updated": {
+              "size": 128,
+              "correct": 69,
+              "accuracy": 0.5390625
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 97,
+              "accuracy": 0.7578125
+            }
+          }
+        },
+        "both_correct": 276,
+        "routed_correct": 373,
+        "routed_loss": 0.4778631530167539,
+        "subgroups": {
+          "no_replacement_query0": {
+            "size": 128,
+            "correct": 108,
+            "accuracy": 0.84375
+          },
+          "no_replacement_query1": {
+            "size": 128,
+            "correct": 96,
+            "accuracy": 0.75
+          },
+          "replacement_updated_same": {
+            "size": 64,
+            "correct": 41,
+            "accuracy": 0.640625
+          },
+          "replacement_updated_conflict": {
+            "size": 64,
+            "correct": 23,
+            "accuracy": 0.359375
+          },
+          "replacement_untouched_query0": {
+            "size": 64,
+            "correct": 54,
+            "accuracy": 0.84375
+          },
+          "replacement_untouched_query1": {
+            "size": 64,
+            "correct": 51,
+            "accuracy": 0.796875
+          },
+          "updated_slot_address_0": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          },
+          "updated_slot_address_1": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          }
+        }
+      },
+      "test": {
+        "size": 512,
+        "slot0": {
+          "correct": 387,
+          "loss": 0.4669181639193837,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 218,
+              "accuracy": 0.8515625
+            },
+            "updated": {
+              "size": 128,
+              "correct": 62,
+              "accuracy": 0.484375
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 107,
+              "accuracy": 0.8359375
+            }
+          }
+        },
+        "slot1": {
+          "correct": 364,
+          "loss": 0.4912546481134006,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 195,
+              "accuracy": 0.76171875
+            },
+            "updated": {
+              "size": 128,
+              "correct": 68,
+              "accuracy": 0.53125
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 101,
+              "accuracy": 0.7890625
+            }
+          }
+        },
+        "both_correct": 257,
+        "routed_correct": 388,
+        "routed_loss": 0.47123325682302675,
+        "subgroups": {
+          "no_replacement_query0": {
+            "size": 128,
+            "correct": 110,
+            "accuracy": 0.859375
+          },
+          "no_replacement_query1": {
+            "size": 128,
+            "correct": 95,
+            "accuracy": 0.7421875
+          },
+          "replacement_updated_same": {
+            "size": 64,
+            "correct": 48,
+            "accuracy": 0.75
+          },
+          "replacement_updated_conflict": {
+            "size": 64,
+            "correct": 24,
+            "accuracy": 0.375
+          },
+          "replacement_untouched_query0": {
+            "size": 64,
+            "correct": 58,
+            "accuracy": 0.90625
+          },
+          "replacement_untouched_query1": {
+            "size": 64,
+            "correct": 53,
+            "accuracy": 0.828125
+          },
+          "updated_slot_address_0": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          },
+          "updated_slot_address_1": {
+            "size": 64,
+            "correct": 40,
+            "accuracy": 0.625
+          }
+        }
+      },
+      "success": false,
+      "status": "ok",
+      "audits": {
+        "marked_new_bit": {
+          "pairs": 256,
+          "both_correct": 0,
+          "prequery_state_equal": 0
+        },
+        "untouched_bit": {
+          "pairs": 256,
+          "both_correct": 165,
+          "prequery_state_equal": 0
+        },
+        "obsolete_bit": {
+          "pairs": 256,
+          "both_correct": 67,
+          "prequery_state_equal": 0
+        },
+        "unmarked_new_bit": {
+          "pairs": 256,
+          "both_correct": 218,
+          "prequery_state_equal": 224
+        },
+        "query_switch": {
+          "histories": 256,
+          "histories_with_different_current_values": 128,
+          "both_correct_on_different_values": 37,
+          "both_correct_on_all_histories": 134
+        }
+      },
+      "classifier_sha256": "daa4de6dc6a3a125066f42c1a5e10bde0971a98d9ab3cd9ed5339d2d453711c3"
+    },
+    {
+      "experiment_id": "EXP-023",
+      "seed": 743,
+      "model_type": "additive_tanh_rnn",
+      "source_checkpoint_sha256": "ff99d394d75bbb76306c4e3b6bbabc84988a96a1d7000451e221509ceba130ce",
+      "weight_fingerprint": "bc70f532a230e904c11c6a8ea1bfbdec0cdb5752ff7114467537874900ed8912",
+      "reproduced_correct": 308,
+      "original_loss": 0.9694932699203491,
+      "original_accuracy": 0.6015625,
+      "fit_rows": 1536,
+      "iterations": [
+        206,
+        233
+      ],
+      "converged": true,
+      "convergence_warnings": [
+        [],
+        []
+      ],
+      "val": {
+        "size": 512,
+        "slot0": {
+          "correct": 448,
+          "loss": 0.3980125508426121,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 256,
+              "accuracy": 1.0
+            },
+            "updated": {
+              "size": 128,
+              "correct": 64,
+              "accuracy": 0.5
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 128,
+              "accuracy": 1.0
+            }
+          }
+        },
+        "slot1": {
+          "correct": 417,
+          "loss": 0.4664635333971371,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 231,
+              "accuracy": 0.90234375
+            },
+            "updated": {
+              "size": 128,
+              "correct": 65,
+              "accuracy": 0.5078125
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 121,
+              "accuracy": 0.9453125
+            }
+          }
+        },
+        "both_correct": 356,
+        "routed_correct": 429,
+        "routed_loss": 0.43602344953145067,
+        "subgroups": {
+          "no_replacement_query0": {
+            "size": 128,
+            "correct": 128,
+            "accuracy": 1.0
+          },
+          "no_replacement_query1": {
+            "size": 128,
+            "correct": 111,
+            "accuracy": 0.8671875
+          },
+          "replacement_updated_same": {
+            "size": 64,
+            "correct": 61,
+            "accuracy": 0.953125
+          },
+          "replacement_updated_conflict": {
+            "size": 64,
+            "correct": 4,
+            "accuracy": 0.0625
+          },
+          "replacement_untouched_query0": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_untouched_query1": {
+            "size": 64,
+            "correct": 61,
+            "accuracy": 0.953125
+          },
+          "updated_slot_address_0": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          },
+          "updated_slot_address_1": {
+            "size": 64,
+            "correct": 33,
+            "accuracy": 0.515625
+          }
+        }
+      },
+      "test": {
+        "size": 512,
+        "slot0": {
+          "correct": 448,
+          "loss": 0.40553889921151254,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 256,
+              "accuracy": 1.0
+            },
+            "updated": {
+              "size": 128,
+              "correct": 64,
+              "accuracy": 0.5
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 128,
+              "accuracy": 1.0
+            }
+          }
+        },
+        "slot1": {
+          "correct": 406,
+          "loss": 0.48764609646388785,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 224,
+              "accuracy": 0.875
+            },
+            "updated": {
+              "size": 128,
+              "correct": 67,
+              "accuracy": 0.5234375
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 115,
+              "accuracy": 0.8984375
+            }
+          }
+        },
+        "both_correct": 348,
+        "routed_correct": 429,
+        "routed_loss": 0.42843399703002866,
+        "subgroups": {
+          "no_replacement_query0": {
+            "size": 128,
+            "correct": 128,
+            "accuracy": 1.0
+          },
+          "no_replacement_query1": {
+            "size": 128,
+            "correct": 113,
+            "accuracy": 0.8828125
+          },
+          "replacement_updated_same": {
+            "size": 64,
+            "correct": 62,
+            "accuracy": 0.96875
+          },
+          "replacement_updated_conflict": {
+            "size": 64,
+            "correct": 6,
+            "accuracy": 0.09375
+          },
+          "replacement_untouched_query0": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_untouched_query1": {
+            "size": 64,
+            "correct": 56,
+            "accuracy": 0.875
+          },
+          "updated_slot_address_0": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          },
+          "updated_slot_address_1": {
+            "size": 64,
+            "correct": 36,
+            "accuracy": 0.5625
+          }
+        }
+      },
+      "success": false,
+      "status": "ok",
+      "audits": {
+        "marked_new_bit": {
+          "pairs": 256,
+          "both_correct": 0,
+          "prequery_state_equal": 72
+        },
+        "untouched_bit": {
+          "pairs": 256,
+          "both_correct": 256,
+          "prequery_state_equal": 0
+        },
+        "obsolete_bit": {
+          "pairs": 256,
+          "both_correct": 0,
+          "prequery_state_equal": 0
+        },
+        "unmarked_new_bit": {
+          "pairs": 256,
+          "both_correct": 256,
+          "prequery_state_equal": 74
+        },
+        "query_switch": {
+          "histories": 256,
+          "histories_with_different_current_values": 128,
+          "both_correct_on_different_values": 74,
+          "both_correct_on_all_histories": 166
+        }
+      },
+      "classifier_sha256": "ca453d0c85c11e4f3d9aea7807d18090f9af3668fc41de79b47a2f0553f603b3"
+    },
+    {
+      "experiment_id": "EXP-023",
+      "seed": 743,
+      "model_type": "whole_reset_additive",
+      "source_checkpoint_sha256": "ff720774e262797aa78dd5dbf5da56543f5f21b7be84d78f7adfb210842944f8",
+      "weight_fingerprint": "4b6bafde16e4759f63391758f74b6614b92d12d5dd7d00a353b8c56270497bf9",
+      "reproduced_correct": 280,
+      "original_loss": 0.7899681031703949,
+      "original_accuracy": 0.546875,
+      "fit_rows": 1536,
+      "iterations": [
+        84,
+        78
+      ],
+      "converged": true,
+      "convergence_warnings": [
+        [],
+        []
+      ],
+      "val": {
+        "size": 512,
+        "slot0": {
+          "correct": 321,
+          "loss": 0.6727025209625828,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 128,
+              "accuracy": 0.5
+            },
+            "updated": {
+              "size": 128,
+              "correct": 128,
+              "accuracy": 1.0
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 65,
+              "accuracy": 0.5078125
+            }
+          }
+        },
+        "slot1": {
+          "correct": 447,
+          "loss": 0.3934455932199627,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 255,
+              "accuracy": 0.99609375
+            },
+            "updated": {
+              "size": 128,
+              "correct": 128,
+              "accuracy": 1.0
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 64,
+              "accuracy": 0.5
+            }
+          }
+        },
+        "both_correct": 256,
+        "routed_correct": 383,
+        "routed_loss": 0.5401618077480228,
+        "subgroups": {
+          "no_replacement_query0": {
+            "size": 128,
+            "correct": 64,
+            "accuracy": 0.5
+          },
+          "no_replacement_query1": {
+            "size": 128,
+            "correct": 127,
+            "accuracy": 0.9921875
+          },
+          "replacement_updated_same": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_updated_conflict": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_untouched_query0": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          },
+          "replacement_untouched_query1": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          },
+          "updated_slot_address_0": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "updated_slot_address_1": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          }
+        }
+      },
+      "test": {
+        "size": 512,
+        "slot0": {
+          "correct": 321,
+          "loss": 0.6728931291790301,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 130,
+              "accuracy": 0.5078125
+            },
+            "updated": {
+              "size": 128,
+              "correct": 127,
+              "accuracy": 0.9921875
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 64,
+              "accuracy": 0.5
+            }
+          }
+        },
+        "slot1": {
+          "correct": 446,
+          "loss": 0.3919757413354477,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 255,
+              "accuracy": 0.99609375
+            },
+            "updated": {
+              "size": 128,
+              "correct": 127,
+              "accuracy": 0.9921875
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 64,
+              "accuracy": 0.5
+            }
+          }
+        },
+        "both_correct": 256,
+        "routed_correct": 383,
+        "routed_loss": 0.548988589155595,
+        "subgroups": {
+          "no_replacement_query0": {
+            "size": 128,
+            "correct": 65,
+            "accuracy": 0.5078125
+          },
+          "no_replacement_query1": {
+            "size": 128,
+            "correct": 127,
+            "accuracy": 0.9921875
+          },
+          "replacement_updated_same": {
+            "size": 64,
+            "correct": 63,
+            "accuracy": 0.984375
+          },
+          "replacement_updated_conflict": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_untouched_query0": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          },
+          "replacement_untouched_query1": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          },
+          "updated_slot_address_0": {
+            "size": 64,
+            "correct": 63,
+            "accuracy": 0.984375
+          },
+          "updated_slot_address_1": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          }
+        }
+      },
+      "success": false,
+      "status": "ok",
+      "audits": {
+        "marked_new_bit": {
+          "pairs": 256,
+          "both_correct": 254,
+          "prequery_state_equal": 0
+        },
+        "untouched_bit": {
+          "pairs": 256,
+          "both_correct": 0,
+          "prequery_state_equal": 256
+        },
+        "obsolete_bit": {
+          "pairs": 256,
+          "both_correct": 254,
+          "prequery_state_equal": 256
+        },
+        "unmarked_new_bit": {
+          "pairs": 256,
+          "both_correct": 126,
+          "prequery_state_equal": 55
+        },
+        "query_switch": {
+          "histories": 256,
+          "histories_with_different_current_values": 128,
+          "both_correct_on_different_values": 0,
+          "both_correct_on_all_histories": 127
+        }
+      },
+      "classifier_sha256": "ad3a2936049f6425d41e4822eb30fd72c067fa2f3d860b3e4e7004b3d6d8a131"
+    },
+    {
+      "experiment_id": "EXP-023",
+      "seed": 743,
+      "model_type": "addressed_reset_additive",
+      "source_checkpoint_sha256": "4ca7ec1a527a77d3511065a8cba2af2eedb90f4fc44dee36c8457ecf5d027d73",
+      "weight_fingerprint": "4b12c8c0a0aa91f826002a49747aa9b8690673a44ab03ef6c6d76d0d321aa30f",
+      "reproduced_correct": 317,
+      "original_loss": 0.9205262660980225,
+      "original_accuracy": 0.619140625,
+      "fit_rows": 1536,
+      "iterations": [
+        145,
+        176
+      ],
+      "converged": true,
+      "convergence_warnings": [
+        [],
+        []
+      ],
+      "val": {
+        "size": 512,
+        "slot0": {
+          "correct": 451,
+          "loss": 0.1988810119456687,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 256,
+              "accuracy": 1.0
+            },
+            "updated": {
+              "size": 128,
+              "correct": 67,
+              "accuracy": 0.5234375
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 128,
+              "accuracy": 1.0
+            }
+          }
+        },
+        "slot1": {
+          "correct": 442,
+          "loss": 0.3310903060402768,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 256,
+              "accuracy": 1.0
+            },
+            "updated": {
+              "size": 128,
+              "correct": 59,
+              "accuracy": 0.4609375
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 127,
+              "accuracy": 0.9921875
+            }
+          }
+        },
+        "both_correct": 381,
+        "routed_correct": 448,
+        "routed_loss": 0.26289030052101015,
+        "subgroups": {
+          "no_replacement_query0": {
+            "size": 128,
+            "correct": 128,
+            "accuracy": 1.0
+          },
+          "no_replacement_query1": {
+            "size": 128,
+            "correct": 128,
+            "accuracy": 1.0
+          },
+          "replacement_updated_same": {
+            "size": 64,
+            "correct": 48,
+            "accuracy": 0.75
+          },
+          "replacement_updated_conflict": {
+            "size": 64,
+            "correct": 16,
+            "accuracy": 0.25
+          },
+          "replacement_untouched_query0": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_untouched_query1": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "updated_slot_address_0": {
+            "size": 64,
+            "correct": 35,
+            "accuracy": 0.546875
+          },
+          "updated_slot_address_1": {
+            "size": 64,
+            "correct": 29,
+            "accuracy": 0.453125
+          }
+        }
+      },
+      "test": {
+        "size": 512,
+        "slot0": {
+          "correct": 439,
+          "loss": 0.20156972114153154,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 256,
+              "accuracy": 1.0
+            },
+            "updated": {
+              "size": 128,
+              "correct": 55,
+              "accuracy": 0.4296875
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 128,
+              "accuracy": 1.0
+            }
+          }
+        },
+        "slot1": {
+          "correct": 443,
+          "loss": 0.33456669996743027,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 256,
+              "accuracy": 1.0
+            },
+            "updated": {
+              "size": 128,
+              "correct": 64,
+              "accuracy": 0.5
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 123,
+              "accuracy": 0.9609375
+            }
+          }
+        },
+        "both_correct": 373,
+        "routed_correct": 434,
+        "routed_loss": 0.2798994959980746,
+        "subgroups": {
+          "no_replacement_query0": {
+            "size": 128,
+            "correct": 128,
+            "accuracy": 1.0
+          },
+          "no_replacement_query1": {
+            "size": 128,
+            "correct": 128,
+            "accuracy": 1.0
+          },
+          "replacement_updated_same": {
+            "size": 64,
+            "correct": 37,
+            "accuracy": 0.578125
+          },
+          "replacement_updated_conflict": {
+            "size": 64,
+            "correct": 15,
+            "accuracy": 0.234375
+          },
+          "replacement_untouched_query0": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_untouched_query1": {
+            "size": 64,
+            "correct": 62,
+            "accuracy": 0.96875
+          },
+          "updated_slot_address_0": {
+            "size": 64,
+            "correct": 25,
+            "accuracy": 0.390625
+          },
+          "updated_slot_address_1": {
+            "size": 64,
+            "correct": 27,
+            "accuracy": 0.421875
+          }
+        }
+      },
+      "success": false,
+      "status": "ok",
+      "audits": {
+        "marked_new_bit": {
+          "pairs": 256,
+          "both_correct": 0,
+          "prequery_state_equal": 2
+        },
+        "untouched_bit": {
+          "pairs": 256,
+          "both_correct": 256,
+          "prequery_state_equal": 0
+        },
+        "obsolete_bit": {
+          "pairs": 256,
+          "both_correct": 28,
+          "prequery_state_equal": 0
+        },
+        "unmarked_new_bit": {
+          "pairs": 256,
+          "both_correct": 256,
+          "prequery_state_equal": 252
+        },
+        "query_switch": {
+          "histories": 256,
+          "histories_with_different_current_values": 128,
+          "both_correct_on_different_values": 100,
+          "both_correct_on_all_histories": 186
+        }
+      },
+      "classifier_sha256": "8487db4783c52fa8e820a7328207d8b7fd68ff93221ebea2195c28390deb910b"
+    },
+    {
+      "experiment_id": "EXP-023",
+      "seed": 751,
+      "model_type": "additive_tanh_rnn",
+      "source_checkpoint_sha256": "10b9129097c2bef6b14579175d18d067f714b4720d0d776dfa3e866352e69f63",
+      "weight_fingerprint": "39d3b6cd092e55ee8f0e4ed40e3073ee3751ba28c3ce6f73f69b865fd5de273b",
+      "reproduced_correct": 348,
+      "original_loss": 0.6719158589839935,
+      "original_accuracy": 0.6796875,
+      "fit_rows": 1536,
+      "iterations": [
+        200,
+        229
+      ],
+      "converged": true,
+      "convergence_warnings": [
+        [],
+        []
+      ],
+      "val": {
+        "size": 512,
+        "slot0": {
+          "correct": 448,
+          "loss": 0.385714880571645,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 256,
+              "accuracy": 1.0
+            },
+            "updated": {
+              "size": 128,
+              "correct": 64,
+              "accuracy": 0.5
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 128,
+              "accuracy": 1.0
+            }
+          }
+        },
+        "slot1": {
+          "correct": 423,
+          "loss": 0.4674845026763416,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 237,
+              "accuracy": 0.92578125
+            },
+            "updated": {
+              "size": 128,
+              "correct": 64,
+              "accuracy": 0.5
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 122,
+              "accuracy": 0.953125
+            }
+          }
+        },
+        "both_correct": 363,
+        "routed_correct": 435,
+        "routed_loss": 0.43233733451606554,
+        "subgroups": {
+          "no_replacement_query0": {
+            "size": 128,
+            "correct": 128,
+            "accuracy": 1.0
+          },
+          "no_replacement_query1": {
+            "size": 128,
+            "correct": 119,
+            "accuracy": 0.9296875
+          },
+          "replacement_updated_same": {
+            "size": 64,
+            "correct": 60,
+            "accuracy": 0.9375
+          },
+          "replacement_updated_conflict": {
+            "size": 64,
+            "correct": 3,
+            "accuracy": 0.046875
+          },
+          "replacement_untouched_query0": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_untouched_query1": {
+            "size": 64,
+            "correct": 61,
+            "accuracy": 0.953125
+          },
+          "updated_slot_address_0": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          },
+          "updated_slot_address_1": {
+            "size": 64,
+            "correct": 31,
+            "accuracy": 0.484375
+          }
+        }
+      },
+      "test": {
+        "size": 512,
+        "slot0": {
+          "correct": 448,
+          "loss": 0.3778878613303875,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 256,
+              "accuracy": 1.0
+            },
+            "updated": {
+              "size": 128,
+              "correct": 64,
+              "accuracy": 0.5
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 128,
+              "accuracy": 1.0
+            }
+          }
+        },
+        "slot1": {
+          "correct": 426,
+          "loss": 0.46596366932346617,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 244,
+              "accuracy": 0.953125
+            },
+            "updated": {
+              "size": 128,
+              "correct": 63,
+              "accuracy": 0.4921875
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 119,
+              "accuracy": 0.9296875
+            }
+          }
+        },
+        "both_correct": 368,
+        "routed_correct": 436,
+        "routed_loss": 0.42339951159860656,
+        "subgroups": {
+          "no_replacement_query0": {
+            "size": 128,
+            "correct": 128,
+            "accuracy": 1.0
+          },
+          "no_replacement_query1": {
+            "size": 128,
+            "correct": 122,
+            "accuracy": 0.953125
+          },
+          "replacement_updated_same": {
+            "size": 64,
+            "correct": 61,
+            "accuracy": 0.953125
+          },
+          "replacement_updated_conflict": {
+            "size": 64,
+            "correct": 2,
+            "accuracy": 0.03125
+          },
+          "replacement_untouched_query0": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_untouched_query1": {
+            "size": 64,
+            "correct": 59,
+            "accuracy": 0.921875
+          },
+          "updated_slot_address_0": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          },
+          "updated_slot_address_1": {
+            "size": 64,
+            "correct": 31,
+            "accuracy": 0.484375
+          }
+        }
+      },
+      "success": false,
+      "status": "ok",
+      "audits": {
+        "marked_new_bit": {
+          "pairs": 256,
+          "both_correct": 1,
+          "prequery_state_equal": 0
+        },
+        "untouched_bit": {
+          "pairs": 256,
+          "both_correct": 256,
+          "prequery_state_equal": 0
+        },
+        "obsolete_bit": {
+          "pairs": 256,
+          "both_correct": 0,
+          "prequery_state_equal": 0
+        },
+        "unmarked_new_bit": {
+          "pairs": 256,
+          "both_correct": 256,
+          "prequery_state_equal": 0
+        },
+        "query_switch": {
+          "histories": 256,
+          "histories_with_different_current_values": 128,
+          "both_correct_on_different_values": 85,
+          "both_correct_on_all_histories": 181
+        }
+      },
+      "classifier_sha256": "500bb8417e9abf47663e8121d4181e5b2118b2f37eeb4d5f8d758a193e894563"
+    },
+    {
+      "experiment_id": "EXP-023",
+      "seed": 751,
+      "model_type": "whole_reset_additive",
+      "source_checkpoint_sha256": "ec7df63667a8d538d4ab457d2530eaad7ee94965f8baac186f03a4654f0db8e8",
+      "weight_fingerprint": "1325ba6f4777fb6d0b27484a2fdfdf236a4b3e9f583adbfbb5831fd09a9a8f67",
+      "reproduced_correct": 288,
+      "original_loss": 1.2690103650093079,
+      "original_accuracy": 0.5625,
+      "fit_rows": 1536,
+      "iterations": [
+        103,
+        91
+      ],
+      "converged": true,
+      "convergence_warnings": [
+        [],
+        []
+      ],
+      "val": {
+        "size": 512,
+        "slot0": {
+          "correct": 321,
+          "loss": 0.6705069123912601,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 128,
+              "accuracy": 0.5
+            },
+            "updated": {
+              "size": 128,
+              "correct": 128,
+              "accuracy": 1.0
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 65,
+              "accuracy": 0.5078125
+            }
+          }
+        },
+        "slot1": {
+          "correct": 447,
+          "loss": 0.36372157382737147,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 255,
+              "accuracy": 0.99609375
+            },
+            "updated": {
+              "size": 128,
+              "correct": 128,
+              "accuracy": 1.0
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 64,
+              "accuracy": 0.5
+            }
+          }
+        },
+        "both_correct": 257,
+        "routed_correct": 385,
+        "routed_loss": 0.5157591784606763,
+        "subgroups": {
+          "no_replacement_query0": {
+            "size": 128,
+            "correct": 65,
+            "accuracy": 0.5078125
+          },
+          "no_replacement_query1": {
+            "size": 128,
+            "correct": 128,
+            "accuracy": 1.0
+          },
+          "replacement_updated_same": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_updated_conflict": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_untouched_query0": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          },
+          "replacement_untouched_query1": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          },
+          "updated_slot_address_0": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "updated_slot_address_1": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          }
+        }
+      },
+      "test": {
+        "size": 512,
+        "slot0": {
+          "correct": 318,
+          "loss": 0.6657300679680507,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 126,
+              "accuracy": 0.4921875
+            },
+            "updated": {
+              "size": 128,
+              "correct": 128,
+              "accuracy": 1.0
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 64,
+              "accuracy": 0.5
+            }
+          }
+        },
+        "slot1": {
+          "correct": 448,
+          "loss": 0.3850971727568865,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 256,
+              "accuracy": 1.0
+            },
+            "updated": {
+              "size": 128,
+              "correct": 128,
+              "accuracy": 1.0
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 64,
+              "accuracy": 0.5
+            }
+          }
+        },
+        "both_correct": 254,
+        "routed_correct": 382,
+        "routed_loss": 0.5216335749470161,
+        "subgroups": {
+          "no_replacement_query0": {
+            "size": 128,
+            "correct": 62,
+            "accuracy": 0.484375
+          },
+          "no_replacement_query1": {
+            "size": 128,
+            "correct": 128,
+            "accuracy": 1.0
+          },
+          "replacement_updated_same": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_updated_conflict": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_untouched_query0": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          },
+          "replacement_untouched_query1": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          },
+          "updated_slot_address_0": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "updated_slot_address_1": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          }
+        }
+      },
+      "success": false,
+      "status": "ok",
+      "audits": {
+        "marked_new_bit": {
+          "pairs": 256,
+          "both_correct": 255,
+          "prequery_state_equal": 0
+        },
+        "untouched_bit": {
+          "pairs": 256,
+          "both_correct": 0,
+          "prequery_state_equal": 256
+        },
+        "obsolete_bit": {
+          "pairs": 256,
+          "both_correct": 254,
+          "prequery_state_equal": 256
+        },
+        "unmarked_new_bit": {
+          "pairs": 256,
+          "both_correct": 128,
+          "prequery_state_equal": 252
+        },
+        "query_switch": {
+          "histories": 256,
+          "histories_with_different_current_values": 128,
+          "both_correct_on_different_values": 2,
+          "both_correct_on_all_histories": 129
+        }
+      },
+      "classifier_sha256": "d55a9774837084922873b853da1ff83ec1b6da8d53f9c24e138c521b2d87721b"
+    },
+    {
+      "experiment_id": "EXP-023",
+      "seed": 751,
+      "model_type": "addressed_reset_additive",
+      "source_checkpoint_sha256": "ac7b5a6931f42b945f2559a4f7adfc5bc3016d6a92be2bbf7a501b73065e271d",
+      "weight_fingerprint": "2467ff550e40b8f9bd509c985557ea475a1261ab0ca9b6bea3db408fe5074f7d",
+      "reproduced_correct": 326,
+      "original_loss": 0.8293167650699615,
+      "original_accuracy": 0.63671875,
+      "fit_rows": 1536,
+      "iterations": [
+        174,
+        235
+      ],
+      "converged": true,
+      "convergence_warnings": [
+        [],
+        []
+      ],
+      "val": {
+        "size": 512,
+        "slot0": {
+          "correct": 447,
+          "loss": 0.29236693033099975,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 256,
+              "accuracy": 1.0
+            },
+            "updated": {
+              "size": 128,
+              "correct": 64,
+              "accuracy": 0.5
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 127,
+              "accuracy": 0.9921875
+            }
+          }
+        },
+        "slot1": {
+          "correct": 448,
+          "loss": 0.3152024293982163,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 256,
+              "accuracy": 1.0
+            },
+            "updated": {
+              "size": 128,
+              "correct": 68,
+              "accuracy": 0.53125
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 124,
+              "accuracy": 0.96875
+            }
+          }
+        },
+        "both_correct": 385,
+        "routed_correct": 454,
+        "routed_loss": 0.3009419325207723,
+        "subgroups": {
+          "no_replacement_query0": {
+            "size": 128,
+            "correct": 128,
+            "accuracy": 1.0
+          },
+          "no_replacement_query1": {
+            "size": 128,
+            "correct": 128,
+            "accuracy": 1.0
+          },
+          "replacement_updated_same": {
+            "size": 64,
+            "correct": 45,
+            "accuracy": 0.703125
+          },
+          "replacement_updated_conflict": {
+            "size": 64,
+            "correct": 25,
+            "accuracy": 0.390625
+          },
+          "replacement_untouched_query0": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_untouched_query1": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "updated_slot_address_0": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          },
+          "updated_slot_address_1": {
+            "size": 64,
+            "correct": 38,
+            "accuracy": 0.59375
+          }
+        }
+      },
+      "test": {
+        "size": 512,
+        "slot0": {
+          "correct": 449,
+          "loss": 0.28661247060339856,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 256,
+              "accuracy": 1.0
+            },
+            "updated": {
+              "size": 128,
+              "correct": 65,
+              "accuracy": 0.5078125
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 128,
+              "accuracy": 1.0
+            }
+          }
+        },
+        "slot1": {
+          "correct": 457,
+          "loss": 0.3037925851977835,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 256,
+              "accuracy": 1.0
+            },
+            "updated": {
+              "size": 128,
+              "correct": 75,
+              "accuracy": 0.5859375
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 126,
+              "accuracy": 0.984375
+            }
+          }
+        },
+        "both_correct": 394,
+        "routed_correct": 449,
+        "routed_loss": 0.302476698251924,
+        "subgroups": {
+          "no_replacement_query0": {
+            "size": 128,
+            "correct": 128,
+            "accuracy": 1.0
+          },
+          "no_replacement_query1": {
+            "size": 128,
+            "correct": 128,
+            "accuracy": 1.0
+          },
+          "replacement_updated_same": {
+            "size": 64,
+            "correct": 46,
+            "accuracy": 0.71875
+          },
+          "replacement_updated_conflict": {
+            "size": 64,
+            "correct": 21,
+            "accuracy": 0.328125
+          },
+          "replacement_untouched_query0": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_untouched_query1": {
+            "size": 64,
+            "correct": 62,
+            "accuracy": 0.96875
+          },
+          "updated_slot_address_0": {
+            "size": 64,
+            "correct": 31,
+            "accuracy": 0.484375
+          },
+          "updated_slot_address_1": {
+            "size": 64,
+            "correct": 36,
+            "accuracy": 0.5625
+          }
+        }
+      },
+      "success": false,
+      "status": "ok",
+      "audits": {
+        "marked_new_bit": {
+          "pairs": 256,
+          "both_correct": 0,
+          "prequery_state_equal": 30
+        },
+        "untouched_bit": {
+          "pairs": 256,
+          "both_correct": 255,
+          "prequery_state_equal": 0
+        },
+        "obsolete_bit": {
+          "pairs": 256,
+          "both_correct": 128,
+          "prequery_state_equal": 0
+        },
+        "unmarked_new_bit": {
+          "pairs": 256,
+          "both_correct": 256,
+          "prequery_state_equal": 256
+        },
+        "query_switch": {
+          "histories": 256,
+          "histories_with_different_current_values": 128,
+          "both_correct_on_different_values": 103,
+          "both_correct_on_all_histories": 195
+        }
+      },
+      "classifier_sha256": "cefd547fcb775ea0d508aeb57d2dfec4abb3720a54c351d045c2106c9215d14e"
+    },
+    {
+      "experiment_id": "EXP-023",
+      "seed": 757,
+      "model_type": "additive_tanh_rnn",
+      "source_checkpoint_sha256": "311183ca0df9e2bdbab5d96a23cf31e2829fa183eebb54c1ad8c6104c4c16afc",
+      "weight_fingerprint": "886e5334f642160b96737924960811f288c4e1dc8e5b626e68c8496ca90c67d3",
+      "reproduced_correct": 256,
+      "original_loss": 0.8314152657985687,
+      "original_accuracy": 0.5,
+      "fit_rows": 1536,
+      "iterations": [
+        197,
+        222
+      ],
+      "converged": true,
+      "convergence_warnings": [
+        [],
+        []
+      ],
+      "val": {
+        "size": 512,
+        "slot0": {
+          "correct": 448,
+          "loss": 0.3796496577966375,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 256,
+              "accuracy": 1.0
+            },
+            "updated": {
+              "size": 128,
+              "correct": 64,
+              "accuracy": 0.5
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 128,
+              "accuracy": 1.0
+            }
+          }
+        },
+        "slot1": {
+          "correct": 448,
+          "loss": 0.39801013554480746,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 256,
+              "accuracy": 1.0
+            },
+            "updated": {
+              "size": 128,
+              "correct": 64,
+              "accuracy": 0.5
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 128,
+              "accuracy": 1.0
+            }
+          }
+        },
+        "both_correct": 384,
+        "routed_correct": 448,
+        "routed_loss": 0.38564506403358334,
+        "subgroups": {
+          "no_replacement_query0": {
+            "size": 128,
+            "correct": 128,
+            "accuracy": 1.0
+          },
+          "no_replacement_query1": {
+            "size": 128,
+            "correct": 128,
+            "accuracy": 1.0
+          },
+          "replacement_updated_same": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_updated_conflict": {
+            "size": 64,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "replacement_untouched_query0": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_untouched_query1": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "updated_slot_address_0": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          },
+          "updated_slot_address_1": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          }
+        }
+      },
+      "test": {
+        "size": 512,
+        "slot0": {
+          "correct": 448,
+          "loss": 0.3832205096606523,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 256,
+              "accuracy": 1.0
+            },
+            "updated": {
+              "size": 128,
+              "correct": 64,
+              "accuracy": 0.5
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 128,
+              "accuracy": 1.0
+            }
+          }
+        },
+        "slot1": {
+          "correct": 448,
+          "loss": 0.39021038872777214,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 256,
+              "accuracy": 1.0
+            },
+            "updated": {
+              "size": 128,
+              "correct": 64,
+              "accuracy": 0.5
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 128,
+              "accuracy": 1.0
+            }
+          }
+        },
+        "both_correct": 384,
+        "routed_correct": 448,
+        "routed_loss": 0.390063829841136,
+        "subgroups": {
+          "no_replacement_query0": {
+            "size": 128,
+            "correct": 128,
+            "accuracy": 1.0
+          },
+          "no_replacement_query1": {
+            "size": 128,
+            "correct": 128,
+            "accuracy": 1.0
+          },
+          "replacement_updated_same": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_updated_conflict": {
+            "size": 64,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "replacement_untouched_query0": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_untouched_query1": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "updated_slot_address_0": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          },
+          "updated_slot_address_1": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          }
+        }
+      },
+      "success": false,
+      "status": "ok",
+      "audits": {
+        "marked_new_bit": {
+          "pairs": 256,
+          "both_correct": 0,
+          "prequery_state_equal": 161
+        },
+        "untouched_bit": {
+          "pairs": 256,
+          "both_correct": 256,
+          "prequery_state_equal": 0
+        },
+        "obsolete_bit": {
+          "pairs": 256,
+          "both_correct": 0,
+          "prequery_state_equal": 0
+        },
+        "unmarked_new_bit": {
+          "pairs": 256,
+          "both_correct": 256,
+          "prequery_state_equal": 160
+        },
+        "query_switch": {
+          "histories": 256,
+          "histories_with_different_current_values": 128,
+          "both_correct_on_different_values": 96,
+          "both_correct_on_all_histories": 192
+        }
+      },
+      "classifier_sha256": "4c0d075a15c1ab9ff1661ba5b066e0ec3f2cfc391f43ed9c8901ac510e6e6e5c"
+    },
+    {
+      "experiment_id": "EXP-023",
+      "seed": 757,
+      "model_type": "whole_reset_additive",
+      "source_checkpoint_sha256": "0367efbfd5130cfd3df0a5ff503957e83c3b22d6603ac35a09683f708fd72d6c",
+      "weight_fingerprint": "82bdb2b05cc39b3d782d18e4b7ec7daf039a24f8a3cdf2f14a5e948b00cc7ec3",
+      "reproduced_correct": 350,
+      "original_loss": 0.678688108921051,
+      "original_accuracy": 0.68359375,
+      "fit_rows": 1536,
+      "iterations": [
+        71,
+        54
+      ],
+      "converged": true,
+      "convergence_warnings": [
+        [],
+        []
+      ],
+      "val": {
+        "size": 512,
+        "slot0": {
+          "correct": 320,
+          "loss": 0.6766549309778928,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 128,
+              "accuracy": 0.5
+            },
+            "updated": {
+              "size": 128,
+              "correct": 128,
+              "accuracy": 1.0
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 64,
+              "accuracy": 0.5
+            }
+          }
+        },
+        "slot1": {
+          "correct": 448,
+          "loss": 0.39812880302560305,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 256,
+              "accuracy": 1.0
+            },
+            "updated": {
+              "size": 128,
+              "correct": 128,
+              "accuracy": 1.0
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 64,
+              "accuracy": 0.5
+            }
+          }
+        },
+        "both_correct": 256,
+        "routed_correct": 384,
+        "routed_loss": 0.532272603001589,
+        "subgroups": {
+          "no_replacement_query0": {
+            "size": 128,
+            "correct": 64,
+            "accuracy": 0.5
+          },
+          "no_replacement_query1": {
+            "size": 128,
+            "correct": 128,
+            "accuracy": 1.0
+          },
+          "replacement_updated_same": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_updated_conflict": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_untouched_query0": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          },
+          "replacement_untouched_query1": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          },
+          "updated_slot_address_0": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "updated_slot_address_1": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          }
+        }
+      },
+      "test": {
+        "size": 512,
+        "slot0": {
+          "correct": 320,
+          "loss": 0.6760183765893226,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 128,
+              "accuracy": 0.5
+            },
+            "updated": {
+              "size": 128,
+              "correct": 128,
+              "accuracy": 1.0
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 64,
+              "accuracy": 0.5
+            }
+          }
+        },
+        "slot1": {
+          "correct": 448,
+          "loss": 0.3893262623395208,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 256,
+              "accuracy": 1.0
+            },
+            "updated": {
+              "size": 128,
+              "correct": 128,
+              "accuracy": 1.0
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 64,
+              "accuracy": 0.5
+            }
+          }
+        },
+        "both_correct": 256,
+        "routed_correct": 384,
+        "routed_loss": 0.5462900763339038,
+        "subgroups": {
+          "no_replacement_query0": {
+            "size": 128,
+            "correct": 64,
+            "accuracy": 0.5
+          },
+          "no_replacement_query1": {
+            "size": 128,
+            "correct": 128,
+            "accuracy": 1.0
+          },
+          "replacement_updated_same": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_updated_conflict": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_untouched_query0": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          },
+          "replacement_untouched_query1": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          },
+          "updated_slot_address_0": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "updated_slot_address_1": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          }
+        }
+      },
+      "success": false,
+      "status": "ok",
+      "audits": {
+        "marked_new_bit": {
+          "pairs": 256,
+          "both_correct": 256,
+          "prequery_state_equal": 0
+        },
+        "untouched_bit": {
+          "pairs": 256,
+          "both_correct": 0,
+          "prequery_state_equal": 256
+        },
+        "obsolete_bit": {
+          "pairs": 256,
+          "both_correct": 256,
+          "prequery_state_equal": 256
+        },
+        "unmarked_new_bit": {
+          "pairs": 256,
+          "both_correct": 127,
+          "prequery_state_equal": 256
+        },
+        "query_switch": {
+          "histories": 256,
+          "histories_with_different_current_values": 128,
+          "both_correct_on_different_values": 0,
+          "both_correct_on_all_histories": 128
+        }
+      },
+      "classifier_sha256": "58a59ac903898534c63b8509db5dee11ac6e7f3a24eb38da1c693a1b7d554069"
+    },
+    {
+      "experiment_id": "EXP-023",
+      "seed": 757,
+      "model_type": "addressed_reset_additive",
+      "source_checkpoint_sha256": "6531822a267e3aaa3aceb4e0336ce199ebf3b92cb8fc14cc0868e7b3a98d7676",
+      "weight_fingerprint": "8d987d8125e7c235a2773c1d4c0a4bb69128958d3e6342ae47c9e9eab2493d7c",
+      "reproduced_correct": 310,
+      "original_loss": 0.8845832645893097,
+      "original_accuracy": 0.60546875,
+      "fit_rows": 1536,
+      "iterations": [
+        152,
+        132
+      ],
+      "converged": true,
+      "convergence_warnings": [
+        [],
+        []
+      ],
+      "val": {
+        "size": 512,
+        "slot0": {
+          "correct": 425,
+          "loss": 0.38869461673524097,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 233,
+              "accuracy": 0.91015625
+            },
+            "updated": {
+              "size": 128,
+              "correct": 70,
+              "accuracy": 0.546875
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 122,
+              "accuracy": 0.953125
+            }
+          }
+        },
+        "slot1": {
+          "correct": 347,
+          "loss": 0.5315458114363438,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 193,
+              "accuracy": 0.75390625
+            },
+            "updated": {
+              "size": 128,
+              "correct": 61,
+              "accuracy": 0.4765625
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 93,
+              "accuracy": 0.7265625
+            }
+          }
+        },
+        "both_correct": 279,
+        "routed_correct": 384,
+        "routed_loss": 0.4638788171221319,
+        "subgroups": {
+          "no_replacement_query0": {
+            "size": 128,
+            "correct": 121,
+            "accuracy": 0.9453125
+          },
+          "no_replacement_query1": {
+            "size": 128,
+            "correct": 96,
+            "accuracy": 0.75
+          },
+          "replacement_updated_same": {
+            "size": 64,
+            "correct": 42,
+            "accuracy": 0.65625
+          },
+          "replacement_updated_conflict": {
+            "size": 64,
+            "correct": 20,
+            "accuracy": 0.3125
+          },
+          "replacement_untouched_query0": {
+            "size": 64,
+            "correct": 61,
+            "accuracy": 0.953125
+          },
+          "replacement_untouched_query1": {
+            "size": 64,
+            "correct": 44,
+            "accuracy": 0.6875
+          },
+          "updated_slot_address_0": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          },
+          "updated_slot_address_1": {
+            "size": 64,
+            "correct": 30,
+            "accuracy": 0.46875
+          }
+        }
+      },
+      "test": {
+        "size": 512,
+        "slot0": {
+          "correct": 408,
+          "loss": 0.4028063721873366,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 228,
+              "accuracy": 0.890625
+            },
+            "updated": {
+              "size": 128,
+              "correct": 64,
+              "accuracy": 0.5
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 116,
+              "accuracy": 0.90625
+            }
+          }
+        },
+        "slot1": {
+          "correct": 352,
+          "loss": 0.5318186508794256,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 192,
+              "accuracy": 0.75
+            },
+            "updated": {
+              "size": 128,
+              "correct": 65,
+              "accuracy": 0.5078125
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 95,
+              "accuracy": 0.7421875
+            }
+          }
+        },
+        "both_correct": 272,
+        "routed_correct": 382,
+        "routed_loss": 0.473848688183343,
+        "subgroups": {
+          "no_replacement_query0": {
+            "size": 128,
+            "correct": 112,
+            "accuracy": 0.875
+          },
+          "no_replacement_query1": {
+            "size": 128,
+            "correct": 92,
+            "accuracy": 0.71875
+          },
+          "replacement_updated_same": {
+            "size": 64,
+            "correct": 46,
+            "accuracy": 0.71875
+          },
+          "replacement_updated_conflict": {
+            "size": 64,
+            "correct": 23,
+            "accuracy": 0.359375
+          },
+          "replacement_untouched_query0": {
+            "size": 64,
+            "correct": 60,
+            "accuracy": 0.9375
+          },
+          "replacement_untouched_query1": {
+            "size": 64,
+            "correct": 49,
+            "accuracy": 0.765625
+          },
+          "updated_slot_address_0": {
+            "size": 64,
+            "correct": 35,
+            "accuracy": 0.546875
+          },
+          "updated_slot_address_1": {
+            "size": 64,
+            "correct": 34,
+            "accuracy": 0.53125
+          }
+        }
+      },
+      "success": false,
+      "status": "ok",
+      "audits": {
+        "marked_new_bit": {
+          "pairs": 256,
+          "both_correct": 0,
+          "prequery_state_equal": 1
+        },
+        "untouched_bit": {
+          "pairs": 256,
+          "both_correct": 197,
+          "prequery_state_equal": 0
+        },
+        "obsolete_bit": {
+          "pairs": 256,
+          "both_correct": 120,
+          "prequery_state_equal": 0
+        },
+        "unmarked_new_bit": {
+          "pairs": 256,
+          "both_correct": 228,
+          "prequery_state_equal": 249
+        },
+        "query_switch": {
+          "histories": 256,
+          "histories_with_different_current_values": 128,
+          "both_correct_on_different_values": 27,
+          "both_correct_on_all_histories": 127
+        }
+      },
+      "classifier_sha256": "37aca5b7e40f986b107eeec71807913d3294cdc7559a7bbea1246475ed5c8f05"
+    },
+    {
+      "experiment_id": "EXP-023",
+      "seed": 761,
+      "model_type": "additive_tanh_rnn",
+      "source_checkpoint_sha256": "c93d2b6f85516c990672b795be8259b7dce8d0bd93b80e89b7824e27e27d56cc",
+      "weight_fingerprint": "64d6ba04f217a9f4fd124a1b8ad6865d89effbf7b4fe661ab799b1b5bf45ec76",
+      "reproduced_correct": 333,
+      "original_loss": 0.7711712419986725,
+      "original_accuracy": 0.650390625,
+      "fit_rows": 1536,
+      "iterations": [
+        200,
+        218
+      ],
+      "converged": true,
+      "convergence_warnings": [
+        [],
+        []
+      ],
+      "val": {
+        "size": 512,
+        "slot0": {
+          "correct": 448,
+          "loss": 0.38782274697615055,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 256,
+              "accuracy": 1.0
+            },
+            "updated": {
+              "size": 128,
+              "correct": 64,
+              "accuracy": 0.5
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 128,
+              "accuracy": 1.0
+            }
+          }
+        },
+        "slot1": {
+          "correct": 437,
+          "loss": 0.43962730471454825,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 252,
+              "accuracy": 0.984375
+            },
+            "updated": {
+              "size": 128,
+              "correct": 62,
+              "accuracy": 0.484375
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 123,
+              "accuracy": 0.9609375
+            }
+          }
+        },
+        "both_correct": 374,
+        "routed_correct": 445,
+        "routed_loss": 0.42443405061186934,
+        "subgroups": {
+          "no_replacement_query0": {
+            "size": 128,
+            "correct": 128,
+            "accuracy": 1.0
+          },
+          "no_replacement_query1": {
+            "size": 128,
+            "correct": 126,
+            "accuracy": 0.984375
+          },
+          "replacement_updated_same": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_updated_conflict": {
+            "size": 64,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "replacement_untouched_query0": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_untouched_query1": {
+            "size": 64,
+            "correct": 63,
+            "accuracy": 0.984375
+          },
+          "updated_slot_address_0": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          },
+          "updated_slot_address_1": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          }
+        }
+      },
+      "test": {
+        "size": 512,
+        "slot0": {
+          "correct": 448,
+          "loss": 0.3897301224534298,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 256,
+              "accuracy": 1.0
+            },
+            "updated": {
+              "size": 128,
+              "correct": 64,
+              "accuracy": 0.5
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 128,
+              "accuracy": 1.0
+            }
+          }
+        },
+        "slot1": {
+          "correct": 442,
+          "loss": 0.42172804637358924,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 252,
+              "accuracy": 0.984375
+            },
+            "updated": {
+              "size": 128,
+              "correct": 67,
+              "accuracy": 0.5234375
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 123,
+              "accuracy": 0.9609375
+            }
+          }
+        },
+        "both_correct": 381,
+        "routed_correct": 442,
+        "routed_loss": 0.40962286753291755,
+        "subgroups": {
+          "no_replacement_query0": {
+            "size": 128,
+            "correct": 128,
+            "accuracy": 1.0
+          },
+          "no_replacement_query1": {
+            "size": 128,
+            "correct": 126,
+            "accuracy": 0.984375
+          },
+          "replacement_updated_same": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_updated_conflict": {
+            "size": 64,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "replacement_untouched_query0": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_untouched_query1": {
+            "size": 64,
+            "correct": 60,
+            "accuracy": 0.9375
+          },
+          "updated_slot_address_0": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          },
+          "updated_slot_address_1": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          }
+        }
+      },
+      "success": false,
+      "status": "ok",
+      "audits": {
+        "marked_new_bit": {
+          "pairs": 256,
+          "both_correct": 0,
+          "prequery_state_equal": 141
+        },
+        "untouched_bit": {
+          "pairs": 256,
+          "both_correct": 256,
+          "prequery_state_equal": 0
+        },
+        "obsolete_bit": {
+          "pairs": 256,
+          "both_correct": 0,
+          "prequery_state_equal": 0
+        },
+        "unmarked_new_bit": {
+          "pairs": 256,
+          "both_correct": 256,
+          "prequery_state_equal": 142
+        },
+        "query_switch": {
+          "histories": 256,
+          "histories_with_different_current_values": 128,
+          "both_correct_on_different_values": 95,
+          "both_correct_on_all_histories": 192
+        }
+      },
+      "classifier_sha256": "be983b2a307a286e509e000695c52b3815715da4bef23c040ecc74bf5abd5e5d"
+    },
+    {
+      "experiment_id": "EXP-023",
+      "seed": 761,
+      "model_type": "whole_reset_additive",
+      "source_checkpoint_sha256": "59669d403dc604ae4beb0ccf4a08bcb4b9f943dd5f55f2c68a3c4283db81ff03",
+      "weight_fingerprint": "0e3bb32a014f679ff431198a1ce83e1cafb72cc7486b019bb697a51471f43197",
+      "reproduced_correct": 267,
+      "original_loss": 0.9158380925655365,
+      "original_accuracy": 0.521484375,
+      "fit_rows": 1536,
+      "iterations": [
+        116,
+        112
+      ],
+      "converged": true,
+      "convergence_warnings": [
+        [],
+        []
+      ],
+      "val": {
+        "size": 512,
+        "slot0": {
+          "correct": 317,
+          "loss": 0.6658699040645694,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 128,
+              "accuracy": 0.5
+            },
+            "updated": {
+              "size": 128,
+              "correct": 125,
+              "accuracy": 0.9765625
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 64,
+              "accuracy": 0.5
+            }
+          }
+        },
+        "slot1": {
+          "correct": 448,
+          "loss": 0.35696179327072597,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 256,
+              "accuracy": 1.0
+            },
+            "updated": {
+              "size": 128,
+              "correct": 128,
+              "accuracy": 1.0
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 64,
+              "accuracy": 0.5
+            }
+          }
+        },
+        "both_correct": 256,
+        "routed_correct": 381,
+        "routed_loss": 0.5234986243209178,
+        "subgroups": {
+          "no_replacement_query0": {
+            "size": 128,
+            "correct": 64,
+            "accuracy": 0.5
+          },
+          "no_replacement_query1": {
+            "size": 128,
+            "correct": 128,
+            "accuracy": 1.0
+          },
+          "replacement_updated_same": {
+            "size": 64,
+            "correct": 63,
+            "accuracy": 0.984375
+          },
+          "replacement_updated_conflict": {
+            "size": 64,
+            "correct": 63,
+            "accuracy": 0.984375
+          },
+          "replacement_untouched_query0": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          },
+          "replacement_untouched_query1": {
+            "size": 64,
+            "correct": 31,
+            "accuracy": 0.484375
+          },
+          "updated_slot_address_0": {
+            "size": 64,
+            "correct": 62,
+            "accuracy": 0.96875
+          },
+          "updated_slot_address_1": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          }
+        }
+      },
+      "test": {
+        "size": 512,
+        "slot0": {
+          "correct": 314,
+          "loss": 0.6682933748830677,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 127,
+              "accuracy": 0.49609375
+            },
+            "updated": {
+              "size": 128,
+              "correct": 126,
+              "accuracy": 0.984375
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 61,
+              "accuracy": 0.4765625
+            }
+          }
+        },
+        "slot1": {
+          "correct": 447,
+          "loss": 0.36487136970068496,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 256,
+              "accuracy": 1.0
+            },
+            "updated": {
+              "size": 128,
+              "correct": 127,
+              "accuracy": 0.9921875
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 64,
+              "accuracy": 0.5
+            }
+          }
+        },
+        "both_correct": 250,
+        "routed_correct": 381,
+        "routed_loss": 0.5213186980280234,
+        "subgroups": {
+          "no_replacement_query0": {
+            "size": 128,
+            "correct": 64,
+            "accuracy": 0.5
+          },
+          "no_replacement_query1": {
+            "size": 128,
+            "correct": 128,
+            "accuracy": 1.0
+          },
+          "replacement_updated_same": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_updated_conflict": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_untouched_query0": {
+            "size": 64,
+            "correct": 30,
+            "accuracy": 0.46875
+          },
+          "replacement_untouched_query1": {
+            "size": 64,
+            "correct": 31,
+            "accuracy": 0.484375
+          },
+          "updated_slot_address_0": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "updated_slot_address_1": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          }
+        }
+      },
+      "success": false,
+      "status": "ok",
+      "audits": {
+        "marked_new_bit": {
+          "pairs": 256,
+          "both_correct": 253,
+          "prequery_state_equal": 0
+        },
+        "untouched_bit": {
+          "pairs": 256,
+          "both_correct": 0,
+          "prequery_state_equal": 256
+        },
+        "obsolete_bit": {
+          "pairs": 256,
+          "both_correct": 256,
+          "prequery_state_equal": 256
+        },
+        "unmarked_new_bit": {
+          "pairs": 256,
+          "both_correct": 127,
+          "prequery_state_equal": 95
+        },
+        "query_switch": {
+          "histories": 256,
+          "histories_with_different_current_values": 128,
+          "both_correct_on_different_values": 3,
+          "both_correct_on_all_histories": 127
+        }
+      },
+      "classifier_sha256": "7491a9e6af3dba17ba67fbc4051f9b7930d804c580fcf5a4a75b1265d1a915a6"
+    },
+    {
+      "experiment_id": "EXP-023",
+      "seed": 761,
+      "model_type": "addressed_reset_additive",
+      "source_checkpoint_sha256": "e1a9c584216864564d4e4e81a5140503cf06a24d79031989a9b4567d0a844822",
+      "weight_fingerprint": "a5f93cfec083aa6be0b32fb31575753f7d575cd9d773615431de2a88c0e6ddda",
+      "reproduced_correct": 337,
+      "original_loss": 0.7203304767608643,
+      "original_accuracy": 0.658203125,
+      "fit_rows": 1536,
+      "iterations": [
+        205,
+        272
+      ],
+      "converged": true,
+      "convergence_warnings": [
+        [],
+        []
+      ],
+      "val": {
+        "size": 512,
+        "slot0": {
+          "correct": 436,
+          "loss": 0.2609622230942308,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 252,
+              "accuracy": 0.984375
+            },
+            "updated": {
+              "size": 128,
+              "correct": 59,
+              "accuracy": 0.4609375
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 125,
+              "accuracy": 0.9765625
+            }
+          }
+        },
+        "slot1": {
+          "correct": 392,
+          "loss": 0.439727770350047,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 229,
+              "accuracy": 0.89453125
+            },
+            "updated": {
+              "size": 128,
+              "correct": 61,
+              "accuracy": 0.4765625
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 102,
+              "accuracy": 0.796875
+            }
+          }
+        },
+        "both_correct": 336,
+        "routed_correct": 410,
+        "routed_loss": 0.3578397964451196,
+        "subgroups": {
+          "no_replacement_query0": {
+            "size": 128,
+            "correct": 125,
+            "accuracy": 0.9765625
+          },
+          "no_replacement_query1": {
+            "size": 128,
+            "correct": 116,
+            "accuracy": 0.90625
+          },
+          "replacement_updated_same": {
+            "size": 64,
+            "correct": 33,
+            "accuracy": 0.515625
+          },
+          "replacement_updated_conflict": {
+            "size": 64,
+            "correct": 22,
+            "accuracy": 0.34375
+          },
+          "replacement_untouched_query0": {
+            "size": 64,
+            "correct": 62,
+            "accuracy": 0.96875
+          },
+          "replacement_untouched_query1": {
+            "size": 64,
+            "correct": 52,
+            "accuracy": 0.8125
+          },
+          "updated_slot_address_0": {
+            "size": 64,
+            "correct": 25,
+            "accuracy": 0.390625
+          },
+          "updated_slot_address_1": {
+            "size": 64,
+            "correct": 30,
+            "accuracy": 0.46875
+          }
+        }
+      },
+      "test": {
+        "size": 512,
+        "slot0": {
+          "correct": 441,
+          "loss": 0.26609757226817576,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 255,
+              "accuracy": 0.99609375
+            },
+            "updated": {
+              "size": 128,
+              "correct": 61,
+              "accuracy": 0.4765625
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 125,
+              "accuracy": 0.9765625
+            }
+          }
+        },
+        "slot1": {
+          "correct": 396,
+          "loss": 0.42170309395890215,
+          "conditions": {
+            "no_replacement": {
+              "size": 256,
+              "correct": 231,
+              "accuracy": 0.90234375
+            },
+            "updated": {
+              "size": 128,
+              "correct": 62,
+              "accuracy": 0.484375
+            },
+            "untouched": {
+              "size": 128,
+              "correct": 103,
+              "accuracy": 0.8046875
+            }
+          }
+        },
+        "both_correct": 345,
+        "routed_correct": 422,
+        "routed_loss": 0.3471237017138581,
+        "subgroups": {
+          "no_replacement_query0": {
+            "size": 128,
+            "correct": 128,
+            "accuracy": 1.0
+          },
+          "no_replacement_query1": {
+            "size": 128,
+            "correct": 115,
+            "accuracy": 0.8984375
+          },
+          "replacement_updated_same": {
+            "size": 64,
+            "correct": 28,
+            "accuracy": 0.4375
+          },
+          "replacement_updated_conflict": {
+            "size": 64,
+            "correct": 37,
+            "accuracy": 0.578125
+          },
+          "replacement_untouched_query0": {
+            "size": 64,
+            "correct": 64,
+            "accuracy": 1.0
+          },
+          "replacement_untouched_query1": {
+            "size": 64,
+            "correct": 50,
+            "accuracy": 0.78125
+          },
+          "updated_slot_address_0": {
+            "size": 64,
+            "correct": 33,
+            "accuracy": 0.515625
+          },
+          "updated_slot_address_1": {
+            "size": 64,
+            "correct": 32,
+            "accuracy": 0.5
+          }
+        }
+      },
+      "success": false,
+      "status": "ok",
+      "audits": {
+        "marked_new_bit": {
+          "pairs": 256,
+          "both_correct": 0,
+          "prequery_state_equal": 3
+        },
+        "untouched_bit": {
+          "pairs": 256,
+          "both_correct": 243,
+          "prequery_state_equal": 0
+        },
+        "obsolete_bit": {
+          "pairs": 256,
+          "both_correct": 86,
+          "prequery_state_equal": 0
+        },
+        "unmarked_new_bit": {
+          "pairs": 256,
+          "both_correct": 254,
+          "prequery_state_equal": 0
+        },
+        "query_switch": {
+          "histories": 256,
+          "histories_with_different_current_values": 128,
+          "both_correct_on_different_values": 83,
+          "both_correct_on_all_histories": 162
+        }
+      },
+      "classifier_sha256": "b2593e5184cc26f19e70f1959ad2c26c49a3f6e0744dc6182e9f7e89af9b51d5"
+    }
+  ]
+}

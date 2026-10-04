@@ -1,0 +1,96 @@
+# EXP-005 preregistration. Tolerances and diagnostic definitions were fixed
+# before any counterfactual audit result. Do not change them after seeing
+# those outcomes.
+experiment_id: EXP-005
+config_revision: 1
+status: preregistered_before_audit
+source_experiment: EXP-004
+source_config: configs/exp004_bounded_additive.yaml
+source_metrics: results/EXP-004/raw_metrics.jsonl
+source_fingerprints: results/EXP-004/fingerprints.json
+device: cpu
+seeds: [17, 29, 43]
+delays: [64, 128]
+models:
+  - vanilla_tanh_rnn
+  - additive_tanh_rnn
+  - bounded_additive_tanh_rnn
+bound:
+  B: 4.0
+  note: "Unchanged from EXP-004. Not tuned."
+task:
+  run_mode: HARD_V2
+  distractor_noise_std: 0.3
+  competitor_rate: 0.4
+  competitor_flip_prob: 0.5
+  base_seed: 1000
+  audit_split_index: 3
+  audit_run_seed: "the training seed, so each seed has its own fresh 512 sequences; all three models share that seed's pairs"
+  audit_samples: 512
+  audit_data_rule: >
+    Fresh sequences use the EXP-004 combined-seed formula with split_index 3.
+    They are not used for training or model selection. Each base sequence is
+    copied twice. Only inputs[:, 0, 0] is set to +1 or -1. The suffix,
+    markers, competitor positions, competitor bits, and noise stay identical.
+recovery:
+  checkpoints_expected_in_exp004: false
+  procedure: >
+    If no EXP-004 checkpoint files exist, replay train_one from
+    experiments/run_exp004.py with the EXP-004 config, seeds, delays,
+    dataset builder, and minibatch index builder. Save weights only under
+    results/EXP-005/checkpoints/. Do not write into results/EXP-004/.
+  fingerprint_check: exact sha256 match to results/EXP-004/fingerprints.json
+  verification:
+    accuracy: identical integer correct count on the 512 test examples
+    losses: "absolute tolerance 1e-7 plus relative tolerance 1e-4"
+    retention_r2_absolute_tolerance: 1.0e-4
+    hidden_magnitude_absolute_tolerance: 1.0e-4
+    fields:
+      - test_loss
+      - val_loss
+      - retention_probe_r2
+      - max_abs_hidden
+      - final_hidden_rms
+  on_verification_failure: stop before the counterfactual audit
+environment_requirement:
+  python: "3.11.9"
+  torch: "2.13.0+cpu"
+  on_mismatch: stop and report the blocker; do not install a substitute
+audit:
+  models_frozen: true
+  optimizer_steps: 0
+  initial_hidden_state: zero
+  prediction_rule: "sign of the final logit; an exact zero logit counts as +1, matching EXP-004 evaluation"
+  both_correct: "positive member predicted +1 and negative member predicted -1"
+  logit_difference: "logit of the +1 member minus logit of the -1 member"
+  quantiles: [0.05, 0.25, 0.5, 0.75, 0.95]
+  exact_computational_zero: "the recorded float equals 0.0; this is not a claim of mathematical zero"
+  bit_sensitivity: "gradient of the final logit with respect to inputs[:, 0, 0] only"
+  marker_sensitivity: "gradient with respect to inputs[:, 0, 1], stored separately and not added into the bit statistic"
+  state_distance:
+    l2: "Euclidean norm across hidden coordinates, per example and timestep"
+    mean_abs: "mean absolute coordinate difference"
+    exact_equal_fraction: "fraction of coordinates whose float values are exactly equal"
+    sign_disagreement_fraction: "fraction of coordinates whose torch.sign values differ"
+  boundary:
+    value: 4.0
+    rule: "a coordinate is at the boundary when its stored float is exactly 4.0 or exactly -4.0"
+    identical_boundary_sign_pattern: >
+      On coordinates where at least one member is at the boundary, torch.sign
+      agrees. Pairs with no boundary coordinate are counted separately.
+  negative_control: >
+    Set the original bit to 0 in both members. Inputs must be identical, and
+    states and logits must match. Do not train on those labels.
+interpretation:
+  A: "State and answer do not change when the original bit is flipped."
+  B: "State or answer changes even though the recorded local bit gradient is an exact computational zero."
+  C: "Final state changes but both answers are not reliably correct. Bit-dependent information can survive without task success."
+  D: "Recovery verification failed. Do not make a mechanism claim."
+  mixed: "Report mixed patterns across seeds. Do not treat every failure as the same kind of forgetting."
+budget:
+  max_cpu_seconds_per_replay_run: 300
+  no_automatic_retry: true
+  no_bound_tuning: true
+outputs:
+  directory: results/EXP-005
+  refuse_overwrite: true

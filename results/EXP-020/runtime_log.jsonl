@@ -1,0 +1,80 @@
+{"condition": "additive_hold", "event": "start", "seed": 503, "session_elapsed_seconds": 0.133}
+{"condition": "additive_hold", "event": "finish", "exit_code": 0, "runtime_seconds": 14.061, "seed": 503, "session_elapsed_seconds": 14.194}
+{"condition": "reset_hold", "event": "start", "seed": 503, "session_elapsed_seconds": 14.195}
+{"condition": "reset_hold", "event": "finish", "exit_code": 0, "runtime_seconds": 14.656, "seed": 503, "session_elapsed_seconds": 28.85}
+{"condition": "additive_selective", "event": "start", "seed": 503, "session_elapsed_seconds": 28.851}
+{"condition": "additive_selective", "event": "finish", "exit_code": 0, "runtime_seconds": 13.073, "seed": 503, "session_elapsed_seconds": 41.924}
+{"condition": "reset_selective", "event": "start", "seed": 503, "session_elapsed_seconds": 41.925}
+{"condition": "reset_selective", "event": "finish", "exit_code": 0, "runtime_seconds": 14.619, "seed": 503, "session_elapsed_seconds": 56.544}
+{"condition": "additive_hold", "event": "start", "seed": 509, "session_elapsed_seconds": 56.545}
+{"condition": "additive_hold", "event": "finish", "exit_code": 0, "runtime_seconds": 12.885, "seed": 509, "session_elapsed_seconds": 69.43}
+{"condition": "reset_hold", "event": "start", "seed": 509, "session_elapsed_seconds": 69.43}
+{"condition": "reset_hold", "event": "finish", "exit_code": 0, "runtime_seconds": 14.551, "seed": 509, "session_elapsed_seconds": 83.981}
+{"condition": "additive_selective", "event": "start", "seed": 509, "session_elapsed_seconds": 83.982}
+{"condition": "additive_selective", "event": "finish", "exit_code": 0, "runtime_seconds": 13.342, "seed": 509, "session_elapsed_seconds": 97.323}
+{"condition": "reset_selective", "event": "start", "seed": 509, "session_elapsed_seconds": 97.324}
+{"condition": "reset_selective", "event": "finish", "exit_code": 0, "runtime_seconds": 14.651, "seed": 509, "session_elapsed_seconds": 111.975}
+{"condition": "additive_hold", "event": "start", "seed": 521, "session_elapsed_seconds": 111.976}
+{"condition": "additive_hold", "event": "finish", "exit_code": 0, "runtime_seconds": 13.411, "seed": 521, "session_elapsed_seconds": 125.386}
+{"condition": "reset_hold", "event": "start", "seed": 521, "session_elapsed_seconds": 125.387}
+{"condition": "reset_hold", "event": "finish", "exit_code": 0, "runtime_seconds": 14.782, "seed": 521, "session_elapsed_seconds": 140.169}
+{"condition": "additive_selective", "event": "start", "seed": 521, "session_elapsed_seconds": 140.17}
+{"condition": "additive_selective", "event": "finish", "exit_code": 0, "runtime_seconds": 13.507, "seed": 521, "session_elapsed_seconds": 153.677}
+{"condition": "reset_selective", "event": "start", "seed": 521, "session_elapsed_seconds": 153.677}
+{"condition": "reset_selective", "event": "finish", "exit_code": 0, "runtime_seconds": 16.282, "seed": 521, "session_elapsed_seconds": 169.959}
+{"condition": "additive_hold", "event": "start", "seed": 523, "session_elapsed_seconds": 169.96}
+{"condition": "additive_hold", "event": "finish", "exit_code": 0, "runtime_seconds": 13.851, "seed": 523, "session_elapsed_seconds": 183.811}
+{"condition": "reset_hold", "event": "start", "seed": 523, "session_elapsed_seconds": 183.812}
+{"condition": "reset_hold", "event": "finish", "exit_code": 0, "runtime_seconds": 15.14, "seed": 523, "session_elapsed_seconds": 198.952}
+{"condition": "additive_selective", "event": "start", "seed": 523, "session_elapsed_seconds": 198.952}
+{"condition": "additive_selective", "event": "finish", "exit_code": 0, "runtime_seconds": 13.285, "seed": 523, "session_elapsed_seconds": 212.237}
+{"condition": "reset_selective", "event": "start", "seed": 523, "session_elapsed_seconds": 212.238}
+{"condition": "reset_selective", "event": "finish", "exit_code": 0, "runtime_seconds": 14.224, "seed": 523, "session_elapsed_seconds": 226.462}
+{"condition": "additive_hold", "event": "start", "seed": 541, "session_elapsed_seconds": 226.462}
+{"condition": "additive_hold", "event": "finish", "exit_code": 0, "runtime_seconds": 13.059, "seed": 541, "session_elapsed_seconds": 239.522}
+{"condition": "reset_hold", "event": "start", "seed": 541, "session_elapsed_seconds": 239.522}
+{"condition": "reset_hold", "event": "finish", "exit_code": 0, "runtime_seconds": 14.794, "seed": 541, "session_elapsed_seconds": 254.317}
+{"condition": "additive_selective", "event": "start", "seed": 541, "session_elapsed_seconds": 254.317}
+{"condition": "additive_selective", "event": "finish", "exit_code": 0, "runtime_seconds": 13.082, "seed": 541, "session_elapsed_seconds": 267.399}
+{"condition": "reset_selective", "event": "start", "seed": 541, "session_elapsed_seconds": 267.4}
+{"condition": "reset_selective", "event": "finish", "exit_code": 0, "runtime_seconds": 14.691, "seed": 541, "session_elapsed_seconds": 282.091}
+{"condition": "additive_hold", "event": "start", "seed": 547, "session_elapsed_seconds": 282.092}
+{"condition": "additive_hold", "event": "finish", "exit_code": 0, "runtime_seconds": 17.273, "seed": 547, "session_elapsed_seconds": 299.365}
+{"condition": "reset_hold", "event": "start", "seed": 547, "session_elapsed_seconds": 299.366}
+{"condition": "reset_hold", "event": "finish", "exit_code": 0, "runtime_seconds": 18.829, "seed": 547, "session_elapsed_seconds": 318.195}
+{"condition": "additive_selective", "event": "start", "seed": 547, "session_elapsed_seconds": 318.195}
+{"condition": "additive_selective", "event": "finish", "exit_code": 0, "runtime_seconds": 13.371, "seed": 547, "session_elapsed_seconds": 331.566}
+{"condition": "reset_selective", "event": "start", "seed": 547, "session_elapsed_seconds": 331.567}
+{"condition": "reset_selective", "event": "finish", "exit_code": 0, "runtime_seconds": 14.698, "seed": 547, "session_elapsed_seconds": 346.265}
+{"condition": "additive_hold", "event": "start", "seed": 557, "session_elapsed_seconds": 346.265}
+{"condition": "additive_hold", "event": "finish", "exit_code": 0, "runtime_seconds": 13.235, "seed": 557, "session_elapsed_seconds": 359.5}
+{"condition": "reset_hold", "event": "start", "seed": 557, "session_elapsed_seconds": 359.501}
+{"condition": "reset_hold", "event": "finish", "exit_code": 0, "runtime_seconds": 14.713, "seed": 557, "session_elapsed_seconds": 374.214}
+{"condition": "additive_selective", "event": "start", "seed": 557, "session_elapsed_seconds": 374.215}
+{"condition": "additive_selective", "event": "finish", "exit_code": 0, "runtime_seconds": 13.06, "seed": 557, "session_elapsed_seconds": 387.275}
+{"condition": "reset_selective", "event": "start", "seed": 557, "session_elapsed_seconds": 387.276}
+{"condition": "reset_selective", "event": "finish", "exit_code": 0, "runtime_seconds": 15.922, "seed": 557, "session_elapsed_seconds": 403.199}
+{"condition": "additive_hold", "event": "start", "seed": 563, "session_elapsed_seconds": 403.199}
+{"condition": "additive_hold", "event": "finish", "exit_code": 0, "runtime_seconds": 13.106, "seed": 563, "session_elapsed_seconds": 416.306}
+{"condition": "reset_hold", "event": "start", "seed": 563, "session_elapsed_seconds": 416.307}
+{"condition": "reset_hold", "event": "finish", "exit_code": 0, "runtime_seconds": 14.615, "seed": 563, "session_elapsed_seconds": 430.922}
+{"condition": "additive_selective", "event": "start", "seed": 563, "session_elapsed_seconds": 430.923}
+{"condition": "additive_selective", "event": "finish", "exit_code": 0, "runtime_seconds": 13.478, "seed": 563, "session_elapsed_seconds": 444.401}
+{"condition": "reset_selective", "event": "start", "seed": 563, "session_elapsed_seconds": 444.401}
+{"condition": "reset_selective", "event": "finish", "exit_code": 0, "runtime_seconds": 16.407, "seed": 563, "session_elapsed_seconds": 460.808}
+{"condition": "additive_hold", "event": "start", "seed": 569, "session_elapsed_seconds": 460.809}
+{"condition": "additive_hold", "event": "finish", "exit_code": 0, "runtime_seconds": 13.374, "seed": 569, "session_elapsed_seconds": 474.183}
+{"condition": "reset_hold", "event": "start", "seed": 569, "session_elapsed_seconds": 474.183}
+{"condition": "reset_hold", "event": "finish", "exit_code": 0, "runtime_seconds": 14.571, "seed": 569, "session_elapsed_seconds": 488.754}
+{"condition": "additive_selective", "event": "start", "seed": 569, "session_elapsed_seconds": 488.755}
+{"condition": "additive_selective", "event": "finish", "exit_code": 0, "runtime_seconds": 13.621, "seed": 569, "session_elapsed_seconds": 502.376}
+{"condition": "reset_selective", "event": "start", "seed": 569, "session_elapsed_seconds": 502.376}
+{"condition": "reset_selective", "event": "finish", "exit_code": 0, "runtime_seconds": 17.264, "seed": 569, "session_elapsed_seconds": 519.64}
+{"condition": "additive_hold", "event": "start", "seed": 571, "session_elapsed_seconds": 519.64}
+{"condition": "additive_hold", "event": "finish", "exit_code": 0, "runtime_seconds": 17.668, "seed": 571, "session_elapsed_seconds": 537.309}
+{"condition": "reset_hold", "event": "start", "seed": 571, "session_elapsed_seconds": 537.309}
+{"condition": "reset_hold", "event": "finish", "exit_code": 0, "runtime_seconds": 20.401, "seed": 571, "session_elapsed_seconds": 557.711}
+{"condition": "additive_selective", "event": "start", "seed": 571, "session_elapsed_seconds": 557.711}
+{"condition": "additive_selective", "event": "finish", "exit_code": 0, "runtime_seconds": 13.393, "seed": 571, "session_elapsed_seconds": 571.105}
+{"condition": "reset_selective", "event": "start", "seed": 571, "session_elapsed_seconds": 571.106}
+{"condition": "reset_selective", "event": "finish", "exit_code": 0, "runtime_seconds": 15.919, "seed": 571, "session_elapsed_seconds": 587.025}

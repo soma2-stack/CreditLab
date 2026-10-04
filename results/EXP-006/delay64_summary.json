@@ -1,0 +1,98 @@
+{
+  "additive_successes": 10,
+  "cohorts": [
+    {
+      "accuracies": {
+        "101": 0.521484375,
+        "113": 1.0,
+        "127": 0.490234375,
+        "139": 0.6796875,
+        "151": 1.0,
+        "163": 1.0,
+        "179": 0.486328125,
+        "191": 0.498046875,
+        "211": 0.501953125,
+        "223": 0.685546875
+      },
+      "accuracy_mean": 0.686328125,
+      "accuracy_median": 0.6005859375,
+      "accuracy_sample_std": 0.2285911036909178,
+      "completed": 10,
+      "delay": 64,
+      "model_type": "vanilla_tanh_rnn",
+      "success_interval_95": {
+        "lower": 0.0667395111777345,
+        "successes": 3,
+        "trials": 10,
+        "upper": 0.6524528500599971
+      },
+      "successes": 3
+    },
+    {
+      "accuracies": {
+        "101": 1.0,
+        "113": 1.0,
+        "127": 1.0,
+        "139": 1.0,
+        "151": 1.0,
+        "163": 1.0,
+        "179": 1.0,
+        "191": 1.0,
+        "211": 1.0,
+        "223": 1.0
+      },
+      "accuracy_mean": 1.0,
+      "accuracy_median": 1.0,
+      "accuracy_sample_std": 0.0,
+      "completed": 10,
+      "delay": 64,
+      "model_type": "additive_tanh_rnn",
+      "success_interval_95": {
+        "lower": 0.6915028921812392,
+        "successes": 10,
+        "trials": 10,
+        "upper": 1.0
+      },
+      "successes": 10
+    },
+    {
+      "accuracies": {
+        "101": 1.0,
+        "113": 1.0,
+        "127": 1.0,
+        "139": 0.896484375,
+        "151": 0.51171875,
+        "163": 1.0,
+        "179": 1.0,
+        "191": 0.482421875,
+        "211": 0.5,
+        "223": 1.0
+      },
+      "accuracy_mean": 0.8390625,
+      "accuracy_median": 1.0,
+      "accuracy_sample_std": 0.23758329302857573,
+      "completed": 10,
+      "delay": 64,
+      "model_type": "bounded_additive_tanh_rnn",
+      "success_interval_95": {
+        "lower": 0.26237807660694523,
+        "successes": 6,
+        "trials": 10,
+        "upper": 0.8784477418801726
+      },
+      "successes": 6
+    }
+  ],
+  "delay_128": "will run",
+  "elapsed_seconds": 181.206,
+  "paired": {
+    "additive_only": 4,
+    "both_succeed": 6,
+    "bounded_only": 0,
+    "neither": 0,
+    "seeds_compared": 10,
+    "vanilla_and_additive": 3,
+    "vanilla_only_vs_additive": 0
+  },
+  "written_before_delay_128": true
+}
