@@ -92,5 +92,15 @@ Registry entries describe completed experiments or plans. Every run saves its ex
 - **Change:** No new forward equation. `B` stayed 4. Each model was trained either fully or with input and recurrent weights frozen at initialization.
 - **Result:** All 120 runs and 120 audits finished. Full additive succeeded on 10/10 seeds at both delays. Readout-only additive succeeded on 0/10 at both delays, with accuracy mostly about 0.80–0.93. Full bounded succeeded on 6/10 and 5/10. Readout-only bounded succeeded on 0/10 at both delays. Frozen recurrent weights and hidden states stayed unchanged in every readout-only run. The initial additive probe R^2 was about 0.53 at delay 64 and about 0.45 at delay 128, and it did not change when only the readout was trained.
 - **Interpretation:** EXPERIMENTAL RESULT, outcome B. Under this schedule, learning the recurrent weights is needed for reliable additive success. Freezing did not repair bounded reliability. This is not an architecture result and it does not validate the broader theory.
+- **Clarification added later:** The readout-only condition froze both the input-side parameters (`W_x`, `b_x`) and the recurrent-side parameters (`W_h`, `b_h`). The supported claim is that training the input/recurrent module improves reliable additive success under this schedule. It does not show that learning the hidden-to-hidden matrix by itself is necessary. Fewer successful seeds is also not the same as lower accuracy on every paired seed. On 18 of 60 paired comparisons, readout-only accuracy was higher than full training.
 - **Files:** `configs/exp007_readout_only.yaml` and `results/EXP-007/`.
-- **Follow-up:** Not started. Do not tune B and do not start another experiment from this run.
+- **Follow-up:** EXP-008 separates input-side training from recurrent-side training. The EXP-007 analysis file was not rewritten.
+
+## EXP-008 — Which parameter group enables additive learning? (preregistered; training not started)
+
+- **Question:** Can reliable additive delayed learning happen while the hidden-to-hidden weights stay fixed, if the input-side weights and the readout are trained? Can the reverse, recurrent-side weights plus the readout, also succeed?
+- **Model:** The existing additive equation only. Four regimes: full, readout only, input-side plus readout, and recurrent-side plus readout. `B` is not part of this comparison and is not tuned.
+- **Seeds:** 101 through 223, data base seed 2000. Not pooled with earlier counts.
+- **Gate:** Fresh delay-128 training runs only if full additive succeeds on at least 8 of 10 delay-64 seeds.
+- **Budget:** Five minutes per run and 15 minutes total.
+- **Result:** Not collected.

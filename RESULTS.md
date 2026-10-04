@@ -93,3 +93,8 @@ Chronological record. Append new entries; never overwrite old results. Distingui
 - **Interpretation:** EXPERIMENTAL RESULT, outcome B. Reliable additive success under this schedule uses learning in the recurrent weights. The initial dynamics already carry partial bit information, and a trained readout uses some of it, but not enough to reach 0.95 accuracy. Freezing the bounded model removed its successes rather than making it more reliable. This does not prove another budget could never train the readout alone, and it does not validate the broader theory.
 - **Files:** `results/EXP-007/`.
 - **Replication:** Ten seeds, two training regimes, not pooled with EXP-006.
+
+## 2026-10-03 — EXP-007 interpretation clarification
+
+- **Clarification:** The EXP-007 readout-only condition froze both input-side parameters (`W_x` and `b_x`) and recurrent-side parameters (`W_h` and `b_h`). The supported conclusion is that training that combined input/recurrent module improves reliable additive success under the registered schedule. It does not establish that learning the hidden-to-hidden matrix specifically is necessary.
+- **Paired accuracy:** Fewer successful seeds is not the same as lower accuracy on every paired seed. Across the 60 paired comparisons, readout-only accuracy was higher than full training on 18 pairs, mostly where full training had not solved the task. The saved EXP-007 analysis file was not rewritten. The execution record of the interrupted run is `results/EXP-008/exp007_execution_audit.md`.
