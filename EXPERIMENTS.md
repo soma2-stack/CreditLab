@@ -170,6 +170,17 @@ Registry entries describe completed experiments or plans. Every run saves its ex
 - **Files:** `configs/exp014_replication.yaml` and `results/EXP-014/`.
 - **Follow-up:** Not started. Do not tune the classifier or the horizon, and do not start EXP-015.
 
+## Pause lifted for EXP-015 only
+
+- **Authorization:** The documentation pause is lifted only for an evaluation of the saved EXP-014 models at longer delays. No training and no classifier refitting.
+
+## EXP-015 — Frozen-model length generalization (preregistered; not started)
+
+- **Question:** Do the existing delay-128 additive models and readouts still answer at delays 256 and 512, with no further adaptation?
+- **Endpoints:** Initialized diagnostic readout; full-history original and diagnostic readouts; final-16 original and diagnostic readouts. Fresh data use base seed 4000. Delay 128 is a new in-distribution reference, not the original EXP-014 test set.
+- **Budget:** Five minutes total.
+- **Result:** Not collected.
+
 ## EXP-014 rescue denominator, clarified after the checkpoint
 
 - **Clarification:** “8 of 10 diagnostic successes” is not “8 misses rescued.” Seed 311 already scored at least 0.95 with the original final-16 readout. Of the 9 original misses, 7 were rescued: 307, 313, 317, 337, 347, 349, and 359. Seeds 331 and 353 stayed below 0.95. The saved EXP-014 analysis was not edited.
