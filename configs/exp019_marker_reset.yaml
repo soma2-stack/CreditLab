@@ -1,0 +1,35 @@
+# EXP-019 preregistration. The reset rule was fixed before any EXP-019 accuracy.
+# Training scores are not collected unless the hold-control trajectories match.
+experiment_id: EXP-019
+config_revision: 1
+status: preregistered_before_running
+kind: mechanism_intervention
+not_learned_selectivity: true
+seeds: [503, 509, 521, 523, 541, 547, 557, 563, 569, 571]
+data:
+  base_seed: 7000
+  same_generator_as: EXP-017
+marker:
+  source: "x_t channel 1, the write/event channel already present in the input"
+  threshold: "none"
+  formula: "previous = (1 - marker) * h_previous; candidate uses previous; h = previous + candidate"
+hold_match_gate:
+  tolerance_max_abs: 1.0e-5
+  applies_to: "final hidden state and final logit on the hold task"
+  if_not_matched: "record the mismatch and do not collect training scores"
+equations:
+  additive: "h_t = h_(t-1) + tanh(W_h h_(t-1) + W_x x_t + b_h + b_x)"
+  marker_reset: "previous_t = (1 - m_t) * h_(t-1); h_t = previous_t + tanh(W_h previous_t + W_x x_t + b_h + b_x)"
+success:
+  hold: "test accuracy >= 0.95"
+  selective: "overall and each of the four subgroups >= 0.95"
+budget:
+  max_cpu_seconds_per_run: 300
+  max_cpu_seconds_total: 900
+  no_automatic_resume: true
+environment_requirement:
+  python: "3.11.9"
+  torch: "2.13.0+cpu"
+  sklearn: 1.9.1
+outputs:
+  directory: results/EXP-019

@@ -222,6 +222,13 @@ Registry entries describe completed experiments or plans. Every run saves its ex
 - **Files:** `configs/exp018_failure_location.yaml` and `results/EXP-018/`.
 - **Follow-up:** Not started. Do not add a gate. Do not fit a new readout. Do not start EXP-019.
 
+## EXP-019 — Explicit marked reset (preregistered; training not started)
+
+- **Question:** Does wiping the carried state before a marked write let the additive model replace the old bit, without hurting the hold task?
+- **Rule:** The reset reads the write channel already in the input. There is no threshold and no new trainable parameter. Training scores are collected only if the hold-task trajectories still match.
+- **Budget:** Five minutes per run and fifteen minutes total, if the hold check passes.
+- **Result:** Not collected.
+
 ## EXP-014 rescue denominator, clarified after the checkpoint
 
 - **Clarification:** “8 of 10 diagnostic successes” is not “8 misses rescued.” Seed 311 already scored at least 0.95 with the original final-16 readout. Of the 9 original misses, 7 were rescued: 307, 313, 317, 337, 347, 349, and 359. Seeds 331 and 353 stayed below 0.95. The saved EXP-014 analysis was not edited.
@@ -229,5 +236,5 @@ Registry entries describe completed experiments or plans. Every run saves its ex
 
 ## Scientific checkpoint
 
-- **Status:** EXP-018 is complete. No experiment is running. EXP-019 is not authorized.
+- **Status:** EXP-019 is preregistered. The hold-match check has not been run. EXP-020 is not authorized.
 - **Document:** `SCIENTIFIC_CHECKPOINT.md`. The audit of saved records is `DOCUMENTATION_AUDIT.md`.

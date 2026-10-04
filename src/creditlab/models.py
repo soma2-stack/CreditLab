@@ -239,3 +239,31 @@ class BoundedAdditiveTanhRNN(ResidualTanhRNN):
     ) -> tuple[torch.Tensor, torch.Tensor]:
         state, candidate, _proposed = self.step_parts(x_t, h_prev)
         return state, candidate
+
+
+class MarkerResetAdditiveRNN(ResidualTanhRNN):
+    """Additive update after a hard-wired reset on the write/event channel.
+
+    The marker is the number already in ``x_t[:, 1]``. There is no threshold
+    and no extra parameter. The reset is input-controlled logic, not a learned
+    gate. It is applied before the candidate is computed:
+
+        previous = (1 - marker) * h_previous
+        candidate = tanh(W_h previous + W_x x + b_h + b_x)
+        h = previous + candidate
+    """
+
+    def candidate_step(
+        self, x_t: torch.Tensor, h_prev: torch.Tensor
+    ) -> tuple[torch.Tensor, torch.Tensor]:
+        marker = x_t[:, 1:2]
+        previous = (1.0 - marker) * h_prev
+        cell = self.recurrent
+        pre = (
+            x_t.matmul(cell.weight_ih_l0.T)
+            + cell.bias_ih_l0
+            + previous.matmul(cell.weight_hh_l0.T)
+            + cell.bias_hh_l0
+        )
+        candidate = torch.tanh(pre)
+        return previous + self.residual_scale * candidate, candidate
