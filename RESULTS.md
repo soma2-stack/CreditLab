@@ -174,3 +174,12 @@ Chronological record. Append new entries; never overwrite old results. Distingui
 - **Interpretation:** DIAGNOSTIC RESULT, outcome C. Untrained additive dynamics are already enough for this readout on some seeds. Learning, including final-16 learning, raises the remaining seeds to a reliable score. The earlier readout-only misses were not proof that the untrained state had no readable answer. This does not validate the broader theory.
 - **Files:** `results/EXP-013/`.
 - **Replication:** Exploratory diagnostic on the existing cohort. These refits are not new recurrent-training seeds.
+
+## 2026-10-03 — EXP-014 new-seed replication
+
+- **Experiment ID:** EXP-014.
+- **Configuration:** `configs/exp014_replication.yaml`. New seeds 307, 311, 313, 317, 331, 337, 347, 349, 353, and 359. Data base seed 3000. Delay 128 only. Unchanged additive model, final-16 cutoff, norm-5 clipping, and the EXP-012 classifier. Python 3.11.9, PyTorch 2.13.0+cpu, scikit-learn 1.9.1. Training code `76d7b76dc488`.
+- **Result:** 20/20 training runs and 30/30 classifier fits finished in 340 seconds. No failures and no unstarted runs. Success counts were initialized diagnostic 4/10, full-history original 10/10, full-history diagnostic 10/10, final-16 original 1/10, and final-16 diagnostic 8/10. The final-16 diagnostic misses were seeds 331 at 0.945 and 353 at 0.922. The early training gradient was blocked. Historical files were unchanged.
+- **Interpretation:** EXPERIMENTAL RESULT. The separation between a weak original readout and a readable final-16 state mostly replicated on a new cohort. It did not replicate for every seed. Untrained states were already enough on 4 of 10 seeds. Full-history training stayed reliable with its original readout. This does not validate the broader theory.
+- **Files:** `results/EXP-014/`. The pre-run note is `research_checkpoint.md`.
+- **Replication:** Ten new seeds, one delay, one task distribution. Not pooled with the earlier cohort.

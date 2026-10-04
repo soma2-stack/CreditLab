@@ -137,3 +137,13 @@ Do not train recurrent weights. Do not tune C. Do not try another horizon. Do no
 - [x] Leave EXP-001 through EXP-012 artifacts unchanged, including the incomplete EXP-007 fingerprint file.
 
 Do not train recurrent weights. Do not tune C. Do not build a model. Do not start EXP-014.
+
+## Phase 14 — new-seed replication
+
+- [x] Confirm the new seeds were unused, and preregister them with the unchanged training and classifier rules.
+- [x] Record the EXP-010 through EXP-013 interpretation before any EXP-014 accuracy.
+- [x] Train full-history and final-16 models at delay 128, and keep the untrained initial state.
+- [x] Fit the fixed diagnostic classifier and run the bit-flip check.
+- [x] Leave EXP-001 through EXP-013 artifacts unchanged.
+
+Do not build a model. Do not change the task distribution. Do not tune the classifier or the horizon. Do not start EXP-015.
