@@ -1,0 +1,17 @@
+experiment_id: EXP-020
+seeds:
+- 503
+- 509
+- 521
+- 523
+- 541
+- 547
+- 557
+- 563
+- 569
+- 571
+input_size: 4
+parameter_count: 1249
+jobs: 40
+hold_match_tolerance: 1.0e-05
+budget_seconds_total: 900.0

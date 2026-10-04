@@ -250,3 +250,7 @@ Chronological record. Append new entries; never overwrite old results. Distingui
 - **Interpretation:** The hold-match assumption is false for the existing task generator. The reset is not confined to the original event. This is not a selective-overwrite accuracy result and not evidence that a cleaner marker could not help. No threshold was added after the check.
 - **Files:** `results/EXP-019/`.
 - **Replication:** Not a training replication. Not pooled with earlier success rates.
+
+## 2026-10-04 — EXP-019 interpretation, stated before EXP-020
+
+- **Correction:** EXP-019 collected no training results. Its clean-marker assumption was false. EXP-017 tested overwrite under its actual noisy input encoding, not under an unambiguous binary write-control interface. EXP-019 is not a model failure. The saved EXP-019 analysis was not rewritten.

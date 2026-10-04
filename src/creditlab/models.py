@@ -242,21 +242,33 @@ class BoundedAdditiveTanhRNN(ResidualTanhRNN):
 
 
 class MarkerResetAdditiveRNN(ResidualTanhRNN):
-    """Additive update after a hard-wired reset on the write/event channel.
+    """Additive update after a hard-wired reset on one input channel.
 
-    The marker is the number already in ``x_t[:, 1]``. There is no threshold
-    and no extra parameter. The reset is input-controlled logic, not a learned
-    gate. It is applied before the candidate is computed:
+    ``marker_index`` selects that channel. The default, 1, is the noisy
+    write/event channel used by EXP-019. EXP-020 passes 3, the clean control.
+    The channel value is used as a number, with no threshold and no extra
+    parameter. The reset is input-controlled logic, not a learned gate:
 
         previous = (1 - marker) * h_previous
         candidate = tanh(W_h previous + W_x x + b_h + b_x)
         h = previous + candidate
     """
 
+    def __init__(
+        self,
+        input_size: int,
+        hidden_size: int,
+        output_size: int = 1,
+        residual_scale: float = 1.0,
+        marker_index: int = 1,
+    ):
+        super().__init__(input_size, hidden_size, output_size, residual_scale=residual_scale)
+        self.marker_index = int(marker_index)
+
     def candidate_step(
         self, x_t: torch.Tensor, h_prev: torch.Tensor
     ) -> tuple[torch.Tensor, torch.Tensor]:
-        marker = x_t[:, 1:2]
+        marker = x_t[:, self.marker_index:self.marker_index + 1]
         previous = (1.0 - marker) * h_prev
         cell = self.recurrent
         pre = (

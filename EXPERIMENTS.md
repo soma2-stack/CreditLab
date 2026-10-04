@@ -230,6 +230,17 @@ Registry entries describe completed experiments or plans. Every run saves its ex
 - **Files:** `configs/exp019_marker_reset.yaml` and `results/EXP-019/`.
 - **Follow-up:** Not started. Do not add a learned gate. Do not start EXP-020.
 
+## EXP-019 interpretation, stated before EXP-020
+
+- **Correction:** EXP-019 collected no training results. Its assumption that the write channel was a clean marker was false. EXP-017 tested overwrite under that actual noisy input encoding, not under an unambiguous binary write-control interface. EXP-019 is not classified as a model failure.
+
+## EXP-020 — Clean write control (preregistered; not started)
+
+- **Question:** If both models receive the same explicit on/off write signal, does the reset version replace the old bit more reliably than the ordinary additive version?
+- **Design:** A fourth input channel carries a clean 0/1 write control. The original three channels stay as they were. This is extra information. It is not a rerun of EXP-017. Forty fresh runs on the same seeds. No learned gate.
+- **Budget:** Five minutes per run, fifteen minutes total, after the hold-match check.
+- **Result:** Not collected.
+
 ## EXP-014 rescue denominator, clarified after the checkpoint
 
 - **Clarification:** “8 of 10 diagnostic successes” is not “8 misses rescued.” Seed 311 already scored at least 0.95 with the original final-16 readout. Of the 9 original misses, 7 were rescued: 307, 313, 317, 337, 347, 349, and 359. Seeds 331 and 353 stayed below 0.95. The saved EXP-014 analysis was not edited.
@@ -237,5 +248,5 @@ Registry entries describe completed experiments or plans. Every run saves its ex
 
 ## Scientific checkpoint
 
-- **Status:** EXP-019 stopped before training. No experiment is running. EXP-020 is not authorized.
+- **Status:** EXP-020 is preregistered. Training scores have not been collected. EXP-021 is not authorized.
 - **Document:** `SCIENTIFIC_CHECKPOINT.md`. The audit of saved records is `DOCUMENTATION_AUDIT.md`.

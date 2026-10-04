@@ -1,0 +1,39 @@
+# EXP-020 preregistration. The clean write channel was defined before any accuracy.
+# This is additional control information. It is not an unchanged EXP-017 replication.
+experiment_id: EXP-020
+config_revision: 1
+status: preregistered_before_running
+kind: exploratory_mechanism_intervention
+not_independent_replication: true
+not_learned_gating: true
+seeds: [503, 509, 521, 523, 541, 547, 557, 563, 569, 571]
+data:
+  base_seed: 7000
+  underlying_task: EXP-017
+  input_channels: 4
+  clean_write_control: "fourth channel, exact 0 or 1, no competitor marks and no noise"
+  additional_information: "both models receive an explicit write control that EXP-017 did not provide"
+models:
+  additive_parameter_count: 1249
+  reset_parameter_count: 1249
+  exp017_parameter_count: 1217
+  extra_input_weights: 32
+equations:
+  additive: "h_t = h_(t-1) + tanh(W_h h_(t-1) + W_x x_t + b_h + b_x)"
+  reset: "m_t = x_t[3]; previous = (1 - m_t) * h_(t-1); h_t = previous + tanh(W_h previous + W_x x_t + b_h + b_x)"
+success:
+  hold: "test accuracy >= 0.95"
+  selective: "overall and each of the four subgroups >= 0.95"
+preflight:
+  hold_match_tolerance: 1.0e-5
+  if_failed: "stop before training and do not weaken the tolerance"
+budget:
+  max_cpu_seconds_per_run: 300
+  max_cpu_seconds_total: 900
+  no_automatic_resume: true
+environment_requirement:
+  python: "3.11.9"
+  torch: "2.13.0+cpu"
+  sklearn: 1.9.1
+outputs:
+  directory: results/EXP-020
