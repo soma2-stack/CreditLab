@@ -214,6 +214,13 @@ Registry entries describe completed experiments or plans. Every run saves its ex
 - **Files:** `configs/exp017_selective_overwrite.yaml` and `results/EXP-017/`.
 - **Follow-up:** Not started. Do not add a gate. Do not train a video model. Do not start EXP-018.
 
+## EXP-018 — Where selective overwrite fails (preregistered; not started)
+
+- **Question:** In the saved overwrite models, does the new bit fail to enter the state, enter and then disappear, or remain unused by the saved readouts?
+- **Design:** No training and no new fit. All 40 EXP-017 checkpoints. Fresh split index 4. Marked bit pairs, unmarked bit pairs, and marker pairs. A fixed saturation convention of `1 - candidate^2 < 1e-6` is only a reporting rule.
+- **Budget:** Five minutes total.
+- **Result:** Not collected.
+
 ## EXP-014 rescue denominator, clarified after the checkpoint
 
 - **Clarification:** “8 of 10 diagnostic successes” is not “8 misses rescued.” Seed 311 already scored at least 0.95 with the original final-16 readout. Of the 9 original misses, 7 were rescued: 307, 313, 317, 337, 347, 349, and 359. Seeds 331 and 353 stayed below 0.95. The saved EXP-014 analysis was not edited.
@@ -221,5 +228,5 @@ Registry entries describe completed experiments or plans. Every run saves its ex
 
 ## Scientific checkpoint
 
-- **Status:** EXP-017 is complete. No experiment is running. EXP-018 is not authorized.
+- **Status:** EXP-018 is preregistered. No diagnostic scores have been collected. EXP-019 is not authorized.
 - **Document:** `SCIENTIFIC_CHECKPOINT.md`. The audit of saved records is `DOCUMENTATION_AUDIT.md`.

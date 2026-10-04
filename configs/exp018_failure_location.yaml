@@ -1,0 +1,40 @@
+# EXP-018 preregistration. Measurements were fixed before any new diagnostic score.
+experiment_id: EXP-018
+config_revision: 1
+status: preregistered_before_running
+kind: frozen_model_diagnostic
+not_training: true
+not_a_new_fit: true
+seeds: [503, 509, 521, 523, 541, 547, 557, 563, 569, 571]
+source: results/EXP-017
+diagnostic_split_index: 4
+base_seed: 7000
+base_sequences_per_seed: 512
+pairs:
+  marked_new_bit: "marker 1, flip B, A and everything else fixed"
+  unmarked_new_bit: "marker 0, flip B, A and everything else fixed"
+  marker: "B = -A, flip only the candidate marker"
+checkpoints:
+  before_update: "state after the input immediately before the candidate index"
+  after_update: "state after the candidate input"
+  plus_1: "one step after the candidate input"
+  plus_8: "eight steps after"
+  plus_16: "sixteen steps after"
+  before_query: "state after input 128"
+  after_query: "state after input 129"
+saturation:
+  exact_pm1: "candidate coordinate exactly +1 or -1"
+  near: "1 - candidate^2 < 1e-6, a fixed reporting convention, not a memory boundary"
+association: "within each seed and model, split marked-update examples at the median saturation fraction and compare exact state equality and L2"
+float64_material_difference: "equality fraction differs by more than 0.05, or both median L2 values are positive and their ratio is outside 0.5 to 2"
+budget:
+  max_cpu_seconds_total: 300
+  no_automatic_resume: true
+  no_training: true
+  no_new_fit: true
+environment_requirement:
+  python: "3.11.9"
+  torch: "2.13.0+cpu"
+  sklearn: 1.9.1
+outputs:
+  directory: results/EXP-018
