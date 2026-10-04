@@ -1,0 +1,8 @@
+experiment_id: EXP-023
+source: EXP-022
+checkpoints: 30
+classifier_fits: 60
+feature: hidden state at index 128
+routing: hard-coded selection of head Q from the final query input
+budget_seconds_total: 300.0
+no_recurrent_training: true

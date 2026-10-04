@@ -1,0 +1,62 @@
+# EXP-023 preregistration. Diagnostic only. No recurrent training.
+experiment_id: EXP-023
+config_revision: 1
+status: preregistered_before_running
+kind: frozen_two_head_diagnostic
+not_a_new_recurrent_architecture: true
+source_experiment: EXP-022
+seeds: [701, 709, 719, 727, 733, 739, 743, 751, 757, 761]
+models:
+  - additive_tanh_rnn
+  - whole_reset_additive
+  - addressed_reset_additive
+checkpoints: 30
+classifier_fits: 60
+features:
+  description: hidden state after input index 128 and before the query at index 129
+  dimensions: 32
+  excludes_query_input: true
+  no_reset_at_extraction: true
+labels:
+  V0: latest true written value of slot 0, from A, B, C, F, and S
+  V1: latest true written value of slot 1, from A, B, C, F, and S
+  task_label: V_Q
+  classifier_inputs: pre-query hidden state only
+classifier:
+  type: affine binary logistic regression with intercept
+  penalty: L2
+  C: 1.0
+  solver: lbfgs
+  tolerance: 1.0e-8
+  max_iterations: 2000
+  class_weight: null
+  dtype: float64
+  standardization: training mean and population standard deviation, scale 1 if variance is 0
+  shared_preprocessing_per_model: true
+  fit_split: training only
+routing:
+  rule: read Q from the final query input address channels and select that head
+  learned: false
+metrics:
+  success_split: EXP-022 test
+  validation_reported: true
+  success: routed test accuracy >= 0.95 and all six EXP-022 subgroups >= 0.95
+  joint_both_slots_reported_separately: true
+convergence:
+  inconclusive_if_not_converged: true
+  no_retry: true
+budget:
+  max_cpu_seconds_total: 300
+  no_automatic_resume: true
+environment_requirement:
+  python: "3.11.9"
+  torch: "2.13.0+cpu"
+  sklearn: "1.9.1"
+outputs:
+  directory: results/EXP-023
+limitations:
+  - explicit head selection is hard-coded symbolic routing
+  - two diagnostic heads are not the original single readout
+  - this is not an equal-budget comparison
+  - whole-state loss of a pre-wipe bit remains structural
+  - a linear miss does not prove the value is absent

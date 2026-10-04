@@ -1,9 +1,9 @@
 # Project Status
 
-- **Current phase:** EXP-022 is complete. No experiment is running.
-- **What was tested:** Whether a fixed reset of half the state can update one stored bit and keep the other.
-- **Latest result:** None of the 30 runs solved the two-memory task. The half-state reset did not replace one bit while preserving the other. A whole-state wipe cannot recover a bit written only before that wipe; that limit was checked before training.
+- **Current phase:** EXP-023 is preregistered. The diagnostic has not started.
+- **What was tested:** Nothing new yet. The two-memory comparison remains the latest scored result.
+- **Latest result:** None of the 30 runs solved the two-memory task. The half-state reset did not replace one bit while preserving the other.
 - **Currently running:** Nothing.
-- **Next recommended action:** Stop. Do not add a learned gate, and do not start EXP-023.
+- **Next recommended action:** Run the preregistered two-head diagnostic on the frozen EXP-022 models. Do not start EXP-024.
 
 See `results/EXP-022/analysis.md`. Earlier analyses and the EXP-019 stop record were not rewritten.

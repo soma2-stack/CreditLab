@@ -259,6 +259,13 @@ Registry entries describe completed experiments or plans. Every run saves its ex
 - **Files:** `configs/exp022_two_memory.yaml` and `results/EXP-022/`.
 - **Follow-up:** Stop. Do not add a learned gate. Do not start EXP-023.
 
+## EXP-023 — Are both current memory values readable? (preregistered; not started)
+
+- **Question:** Before the final question, can two linear readouts recover both current memory values from the same frozen state, and does choosing between them with the supplied query address improve the task score?
+- **Design:** Diagnostic only, on the 30 saved EXP-022 models. No recurrent training. The features are the hidden state after step 128, before the query. Success on the original test split requires routed accuracy and every subgroup at least 0.95.
+- **Budget:** Five minutes total.
+- **Result:** Not collected.
+
 ## EXP-014 rescue denominator, clarified after the checkpoint
 
 - **Clarification:** “8 of 10 diagnostic successes” is not “8 misses rescued.” Seed 311 already scored at least 0.95 with the original final-16 readout. Of the 9 original misses, 7 were rescued: 307, 313, 317, 337, 347, 349, and 359. Seeds 331 and 353 stayed below 0.95. The saved EXP-014 analysis was not edited.
@@ -266,5 +273,5 @@ Registry entries describe completed experiments or plans. Every run saves its ex
 
 ## Scientific checkpoint
 
-- **Status:** EXP-022 is complete. No model solved the two-memory task. EXP-023 is not authorized.
+- **Status:** EXP-023 is preregistered. Diagnostic scores have not been collected. EXP-024 is not authorized.
 - **Document:** `SCIENTIFIC_CHECKPOINT.md`. The audit of saved records is `DOCUMENTATION_AUDIT.md`.
