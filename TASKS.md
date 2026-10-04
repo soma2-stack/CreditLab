@@ -169,10 +169,10 @@ Do not test delay 1024. Do not retrain or refit. Do not start EXP-016.
 
 ## Phase 16 — stronger distractor noise
 
-- [ ] Confirm the new seeds are unused, and preregister the four matched conditions before any EXP-016 accuracy.
-- [ ] Train vanilla and additive models at delay 128, at distractor noise 0.3 and 1.0, on the new seeds.
-- [ ] Fit the fixed diagnostic classifier separately at each noise level.
-- [ ] Run the bit-flip audit on the completed models.
-- [ ] Leave EXP-001 through EXP-015 artifacts, and the scientific checkpoint, unchanged.
+- [x] Confirm the new seeds are unused, and preregister the four matched conditions before any EXP-016 accuracy.
+- [ ] Train vanilla and additive models at delay 128, at distractor noise 0.3 and 1.0, on the new seeds. Interrupted during seed 439, vanilla, noise 1.0. Seeds 443, 449, and 457 were not started.
+- [ ] Fit the fixed diagnostic classifier separately at each noise level. Done for seeds 401 through 433 only.
+- [ ] Run the bit-flip audit on the completed models. Done for seeds 401 through 433 only.
+- [x] Leave EXP-001 through EXP-015 artifacts, and the scientific checkpoint, unchanged.
 
-Do not raise the training budget. Do not try another noise level. Do not start EXP-017.
+Do not resume automatically. Do not raise the training budget. Do not try another noise level. Do not start EXP-017.

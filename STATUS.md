@@ -1,9 +1,11 @@
 # Project Status
 
-- **Current phase:** EXP-016 is preregistered. Training has not started.
-- **What was tested:** Nothing new yet. The saved delay-128 length check remains the latest result.
-- **Latest result:** The separate linear readout did not stay reliable at delays 256 and 512. A fixed-length readout rescue did not establish length robustness.
+- **Current phase:** EXP-016 was interrupted. No experiment is running.
+- **What was tested:** Fresh vanilla and additive models at delay 128, with shared distractor noise scaled to 0.3 and 1.0. The run stopped before the ten-seed cohort finished.
+- **Latest result:** On the finished runs, the additive model still scored perfectly at the stronger noise, and the vanilla model did not. Three seeds were never started.
 - **Currently running:** Nothing.
-- **Next recommended action:** Train the preregistered EXP-016 noise comparison. Do not start EXP-017.
+- **Next recommended action:** Stop for coordinator review. Do not resume automatically, and do not start EXP-017.
+
+See `results/EXP-016/analysis.md`. The scientific checkpoint was not rewritten.
 
 See `results/EXP-015/analysis.md`. The scientific checkpoint was not rewritten.

@@ -1,0 +1,4 @@
+Python: 3.11.9
+PyTorch: 2.13.0+cpu
+scikit-learn: 1.9.1
+Training code revision: 8ccb69e9e4470c5dec29c11e8a4b96d0a040cd75

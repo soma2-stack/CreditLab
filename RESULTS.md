@@ -204,3 +204,13 @@ Chronological record. Append new entries; never overwrite old results. Distingui
 - **Interpretation:** EXPERIMENTAL RESULT. The frozen diagnostic readout does not remain reliable at delays 256 and 512. The full-history original readout does on many seeds. Surviving bit dependence is not the same as a correct answer. This is not a pure elapsed-time test, because longer sequences contain more distractors. It does not validate the broader theory.
 - **Files:** `results/EXP-015/`.
 - **Replication:** Evaluation of the EXP-014 cohort on new longer sequences. Not a new training replication.
+- **Length note:** A fixed-length readout rescue did not establish length robustness. The saved diagnostic readout failed at the longer delays even where the state still depended on the bit.
+
+## 2026-10-04 — EXP-016 stronger noise, interrupted
+
+- **Experiment ID:** EXP-016.
+- **Configuration:** `configs/exp016_noise_robustness.yaml`. New seeds 401, 409, 419, 421, 431, 433, 439, 443, 449, and 457. Data base seed 6000. Delay 128. Vanilla and additive models, each at distractor noise 0.3 and 1.0, with shared latent draws. Python 3.11.9, PyTorch 2.13.0+cpu, scikit-learn 1.9.1. Training code `8ccb69e9e447`.
+- **Result:** Interrupted during seed 439, vanilla, noise 1.0. No score was saved for that condition. A second start was refused. Finished original-readout accuracies were, in seed order: vanilla noise 0.3: 0.494, 0.518, 0.506, 0.730, 0.506, 0.543, 0.506. Additive noise 0.3: 1.000 on those same seven seeds. Vanilla noise 1.0: 0.506, 0.482, 0.529, 0.570, 0.533, 0.457. Additive noise 1.0: 1.000 on those six seeds. The diagnostic readout on the six fully finished seeds was about 0.5 for vanilla and 1.0 for additive, at both noise levels. Seeds 443, 449, and 457 were not started. The last recorded session time was 218 seconds. Historical files were unchanged.
+- **Interpretation:** The finished runs are consistent with the additive advantage surviving this stronger noise, on both the original readout and the separate diagnostic readout. This is not a completed ten-seed result. A vanilla miss was not always the same: some vanilla states became identical after a bit flip, and one partial vanilla run did not. Noise 1.0 does not replace the frozen noise-0.3 experiments. This does not validate the broader theory.
+- **Files:** `results/EXP-016/`.
+- **Replication:** Incomplete new cohort. Not pooled with earlier seeds.

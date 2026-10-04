@@ -1,0 +1,94 @@
+# EXP-016 preregistration. The four conditions and the noise-pairing rule
+# were fixed before any EXP-016 accuracy was collected.
+experiment_id: EXP-016
+config_revision: 1
+status: preregistered_before_running
+kind: task_robustness
+device: cpu
+delay: 128
+seeds: [401, 409, 419, 421, 431, 433, 439, 443, 449, 457]
+data:
+  base_seed: 6000
+  train_samples: 1536
+  val_samples: 512
+  test_samples: 512
+  audit_samples: 512
+  splits:
+    train: 0
+    validation: 1
+    test: 2
+    audit: 3
+  combined_seed: "(run_seed * 1000003 + base_seed * 9973 + delay * 31 + split_index) % (2**31 - 1)"
+  noise_pairing: >
+    One generator draw at noise 0 and the same draw at noise 1.0.
+    Distractor steps are scaled by 0.3 or 1.0. Event, query, labels,
+    competitor bits, and markers are not scaled. The 0.3 tensors must
+    match a direct generator call at noise 0.3. make_split is not used,
+    because HARD_V2 would ignore a requested noise of 1.0.
+conditions:
+  - {model: vanilla_tanh_rnn, noise: 0.3}
+  - {model: additive_tanh_rnn, noise: 0.3}
+  - {model: vanilla_tanh_rnn, noise: 1.0}
+  - {model: additive_tanh_rnn, noise: 1.0}
+equations:
+  vanilla: "candidate_t = tanh(W_h h_{t-1} + W_x x_t + b_h + b_x); h_t = candidate_t"
+  additive: "candidate_t = tanh(W_h h_{t-1} + W_x x_t + b_h + b_x); h_t = h_{t-1} + candidate_t"
+model:
+  input_size: 3
+  hidden_size: 32
+  output_size: 1
+  initial_hidden_state: zero
+  residual_scale: 1.0
+  initialization: same seed immediately before each model, then copied across noise levels
+task:
+  run_mode: HARD_V2
+  competitor_rate: 0.4
+  competitor_flip_prob: 0.5
+  noise_levels: [0.3, 1.0]
+  noise_changes_only: distractor standard deviation
+training:
+  backpropagation: full_history
+  optimizer: Adam
+  adam_defaults: "betas (0.9, 0.999), eps 1e-8"
+  learning_rate: 0.003
+  batch_size: 64
+  eval_batch_size: 256
+  updates_per_run: 400
+  grad_clip_norm: 5.0
+  loss: terminal_binary_cross_entropy_with_logits
+  diagnostic_updates: [0, 50, 100, 200, 400]
+  checkpoint_selection: final update only
+  test_evaluation_during_training: false
+classifier:
+  same_as: EXP-012
+  separate_fit_per_condition: true
+  transfer_across_noise: false
+  C: 1.0
+  l1_ratio: 0.0
+  solver: lbfgs
+  tolerance: 1.0e-8
+  max_iterations: 2000
+  fit_intercept: true
+  class_weight: null
+  fit_on: training final states only
+success_test_accuracy_at_least: 0.95
+primary_endpoint: original jointly trained readout at the final checkpoint
+secondary_endpoint: diagnostic classifier, kept separate and not an equal-budget control
+budget:
+  max_cpu_seconds_per_run: 300
+  max_cpu_seconds_total: 900
+  no_automatic_resume: true
+  no_seed_replacement: true
+  no_retries: true
+environment_requirement:
+  python: "3.11.9"
+  torch: "2.13.0+cpu"
+  sklearn: 1.9.1
+interpretation_limits:
+  - Noise 1.0 does not correct or replace the frozen noise-0.3 experiments.
+  - This varies interference, not gradient horizon.
+  - Do not claim general task robustness or a new architecture.
+  - A miss is not total forgetting. Diagnostic success is not joint-training success.
+  - Do not raise the budget after seeing failures.
+outputs:
+  directory: results/EXP-016

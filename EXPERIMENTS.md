@@ -190,12 +190,13 @@ Registry entries describe completed experiments or plans. Every run saves its ex
 
 - **Authorization:** The stop after EXP-015 is lifted only for a fresh vanilla-versus-additive comparison at delay 128, with distractor noise 0.3 and 1.0. Noise 1.0 does not replace the frozen noise-0.3 experiments.
 
-## EXP-016 — Additive advantage under stronger noise (preregistered; not started)
+## EXP-016 — Additive advantage under stronger noise (interrupted)
 
 - **Question:** At delay 128, does additive recurrence stay more reliable than vanilla recurrence when distractor noise increases from 0.3 to 1.0?
-- **Design:** Ten new seeds, data base seed 6000. Four matched conditions: vanilla and additive, each at both noise levels. Shared labels, competitors, and standard-normal distractor draws. Full-history training, 400 Adam updates, clip 5. Success is test accuracy of at least 0.95. A separate diagnostic classifier is fit per condition and is not transferred across noise.
-- **Budget:** Five minutes per run, fifteen minutes total.
-- **Result:** Not collected.
+- **Result:** Interrupted. The process stopped during seed 439, vanilla, noise 1.0, with no score for that run. A second start was refused. On the finished runs, additive test accuracy was 1.000 on all 7 noise-0.3 runs and all 6 noise-1.0 runs. Vanilla was below 0.95 on all of those runs, from 0.457 to 0.730. The diagnostic readout matched that split on the six seeds that received it. Seeds 443, 449, and 457 were not started.
+- **Interpretation:** The finished runs are consistent with the additive advantage surviving noise 1.0. EXPERIMENTAL RESULT is not claimed for the full ten-seed cohort, because the run is incomplete. Noise 1.0 does not replace the frozen noise-0.3 experiments. This does not validate the broader theory.
+- **Files:** `configs/exp016_noise_robustness.yaml` and `results/EXP-016/`.
+- **Follow-up:** Not started. Do not resume automatically. Do not raise the budget. Do not start EXP-017.
 
 ## EXP-014 rescue denominator, clarified after the checkpoint
 
@@ -204,5 +205,5 @@ Registry entries describe completed experiments or plans. Every run saves its ex
 
 ## Scientific checkpoint
 
-- **Status:** EXP-016 is preregistered. No training scores have been collected. EXP-017 is not authorized.
+- **Status:** EXP-016 was interrupted. No experiment is running. Do not resume it automatically. EXP-017 is not authorized.
 - **Document:** `SCIENTIFIC_CHECKPOINT.md`. The audit of saved records is `DOCUMENTATION_AUDIT.md`.
