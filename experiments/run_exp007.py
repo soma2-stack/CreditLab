@@ -327,29 +327,48 @@ def main() -> None:
         raise RuntimeError("environment does not match the preregistered Python 3.11.9 / PyTorch 2.13.0+cpu")
     out_dir = ROOT / cfg["outputs"]["directory"]
     out_dir.mkdir(parents=True, exist_ok=True)
-    if (out_dir / "raw_metrics.jsonl").exists():
-        raise FileExistsError("refusing to overwrite existing EXP-007 outputs")
+    raw_path = out_dir / "raw_metrics.jsonl"
+    resuming = raw_path.exists()
     dirty = working_tree_dirty()
-    if dirty:
+    allowed_dirty = {
+        "results/EXP-007/config_used.yaml",
+        "results/EXP-007/environment.txt",
+        "results/EXP-007/parameter_sets.json",
+        "results/EXP-007/raw_metrics.jsonl",
+        "results/EXP-007/loss_curves.jsonl",
+        "results/EXP-007/checkpoint_diagnostics.jsonl",
+        "results/EXP-007/delay64_summary.json",
+        "results/EXP-007/checkpoints",
+    }
+    if dirty and not resuming:
         raise RuntimeError(f"working tree is dirty:\n{dirty}")
     before_path = out_dir / "frozen_hashes_before.json"
     if json.loads(before_path.read_text(encoding="utf-8")) != frozen_manifest():
         raise RuntimeError("frozen artifact hashes changed before EXP-007")
     revision = git_revision()
-    (out_dir / "environment.txt").write_text(
-        f"Python: {platform.python_version()}\nPyTorch: {torch.__version__}\nTraining code revision: {revision}\n",
-        encoding="utf-8",
-    )
-    (out_dir / "config_used.yaml").write_text(CONFIG_PATH.read_text(encoding="utf-8"), encoding="utf-8")
-    (out_dir / "parameter_sets.json").write_text(json.dumps({
-        "frozen_when_readout_only": cfg["frozen_parameter_names"],
-        "trainable_when_readout_only": cfg["trainable_readout_parameter_names"],
-        "total_parameter_count": 1217,
-        "readout_trainable_count": 33,
-    }, indent=2), encoding="utf-8")
-    clock = time.perf_counter()
-    total_cap = float(cfg["budget"]["max_cpu_seconds_total"])
+    if not resuming:
+        (out_dir / "environment.txt").write_text(
+            f"Python: {platform.python_version()}\nPyTorch: {torch.__version__}\nTraining code revision: {revision}\n",
+            encoding="utf-8",
+        )
+        (out_dir / "config_used.yaml").write_text(CONFIG_PATH.read_text(encoding="utf-8"), encoding="utf-8")
+        (out_dir / "parameter_sets.json").write_text(json.dumps({
+            "frozen_when_readout_only": cfg["frozen_parameter_names"],
+            "trainable_when_readout_only": cfg["trainable_readout_parameter_names"],
+            "total_parameter_count": 1217,
+            "readout_trainable_count": 33,
+        }, indent=2), encoding="utf-8")
     records = []
+    if resuming:
+        records = [json.loads(line) for line in raw_path.read_text(encoding="utf-8").splitlines()]
+        created = raw_path.stat().st_ctime
+        last_write = max(path.stat().st_mtime for path in out_dir.rglob("*") if path.is_file())
+        already_elapsed = max(0.0, last_write - created)
+    else:
+        already_elapsed = 0.0
+    clock = time.perf_counter() - already_elapsed
+    total_cap = float(cfg["budget"]["max_cpu_seconds_total"])
+    done = {(row["delay"], row["seed"], row["model_type"], row["regime"]) for row in records}
     fingerprint_rows = []
     unstarted = []
     stop_for_bug = False
@@ -360,10 +379,13 @@ def main() -> None:
     def run_delay(delay: int, phase: str) -> None:
         nonlocal stop_for_bug
         for seed in cfg["seeds"]:
+            if all((delay, seed, model_type, regime) in done for model_type in cfg["models"] for regime in cfg["regimes"]):
+                continue
             if stop_for_bug or expired():
                 for model_type in cfg["models"]:
                     for regime in cfg["regimes"]:
-                        unstarted.append({"delay": delay, "seed": seed, "model_type": model_type, "regime": regime, "reason": "stopped"})
+                        if (delay, seed, model_type, regime) not in done:
+                            unstarted.append({"delay": delay, "seed": seed, "model_type": model_type, "regime": regime, "reason": "stopped"})
                 continue
             bundle = dataset_bundle(cfg, delay, seed)
             data_fp = dataset_fingerprints(bundle)
@@ -391,6 +413,8 @@ def main() -> None:
                     )
                 hidden_before = hidden_fingerprint(readout, bundle["val_x"][:64])
                 for regime, model in (("full", full), ("readout_only", readout)):
+                    if (delay, seed, model_type, regime) in done:
+                        continue
                     if expired() or stop_for_bug:
                         unstarted.append({"delay": delay, "seed": seed, "model_type": model_type, "regime": regime, "reason": "stopped"})
                         continue
@@ -437,7 +461,8 @@ def main() -> None:
     run_delay(64, "primary")
     additive_ok = sum(1 for row in records if row["delay"] == 64 and row["model_type"] == "additive_tanh_rnn" and row["regime"] == "full" and row.get("success"))
     gate = additive_ok >= 8 and not stop_for_bug
-    (out_dir / "delay64_summary.json").write_text(json.dumps({
+    if not (out_dir / "delay64_summary.json").exists():
+        (out_dir / "delay64_summary.json").write_text(json.dumps({
         "full_additive_successes": additive_ok,
         "delay_128": "will run" if gate else "not run",
         "written_before_delay_128": True,
