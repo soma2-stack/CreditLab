@@ -232,3 +232,12 @@ Chronological record. Append new entries; never overwrite old results. Distingui
 - **Interpretation:** EXPERIMENTAL RESULT. The additive model retained the first bit and did not reliably replace it. The separate readout made that retention sharper. It did not establish selective updating, erasure, or a need for a new gate. This does not validate the broader theory.
 - **Files:** `results/EXP-017/`.
 - **Replication:** Ten new seeds, one new task, one budget. Not pooled with the delayed-bit cohorts.
+
+## 2026-10-04 — EXP-018 locate the overwrite failure
+
+- **Experiment ID:** EXP-018.
+- **Configuration:** `configs/exp018_failure_location.yaml`. Frozen EXP-017 checkpoints only. Fresh split index 4, 512 sequences per seed. No training and no new fit. Python 3.11.9, PyTorch 2.13.0+cpu, scikit-learn 1.9.1. Diagnostic code `252565c7f858`.
+- **Result:** All 40 checkpoints and classifiers reproduced their saved correct counts. The run took 11.4 seconds. Additive selective seeds 503, 521, 557, and 569 were usually unchanged in ordinary precision when the marked bit flipped, with median difference 0. Seeds 523 and 541 changed by median 0.392 and 0.153, and that change remained at the query. Seed 509 changed and about half of the differences were gone by the query. Both saved readouts followed the marked bit on 0 of the pairs for every selective model. Additive candidates were mostly near plus or minus one. Float64 changed many exact-equality calls without making the typical tiny differences large.
+- **Interpretation:** NUMERICAL EVIDENCE. Weak entry, later disappearance, and unused persistent differences all occur. Saturation is associated with weaker entry and is not shown to be the cause. A lasting state difference is not evidence that another readout could use the new bit. This does not validate the broader theory.
+- **Files:** `results/EXP-018/`.
+- **Replication:** Diagnostic of the EXP-017 models. Not a new training replication.

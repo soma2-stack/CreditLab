@@ -198,9 +198,9 @@ Do not add a gate. Do not train a video model. Do not start EXP-018.
 
 ## Phase 18 — locate the overwrite failure
 
-- [ ] Preregister the frozen-model measurements before any new diagnostic score.
-- [ ] Verify the 40 saved checkpoints and readouts against their saved correct counts.
-- [ ] Measure new-bit entry, later persistence, saturation, and saved-readout use.
-- [ ] Leave EXP-001 through EXP-017 artifacts unchanged.
+- [x] Preregister the frozen-model measurements before any new diagnostic score.
+- [x] Verify the 40 saved checkpoints and readouts against their saved correct counts.
+- [x] Measure new-bit entry, later persistence, saturation, and saved-readout use.
+- [x] Leave EXP-001 through EXP-017 artifacts unchanged.
 
 Do not fit a new readout. Do not add a gate. Do not start EXP-019.

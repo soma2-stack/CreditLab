@@ -214,12 +214,13 @@ Registry entries describe completed experiments or plans. Every run saves its ex
 - **Files:** `configs/exp017_selective_overwrite.yaml` and `results/EXP-017/`.
 - **Follow-up:** Not started. Do not add a gate. Do not train a video model. Do not start EXP-018.
 
-## EXP-018 — Where selective overwrite fails (preregistered; not started)
+## EXP-018 — Where selective overwrite fails (completed)
 
 - **Question:** In the saved overwrite models, does the new bit fail to enter the state, enter and then disappear, or remain unused by the saved readouts?
-- **Design:** No training and no new fit. All 40 EXP-017 checkpoints. Fresh split index 4. Marked bit pairs, unmarked bit pairs, and marker pairs. A fixed saturation convention of `1 - candidate^2 < 1e-6` is only a reporting rule.
-- **Budget:** Five minutes total.
-- **Result:** Not collected.
+- **Result:** All 40 checkpoints and readouts verified. The diagnostic took 11.4 seconds. On the additive selective models, some seeds show little or no ordinary-precision change when the marked bit flips, and those candidates are mostly saturated. Other seeds change and keep the change. Both saved readouts follow that marked bit on none of the fresh pairs. Exact float32 equality is often lost in float64, while the typical difference stays tiny.
+- **Interpretation:** NUMERICAL EVIDENCE. The failure is not one thing. Weak entry, later loss, and unused persistent differences all occur. Saturation is associated with weaker entry. It is not shown to be the cause. This does not show erasure or a universal limit, and it does not validate the broader theory.
+- **Files:** `configs/exp018_failure_location.yaml` and `results/EXP-018/`.
+- **Follow-up:** Not started. Do not add a gate. Do not fit a new readout. Do not start EXP-019.
 
 ## EXP-014 rescue denominator, clarified after the checkpoint
 
@@ -228,5 +229,5 @@ Registry entries describe completed experiments or plans. Every run saves its ex
 
 ## Scientific checkpoint
 
-- **Status:** EXP-018 is preregistered. No diagnostic scores have been collected. EXP-019 is not authorized.
+- **Status:** EXP-018 is complete. No experiment is running. EXP-019 is not authorized.
 - **Document:** `SCIENTIFIC_CHECKPOINT.md`. The audit of saved records is `DOCUMENTATION_AUDIT.md`.
