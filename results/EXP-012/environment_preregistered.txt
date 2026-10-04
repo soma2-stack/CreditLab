@@ -1,0 +1,5 @@
+Python: 3.11.9
+PyTorch: 2.13.0+cpu
+scikit-learn: 1.9.1
+scikit-learn was installed for this diagnostic because it was not already present. Python and PyTorch were not changed.
+The diagnostic-code commit is the preregistration commit. The runner records its full hash when the diagnostic starts.

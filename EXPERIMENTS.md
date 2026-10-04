@@ -140,4 +140,12 @@ Registry entries describe completed experiments or plans. Every run saves its ex
 - **Result:** All 80 runs and 80 audits finished in 1032 seconds. No numerical failures and no unstarted runs. At delay 64 the success counts were full with clipping 10/10, final 16 with clipping 1/10, full without clipping 10/10, and final 16 without clipping 2/10. At delay 128 they were 10/10, 0/10, 7/10, and 0/10. The clipped runs matched EXP-010. No unclipped run rescaled a gradient.
 - **Interpretation:** EXPERIMENTAL RESULT, outcome D. At delay 64 the full-history advantage remains without clipping. At delay 128, turning clipping off makes full-history training less consistent and still does not make final-16 training reliable. This is not an architecture result and it does not validate the broader theory.
 - **Files:** `configs/exp011_clipping_horizon.yaml` and `results/EXP-011/`.
-- **Follow-up:** Not started. Do not try another horizon or clipping threshold, and do not start EXP-012.
+- **Follow-up:** EXP-012 asks whether a new linear readout can use the hidden states the final-16 runs already learned. The EXP-011 analysis file was not rewritten.
+
+## EXP-012 — Frozen-state linear readout rescue (preregistered; diagnostic not started)
+
+- **Question:** Can a separately fitted linear classifier answer the task from the final hidden states of the 80 saved EXP-011 models?
+- **Classifier:** L2 logistic regression, C = 1.0, lbfgs, tolerance 1e-8, 2000 iterations. In scikit-learn 1.9 this L2 setting is `l1_ratio = 0`. Training features are standardized with the training mean and population standard deviation. A zero-variance coordinate uses scale 1.
+- **Scope:** All 80 checkpoints. No recurrent training and no change to K or clipping.
+- **Budget:** Five minutes total. No automatic resume.
+- **Result:** Not collected.
