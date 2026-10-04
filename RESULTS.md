@@ -125,3 +125,12 @@ Chronological record. Append new entries; never overwrite old results. Distingui
 - **Interpretation:** DIAGNOSTIC RESULT. The pair check supports finite dependence on the original bit for the bias-only successes and for the matrix-trained runs. The two ordinary misses still carry partial information. This does not prove a bias explanation of EXP-008, does not finish delay 128, and does not validate the broader theory. The cause of the original process stop remains unknown.
 - **Files:** `results/EXP-009/audit_completion/`.
 - **Compute:** Separate diagnostic allowance. It is not evidence about the original 15-minute training cap.
+
+## 2026-10-03 — EXP-009 delay-128 continuation
+
+- **Experiment ID:** EXP-009 delay-128 continuation. The original session remains interrupted.
+- **Configuration:** Unchanged additive model and training settings. Two original conditions were reused: delay 128, seed 101, full and readout-only. Seed 101 bias-plus-readout was restarted once from initialization. The other 37 delay-128 conditions were trained once. Python 3.11.9, PyTorch 2.13.0+cpu. Continuation code `3c5e02f64be3`.
+- **Result:** 38/38 new jobs finished in 381.534 seconds. No numerical failures and no unstarted jobs. Counting each condition once, delay-128 successes were full 10/10, readout only 0/10, bias plus readout 2/10, and matrices plus readout 10/10. Bias successes were seeds 127 at 0.971 and 211 at 0.992. The nearest misses were seeds 223 at 0.949 and 179 at 0.947. All 40 models changed final state when only the original bit was flipped. Matrix-trained runs had both pair members correct on every pair. Bias misses still had both members correct on about 0.66 to 0.90 of pairs. Frozen parameters and historical files stayed unchanged.
+- **Interpretation:** EXPERIMENTAL RESULT. At delay 128, bias-only adaptation was not sufficient for most seeds, while matrix adaptation was sufficient on every seed with both biases fixed. Scores just below 0.95 still carried bit information. This does not explain EXP-008, does not make matrix learning universally necessary, and does not validate the broader theory. The original unfinished attempt still has no recorded duration.
+- **Files:** `results/EXP-009/delay128_completion/`.
+- **Compute:** Separate 10-minute allowance. Measured time was 381.534 seconds. This is not the complete historical EXP-009 cost.

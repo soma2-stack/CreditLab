@@ -1,0 +1,2 @@
+{"checkpoint_sha256": "08252d278b74a192aed5f21e71bf173bc18a37b5cfc201a8a448f18e9c190c36", "delay": 128, "recomputed_correct_count": 512, "regime": "full", "saved_correct_count": 512, "seed": 101, "status": "ok", "stop_reason": null}
+{"checkpoint_sha256": "e6fff37a74e63bb5122ed72ce733949c12027981e256ee5eb7345c456e28eb26", "delay": 128, "recomputed_correct_count": 410, "regime": "readout_only", "saved_correct_count": 410, "seed": 101, "status": "ok", "stop_reason": null}

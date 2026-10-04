@@ -92,7 +92,8 @@ Do not start EXP-009. Do not tune B. Do not change the forward equation.
 - [x] Preregister one trainable preactivation bias, `b_x`, and the four additive regimes before any EXP-009 accuracy.
 - [x] Train all four regimes at delay 64. Full training succeeded on 10 of 10 seeds.
 - [x] Run the delay-64 bit-flip audit on the 40 saved checkpoints. This was a diagnostic continuation, not a training resume.
-- [ ] Finish delay 128. Not authorized after coordinator review. The process had stopped during seed 101 bias-plus-readout.
-- [x] Leave EXP-001 through EXP-008 artifacts unchanged, and leave the saved EXP-009 training files unchanged.
+- [x] Finish the planned delay-128 comparison through an authorized continuation. The original session remains interrupted. Seed 101 bias-plus-readout was restarted once from initialization, and the other 37 conditions were trained once.
+- [x] Audit all 40 delay-128 models, including the two reused checkpoints.
+- [x] Leave EXP-001 through the earlier EXP-009 training and audit files unchanged.
 
-Do not resume delay 128. Do not start EXP-010. Do not tune B. Do not change the forward equation.
+Do not start EXP-010. Do not subdivide parameter groups further. Do not tune B. Do not change the forward equation.

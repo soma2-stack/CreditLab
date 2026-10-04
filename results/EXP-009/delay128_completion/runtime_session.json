@@ -1,0 +1,9 @@
+{
+  "budget_seconds": 600,
+  "code_revision": "3c5e02f64be35b6ac8a459f94f22eeec96fecdce",
+  "kind": "authorized_delay128_continuation",
+  "original_session": "interrupted",
+  "original_unfinished_attempt_runtime": "unknown",
+  "started_unix": 1791077867.9474638,
+  "timing_method": "time.perf_counter inside this process"
+}

@@ -1,0 +1,3 @@
+Python: 3.11.9
+PyTorch: 2.13.0+cpu
+Continuation code revision: 3c5e02f64be35b6ac8a459f94f22eeec96fecdce

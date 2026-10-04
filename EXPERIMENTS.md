@@ -118,3 +118,10 @@ Registry entries describe completed experiments or plans. Every run saves its ex
 - **Result:** All 40 checkpoints matched their saved test counts. The audit took 10.649 seconds and did not change earlier files. Bias-only successes changed the final state when only the original bit was flipped. Seeds 151 and 191 still showed partial bit dependence. Matrix-trained runs did too. This separate clock does not reconstruct the unfinished training run.
 - **Interpretation:** DIAGNOSTIC RESULT. The ordinary test scores and the pair scores are different measurements. This does not explain EXP-008, does not establish delay 128, and does not validate the broader theory.
 - **Files:** `results/EXP-009/audit_completion/`. The original interruption note and training analysis were not rewritten.
+
+## EXP-009 delay-128 continuation (authorized completion of the planned comparison)
+
+- **Authorization:** Reuse seed 101 full and seed 101 readout-only. Restart seed 101 bias-plus-readout once from initialization. Train the other 37 delay-128 conditions. No other training.
+- **Result:** All 38 jobs finished in 381.534 seconds. No failures and no unstarted jobs. Delay-128 success counts were full 10/10, readout only 0/10, bias plus readout 2/10, and matrices plus readout 10/10. The two bias successes were seeds 127 and 211. The bit-flip audit covered all 40 models. Frozen parameters stayed fixed.
+- **Interpretation:** EXPERIMENTAL RESULT for the completed delay-128 cohort. Bias-only adaptation did not remain sufficient for most seeds at this delay. Matrix adaptation remained sufficient on every seed with both biases fixed. The original session is still interrupted, and this clock is not its missing cost. This is not an architecture result and it does not validate the broader theory.
+- **Files:** `results/EXP-009/delay128_completion/`. The interruption note was not rewritten.
