@@ -29,15 +29,23 @@ def build_matrix() -> list[ProposedRun]:
     ]
 
 def validate_matrix(runs: list[ProposedRun]) -> None:
-    assert len(runs) == len(ARCHITECTURES) * len(WIDTHS) * len(SEEDS)
-    assert len({(r.architecture, r.width, r.seed) for r in runs}) == len(runs)
-    assert all(r.train_delay == 128 and r.evaluation_delays == DELAYS for r in runs)
-    assert all(r.width > 0 and r.seed >= 0 for r in runs)
+    if len(runs) != len(ARCHITECTURES) * len(WIDTHS) * len(SEEDS):
+        raise ValueError("incomplete experiment matrix")
+    if len({(r.architecture, r.width, r.seed) for r in runs}) != len(runs):
+        raise ValueError("duplicate experiment configurations")
+    if any(r.train_delay != TRAIN_DELAY or r.evaluation_delays != DELAYS for r in runs):
+        raise ValueError("invalid train/evaluation delay")
+    if any(r.width <= 0 or r.seed < 0 for r in runs):
+        raise ValueError("invalid width or seed")
+    if len(set(SEEDS)) != len(SEEDS) or len(set(DELAYS)) != len(DELAYS):
+        raise ValueError("duplicate seeds or evaluation delays")
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Validate proposed study matrix; never train.")
     parser.add_argument("--output", type=Path, help="Optional local JSON manifest path")
     args = parser.parse_args()
+    if args.output and args.output.suffix.lower() != ".json":
+        parser.error("--output must be a .json file")
     runs = build_matrix()
     validate_matrix(runs)
     manifest = {
